@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-.body{
-  background-color: #fff!important;
+
+$white: #fff;
+$black: #000;
+
+%bg-white {
+  background-color: $white!important;
+  color: $black!important;
+}
+
+html, body{
+  @extend %bg-white;
 }

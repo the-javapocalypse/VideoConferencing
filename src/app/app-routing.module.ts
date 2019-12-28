@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfilepageComponent },
   { path: 'register', component: RegisterpageComponent },
   { path: 'landing', component: LandingpageComponent },
-  { path: 'join', component: JoinMeetingComponent }
+  { path: 'join/:meeting_id', component: JoinMeetingComponent }
 
 ];
 
