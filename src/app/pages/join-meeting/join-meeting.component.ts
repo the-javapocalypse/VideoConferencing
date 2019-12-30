@@ -1,29 +1,6 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {ChimeService} from '../../services/api/chime.service';
-
-import {
-    AsyncScheduler,
-    AudioVideoFacade,
-    AudioVideoObserver,
-    ClientMetricReport,
-    ConsoleLogger,
-    DefaultActiveSpeakerPolicy,
-    DefaultAudioMixController,
-    DefaultDeviceController,
-    DefaultMeetingSession,
-    Device,
-    DeviceChangeObserver,
-    LogLevel,
-    MeetingSession,
-    MeetingSessionConfiguration,
-    MeetingSessionStatus,
-    MeetingSessionStatusCode,
-    MeetingSessionVideoAvailability,
-    ScreenMessageDetail,
-    TimeoutScheduler,
-    VideoTileState,
-} from '../../../assets/vendor/chime/index';
+// import {ChimeService} from '../../services/api/chime.service';
 
 @Component({
     selector: 'app-join-meeting',
@@ -39,7 +16,7 @@ export class JoinMeetingComponent implements OnInit, OnDestroy {
     meetingId = null;
     attendeeName = null;
 
-    constructor(private route: ActivatedRoute, private chime: ChimeService) {
+    constructor(private route: ActivatedRoute) {
     }
 
     @HostListener('document:mousemove', ['$event'])
