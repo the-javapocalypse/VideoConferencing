@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Chime Integrated">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/join-meeting/join-meeting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/join-meeting/join-meeting.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +80,7 @@
       <updated>1577516316024</updated>
       <workItem from="1577516319298" duration="8986000" />
       <workItem from="1577691339794" duration="10870000" />
-      <workItem from="1577728341818" duration="2626000" />
+      <workItem from="1577728341818" duration="3134000" />
     </task>
     <task id="LOCAL-00001" summary="Added Chime">
       <created>1577533465175</created>
@@ -99,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577708998057</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Chime Integrated &amp; Compiling Success">
+      <created>1577730984733</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577730984733</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Chime" />
     <MESSAGE value="Refactored Chime Code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored Chime Code" />
+    <MESSAGE value="Chime Integrated &amp; Compiling Success" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chime Integrated &amp; Compiling Success" />
   </component>
 </project>
