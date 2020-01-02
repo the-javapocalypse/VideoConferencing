@@ -24,7 +24,7 @@ let options = {
   key: fs.readFileSync('./key.pem'),
   cert: fs.readFileSync('./cert.pem')
 };
-let port = 30006;
+let port = 8080;
 
 
 

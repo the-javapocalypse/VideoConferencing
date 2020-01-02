@@ -23,7 +23,7 @@ import {
     TimeoutScheduler,
     VideoTileState,
     ScreenShareFacadeObserver
-} from '../../../assets/vendor/chime/index.js';
+} from '../../../assets/vendor/chime/index';
 
 
 @Injectable({
@@ -103,7 +103,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     static readonly BASE_URL: string = [location.protocol, '//', location.host, location.pathname.replace(/\/*$/, '/')].join('');
 
 
-    private host = 'https://192.168.100.131:8080/';
+    private host = 'https://localhost:8080/';
     //
     // showActiveSpeakerScores = false;
     // activeSpeakerLayout = true;
