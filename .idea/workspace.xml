@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Join Meeting Params">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/chimeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/chimeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/join-meeting/join-meeting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/join-meeting/join-meeting.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +89,7 @@
       <workItem from="1577773271015" duration="8278000" />
       <workItem from="1577871655915" duration="288000" />
       <workItem from="1577873496288" duration="1091000" />
-      <workItem from="1577953280137" duration="2969000" />
+      <workItem from="1577953280137" duration="4565000" />
     </task>
     <task id="LOCAL-00001" summary="Added Chime">
       <created>1577533465175</created>
@@ -110,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577730984733</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Join Meeting Api Params">
+      <created>1577961822850</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577961822850</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +142,7 @@
     <MESSAGE value="Added Chime" />
     <MESSAGE value="Refactored Chime Code" />
     <MESSAGE value="Chime Integrated &amp; Compiling Success" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chime Integrated &amp; Compiling Success" />
+    <MESSAGE value="Join Meeting Api Params" />
+    <option name="LAST_COMMIT_MESSAGE" value="Join Meeting Api Params" />
   </component>
 </project>

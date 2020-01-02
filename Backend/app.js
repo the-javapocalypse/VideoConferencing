@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const cors = require('cors');
 
 
 // Router
@@ -11,6 +11,10 @@ var indexRouter = require('./routes/index');
 var vcRouter = require('./routes/videoConference');
 
 var app = express();
+
+// Cors shit
+app.use(cors());
+app.options('*', cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

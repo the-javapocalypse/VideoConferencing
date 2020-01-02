@@ -1,6 +1,7 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ChimeService} from '../../services/api/chime.service';
+import {log} from "util";
 
 @Component({
     selector: 'app-join-meeting',
@@ -98,14 +99,23 @@ export class JoinMeetingComponent implements OnInit, OnDestroy {
 
 
     /////////////////// CHIME SHIT STARTS ///////////////////////
-   async joinMeetingTrigger(formData) {
+    async joinMeetingTrigger(formData) {
         // Grab meeting id from url
-       let meetingId = this.route.snapshot.paramMap.get('meeting_id');
-       let attendeeName = formData.attendeeName;
-       let region = 'us-east-1'; // default region
+        let meetingId = this.route.snapshot.paramMap.get('meeting_id');
+        let attendeeName = formData.attendeeName;
+        let region = 'us-east-1'; // default region
 
-       const meetingInfo = await this.chime.joinMeeting(meetingId, attendeeName, region);
+        console.log('requesting');
+        this.chime.joinMeeting({
+            title: meetingId,
+            name: attendeeName
+        }).subscribe((res: any) => {
+                console.log(res);
+            },
+            (err: any) => {
+                console.log(err);
+            }
+        );
 
-       console.log(meetingInfo);
-   }
+    }
 }

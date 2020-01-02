@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 import {
     AsyncScheduler,
@@ -104,7 +105,9 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
 
 
     private host = 'https://localhost:8080/';
-    //
+    private apiUrl = this.host + 'vc/';
+
+
     // showActiveSpeakerScores = false;
     // activeSpeakerLayout = true;
     // meeting: string | null = null;
@@ -135,7 +138,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // // feature flags
     // enableWebAudio = false;
 
-    constructor() {
+    constructor(private http: HttpClient) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         // (global as any).app = this;
         // this.switchToFlow('flow-authenticate');
@@ -762,7 +765,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //     }
     //     if (!list.firstElementChild) {
     //         const option = document.createElement('option');
-    //         option.text = 'Device selection unavailable';
+    //         option.text = 'Device selection u: Promise<any>navailable';
     //         list.appendChild(option);
     //     }
     // }
@@ -890,7 +893,8 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //         additionalDevices,
     //         async (name: string) => {
     //             await this.audioVideo.chooseAudioOutputDevice(name);
-    //         }
+    //         }        console.log(meetingInfo);
+
     //     );
     // }
 
@@ -1311,18 +1315,19 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //////////////// CUSTOM CODE //////////////////
     ///////////////////////////////////////////////
 
-    async joinMeeting(meetingId, attendeeName, region): Promise<any> {
-        const response = await fetch(
-            // tslint:disable-next-line:max-line-length
-            this.host + `join?title=${encodeURIComponent(meetingId)}&name=${encodeURIComponent(attendeeName)}&region=${encodeURIComponent(region)}`,
-            {
-                method: 'POST',
-            }
-        );
-        const json = await response.json();
-        if (json.error) {
-            throw new Error(`Server error: ${json.error}`);
-        }
-        return json;
+    joinMeeting(body) {
+        // const response = await fetch(
+        //     // tslint:disable-next-line:max-line-length
+        //     this.host + `join?title=${encodeURIComponent(meetingId)}&name=${encodeURIComponent(attendeeName)}&region=${encodeURIComponent(region)}`,
+        //     {
+        //         method: 'POST',
+        //     }
+        // );
+        // const json = await response.json();
+        // if (json.error) {
+        //     throw new Error(`Server error: ${json.error}`);
+        // }
+        // return json;
+        return this.http.post(this.apiUrl + 'join', body);
     }
 }
