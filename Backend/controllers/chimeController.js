@@ -47,5 +47,17 @@ module.exports = {
         attendeeCache[title][joinInfo.JoinInfo.Attendee.AttendeeId] = name;
         res.send(JSON.stringify(joinInfo));
         res.end();
+    },
+
+    // join meeting
+    async attendee(req, res, next) {
+        compression({})(req, res, () => {});
+        const attendeeInfo = {
+            AttendeeInfo: {
+                AttendeeId: req.body.attendee,
+                Name: attendeeCache[req.body.title][req.body.attendee],
+            },
+        };
+        res.send(JSON.stringify(attendeeInfo));
     }
 }
