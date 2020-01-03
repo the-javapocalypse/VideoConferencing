@@ -700,7 +700,12 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //      set enableWebAudio flag,
     //      set addDeviceChangeObserver(),
     //      setupDeviceLabelTrigger() to get audio and video permissions,
-    //      populateAllDeviceLists() initialize and get list of all audio and video devices
+    //      populateAllDeviceLists() initialize and get list of all audio and video devices ui
+    //      setupMuteHandler() realtime mute unmute set
+    //      canUnmuteHandler()  realtime mute unmute boolean check
+    //      setupSubscribeToAttendeeIdPresenceHandler() update roaster for attendees info ui
+    //      setupScreenViewing()    setup screen viewing ui
+    //      audioVideo add observer
     // Params: res.joinInfo.Meeting and res.joinInfo.Attendee  subscribed to joinMeeting()
     // Return:
     async initializeMeetingSession(configuration: MeetingSessionConfiguration): Promise<void> {
@@ -715,8 +720,8 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
         this.setupMuteHandler();
         this.setupCanUnmuteHandler();
         this.setupSubscribeToAttendeeIdPresenceHandler();
-        // this.setupScreenViewing();
-        // this.audioVideo.addObserver(this);
+        this.setupScreenViewing();
+        this.audioVideo.addObserver(this);
     }
 
     log(str: string): void {
@@ -972,7 +977,6 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
 
     // Attendee id presence handler
     setupSubscribeToAttendeeIdPresenceHandler(): void {
-        console.log('inside aip handler');
         const handler = (attendeeId: string, present: boolean): void => {
             this.log(`${attendeeId} present = ${present}`);
             if (!present) {
@@ -1002,17 +1006,15 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
                     }
                     if (!this.roster[attendeeId].name) {
                         // Get attendee info if not already present
-                        console.log('inside aip handler 1');
-
                         const response = await this.getAttendeeInfo({
                             title: this.meeting,
                             attendee: attendeeId
-                        }).toPromise();
-                        console.log('inside aip handler 2');
+                        }).subscribe((res: any) => {
+                            const name = res.AttendeeInfo.Name;
+                            this.roster[attendeeId].name = name ? name : '';
+                            this.updateRoster();
 
-                        const json = await response.json();
-                        const name = json.AttendeeInfo.Name;
-                        this.roster[attendeeId].name = name ? name : '';
+                        });
                     }
                     this.updateRoster();
                 }
@@ -1111,7 +1113,23 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
         // }
     }
 
-    ///////////////////////////////////////////////////////////////////////////
+    //////////////////////////////  Setup Screen Viewing for UI  /////////////////////////////////////////////
+
+    // Def: Setup screen viewing UI
+    private setupScreenViewing(): void {
+        const self = this;
+        this.meetingSession.screenShareView.registerObserver({
+            streamDidStart(screenMessageDetail: ScreenMessageDetail): void {
+                const rosterEntry = self.roster[screenMessageDetail.attendeeId];
+                // document.getElementById('nameplate-17').innerHTML = rosterEntry ? rosterEntry.name : '';
+            },
+            streamDidStop(_screenMessageDetail: ScreenMessageDetail): void {
+                // document.getElementById('nameplate-17').innerHTML = 'No one is sharing screen';
+            },
+        });
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
 
     // audioVideoDidStartConnecting(reconnecting: boolean): void {
     //     this.log(`session connecting. reconnecting: ${reconnecting}`);
@@ -1189,7 +1207,6 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //     }
     //     return null;
     // }
-
 
 
     // visibleTileIndices(): number[] {
@@ -1328,18 +1345,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //     }
     // }
 
-    // private setupScreenViewing(): void {
-    //     const self = this;
-    //     this.meetingSession.screenShareView.registerObserver({
-    //         streamDidStart(screenMessageDetail: ScreenMessageDetail): void {
-    //             const rosterEntry = self.roster[screenMessageDetail.attendeeId];
-    //             document.getElementById('nameplate-17').innerHTML = rosterEntry ? rosterEntry.name : '';
-    //         },
-    //         streamDidStop(_screenMessageDetail: ScreenMessageDetail): void {
-    //             document.getElementById('nameplate-17').innerHTML = 'No one is sharing screen';
-    //         },
-    //     });
-    // }
+
 
     // connectionDidBecomePoor(): void {
     //     this.log('connection is poor');
