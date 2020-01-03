@@ -24,7 +24,7 @@ import {
     TimeoutScheduler,
     VideoTileState,
     ScreenShareFacadeObserver
-} from '../../../assets/vendor/chime/index';
+} from '../../../assets/vendor/chime/index.js';
 
 
 @Injectable({
@@ -108,7 +108,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     private apiUrl = this.host + 'vc/';
 
 
-    // showActiveSpeakerScores = false;
+    showActiveSpeakerScores = false;
     // activeSpeakerLayout = true;
     // meeting: string | null = null;
     // name: string | null = null;
@@ -116,12 +116,12 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // sipURI: string | null = null;
     // region: string | null = null;
     //
-    // meetingSession: MeetingSession | null = null;
-    // audioVideo: AudioVideoFacade | null = null;
+    meetingSession: MeetingSession | null = null;
+    audioVideo: AudioVideoFacade | null = null;
     // // tileOrganizer: DemoTileOrganizer = new DemoTileOrganizer();
     // canStartLocalVideo = true;
     // // eslint-disable-next-line
-    // roster: any = {};
+    roster: any = {};
     // tileIndexToTileId: { [id: number]: number } = {};
     // tileIdToTileIndex: { [id: number]: number } = {};
     //
@@ -133,10 +133,10 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //     'button-screen-view': false,
     // };
     //
-    // private selectedVideoInput: string | null = null;
+    private selectedVideoInput: string | null = null;
     //
     // // feature flags
-    // enableWebAudio = false;
+    enableWebAudio = false;
 
     constructor(private http: HttpClient) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -571,134 +571,6 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //     this.roster = {};
     // }
 
-    // Setup Mute handler
-    // setupMuteHandler(): void {
-    //     const handler = (isMuted: boolean): void => {
-    //         this.log(`muted = ${isMuted}`);
-    //     };
-    //     this.audioVideo.realtimeSubscribeToMuteAndUnmuteLocalAudio(handler);
-    //     const isMuted = this.audioVideo.realtimeIsLocalAudioMuted();
-    //     handler(isMuted);
-    // }
-
-    // Setup unmute handler
-    // setupCanUnmuteHandler(): void {
-    //     const handler = (canUnmute: boolean): void => {
-    //         this.log(`canUnmute = ${canUnmute}`);
-    //     };
-    //     this.audioVideo.realtimeSubscribeToSetCanUnmuteLocalAudio(handler);
-    //     handler(this.audioVideo.realtimeCanUnmuteLocalAudio());
-    // }
-
-    // Update roaster/meeting board or room
-    // updateRoster(): void {
-    //     let rosterText = '';
-    //     for (const attendeeId in this.roster) {
-    //         rosterText +=
-    //             '<li class="list-group-item d-flex justify-content-between align-items-center">';
-    //         rosterText += this.roster[attendeeId].name;
-    //         let score = this.roster[attendeeId].score;
-    //         if (!score) {
-    //             score = 0;
-    //         }
-    //         score = Math.floor(score * 100);
-    //         if (score) {
-    //             rosterText += ` (${score})`
-    //         }
-    //         rosterText += '<span class="badge badge-pill ';
-    //         let status = '';
-    //         if (this.roster[attendeeId].signalStrength < 1) {
-    //             status = '&nbsp;';
-    //             rosterText += 'badge-warning';
-    //         } else if (this.roster[attendeeId].signalStrength === 0) {
-    //             status = '&nbsp;';
-    //             rosterText += 'badge-danger';
-    //         } else if (this.roster[attendeeId].muted) {
-    //             status = 'MUTED';
-    //             rosterText += 'badge-secondary';
-    //         } else if (this.roster[attendeeId].active) {
-    //             status = 'SPEAKING';
-    //             rosterText += 'badge-success';
-    //         } else if (this.roster[attendeeId].volume > 0) {
-    //             status = '&nbsp;';
-    //             rosterText += 'badge-success';
-    //         }
-    //         rosterText += `">${status}</span></li>`;
-    //     }
-    //     const roster = document.getElementById('roster');
-    //     if (roster.innerHTML !== rosterText) {
-    //         roster.innerHTML = rosterText;
-    //     }
-    // }
-
-    // Attendee id presence handler
-    // setupSubscribeToAttendeeIdPresenceHandler(): void {
-    //     const handler = (attendeeId: string, present: boolean): void => {
-    //         this.log(`${attendeeId} present = ${present}`);
-    //         if (!present) {
-    //             delete this.roster[attendeeId];
-    //             this.updateRoster();
-    //             return;
-    //         }
-    //         this.audioVideo.realtimeSubscribeToVolumeIndicator(
-    //             attendeeId,
-    //             async (
-    //                 attendeeId: string,
-    //                 volume: number | null,
-    //                 muted: boolean | null,
-    //                 signalStrength: number | null
-    //             ) => {
-    //                 if (!this.roster[attendeeId]) {
-    //                     this.roster[attendeeId] = {name: ''};
-    //                 }
-    //                 if (volume !== null) {
-    //                     this.roster[attendeeId].volume = Math.round(volume * 100);
-    //                 }
-    //                 if (muted !== null) {
-    //                     this.roster[attendeeId].muted = muted;
-    //                 }
-    //                 if (signalStrength !== null) {
-    //                     this.roster[attendeeId].signalStrength = Math.round(signalStrength * 100);
-    //                 }
-    //                 if (!this.roster[attendeeId].name) {
-    // tslint:disable-next-line:max-line-length
-    //                     const response = await fetch(`${DemoMeetingApp.BASE_URL}attendee?title=${encodeURIComponent(this.meeting)}&attendee=${encodeURIComponent(attendeeId)}`);
-    //                     const json = await response.json();
-    //                     const name = json.AttendeeInfo.Name;
-    //                     this.roster[attendeeId].name = name ? name : '';
-    //                 }
-    //                 this.updateRoster();
-    //             }
-    //         );
-    //     };
-    //     this.audioVideo.realtimeSubscribeToAttendeeIdPresence(handler);
-    //     const activeSpeakerHandler = (attendeeIds: string[]): void => {
-    //         for (const attendeeId in this.roster) {
-    //             this.roster[attendeeId].active = false;
-    //         }
-    //         for (const attendeeId of attendeeIds) {
-    //             if (this.roster[attendeeId]) {
-    //                 this.roster[attendeeId].active = true;
-    //                 break; // only show the most active speaker
-    //             }
-    //         }
-    //         this.layoutVideoTiles();
-    //     };
-    //     this.audioVideo.subscribeToActiveSpeakerDetector(
-    //         new DefaultActiveSpeakerPolicy(),
-    //         activeSpeakerHandler,
-    //         (scores: { [attendeeId: string]: number }) => {
-    //             for (const attendeeId in scores) {
-    //                 if (this.roster[attendeeId]) {
-    //                     this.roster[attendeeId].score = scores[attendeeId];
-    //                 }
-    //             }
-    //             this.updateRoster();
-    //         },
-    //         this.showActiveSpeakerScores ? 100 : 0,
-    //     );
-    // }
-
 
     // End meeting
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -708,195 +580,6 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //     });
     // }
 
-    // Setup device label trigger
-    // setupDeviceLabelTrigger(): void {
-    //     // Note that device labels are privileged since they add to the
-    //     // fingerprinting surface area of the browser session. In Chrome private
-    //     // tabs and in all Firefox tabs, the labels can only be read once a
-    //     // MediaStream is active. How to deal with this restriction depends on the
-    //     // desired UX. The device controller includes an injectable device label
-    //     // trigger which allows you to perform custom behavior in case there are no
-    //     // labels, such as creating a temporary audio/video stream to unlock the
-    //     // device names, which is the default behavior. Here we override the
-    //     // trigger to also show an alert to let the user know that we are asking for
-    //     // mic/camera permission.
-    //     //
-    //     // Also note that Firefox has its own device picker, which may be useful
-    //     // for the first device selection. Subsequent device selections could use
-    //     // a custom UX with a specific device id.
-    //     this.audioVideo.setDeviceLabelTrigger(
-    //         async (): Promise<MediaStream> => {
-    //             this.switchToFlow('flow-need-permission');
-    //             const stream = await navigator.mediaDevices.getUserMedia({audio: true, video: true});
-    //             this.switchToFlow('flow-devices');
-    //             return stream;
-    //         }
-    //     );
-    // }
-
-    // Populate device list
-    // populateDeviceList(
-    //     elementId: string,
-    //     genericName: string,
-    //     devices: MediaDeviceInfo[],
-    //     additionalOptions: string[]
-    // ): void {
-    //     const list = document.getElementById(elementId) as HTMLSelectElement;
-    //     while (list.firstElementChild) {
-    //         list.removeChild(list.firstElementChild);
-    //     }
-    //     for (let i = 0; i < devices.length; i++) {
-    //         const option = document.createElement('option');
-    //         list.appendChild(option);
-    //         option.text = devices[i].label || `${genericName} ${i + 1}`;
-    //         option.value = devices[i].deviceId;
-    //     }
-    //     if (additionalOptions.length > 0) {
-    //         const separator = document.createElement('option');
-    //         separator.disabled = true;
-    //         separator.text = '──────────';
-    //         list.appendChild(separator);
-    //         for (const additionalOption of additionalOptions) {
-    //             const option = document.createElement('option');
-    //             list.appendChild(option);
-    //             option.text = additionalOption;
-    //             option.value = additionalOption;
-    //         }
-    //     }
-    //     if (!list.firstElementChild) {
-    //         const option = document.createElement('option');
-    //         option.text = 'Device selection u: Promise<any>navailable';
-    //         list.appendChild(option);
-    //     }
-    // }
-
-    // Populate in meeting device list
-    // populateInMeetingDeviceList(
-    //     elementId: string,
-    //     genericName: string,
-    //     devices: MediaDeviceInfo[],
-    //     additionalOptions: string[],
-    //     callback: (name: string) => void
-    // ): void {
-    //     const menu = document.getElementById(elementId) as HTMLDivElement;
-    //     while (menu.firstElementChild) {
-    //         menu.removeChild(menu.firstElementChild);
-    //     }
-    //     for (let i = 0; i < devices.length; i++) {
-    //         this.createDropdownMenuItem(menu, devices[i].label || `${genericName} ${i + 1}`, () => {
-    //             callback(devices[i].deviceId);
-    //         });
-    //     }
-    //     if (additionalOptions.length > 0) {
-    //         this.createDropdownMenuItem(menu, '──────────', () => {
-    //         }).classList.add('text-center');
-    //         for (const additionalOption of additionalOptions) {
-    //             this.createDropdownMenuItem(
-    //                 menu,
-    //                 additionalOption,
-    //                 () => {
-    //                     callback(additionalOption);
-    //                 },
-    //                 `${elementId}-${additionalOption.replace(/\s/g, '-')}`
-    //             );
-    //         }
-    //     }
-    //     if (!menu.firstElementChild) {
-    //         this.createDropdownMenuItem(menu, 'Device selection unavailable', () => {
-    //         });
-    //     }
-    // }
-
-    // Create drop down menu item
-    // createDropdownMenuItem(
-    //     menu: HTMLDivElement,
-    //     title: string,
-    //     clickHandler: () => void,
-    //     id?: string
-    // ): HTMLButtonElement {
-    //     const button = document.createElement('button') as HTMLButtonElement;
-    //     menu.appendChild(button);
-    //     button.innerHTML = title;
-    //     button.classList.add('dropdown-item');
-    //     if (id !== undefined) {
-    //         button.id = id;
-    //     }
-    //     button.addEventListener('click', () => {
-    //         clickHandler();
-    //     });
-    //     return button;
-    // }
-
-    // async populateAllDeviceLists(): Promise<void> {
-    //     await this.populateAudioInputList();
-    //     await this.populateVideoInputList();
-    //     await this.populateAudioOutputList();
-    // }
-
-    // async populateAudioInputList(): Promise<void> {
-    //     const genericName = 'Microphone';
-    //     const additionalDevices = ['None', '440 Hz'];
-    //     this.populateDeviceList(
-    //         'audio-input',
-    //         genericName,
-    //         await this.audioVideo.listAudioInputDevices(),
-    //         additionalDevices
-    //     );
-    //     this.populateInMeetingDeviceList(
-    //         'dropdown-menu-microphone',
-    //         genericName,
-    //         await this.audioVideo.listAudioInputDevices(),
-    //         additionalDevices,
-    //         async (name: string) => {
-    //             await this.audioVideo.chooseAudioInputDevice(this.audioInputSelectionToDevice(name));
-    //         }
-    //     );
-    // }
-
-    // async populateVideoInputList(): Promise<void> {
-    //     const genericName = 'Camera';
-    //     const additionalDevices = ['None', 'Blue', 'SMPTE Color Bars'];
-    //     this.populateDeviceList(
-    //         'video-input',
-    //         genericName,
-    //         await this.audioVideo.listVideoInputDevices(),
-    //         additionalDevices
-    //     );
-    //     this.populateInMeetingDeviceList(
-    //         'dropdown-menu-camera',
-    //         genericName,
-    //         await this.audioVideo.listVideoInputDevices(),
-    //         additionalDevices,
-    //         async (name: string) => {
-    //             try {
-    //                 await this.openVideoInputFromSelection(name, false);
-    //             } catch (err) {
-    //                 this.log('no video input device selected');
-    //             }
-    //         }
-    //     );
-    // }
-
-    // async populateAudioOutputList(): Promise<void> {
-    //     const genericName = 'Speaker';
-    //     const additionalDevices: string[] = [];
-    //     this.populateDeviceList(
-    //         'audio-output',
-    //         genericName,
-    //         await this.audioVideo.listAudioOutputDevices(),
-    //         additionalDevices
-    //     );
-    //     this.populateInMeetingDeviceList(
-    //         'dropdown-menu-speaker',
-    //         genericName,
-    //         await this.audioVideo.listAudioOutputDevices(),
-    //         additionalDevices,
-    //         async (name: string) => {
-    //             await this.audioVideo.chooseAudioOutputDevice(name);
-    //         }        console.log(meetingInfo);
-
-    //     );
-    // }
 
     // private analyserNodeCallback = () => {
     // };
@@ -960,45 +643,6 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // }
 
 
-    // async openVideoInputFromSelection(selection: string | null, showPreview: boolean): Promise<void> {
-    //     if (selection) {
-    //         this.selectedVideoInput = selection;
-    //     }
-    //     this.log(`Switching to: ${this.selectedVideoInput}`);
-    //     const device = this.videoInputSelectionToDevice(this.selectedVideoInput);
-    //     if (device === null) {
-    //         this.audioVideo.stopLocalVideoTile();
-    //         this.toggleButton('button-camera', 'off');
-    //         throw new Error('no video device selected');
-    //     }
-    //     await this.audioVideo.chooseVideoInputDevice(device);
-    //     if (showPreview) {
-    //         this.audioVideo.startVideoPreviewForVideoInput(document.getElementById(
-    //             'video-preview'
-    //         ) as HTMLVideoElement);
-    //     }
-    // }
-
-    // private audioInputSelectionToDevice(value: string): Device {
-    //     if (value === '440 Hz') {
-    //         return DefaultDeviceController.synthesizeAudioDevice(440);
-    //     } else if (value === 'None') {
-    //         return null;
-    //     }
-    //     return value;
-    // }
-
-    // private videoInputSelectionToDevice(value: string): Device {
-    //     if (value === 'Blue') {
-    //         return DefaultDeviceController.synthesizeVideoDevice('blue');
-    //     } else if (value === 'SMPTE Color Bars') {
-    //         return DefaultDeviceController.synthesizeVideoDevice('smpte');
-    //     } else if (value === 'None') {
-    //         return null;
-    //     }
-    //     return value;
-    // }
-
     // async authenticate(): Promise<void> {
     //     let joinInfo = (await this.joinMeeting()).JoinInfo;
     //     await this.initializeMeetingSession(
@@ -1026,27 +670,448 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //     return json;
     // }
 
-    // Initialize meeting session
-    // async initializeMeetingSession(configuration: MeetingSessionConfiguration): Promise<void> {
-    //     const logger = new ConsoleLogger('SDK', LogLevel.INFO);
-    //     const deviceController = new DefaultDeviceController(logger);
-    //     configuration.enableWebAudio = this.enableWebAudio;
-    //     this.meetingSession = new DefaultMeetingSession(configuration, logger, deviceController);
-    //     this.audioVideo = this.meetingSession.audioVideo;
-    //
-    //     this.audioVideo.addDeviceChangeObserver(this);
-    //     this.setupDeviceLabelTrigger();
-    //     await this.populateAllDeviceLists();
-    //     this.setupMuteHandler();
-    //     this.setupCanUnmuteHandler();
-    //     this.setupSubscribeToAttendeeIdPresenceHandler();
-    //     this.setupScreenViewing();
-    //     this.audioVideo.addObserver(this);
-    // }
+    // Setup device label trigger
+    setupDeviceLabelTrigger(): void {
+        // Note that device labels are privileged since they add to the
+        // fingerprinting surface area of the browser session. In Chrome private
+        // tabs and in all Firefox tabs, the labels can only be read once a
+        // MediaStream is active. How to deal with this restriction depends on the
+        // desired UX. The device controller includes an injectable device label
+        // trigger which allows you to perform custom behavior in case there are no
+        // labels, such as creating a temporary audio/video stream to unlock the
+        // device names, which is the default behavior. Here we override the
+        // trigger to also show an alert to let the user know that we are asking for
+        // mic/camera permission.
+        //
+        // Also note that Firefox has its own device picker, which may be useful
+        // for the first device selection. Subsequent device selections could use
+        // a custom UX with a specific device id.
+        this.audioVideo.setDeviceLabelTrigger(
+            async (): Promise<MediaStream> => {
+                const stream = await navigator.mediaDevices.getUserMedia({audio: true, video: true});
+                return stream;
+            }
+        );
+    }
+
+
+    // Def: Initialize ConsoleLogger(),
+    //      Initialize DefaultDeviceController(),
+    //      set enableWebAudio flag,
+    //      set addDeviceChangeObserver(),
+    //      setupDeviceLabelTrigger() to get audio and video permissions,
+    //      populateAllDeviceLists() initialize and get list of all audio and video devices
+    // Params: res.joinInfo.Meeting and res.joinInfo.Attendee  subscribed to joinMeeting()
+    // Return:
+    async initializeMeetingSession(configuration: MeetingSessionConfiguration): Promise<void> {
+        const logger = new ConsoleLogger('SDK', LogLevel.INFO);
+        const deviceController = new DefaultDeviceController(logger);
+        configuration.enableWebAudio = this.enableWebAudio;
+        this.meetingSession = new DefaultMeetingSession(configuration, logger, deviceController);
+        this.audioVideo = this.meetingSession.audioVideo;
+        this.audioVideo.addDeviceChangeObserver(this);
+        this.setupDeviceLabelTrigger();
+        await this.populateAllDeviceLists();
+        this.setupMuteHandler();
+        this.setupCanUnmuteHandler();
+        this.setupSubscribeToAttendeeIdPresenceHandler();
+        // this.setupScreenViewing();
+        // this.audioVideo.addObserver(this);
+    }
 
     log(str: string): void {
         console.log(`[DEMO] ${str}`);
     }
+
+    ////////////////////// Segment populate all device lists //////////////////////
+
+
+    async populateAllDeviceLists(): Promise<void> {
+        await this.populateAudioInputList();
+        await this.populateVideoInputList();
+        await this.populateAudioOutputList();
+    }
+
+    // -------------------- VIDEO INPUTS ----------------------- //
+
+    // Def: Toggle camera off or choose from available camera devices and show preview
+    async openVideoInputFromSelection(selection: string | null, showPreview: boolean): Promise<void> {
+        if (selection) {
+            this.selectedVideoInput = selection;
+        }
+        this.log(`Switching to: ${this.selectedVideoInput}`);
+        const device = this.videoInputSelectionToDevice(this.selectedVideoInput);
+        if (device === null) {
+            this.audioVideo.stopLocalVideoTile();
+            // !! toggle camera button off here
+            // this.toggleButton('button-camera', 'off');
+            throw new Error('no video device selected');
+        }
+        await this.audioVideo.chooseVideoInputDevice(device);
+        if (showPreview) {
+            // !! Show video preview here
+            // this.audioVideo.startVideoPreviewForVideoInput(document.getElementById(
+            //     'video-preview'
+            // ) as HTMLVideoElement);
+        }
+    }
+
+    private videoInputSelectionToDevice(value: string): Device {
+        if (value === 'Blue') {
+            return DefaultDeviceController.synthesizeVideoDevice('blue');
+        } else if (value === 'SMPTE Color Bars') {
+            return DefaultDeviceController.synthesizeVideoDevice('smpte');
+        } else if (value === 'None') {
+            return null;
+        }
+        return value;
+    }
+
+
+    async populateVideoInputList(): Promise<void> {
+        const genericName = 'Camera';
+        const additionalDevices = ['None', 'Blue', 'SMPTE Color Bars'];
+        this.populateDeviceList(
+            'video-input',
+            genericName,
+            await this.audioVideo.listVideoInputDevices(),
+            additionalDevices
+        );
+        this.populateInMeetingDeviceList(
+            'dropdown-menu-camera',
+            genericName,
+            await this.audioVideo.listVideoInputDevices(),
+            additionalDevices,
+            async (name: string) => {
+                try {
+                    await this.openVideoInputFromSelection(name, false);
+                } catch (err) {
+                    this.log('no video input device selected');
+                }
+            }
+        );
+    }
+
+    // -------------------- AUDIO INPUTS ----------------------- //
+
+    // Def:Choose from available audio devices
+    private audioInputSelectionToDevice(value: string): Device {
+        if (value === '440 Hz') {
+            return DefaultDeviceController.synthesizeAudioDevice(440);
+        } else if (value === 'None') {
+            return null;
+        }
+        return value;
+    }
+
+
+    async populateAudioInputList(): Promise<void> {
+        const genericName = 'Microphone';
+        const additionalDevices = ['None', '440 Hz'];
+        this.populateDeviceList(
+            'audio-input',
+            genericName,
+            await this.audioVideo.listAudioInputDevices(),
+            additionalDevices
+        );
+        this.populateInMeetingDeviceList(
+            'dropdown-menu-microphone',
+            genericName,
+            await this.audioVideo.listAudioInputDevices(),
+            additionalDevices,
+            async (name: string) => {
+                await this.audioVideo.chooseAudioInputDevice(this.audioInputSelectionToDevice(name));
+            }
+        );
+    }
+
+    // -------------------- AUDIO OUTPUTS ----------------------- //
+
+    async populateAudioOutputList(): Promise<void> {
+        const genericName = 'Speaker';
+        const additionalDevices: string[] = [];
+        this.populateDeviceList(
+            'audio-output',
+            genericName,
+            await this.audioVideo.listAudioOutputDevices(),
+            additionalDevices
+        );
+        this.populateInMeetingDeviceList(
+            'dropdown-menu-speaker',
+            genericName,
+            await this.audioVideo.listAudioOutputDevices(),
+            additionalDevices,
+            async (name: string) => {
+                await this.audioVideo.chooseAudioOutputDevice(name);
+            }
+        );
+    }
+
+
+    // ------------------- Set Frontend For Audio|Video Lists ---------------------- //
+
+
+    // Def: Map available audio|video devices to frontend for pre-meeting
+    populateDeviceList(
+        elementId: string,
+        genericName: string,
+        devices: MediaDeviceInfo[],
+        additionalOptions: string[]
+    ): void {
+        // const list = document.getElementById(elementId) as HTMLSelectElement;
+        // while (list.firstElementChild) {
+        //     list.removeChild(list.firstElementChild);
+        // }
+        // for (let i = 0; i < devices.length; i++) {
+        // const option = document.createElement('option');
+        // list.appendChild(option);
+        // option.text = devices[i].label || `${genericName} ${i + 1}`;
+        // option.value = devices[i].deviceId;
+        // }
+        // if (additionalOptions.length > 0) {
+        //     const separator = document.createElement('option');
+        //     separator.disabled = true;
+        //     separator.text = '──────────';
+        //     list.appendChild(separator);
+        //     for (const additionalOption of additionalOptions) {
+        //         const option = document.createElement('option');
+        //         list.appendChild(option);
+        //         option.text = additionalOption;
+        //         option.value = additionalOption;
+        //     }
+        // }
+        // if (!list.firstElementChild) {
+        //     const option = document.createElement('option');
+        //     option.text = 'Device selection u: Promise<any>navailable';
+        //     list.appendChild(option);
+        // }
+    }
+
+    // Def: Map available audio|video devices to frontend for meeting
+    populateInMeetingDeviceList(
+        elementId: string,
+        genericName: string,
+        devices: MediaDeviceInfo[],
+        additionalOptions: string[],
+        callback: (name: string) => void
+    ): void {
+        // const menu = document.getElementById(elementId) as HTMLDivElement;
+        // while (menu.firstElementChild) {
+        //     menu.removeChild(menu.firstElementChild);
+        // }
+        // for (let i = 0; i < devices.length; i++) {
+        // this.createDropdownMenuItem(menu, devices[i].label || `${genericName} ${i + 1}`, () => {
+        //     callback(devices[i].deviceId);
+        // });
+        // }
+        // if (additionalOptions.length > 0) {
+        //     this.createDropdownMenuItem(menu, '──────────', () => {
+        //     }).classList.add('text-center');
+        //     for (const additionalOption of additionalOptions) {
+        //         this.createDropdownMenuItem(
+        //             menu,
+        //             additionalOption,
+        //             () => {
+        //                 callback(additionalOption);
+        //             },
+        //             `${elementId}-${additionalOption.replace(/\s/g, '-')}`
+        //         );
+        //     }
+        // }
+        // if (!menu.firstElementChild) {
+        //     this.createDropdownMenuItem(menu, 'Device selection unavailable', () => {
+        //     });
+        // }
+    }
+
+    // Def: Create dropdown item list for available input|output audio and video sources
+    // createDropdownMenuItem(
+    //     menu: HTMLDivElement,
+    //     title: string,
+    //     clickHandler: () => void,
+    //     id?: string
+    // ): HTMLButtonElement {
+    //     const button = document.createElement('button') as HTMLButtonElement;
+    //     menu.appendChild(button);
+    //     button.innerHTML = title;
+    //     button.classList.add('dropdown-item');
+    //     if (id !== undefined) {
+    //         button.id = id;
+    //     }
+    //     button.addEventListener('click', () => {
+    //         clickHandler();
+    //     });
+    //     return button;
+    // }
+
+
+    //////////////////////////////// MUTE|UNMUTE Handlers ////////////////////////////////////
+
+
+    // Setup Mute handler
+    setupMuteHandler(): void {
+        const handler = (isMuted: boolean): void => {
+            this.log(`muted = ${isMuted}`);
+        };
+        this.audioVideo.realtimeSubscribeToMuteAndUnmuteLocalAudio(handler);
+        const isMuted = this.audioVideo.realtimeIsLocalAudioMuted();
+        handler(isMuted);
+    }
+
+    // Setup unmute handler
+    setupCanUnmuteHandler(): void {
+        const handler = (canUnmute: boolean): void => {
+            this.log(`canUnmute = ${canUnmute}`);
+        };
+        this.audioVideo.realtimeSubscribeToSetCanUnmuteLocalAudio(handler);
+        handler(this.audioVideo.realtimeCanUnmuteLocalAudio());
+    }
+
+
+    ////////////////////////////////// Attendee Presence /////////////////////////////////////////////
+
+    // Attendee id presence handler
+    setupSubscribeToAttendeeIdPresenceHandler(): void {
+        console.log('inside aip handler');
+        const handler = (attendeeId: string, present: boolean): void => {
+            this.log(`${attendeeId} present = ${present}`);
+            if (!present) {
+                delete this.roster[attendeeId];
+                this.updateRoster();
+                return;
+            }
+            this.audioVideo.realtimeSubscribeToVolumeIndicator(
+                attendeeId,
+                async (
+                    attendeeId: string,
+                    volume: number | null,
+                    muted: boolean | null,
+                    signalStrength: number | null
+                ) => {
+                    if (!this.roster[attendeeId]) {
+                        this.roster[attendeeId] = {name: ''};
+                    }
+                    if (volume !== null) {
+                        this.roster[attendeeId].volume = Math.round(volume * 100);
+                    }
+                    if (muted !== null) {
+                        this.roster[attendeeId].muted = muted;
+                    }
+                    if (signalStrength !== null) {
+                        this.roster[attendeeId].signalStrength = Math.round(signalStrength * 100);
+                    }
+                    if (!this.roster[attendeeId].name) {
+                        // Get attendee info if not already present
+                        console.log('inside aip handler 1');
+
+                        const response = await this.getAttendeeInfo({
+                            title: this.meeting,
+                            attendee: attendeeId
+                        }).toPromise();
+                        console.log('inside aip handler 2');
+
+                        const json = await response.json();
+                        const name = json.AttendeeInfo.Name;
+                        this.roster[attendeeId].name = name ? name : '';
+                    }
+                    this.updateRoster();
+                }
+            );
+        };
+        this.audioVideo.realtimeSubscribeToAttendeeIdPresence(handler);
+        const activeSpeakerHandler = (attendeeIds: string[]): void => {
+            for (const attendeeId in this.roster) {
+                this.roster[attendeeId].active = false;
+            }
+            for (const attendeeId of attendeeIds) {
+                if (this.roster[attendeeId]) {
+                    this.roster[attendeeId].active = true;
+                    break; // only show the most active speaker
+                }
+            }
+            this.layoutVideoTiles();
+        };
+        this.audioVideo.subscribeToActiveSpeakerDetector(
+            new DefaultActiveSpeakerPolicy(),
+            activeSpeakerHandler,
+            (scores: { [attendeeId: string]: number }) => {
+                for (const attendeeId in scores) {
+                    if (this.roster[attendeeId]) {
+                        this.roster[attendeeId].score = scores[attendeeId];
+                    }
+                }
+                this.updateRoster();
+            },
+            this.showActiveSpeakerScores ? 100 : 0,
+        );
+    }
+
+    // Update roaster/meeting board or room UI
+    updateRoster(): void {
+        // let rosterText = '';
+        // for (const attendeeId in this.roster) {
+        //     rosterText +=
+        //         '<li class="list-group-item d-flex justify-content-between align-items-center">';
+        //     rosterText += this.roster[attendeeId].name;
+        //     let score = this.roster[attendeeId].score;
+        //     if (!score) {
+        //         score = 0;
+        //     }
+        //     score = Math.floor(score * 100);
+        //     if (score) {
+        //         rosterText += ` (${score})`;
+        //     }
+        //     rosterText += '<span class="badge badge-pill ';
+        //     let status = '';
+        //     if (this.roster[attendeeId].signalStrength < 1) {
+        //         status = '&nbsp;';
+        //         rosterText += 'badge-warning';
+        //     } else if (this.roster[attendeeId].signalStrength === 0) {
+        //         status = '&nbsp;';
+        //         rosterText += 'badge-danger';
+        //     } else if (this.roster[attendeeId].muted) {
+        //         status = 'MUTED';
+        //         rosterText += 'badge-secondary';
+        //     } else if (this.roster[attendeeId].active) {
+        //         status = 'SPEAKING';
+        //         rosterText += 'badge-success';
+        //     } else if (this.roster[attendeeId].volume > 0) {
+        //         status = '&nbsp;';
+        //         rosterText += 'badge-success';
+        //     }
+        //     rosterText += `">${status}</span></li>`;
+        // }
+        // const roster = document.getElementById('roster');
+        // if (roster.innerHTML !== rosterText) {
+        //     roster.innerHTML = rosterText;
+        // }
+    }
+
+    layoutVideoTiles(): void {
+        // if (!this.meetingSession) {
+        //     return;
+        // }
+        // const selfAttendeeId = this.meetingSession.configuration.credentials.attendeeId;
+        // const selfTileId = this.tileIdForAttendeeId(selfAttendeeId);
+        // const visibleTileIndices = this.visibleTileIndices();
+        // let activeTileId = this.activeTileId();
+        // const selfIsVisible = visibleTileIndices.includes(this.tileIdToTileIndex[selfTileId]);
+        // if (visibleTileIndices.length === 2 && selfIsVisible) {
+        //     activeTileId = this.tileIndexToTileId[
+        //         visibleTileInavigatorndices[0] === selfTileId ? visibleTileIndices[1] : visibleTileIndices[0]
+        //         ];
+        // }
+        // const hasVisibleActiveSpeaker = visibleTileIndices.includes(
+        //     this.tileIdToTileIndex[activeTileId]
+        // );
+        // if (this.activeSpeakerLayout && hasVisibleActiveSpeaker) {
+        //     this.layoutVideoTilesActiveSpeaker(visibleTileIndices, activeTileId);
+        // } else {
+        //     this.layoutVideoTilesGrid(visibleTileIndices);
+        // }
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
 
     // audioVideoDidStartConnecting(reconnecting: boolean): void {
     //     this.log(`session connecting. reconnecting: ${reconnecting}`);
@@ -1125,29 +1190,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //     return null;
     // }
 
-    // layoutVideoTiles(): void {
-    //     if (!this.meetingSession) {
-    //         return;
-    //     }
-    //     const selfAttendeeId = this.meetingSession.configuration.credentials.attendeeId;
-    //     const selfTileId = this.tileIdForAttendeeId(selfAttendeeId);
-    //     const visibleTileIndices = this.visibleTileIndices();
-    //     let activeTileId = this.activeTileId();
-    //     const selfIsVisible = visibleTileIndices.includes(this.tileIdToTileIndex[selfTileId]);
-    //     if (visibleTileIndices.length === 2 && selfIsVisible) {
-    //         activeTileId = this.tileIndexToTileId[
-    //             visibleTileIndices[0] === selfTileId ? visibleTileIndices[1] : visibleTileIndices[0]
-    //             ];
-    //     }
-    //     const hasVisibleActiveSpeaker = visibleTileIndices.includes(
-    //         this.tileIdToTileIndex[activeTileId]
-    //     );
-    //     if (this.activeSpeakerLayout && hasVisibleActiveSpeaker) {
-    //         this.layoutVideoTilesActiveSpeaker(visibleTileIndices, activeTileId);
-    //     } else {
-    //         this.layoutVideoTilesGrid(visibleTileIndices);
-    //     }
-    // }
+
 
     // visibleTileIndices(): number[] {
     //     let tiles: number[] = [];
@@ -1315,19 +1358,27 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     //////////////// CUSTOM CODE //////////////////
     ///////////////////////////////////////////////
 
+    // Def: Create room and join room as attendee
+    // Params: meeting id, attendee name and region
+    // Return <promise>: join info with meeting and attendee info
     joinMeeting(body) {
-        // const response = await fetch(
-        //     // tslint:disable-next-line:max-line-length
-        //     this.host + `join?title=${encodeURIComponent(meetingId)}&name=${encodeURIComponent(attendeeName)}&region=${encodeURIComponent(region)}`,
-        //     {
-        //         method: 'POST',
-        //     }
-        // );
-        // const json = await response.json();
-        // if (json.error) {
-        //     throw new Error(`Server error: ${json.error}`);
-        // }
-        // return json;
         return this.http.post(this.apiUrl + 'join', body);
+    }
+
+    // Def: Initialize session, get audio and video permissions, initialize and get list of all audio and video devices
+    // Params: res.joinInfo.Meeting and res.joinInfo.Attendee  subscribed to joinMeeting()
+    // Return:
+    startSession(meeting, attendee) {
+        this.initializeMeetingSession(
+            new MeetingSessionConfiguration(meeting, attendee)
+        );
+    }
+
+
+    // Def: Get attendee info
+    // Params: Attendee and title
+    // Return <promise>: Attendee info
+    getAttendeeInfo(body) {
+        return this.http.get(this.apiUrl + 'attendee', body);
     }
 }

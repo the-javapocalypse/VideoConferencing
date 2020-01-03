@@ -105,12 +105,13 @@ export class JoinMeetingComponent implements OnInit, OnDestroy {
         let attendeeName = formData.attendeeName;
         let region = 'us-east-1'; // default region
 
-        console.log('requesting');
+        console.log('Joining meting...');
         this.chime.joinMeeting({
             title: meetingId,
             name: attendeeName
         }).subscribe((res: any) => {
-                console.log(res);
+                console.log('Successfully joined...');
+                this.chime.startSession(res.JoinInfo.Meeting, res.JoinInfo.Attendee);
             },
             (err: any) => {
                 console.log(err);
