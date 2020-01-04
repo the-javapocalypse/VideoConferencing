@@ -103,10 +103,13 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     static readonly DID: string = '+17035550122';
     static readonly BASE_URL: string = [location.protocol, '//', location.host, location.pathname.replace(/\/*$/, '/')].join('');
 
-
+    // Todo: Export in other file
     private host = 'https://localhost:8080/';
     private apiUrl = this.host + 'vc/';
 
+    // Custom variables to be used in components
+    audioInputDeviceList = [];
+    audiOutputDeviceList = [];
 
     showActiveSpeakerScores = false;
     // activeSpeakerLayout = true;
@@ -833,23 +836,26 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // -------------------- AUDIO OUTPUTS ----------------------- //
 
     async populateAudioOutputList(): Promise<void> {
-        const genericName = 'Speaker';
-        const additionalDevices: string[] = [];
-        this.populateDeviceList(
-            'audio-output',
-            genericName,
-            await this.audioVideo.listAudioOutputDevices(),
-            additionalDevices
-        );
-        this.populateInMeetingDeviceList(
-            'dropdown-menu-speaker',
-            genericName,
-            await this.audioVideo.listAudioOutputDevices(),
-            additionalDevices,
-            async (name: string) => {
-                await this.audioVideo.chooseAudioOutputDevice(name);
-            }
-        );
+        this.audiOutputDeviceList = await this.audioVideo.listAudioOutputDevices();
+        console.log('insideeeeeeee');
+        console.log(this.audiOutputDeviceList);
+        // const genericName = 'Speaker';
+        // const additionalDevices: string[] = [];
+        // this.populateDeviceList(
+        //     'audio-output',
+        //     genericName,
+        //     await this.audioVideo.listAudioOutputDevices(),
+        //     additionalDevices
+        // );
+        // this.populateInMeetingDeviceList(
+        //     'dropdown-menu-speaker',
+        //     genericName,
+        //     await this.audioVideo.listAudioOutputDevices(),
+        //     additionalDevices,
+        //     async (name: string) => {
+        //         await this.audioVideo.chooseAudioOutputDevice(name);
+        //     }
+        // );
     }
 
 
@@ -1346,7 +1352,6 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // }
 
 
-
     // connectionDidBecomePoor(): void {
     //     this.log('connection is poor');
     // }
@@ -1387,4 +1392,5 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     getAttendeeInfo(body) {
         return this.http.get(this.apiUrl + 'attendee', body);
     }
+
 }

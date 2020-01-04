@@ -1,7 +1,6 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
 import {ChimeService} from '../../services/api/chime.service';
-import {log} from "util";
 
 @Component({
     selector: 'app-join-meeting',
@@ -17,7 +16,7 @@ export class JoinMeetingComponent implements OnInit, OnDestroy {
     meetingId = null;
     attendeeName = null;
 
-    constructor(private route: ActivatedRoute, private chime: ChimeService) {
+    constructor(private route: ActivatedRoute, private router: Router, private chime: ChimeService) {
     }
 
     @HostListener('document:mousemove', ['$event'])
@@ -112,6 +111,7 @@ export class JoinMeetingComponent implements OnInit, OnDestroy {
         }).subscribe((res: any) => {
                 console.log('Successfully joined...');
                 this.chime.startSession(res.JoinInfo.Meeting, res.JoinInfo.Attendee);
+                this.router.navigate(['/meeting/' + meetingId]);
             },
             (err: any) => {
                 console.log(err);
