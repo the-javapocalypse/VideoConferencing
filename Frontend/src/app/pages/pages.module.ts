@@ -22,6 +22,7 @@ import { ProfilepageComponent } from "./examples/profilepage/profilepage.compone
 import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
 import { JoinMeetingComponent } from './join-meeting/join-meeting.component';
+import { MeetingComponent } from './meeting/meeting.component';
 
 @NgModule({
   imports: [
@@ -47,7 +48,8 @@ import { JoinMeetingComponent } from './join-meeting/join-meeting.component';
     ProfilepageComponent,
     RegisterpageComponent,
     LandingpageComponent,
-    JoinMeetingComponent
+    JoinMeetingComponent,
+    MeetingComponent
   ],
   exports: [
     IndexComponent,

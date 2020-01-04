@@ -8,6 +8,7 @@ import { ProfilepageComponent } from './pages/examples/profilepage/profilepage.c
 import { RegisterpageComponent } from './pages/examples/registerpage/registerpage.component';
 import { LandingpageComponent } from './pages/examples/landingpage/landingpage.component';
 import { JoinMeetingComponent } from './pages/join-meeting/join-meeting.component';
+import {MeetingComponent} from './pages/meeting/meeting.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfilepageComponent },
   { path: 'register', component: RegisterpageComponent },
   { path: 'landing', component: LandingpageComponent },
-  { path: 'join/:meeting_id', component: JoinMeetingComponent }
+  { path: 'join/:meeting_id', component: JoinMeetingComponent },
+  { path: 'meeting/:meeting_id', component: MeetingComponent }
 
 ];
 
