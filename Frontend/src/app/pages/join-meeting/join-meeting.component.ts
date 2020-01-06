@@ -1,6 +1,7 @@
 import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {ChimeService} from '../../services/api/chime.service';
+import {LocalStorageService} from '../../services/storage/local-storage.service';
 
 @Component({
     selector: 'app-join-meeting',
@@ -16,7 +17,8 @@ export class JoinMeetingComponent implements OnInit, OnDestroy {
     meetingId = null;
     attendeeName = null;
 
-    constructor(private route: ActivatedRoute, private router: Router, private chime: ChimeService) {
+    // tslint:disable-next-line:max-line-length
+    constructor(private route: ActivatedRoute, private router: Router, private chime: ChimeService, private localStorage: LocalStorageService) {
     }
 
     @HostListener('document:mousemove', ['$event'])
@@ -103,6 +105,14 @@ export class JoinMeetingComponent implements OnInit, OnDestroy {
         let meetingId = this.route.snapshot.paramMap.get('meeting_id');
         let attendeeName = formData.attendeeName;
         let region = 'us-east-1'; // default region
+
+        // Save info (if not set) in localstorage to directly continue to meeting next time visiting the page
+        if (!this.localStorage.roasterInfoIsSet()) {
+            this.localStorage.setRoasterInfo({
+                meetingId: meetingId,
+                attendeeName: attendeeName
+            });
+        }
 
         console.log('Joining meting...');
         this.chime.joinMeeting({
