@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="" />
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +88,7 @@
       <workItem from="1577953280137" duration="7033000" />
       <workItem from="1578030419042" duration="9501000" />
       <workItem from="1578123314199" duration="8380000" />
-      <workItem from="1578301980946" duration="6822000" />
+      <workItem from="1578301980946" duration="8540000" />
     </task>
     <task id="LOCAL-00001" summary="Added Chime">
       <created>1577533465175</created>
@@ -192,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578308672388</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Audio Output Device UI">
+      <created>1578308831331</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1578308831331</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +239,7 @@
     <MESSAGE value="Added Local Storage Service" />
     <MESSAGE value="Local storage for roaster working" />
     <MESSAGE value="Audio Input Device UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Audio Input Device UI" />
+    <MESSAGE value="Audio Output Device UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Audio Output Device UI" />
   </component>
 </project>

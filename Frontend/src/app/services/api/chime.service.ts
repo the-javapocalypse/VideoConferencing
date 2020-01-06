@@ -107,9 +107,6 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     private host = 'https://localhost:8080/';
     private apiUrl = this.host + 'vc/';
 
-    // Custom variables to be used in components
-    audioInputDeviceList = [];
-    audiOutputDeviceList = [];
 
     showActiveSpeakerScores = false;
     // activeSpeakerLayout = true;
@@ -836,7 +833,6 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // -------------------- AUDIO OUTPUTS ----------------------- //
 
     async populateAudioOutputList(): Promise<void> {
-        this.audiOutputDeviceList = await this.audioVideo.listAudioOutputDevices(); // !!!---
         // const genericName = 'Speaker';
         // const additionalDevices: string[] = [];
         // this.populateDeviceList(
