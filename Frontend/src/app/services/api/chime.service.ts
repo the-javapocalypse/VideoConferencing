@@ -836,9 +836,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // -------------------- AUDIO OUTPUTS ----------------------- //
 
     async populateAudioOutputList(): Promise<void> {
-        this.audiOutputDeviceList = await this.audioVideo.listAudioOutputDevices();
-        console.log('insideeeeeeee');
-        console.log(this.audiOutputDeviceList);
+        this.audiOutputDeviceList = await this.audioVideo.listAudioOutputDevices(); // !!!---
         // const genericName = 'Speaker';
         // const additionalDevices: string[] = [];
         // this.populateDeviceList(
