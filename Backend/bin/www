@@ -21,8 +21,8 @@ var debug = require('debug')('chimebackend:server');
  */
 var protocol = 'https';
 let options = {
-  key: fs.readFileSync('./key.pem'),
-  cert: fs.readFileSync('./cert.pem')
+  key: fs.readFileSync('./ssl.key'),
+  cert: fs.readFileSync('./ssl.crt')
 };
 let port = 8080;
 

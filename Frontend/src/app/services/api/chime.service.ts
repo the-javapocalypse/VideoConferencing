@@ -977,6 +977,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
 
     // Attendee id presence handler
     setupSubscribeToAttendeeIdPresenceHandler(): void {
+        console.log('javatar');
         const handler = (attendeeId: string, present: boolean): void => {
             this.log(`${attendeeId} present = ${present}`);
             if (!present) {

@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +93,9 @@
       <workItem from="1577953280137" duration="7033000" />
       <workItem from="1578030419042" duration="9501000" />
       <workItem from="1578123314199" duration="8380000" />
-      <workItem from="1578301980946" duration="9348000" />
+      <workItem from="1578301980946" duration="13326000" />
+      <workItem from="1578382016177" duration="3645000" />
+      <workItem from="1578386028865" duration="1719000" />
     </task>
     <task id="LOCAL-00001" summary="Added Chime">
       <created>1577533465175</created>
@@ -208,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578310554392</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update Input Audio Device">
+      <created>1578311434656</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1578311434656</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +262,7 @@
     <MESSAGE value="Audio Input Device UI" />
     <MESSAGE value="Audio Output Device UI" />
     <MESSAGE value="Meeting Controls UI Refined" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meeting Controls UI Refined" />
+    <MESSAGE value="Update Input Audio Device" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Input Audio Device" />
   </component>
 </project>
