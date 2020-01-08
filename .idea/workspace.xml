@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +91,7 @@
       <workItem from="1578382016177" duration="3645000" />
       <workItem from="1578386028865" duration="5797000" />
       <workItem from="1578421310467" duration="746000" />
-      <workItem from="1578462837220" duration="7106000" />
+      <workItem from="1578462837220" duration="8219000" />
     </task>
     <task id="LOCAL-00001" summary="Added Chime">
       <created>1577533465175</created>
@@ -235,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578401582133</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added speaker test and video quality">
+      <created>1578470685056</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1578470685056</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +282,7 @@
     <MESSAGE value="Update Input Audio Device" />
     <MESSAGE value="Video Preview working" />
     <MESSAGE value="Audio Preview Working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Audio Preview Working" />
+    <MESSAGE value="Added speaker test and video quality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added speaker test and video quality" />
   </component>
 </project>
