@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 const compression = require('compression');
 const uuid = require('uuid/v4');
-
+const log = require('../utils/logger');
 
 const chime = new AWS.Chime({ region: 'us-east-1' });
 chime.endpoint = new AWS.Endpoint('https://service.chime.aws.amazon.com/console');
@@ -13,7 +13,8 @@ const attendeeCache = {};
 module.exports = {
     // join meeting
     async joinMeeting(req, res, next){
-        compression({})(req, res, () => {});
+        compression({})(req, res, () => {
+        });
         const title = req.body.title;
         const name = req.body.name;
 
@@ -45,6 +46,8 @@ module.exports = {
             },
         };
         attendeeCache[title][joinInfo.JoinInfo.Attendee.AttendeeId] = name;
+        log(meetingCache);
+        log(attendeeCache);
         res.send(JSON.stringify(joinInfo));
         res.end();
     },
