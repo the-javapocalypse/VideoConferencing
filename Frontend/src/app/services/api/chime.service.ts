@@ -24,7 +24,7 @@ import {
     TimeoutScheduler,
     VideoTileState,
     ScreenShareFacadeObserver
-} from '../../../assets/vendor/chime/index';
+} from '../../../assets/vendor/chimeCompiled/index';
 
 
 @Injectable({
@@ -549,13 +549,11 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // }
 
     // Join meeting
-    // async join(): Promise<void> {
-    //     await this.openAudioInputFromSelection();
-    //     await this.openAudioOutputFromSelection();
-    //     this.audioVideo.start();
-    //     await this.meetingSession.screenShare.open();
-    //     await this.meetingSession.screenShareView.open();
-    // }
+    async join(): Promise<void> {
+        this.audioVideo.start();
+        await this.meetingSession.screenShare.open();
+        await this.meetingSession.screenShareView.open();
+    }
 
     // Leave meeting
     // leave(): void {
@@ -950,7 +948,6 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // }
 
 
-
     //////////////////////////////// MUTE|UNMUTE Handlers ////////////////////////////////////
 
 
@@ -978,9 +975,10 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
 
     // Attendee id presence handler
     setupSubscribeToAttendeeIdPresenceHandler(): void {
-        console.log('javatar');
+        console.log('custom----------------------- 1');
         const handler = (attendeeId: string, present: boolean): void => {
             this.log(`${attendeeId} present = ${present}`);
+            console.log('custom-----------------------2');
             if (!present) {
                 delete this.roster[attendeeId];
                 this.updateRoster();
@@ -1007,15 +1005,17 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
                         this.roster[attendeeId].signalStrength = Math.round(signalStrength * 100);
                     }
                     if (!this.roster[attendeeId].name) {
+                        console.log('custom-----------------------3');
                         // Get attendee info if not already present
                         const response = await this.getAttendeeInfo({
                             title: this.meeting,
                             attendee: attendeeId
                         }).subscribe((res: any) => {
+                            console.log('custom-----------------------');
+                            console.log(res);
                             const name = res.AttendeeInfo.Name;
                             this.roster[attendeeId].name = name ? name : '';
                             this.updateRoster();
-
                         });
                     }
                     this.updateRoster();
@@ -1089,6 +1089,8 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
         // if (roster.innerHTML !== rosterText) {
         //     roster.innerHTML = rosterText;
         // }
+        console.log('java');
+        console.log(this.roster);
     }
 
     layoutVideoTiles(): void {
@@ -1387,6 +1389,17 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // Return <promise>: Attendee info
     getAttendeeInfo(body) {
         return this.http.get(this.apiUrl + 'attendee', body);
+    }
+
+
+    startMeeting() {
+        new AsyncScheduler().start(async () => {
+            try {
+                await this.join();
+            } catch (error) {
+                console.log(error.message);
+            }
+        });
     }
 
 }

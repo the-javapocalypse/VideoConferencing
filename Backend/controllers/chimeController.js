@@ -59,5 +59,6 @@ module.exports = {
             },
         };
         res.send(JSON.stringify(attendeeInfo));
+        res.end();
     }
 }
