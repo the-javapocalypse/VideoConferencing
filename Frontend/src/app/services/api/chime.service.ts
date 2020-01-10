@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {LocalStorageService} from '../storage/local-storage.service';
 
 import {
     AsyncScheduler,
@@ -138,7 +139,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // // feature flags
     enableWebAudio = false;
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private storage: LocalStorageService) {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         // (global as any).app = this;
         // this.switchToFlow('flow-authenticate');
@@ -1003,11 +1004,13 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
                         this.roster[attendeeId].signalStrength = Math.round(signalStrength * 100);
                     }
                     if (!this.roster[attendeeId].name) {
+                        console.log('custom 1');
                         // Get attendee info if not already present
                         const response = await this.getAttendeeInfo({
-                            title: this.meeting,
+                            title: this.storage.getRoasterInfo().meetingId,
                             attendee: attendeeId
                         }).subscribe((res: any) => {
+                            console.log('custom 2');
                             const name = res.AttendeeInfo.Name;
                             this.roster[attendeeId].name = name ? name : '';
                             this.updateRoster();
@@ -1381,17 +1384,18 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // Params: Attendee and title
     // Return <promise>: Attendee info
     getAttendeeInfo(body) {
-        return this.http.get(this.apiUrl + 'attendee', body);
+        return this.http.post(this.apiUrl + 'attendee', body);
     }
 
 
     startMeeting() {
         new AsyncScheduler().start(async () => {
-            try {
-                await this.join();
-            } catch (error) {
-                console.log(error.message);
-            }
+            await this.join();
+            // try {
+            //     await this.join();
+            // } catch (error) {
+            //     console.log(error.message);
+            // }
         });
     }
 

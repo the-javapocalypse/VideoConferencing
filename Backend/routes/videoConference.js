@@ -11,7 +11,7 @@ router.post('/join',  function(req, res, next) {
 });
 
 /* Attendee Info */
-router.get('/attendee',  function(req, res, next) {
+router.post('/attendee',  function(req, res, next) {
      controllers.chime.attendee(req, res, next);
 });
 

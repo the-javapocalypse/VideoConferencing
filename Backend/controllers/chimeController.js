@@ -46,8 +46,6 @@ module.exports = {
             },
         };
         attendeeCache[title][joinInfo.JoinInfo.Attendee.AttendeeId] = name;
-        log(meetingCache);
-        log(attendeeCache);
         res.send(JSON.stringify(joinInfo));
         res.end();
     },
