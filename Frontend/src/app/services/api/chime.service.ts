@@ -1385,19 +1385,16 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
         return this.http.post(this.apiUrl + 'attendee', body);
     }
 
-
+    // Def: Start and subscribe to meeting
+    // Params:
+    // Return <promise>:
     startMeeting() {
         new AsyncScheduler().start(async () => {
             await this.join();
-            // try {
-            //     await this.join();
-            // } catch (error) {
-            //     console.log(error.message);
-            // }
         });
     }
 
-
+    // Def: Return roster to meeting component
     async getRoster() {
         return this.roster;
     }

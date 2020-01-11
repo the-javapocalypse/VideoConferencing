@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +102,7 @@
       <workItem from="1578483996583" duration="2055000" />
       <workItem from="1578549301035" duration="12232000" />
       <workItem from="1578635398596" duration="9700000" />
-      <workItem from="1578721532573" duration="9588000" />
+      <workItem from="1578721532573" duration="9955000" />
     </task>
     <task id="LOCAL-00001" summary="Added Chime">
       <created>1577533465175</created>
@@ -307,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578729789457</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Added comments">
+      <created>1578731382623</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1578731382623</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +336,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Join Api Integrated" />
     <MESSAGE value="Added Docs" />
     <MESSAGE value="Created Get Attendee API" />
     <MESSAGE value="initializing meeting in-progress" />
@@ -354,6 +360,7 @@
     <MESSAGE value="Refactored UI" />
     <MESSAGE value="Attendee List UI" />
     <MESSAGE value="Real Time Attendee Data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Real Time Attendee Data" />
+    <MESSAGE value="Added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added comments" />
   </component>
 </project>
