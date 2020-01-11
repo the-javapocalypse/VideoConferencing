@@ -1397,4 +1397,8 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
         });
     }
 
+
+    async getRoster() {
+        return this.roster;
+    }
 }
