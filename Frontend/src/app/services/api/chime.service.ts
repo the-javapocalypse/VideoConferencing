@@ -1004,13 +1004,11 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
                         this.roster[attendeeId].signalStrength = Math.round(signalStrength * 100);
                     }
                     if (!this.roster[attendeeId].name) {
-                        console.log('custom 1');
                         // Get attendee info if not already present
                         const response = await this.getAttendeeInfo({
                             title: this.storage.getRoasterInfo().meetingId,
                             attendee: attendeeId
                         }).subscribe((res: any) => {
-                            console.log('custom 2');
                             const name = res.AttendeeInfo.Name;
                             this.roster[attendeeId].name = name ? name : '';
                             this.updateRoster();
