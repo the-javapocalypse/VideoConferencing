@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +103,7 @@
       <workItem from="1578549301035" duration="12232000" />
       <workItem from="1578635398596" duration="9700000" />
       <workItem from="1578721532573" duration="18862000" />
-      <workItem from="1578900655170" duration="4060000" />
+      <workItem from="1578900655170" duration="6941000" />
     </task>
     <task id="LOCAL-00001" summary="Added Chime">
       <created>1577533465175</created>
@@ -352,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578742780185</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Audio Chat Working">
+      <created>1578904970454</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1578904970454</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +379,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Meeting Component Added" />
     <MESSAGE value="Removed Global style for light bg dark text" />
     <MESSAGE value="Meeting room ui" />
     <MESSAGE value="Added Local Storage Service" />
@@ -399,6 +403,7 @@
     <MESSAGE value="Mute Unmute integrated" />
     <MESSAGE value="Added Video Input Toggle" />
     <MESSAGE value="UI Tweaked" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Tweaked" />
+    <MESSAGE value="Audio Chat Working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Audio Chat Working" />
   </component>
 </project>
