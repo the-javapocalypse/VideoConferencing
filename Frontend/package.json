@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --ssl --ssl-key ssl.key  --ssl-cert ssl.crt",
+    "start": "ng serve --host 0.0.0.0 --ssl --ssl-key ssl.key  --ssl-cert ssl.crt",
     "build": "ng build",
     "description": "BLK Design System Angular: Free Angular Design System For Bootstrap 4 and Angular",
     "test": "ng test",
