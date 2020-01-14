@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngx-admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ngx-admin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngx-admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ngx-admin/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +102,7 @@
       <workItem from="1578635398596" duration="9700000" />
       <workItem from="1578721532573" duration="18862000" />
       <workItem from="1578900655170" duration="9062000" />
-      <workItem from="1578981669839" duration="2659000" />
+      <workItem from="1578981669839" duration="2950000" />
     </task>
     <task id="LOCAL-00001" summary="Added Chime">
       <created>1577533465175</created>
@@ -375,7 +370,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578917399624</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added New Frontend">
+      <created>1578985082706</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1578985082707</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Added chime sdk in new frontend">
+      <created>1578985231368</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1578985231368</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,8 +406,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added Local Storage Service" />
-    <MESSAGE value="Local storage for roaster working" />
     <MESSAGE value="Audio Input Device UI" />
     <MESSAGE value="Audio Output Device UI" />
     <MESSAGE value="Meeting Controls UI Refined" />
@@ -422,6 +429,8 @@
     <MESSAGE value="Audio Chat Working" />
     <MESSAGE value="Btn for audio and video input toggle" />
     <MESSAGE value="UI Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Updated" />
+    <MESSAGE value="Added New Frontend" />
+    <MESSAGE value="Added chime sdk in new frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added chime sdk in new frontend" />
   </component>
 </project>
