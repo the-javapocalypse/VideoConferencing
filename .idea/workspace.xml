@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="" />
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngx-admin/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ngx-admin/src/app/pages/pages-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngx-admin/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ngx-admin/src/app/pages/pages.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngx-admin/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ngx-admin/src/app/services/api/chime.service.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +108,8 @@
       <workItem from="1578721532573" duration="18862000" />
       <workItem from="1578900655170" duration="9062000" />
       <workItem from="1578981669839" duration="3259000" />
-      <workItem from="1578986380688" duration="8574000" />
+      <workItem from="1578986380688" duration="8837000" />
+      <workItem from="1579072977501" duration="2890000" />
     </task>
     <task id="LOCAL-00001" summary="Added Chime">
       <created>1577533465175</created>
