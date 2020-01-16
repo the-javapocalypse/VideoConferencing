@@ -119,7 +119,11 @@
                                    (click)="videoInputHandler()">
                         </nb-action>
                         <!--       Video Input On Handler End      -->
-                        <nb-action icon="person-outline"></nb-action>
+                        <!--       Screen Share Handler Start      -->
+                        <nb-action icon='{{shareScreen ? "close-square-outline" : "cast-outline"}}'
+                                   (click)="shareScreenInputHandler()">
+                        </nb-action>
+                        <!--       Screen Share Handler End      -->
                         <nb-action icon="home-outline"></nb-action>
                         <nb-action>Some Action</nb-action>
                     </nb-actions>
