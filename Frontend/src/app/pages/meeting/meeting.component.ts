@@ -13,8 +13,11 @@ import {interval} from 'rxjs';
 
 export class MeetingComponent implements OnInit {
 
-    constructor(@Inject(DOCUMENT) document, public chime: ChimeService,
-                private router: Router, private route: ActivatedRoute) {
+    constructor(@Inject(DOCUMENT) document,
+                public chime: ChimeService,
+                private router: Router,
+                private route: ActivatedRoute,
+                ) {
     }
 
 
@@ -105,6 +108,7 @@ export class MeetingComponent implements OnInit {
         this.currentVideoInputDeviceID = id;
         console.log('updating video input device');
         await this.chime.audioVideo.chooseVideoInputDevice(id);
+        // tslint:disable-next-line:max-line-length
         this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-preview') as HTMLVideoElement);
     }
 
@@ -128,7 +132,7 @@ export class MeetingComponent implements OnInit {
     // Def: Play demo audio clip to test audio output
     playAudio() {
         this.speakerTestFlag = true;
-        let audio = new Audio();
+        const audio = new Audio();
         audio.src = '../../assets/audio/audiotest.wav';
         audio.load();
         audio.play();
@@ -163,8 +167,8 @@ export class MeetingComponent implements OnInit {
                 for (const f of data) {
                     max = Math.max(max, Math.abs(f));
                 }
-                let normalized = (Math.log(lowest) - Math.log(max)) / Math.log(lowest);
-                let percent = Math.min(Math.max(normalized * 100, 0), 100);
+                const normalized = (Math.log(lowest) - Math.log(max)) / Math.log(lowest);
+                const percent = Math.min(Math.max(normalized * 100, 0), 100);
                 this.audioInputPreview = percent;
             }
             frameIndex = (frameIndex + 1) % 2;
@@ -215,17 +219,17 @@ export class MeetingComponent implements OnInit {
         }
     }
 
-  shareScreenInputHandler() {
-    // Toggle flag
-    this.shareScreen = !this.shareScreen;
-    if (this.shareScreen) {
-      // Start screen share
+    shareScreenInputHandler() {
+        // Toggle flag
+        this.shareScreen = !this.shareScreen;
+        if (this.shareScreen) {
+            // Start screen share
 
-    } else {
-      // Stop screen share
+        } else {
+            // Stop screen share
 
+        }
     }
-  }
 
     // Def: helper method to sleep for x microseconds
     delay(ms: number) {
