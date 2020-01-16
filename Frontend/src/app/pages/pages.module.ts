@@ -6,7 +6,7 @@ import {
     NbInputModule,
     NbMenuModule, NbProgressBarModule,
     NbSelectModule,
-    NbStepperModule
+    NbStepperModule, NbTabsetModule
 } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
@@ -35,6 +35,7 @@ import {FormsModule} from "@angular/forms";
         NbSelectModule,
         NbProgressBarModule,
         NbActionsModule,
+        NbTabsetModule,
     ],
   declarations: [
     PagesComponent,

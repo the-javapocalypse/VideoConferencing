@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/pages.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,14 +109,7 @@
       <workItem from="1578981669839" duration="3259000" />
       <workItem from="1578986380688" duration="8837000" />
       <workItem from="1579072977501" duration="6722000" />
-      <workItem from="1579157439372" duration="11283000" />
-    </task>
-    <task id="LOCAL-00013" summary="Added Local Storage Service">
-      <created>1578303596079</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1578303596079</updated>
+      <workItem from="1579157439372" duration="11545000" />
     </task>
     <task id="LOCAL-00014" summary="Local storage for roaster working">
       <created>1578305486628</created>
@@ -454,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579174552090</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Meeting Controls UI Done">
+      <created>1579175477381</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1579175477381</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +479,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Btn for audio and video input toggle" />
     <MESSAGE value="UI Updated" />
     <MESSAGE value="Added New Frontend" />
     <MESSAGE value="Added chime sdk in new frontend" />
@@ -504,6 +503,7 @@
     <MESSAGE value="Audio mute handler" />
     <MESSAGE value="Video input handler" />
     <MESSAGE value="Toggle Screen Sharing UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Toggle Screen Sharing UI" />
+    <MESSAGE value="Meeting Controls UI Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Meeting Controls UI Done" />
   </component>
 </project>
