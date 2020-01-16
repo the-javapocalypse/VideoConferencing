@@ -1,62 +1,44 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
-import { RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import {
+  NbButtonModule,
+  NbCardModule,
+  NbInputModule,
+  NbMenuModule, NbProgressBarModule,
+  NbSelectModule,
+  NbStepperModule
+} from '@nebular/theme';
 
-import { BsDropdownModule } from "ngx-bootstrap/dropdown";
-import { ProgressbarModule } from "ngx-bootstrap/progressbar";
-import { TooltipModule } from "ngx-bootstrap/tooltip";
-import { CollapseModule } from "ngx-bootstrap/collapse";
-import { TabsModule } from "ngx-bootstrap/tabs";
-import { PaginationModule } from "ngx-bootstrap/pagination";
-import { AlertModule } from "ngx-bootstrap/alert";
-import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
-import { CarouselModule } from "ngx-bootstrap/carousel";
-import { ModalModule } from "ngx-bootstrap/modal";
-import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
-import { PopoverModule } from "ngx-bootstrap/popover";
-
-import { IndexComponent } from "./index/index.component";
-import { ProfilepageComponent } from "./examples/profilepage/profilepage.component";
-import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
-import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
-import { JoinMeetingComponent } from './join-meeting/join-meeting.component';
+import { ThemeModule } from '../@theme/theme.module';
+import { PagesComponent } from './pages.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { ECommerceModule } from './e-commerce/e-commerce.module';
+import { PagesRoutingModule } from './pages-routing.module';
+import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
+import { JoinComponent } from './join/join.component';
 import { MeetingComponent } from './meeting/meeting.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
-    CommonModule,
-    BrowserModule,
+    PagesRoutingModule,
+    ThemeModule,
+    NbMenuModule,
+    DashboardModule,
+    ECommerceModule,
+    MiscellaneousModule,
+    NbCardModule,
+    NbInputModule,
+    NbButtonModule,
+    NbStepperModule,
     FormsModule,
-    RouterModule,
-    BsDropdownModule.forRoot(),
-    ProgressbarModule.forRoot(),
-    TooltipModule.forRoot(),
-    PopoverModule.forRoot(),
-    CollapseModule.forRoot(),
-    JwBootstrapSwitchNg2Module,
-    TabsModule.forRoot(),
-    PaginationModule.forRoot(),
-    AlertModule.forRoot(),
-    BsDatepickerModule.forRoot(),
-    CarouselModule.forRoot(),
-    ModalModule.forRoot()
+    NbSelectModule,
+    NbProgressBarModule,
   ],
   declarations: [
-    IndexComponent,
-    ProfilepageComponent,
-    RegisterpageComponent,
-    LandingpageComponent,
-    JoinMeetingComponent,
-    MeetingComponent
+    PagesComponent,
+    JoinComponent,
+    MeetingComponent,
   ],
-  exports: [
-    IndexComponent,
-    ProfilepageComponent,
-    RegisterpageComponent,
-    LandingpageComponent
-  ],
-  providers: []
 })
-export class PagesModule {}
+export class PagesModule {
+}

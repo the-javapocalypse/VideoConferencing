@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +106,7 @@
       <workItem from="1578981669839" duration="3259000" />
       <workItem from="1578986380688" duration="8837000" />
       <workItem from="1579072977501" duration="6722000" />
-      <workItem from="1579157439372" duration="3911000" />
-    </task>
-    <task id="LOCAL-00009" summary="initializeMeetingSession() Working">
-      <created>1578052695329</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1578052695329</updated>
+      <workItem from="1579157439372" duration="4587000" />
     </task>
     <task id="LOCAL-00010" summary="Meeting Component Added">
       <created>1578129554793</created>
@@ -453,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579160535492</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Backup">
+      <created>1579161547287</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1579161547287</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +473,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Mute Unmute integrated" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/ngx-admin" />
+    </ignored-roots>
     <MESSAGE value="Added Video Input Toggle" />
     <MESSAGE value="UI Tweaked" />
     <MESSAGE value="Audio Chat Working" />
@@ -500,6 +500,7 @@
     <MESSAGE value="Updated Audio Input Preview" />
     <MESSAGE value="Manage Devices UI Refactored" />
     <MESSAGE value="Manage Device Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manage Device Done" />
+    <MESSAGE value="Backup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backup" />
   </component>
 </project>

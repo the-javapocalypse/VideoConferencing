@@ -1,34 +1,61 @@
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
-import { Routes, RouterModule } from '@angular/router';
-
-import { IndexComponent } from './pages/index/index.component';
-import { ProfilepageComponent } from './pages/examples/profilepage/profilepage.component';
-import { RegisterpageComponent } from './pages/examples/registerpage/registerpage.component';
-import { LandingpageComponent } from './pages/examples/landingpage/landingpage.component';
-import { JoinMeetingComponent } from './pages/join-meeting/join-meeting.component';
-import {MeetingComponent} from './pages/meeting/meeting.component';
+import {
+  NbAuthComponent,
+  NbLoginComponent,
+  NbLogoutComponent,
+  NbRegisterComponent,
+  NbRequestPasswordComponent,
+  NbResetPasswordComponent,
+} from '@nebular/auth';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: IndexComponent },
-  { path: 'profile', component: ProfilepageComponent },
-  { path: 'register', component: RegisterpageComponent },
-  { path: 'landing', component: LandingpageComponent },
-  { path: 'join/:meeting_id', component: JoinMeetingComponent },
-  { path: 'meeting/:meeting_id', component: MeetingComponent }
-
+  {
+    path: '',
+    loadChildren: () => import('app/pages/pages.module')
+      .then(m => m.PagesModule),
+  },
+  {
+    path: 'auth',
+    component: NbAuthComponent,
+    children: [
+      {
+        path: '',
+        component: NbLoginComponent,
+      },
+      {
+        path: 'login',
+        component: NbLoginComponent,
+      },
+      {
+        path: 'register',
+        component: NbRegisterComponent,
+      },
+      {
+        path: 'logout',
+        component: NbLogoutComponent,
+      },
+      {
+        path: 'request-password',
+        component: NbRequestPasswordComponent,
+      },
+      {
+        path: 'reset-password',
+        component: NbResetPasswordComponent,
+      },
+    ],
+  },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login' },
 ];
 
+const config: ExtraOptions = {
+  useHash: false,
+};
+
 @NgModule({
-  imports: [
-    CommonModule,
-    BrowserModule,
-    RouterModule.forRoot(routes, {
-      useHash: false
-    })
-  ],
-  exports: []
+  imports: [RouterModule.forRoot(routes, config)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

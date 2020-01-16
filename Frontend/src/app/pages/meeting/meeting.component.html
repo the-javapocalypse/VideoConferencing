@@ -1,236 +1,211 @@
 <!--Device Management-->
 <div [class.d-none]="!deviceManagementFLAG" class="wrapper">
-    <div class="container">
-        <div class="pt-5">
-            <div class="card ">
-                <div class="card-body p-5">
-                    <h2 class="card-title text-center">
-                        Manage Devices
-                    </h2>
-                    <div class="row pt-5">
-                        <div class="col-12 col-md-3">
-                            <h4>
-                                Microphone
-                            </h4>
-                            <!--    AUDIO INPUT CONTROLS START     -->
-                            <button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="audioInputBtn"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{ currentAudioInputDevice  | slice:0:24}}
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="audioInputBtn">
-                                <div *ngFor="let audioInput of audioInputDevices">
-                                    <a class="dropdown-item"
-                                       (click)="updateCurrentAudioInputDevice(audioInput.label, audioInput.deviceId)">
-                                        {{audioInput.label | slice:0:24}}
-                                    </a>
-                                </div>
-                            </div>
-                            <!--    AUDIO INPUT CONTROLS END     -->
-                            <h4 class="pt-md-5">
-                                Camera
-                            </h4>
-                            <!--    VIDEO INPUT CONTROLS START     -->
-                            <div class="dropdown controls-inline">
-                                <button class="btn btn-default dropdown-toggle btn-block" type="button"
-                                        data-toggle="dropdown">
-                                    {{currentVideoInputDevice | slice:0:24}}
-                                </button>
-                                <div class="dropdown-menu" *ngFor="let videoInput of videoInputDevices">
-                                    <a class="dropdown-item"
-                                       (click)="updateCurrentVideoInputDevice(videoInput.label, videoInput.deviceId)">
-                                        {{videoInput.label | slice:0:24}}
-                                    </a>
-                                </div>
-                            </div>
-                            <!--    VIDEO INPUT CONTROLS END     -->
-                        </div>
-
-                        <div class="col-md-1 col-0"></div>
-
-                        <div class="col-md-3 col-12">
-                            <h4>
-                                Speaker
-                            </h4>
-                            <!--    AUDIO OUTPUT CONTROLS START     -->
-                            <button class="btn btn-secondary dropdown-toggle btn-block" type="button"
-                                    id="audioOutputBtn"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{currentAudioOutputDevice | slice:0:24}}
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="audioOutputBtn">
-                                <div *ngFor="let audioOutput of audioOutputDevices">
-                                    <a class="dropdown-item"
-                                       (click)="updateCurrentAudioOutputDevice(audioOutput.label, audioOutput.deviceId)">
-                                        {{audioOutput.label | slice:0:24}}
-                                    </a>
-                                </div>
-                            </div>
-                            <!--    AUDIO OUTPUT CONTROLS END     -->
-                            <h4 class="pt-md-5">
-                                Video Quality
-                            </h4>
-                            <!--    VIDEO QUALITY CONTROLS START     -->
-                            <div class="dropdown controls-inline">
-                                <button class="btn btn-default dropdown-toggle btn-block" type="button"
-                                        data-toggle="dropdown">
-                                    {{videoQualityPreview | slice:0:24}}
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" (click)="updateVideoQualityPreview('360p')">
-                                        360p
-                                    </a>
-                                    <a class="dropdown-item" (click)="updateVideoQualityPreview('540p')">
-                                        540p
-                                    </a>
-                                    <a class="dropdown-item" (click)="updateVideoQualityPreview('720p')">
-                                        720p
-                                    </a>
-                                </div>
-                            </div>
-                            <!--    VIDEO QUALITY CONTROLS END     -->
-                        </div>
-
-                        <div class="col-md-1 col-0"></div>
-
-                        <div class="col-md-4 col-0">
-                            <div class="progress-container progress-danger">
-                                <h4 class="progress-badge"> Microphone Test </h4>
-                                <!--    AUDIO PREVIEW START     -->
-                                <progressbar class="progress-bar-danger" [value]="audioInputPreview">
-                                </progressbar>
-                                <!--    AUDIO PREVIEW END     -->
-                            </div>
-                            <!--    TEST SPEAKER START     -->
-                            <button id='buttonTestSound' class="btn btn-outline-secondary btn-block mt-3"
-                                    (click)="playAudio()" [class.disabled]="speakerTestFlag">Test Speakers
-                            </button>
-                            <video id="video-preview" class="w-100 h-100 p-md-3"></video>
-                            <!--    TEST SPEAKER END     -->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8 col-12 pt-5 pt-md-0">
-                            <button class="btn btn-block btn-default" (click)="joinMeeting()">
-                                Join
-                            </button>
-                        </div>
-                    </div>
-                </div>
+  <div class="container">
+    <div class="pt-5">
+      <div class="card ">
+        <div class="card-body p-5">
+          <h2 class="card-title text-center">
+            Manage Devices
+          </h2>
+          <div class="row pt-5">
+            <div class="col-12 col-md-3">
+              <h6>
+                Microphone
+              </h6>
+              <!--    AUDIO INPUT CONTROLS START     -->
+              <nb-select placeholder="{{ currentAudioInputDevice  | slice:0:35}}..." fullWidth>
+                <nb-option *ngFor="let audioInput of audioInputDevices"
+                           (click)="updateCurrentAudioInputDevice(audioInput.label, audioInput.deviceId)">
+                  {{audioInput.label | slice:0:35}}...
+                </nb-option>
+              </nb-select>
+              <!--    AUDIO INPUT CONTROLS END     -->
+              <h6 class="pt-md-5">
+                Camera
+              </h6>
+              <!--    VIDEO INPUT CONTROLS START     -->
+              <nb-select placeholder="{{ currentVideoInputDevice  | slice:0:35}}..." fullWidth>
+                <nb-option *ngFor="let videoInput of videoInputDevices"
+                           (click)="updateCurrentVideoInputDevice(videoInput.label, videoInput.deviceId)">
+                  {{videoInput.label | slice:0:35}}...
+                </nb-option>
+              </nb-select>
+              <!--    VIDEO INPUT CONTROLS END     -->
             </div>
+
+            <div class="col-md-1 col-0"></div>
+
+            <div class="col-md-3 col-12">
+              <h6>
+                Speaker
+              </h6>
+              <!--    AUDIO OUTPUT CONTROLS START     -->
+              <nb-select placeholder="{{ currentAudioOutputDevice  | slice:0:35}}..." fullWidth>
+                <nb-option *ngFor="let audioOutput of audioOutputDevices"
+                           (click)="updateCurrentAudioOutputDevice(audioOutput.label, audioOutput.deviceId)">
+                  {{audioOutput.label | slice:0:35}}...
+                </nb-option>
+              </nb-select>
+              <!--    AUDIO OUTPUT CONTROLS END     -->
+              <h6 class="pt-md-5">
+                Video Quality
+              </h6>
+              <!--    VIDEO QUALITY CONTROLS START     -->
+              <nb-select placeholder="{{videoQualityPreview}}" fullWidth>
+                <nb-option (click)="updateVideoQualityPreview('360p')">
+                  360p
+                </nb-option>
+                <nb-option (click)="updateVideoQualityPreview('540p')">
+                  540p
+                </nb-option>
+                <nb-option (click)="updateVideoQualityPreview('720p')">
+                  720p
+                </nb-option>
+              </nb-select>
+              <!--    VIDEO QUALITY CONTROLS END     -->
+            </div>
+
+            <div class="col-md-1 col-0"></div>
+
+            <div class="col-md-4 col-0">
+              <div class="pb-md-2">
+                <h6 class="progress-badge"> Microphone Test </h6>
+                <!--    AUDIO PREVIEW START     -->
+                <nb-progress-bar [value]="audioInputPreview"></nb-progress-bar>
+                <!--    AUDIO PREVIEW END     -->
+              </div>
+              <!--    TEST SPEAKER START     -->
+              <button nbButton status="basic" id='buttonTestSound'
+                      (click)="playAudio()" [class.disabled]="speakerTestFlag">
+                Test Speakers
+              </button>
+              <video id="video-preview" class="w-100 h-100 p-md-3"></video>
+              <!--    TEST SPEAKER END     -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 col-12 pt-5 pt-md-0">
+              <button nbButton hero fullWidth (click)="joinMeeting()">
+                Join
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <!--Device Management END-->
-<div [class.d-none]="deviceManagementFLAG" class="wrapper container-fluid m-0 p-0 m-h-100vh">
-    <div class="row no-gutters">
-        <div class="col-md-3">
-            <div class="card m-h-100vh">
-                <div class="container">
-                    <!--       Meeting Name       -->
-                    <h1 class="display-3 pt-md-3 pt-0 pb-md-0 mb-md-0">
-                        {{meetingName}}
-                    </h1>
-                    <hr class="line-success">
-                    <!--       Audio Mute Handler Start      -->
-                    <button class="btn btn-primary btn-fab btn-icon btn-round" (click)="muteHandler()">
-                        <i class="fas fa-microphone" [class.d-none]="!audioInputUnmute"></i>
-                        <i class="fas fa-microphone-slash" [class.d-none]="audioInputUnmute"></i>
-                    </button>
-                    <!--       Audio Mute Handler End      -->
-                    <!--       Video Input On Handler Start      -->
-                    <button class="btn btn-primary btn-fab btn-icon btn-round" (click)="videoInputHandler()">
-                        <i class="fas fa-video" [class.d-none]="!videoInput"></i>
-                        <i class="fas fa-video-slash" [class.d-none]="videoInput"></i>
-                    </button>
-                </div>
-                    <!--       Video Input On Handler End      -->
-                    <tabset class="nav-tabs-primary">
-                        <!--       Attendees List Tab Start      -->
-                        <tab>
-                            <ng-template tabHeading>
-                                <i class="tim-icons icon-single-02"></i>Attendees
-                            </ng-template>
+<!--<div [class.d-none]="deviceManagementFLAG" class="wrapper container-fluid m-0 p-0 m-h-100vh">-->
+<!--  <div class="row no-gutters">-->
+<!--    <div class="col-md-3">-->
+<!--      <div class="card m-h-100vh">-->
+<!--        <div class="container">-->
+<!--          &lt;!&ndash;       Meeting Name       &ndash;&gt;-->
+<!--          <h1 class="display-3 pt-md-3 pt-0 pb-md-0 mb-md-0">-->
+<!--            {{meetingName}}-->
+<!--          </h1>-->
+<!--          <hr class="line-success">-->
+<!--          &lt;!&ndash;       Audio Mute Handler Start      &ndash;&gt;-->
+<!--          <button class="btn btn-primary btn-fab btn-icon btn-round" (click)="muteHandler()">-->
+<!--            <i class="fas fa-microphone" [class.d-none]="!audioInputUnmute"></i>-->
+<!--            <i class="fas fa-microphone-slash" [class.d-none]="audioInputUnmute"></i>-->
+<!--          </button>-->
+<!--          &lt;!&ndash;       Audio Mute Handler End      &ndash;&gt;-->
+<!--          &lt;!&ndash;       Video Input On Handler Start      &ndash;&gt;-->
+<!--          <button class="btn btn-primary btn-fab btn-icon btn-round" (click)="videoInputHandler()">-->
+<!--            <i class="fas fa-video" [class.d-none]="!videoInput"></i>-->
+<!--            <i class="fas fa-video-slash" [class.d-none]="videoInput"></i>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;       Video Input On Handler End      &ndash;&gt;-->
+<!--        <tabset class="nav-tabs-primary">-->
+<!--          &lt;!&ndash;       Attendees List Tab Start      &ndash;&gt;-->
+<!--          <tab>-->
+<!--            <ng-template tabHeading>-->
+<!--              <i class="tim-icons icon-single-02"></i>Attendees-->
+<!--            </ng-template>-->
 
 
-<!--                            DEMO -->
-                            <div class="active-bg">
-                                <div class="pt-md-1 pb-md-1 row no-gutters">
-                                    <div class="col-md-9">
-                                        <img alt="Raised circle image"
-                                             class="img-fluid rounded-circle shadow-lg attendeeAvatar"
-                                             src='https://ui-avatars.com/api/?name=alI&rounded=true&background=000&color=fff'>
-                                        <h6 class="pt-md-3 pl-md-3 controls-inline">
-                                            Muhammad Ali
-                                        </h6>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="pt-md-3">
-                                            <!--    Speaking Indicator    -->
-<!--                                            <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>-->
-                                            <!--                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">-->
-                                            <!--                                                    speaking-->
-                                            <!--                                                </span>-->
-                                            <!--    Signal Indicator    -->
-                                            <i class="tim-icoNbRegisterComponentns icon-wifi"
-                                               [class.text-red]="0 < 1"
-                                               [class.text-green]="0 > 1"></i>
-                                            <!--    Mute Indicator    -->
-                                            <i class="fas fa-microphone-slash text-red" [class.d-none]="false"></i>
-                                        </div>
-                                    </div>
-                                </div>
+<!--            &lt;!&ndash;                            DEMO &ndash;&gt;-->
+<!--            <div class="active-bg">-->
+<!--              <div class="pt-md-1 pb-md-1 row no-gutters">-->
+<!--                <div class="col-md-9">-->
+<!--                  <img alt="Raised circle image"-->
+<!--                       class="img-fluid rounded-circle shadow-lg attendeeAvatar"-->
+<!--                       src='https://ui-avatars.com/api/?name=alI&rounded=true&background=000&color=fff'>-->
+<!--                  <h6 class="pt-md-3 pl-md-3 controls-inline">-->
+<!--                    Muhammad Ali-->
+<!--                  </h6>-->
+<!--                </div>-->
+<!--                <div class="col-md-3">-->
+<!--                  <div class="pt-md-3">-->
+<!--                    &lt;!&ndash;    Speaking Indicator    &ndash;&gt;-->
+<!--                    &lt;!&ndash;                                            <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                                    speaking&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                                </span>&ndash;&gt;-->
+<!--                    &lt;!&ndash;    Signal Indicator    &ndash;&gt;-->
+<!--                    <i class="tim-icoNbRegisterComponentns icon-wifi"-->
+<!--                       [class.text-red]="0 < 1"-->
+<!--                       [class.text-green]="0 > 1"></i>-->
+<!--                    &lt;!&ndash;    Mute Indicator    &ndash;&gt;-->
+<!--                    <i class="fas fa-microphone-slash text-red" [class.d-none]="false"></i>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
 
-                            </div>
-<!--                            DEMO -->
+<!--            </div>-->
+<!--            &lt;!&ndash;                            DEMO &ndash;&gt;-->
 
 
-                            <div *ngFor="let data of rosterData">
-                                <div class="pt-md-1 pb-md-1">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-9">
-                                            <img alt="Raised circle image"
-                                                 class="img-fluid rounded-circle shadow-lg attendeeAvatar"
-                                                 src='https://ui-avatars.com/api/?name={{roster[data].name}}&rounded=true&background=000&color=fff'>
-                                            <h6 class="pt-md-3 pl-md-3 controls-inline">
-                                                {{roster[data].name}}
-                                            </h6>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="pt-md-3">
-                                                <!--    Speaking Indicator    -->
-                                                <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>
-<!--                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">-->
-<!--                                                    speaking-->
-<!--                                                </span>-->
-                                                <!--    Signal Indicator    -->
-                                                <i class="tim-icons icon-wifi"
-                                                   [class.text-red]="roster[data].signalStrength < 1"
-                                                    [class.text-green]="roster[data].signalStrength > 1"></i>
-                                                <!--    Mute Indicator    -->
-                                                <i class="fas fa-microphone-slash text-red" [class.d-none]="!roster[data].muted"></i>
-                                            </div>
-                                        </div>
-                                    </div>
+<!--            <div *ngFor="let data of rosterData">-->
+<!--              <div class="pt-md-1 pb-md-1">-->
+<!--                <div class="row no-gutters">-->
+<!--                  <div class="col-md-9">-->
+<!--                    <img alt="Raised circle image"-->
+<!--                         class="img-fluid rounded-circle shadow-lg attendeeAvatar"-->
+<!--                         src='https://ui-avatars.com/api/?name={{roster[data].name}}&rounded=true&background=000&color=fff'>-->
+<!--                    <h6 class="pt-md-3 pl-md-3 controls-inline">-->
+<!--                      {{roster[data].name}}-->
+<!--                    </h6>-->
+<!--                  </div>-->
+<!--                  <div class="col-md-3">-->
+<!--                    <div class="pt-md-3">-->
+<!--                      &lt;!&ndash;    Speaking Indicator    &ndash;&gt;-->
+<!--                      <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>-->
+<!--                      &lt;!&ndash;                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">&ndash;&gt;-->
+<!--                      &lt;!&ndash;                                                    speaking&ndash;&gt;-->
+<!--                      &lt;!&ndash;                                                </span>&ndash;&gt;-->
+<!--                      &lt;!&ndash;    Signal Indicator    &ndash;&gt;-->
+<!--                      <i class="tim-icons icon-wifi"-->
+<!--                         [class.text-red]="roster[data].signalStrength < 1"-->
+<!--                         [class.text-green]="roster[data].signalStrength > 1"></i>-->
+<!--                      &lt;!&ndash;    Mute Indicator    &ndash;&gt;-->
+<!--                      <i class="fas fa-microphone-slash text-red" [class.d-none]="!roster[data].muted"></i>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
 
-                                </div>
-                            </div>
-                        </tab>
-                        <!--       Attendees List Tab End      -->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </tab>-->
+<!--          &lt;!&ndash;       Attendees List Tab End      &ndash;&gt;-->
 
-                        <tab>
-                            <ng-template tabHeading>
-                                <i class="tim-icons icon-chat-33"> </i> Chat
-                            </ng-template>
-                            <p>
+<!--          <tab>-->
+<!--            <ng-template tabHeading>-->
+<!--              <i class="tim-icons icon-chat-33"> </i> Chat-->
+<!--            </ng-template>-->
+<!--            <p>-->
 
-                                Dramatically visualize customer directed convergence
-                                without revolutionary ROI.
-                            </p>
-                        </tab>
-                    </tabset>
-            </div>
-        </div>
+<!--              Dramatically visualize customer directed convergence-->
+<!--              without revolutionary ROI.-->
+<!--            </p>-->
+<!--          </tab>-->
+<!--        </tabset>-->
+<!--      </div>-->
+<!--    </div>-->
 
-        <audio id="meeting-audio" style="display:none"></audio>
-    </div>
-</div>
+<!--    <audio id="meeting-audio" style="display:none"></audio>-->
+<!--  </div>-->
+<!--</div>-->

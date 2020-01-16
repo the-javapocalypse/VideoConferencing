@@ -1,195 +1,76 @@
-[Blk• Design  System Angular](https://demos.creative-tim.com/blk-design-system-angular) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fcreativetimofficial.github.io%2Fblk-design-system-angular&text=BLK%20Design%20System%20Angular%20-%20Free%20Angular%20Template&original_referer=https%3A%2F%2Fdemos.creative-tim.com%blk-design-system-angular%2F%3F_ga%3D2.234372891.44370326.1533641128-1803433978.1528781151&via=creativetim&hashtags=angular%2Cbootstrap)
+# ngx-admin [<img src="https://i.imgur.com/oMcxwZ0.png" alt="Eva Design System" height="20px" />](https://eva.design) [![Build Status](https://travis-ci.org/akveo/ngx-admin.svg?branch=master)](https://travis-ci.org/akveo/ngx-admin) [![Dependency Status](https://david-dm.org/akveo/ngx-admin/status.svg)](https://david-dm.org/akveo/ng2-admin)
 
+[Who uses ngx-admin?](https://github.com/akveo/ngx-admin/issues/1645)| [Documentation](https://akveo.github.io/ngx-admin/?utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=themes) | [Installation Guidelines](https://akveo.github.io/ngx-admin/docs/getting-started/what-is-ngxadmin?utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=themes)
 
- ![version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/blk-design-system-angular.svg?maxAge=2592000)](https://github.com/creativetimofficial/blk-design-system-angular/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/blk-design-system-angular.svg?maxAge=2592000)](https://github.com/creativetimofficial/blk-design-system-angular/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+# Admin template based on Angular 8+ and <a href="https://github.com/akveo/nebular">Nebular</a>
+<a target="_blank" href="http://akveo.com/ngx-admin/pages/dashboard?theme=corporate&utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=main_pic"><img src="https://i.imgur.com/mFdqvgG.png"/></a>
 
+### Backend Integration Bundles
+Easy way to integrate ngx-admin with backend (.NET, Node.js, Java etc.).
 
-![Product Presentation Image](https://github.com/creativetimofficial/public-assets/blob/master/blk-design-system-angular/opt_blk_angular_thumbnail.jpg?raw=true)
+<a target="_blank" href="https://store.akveo.com/collections/all/?utm_source=github&utm_medium=ngx_admin_readme">
+  <img src="https://i.imgur.com/Ywbs8cl.png"/>
+</a>
 
-**[Blk• Design  System Angular](http://demos.creative-tim.com/blk-design-system-angular/)** is a responsive Bootstrap 4 kit, developed using [Angular](https://angular.io/) and it is provided for free by Creative Tim. It is a beautiful cross-platform UI kit featuring over 70 elements and 3 templates.
+[Checkout our Store](https://store.akveo.com/collections/all/?utm_source=github&utm_medium=ngx_admin_readme) for ready to use Backend Bundles.
 
-Blk• Design  System Angular will help you create a clean and simple website that is a perfect fit for today's black design. It is built using the 12 column grid system, with components designed to fit together perfectly. It makes use of bold colours, beautiful typography, clear photography and spacious arrangements.
-
-## Complex Documentation
-
-Each element is well presented in a very complex documentation. You can read more about the idea behind this design system here. You can check the components here and the foundation here.
-
-## Bootstrap 4 Support
-
-Blk• Design System Angular is built on top of the much awaited Bootstrap 4 and Angular. This makes starting a new project very simple. It also provides benefits if you are already working on a Bootstrap 4 or Angular project; you can just import the Blk• Design System Angular style over it. Most of the elements have been redesigned; but if you are using an element we have not touched, it will fall back to the Bootstrap default.
-
-
-## Table of Contents
-
-* [Versions](#versions)
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Reporting Issues](#reporting-issues)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
-
-
-## Versions
-
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/blk-design-system?ref=blkdsa-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/blk-design-system-react?ref=blkdsa-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/blk-design-system-angular?ref=blkdsa-readme)[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/sketch-logo.jpg" width="60" height="60" />](https://github.com/creativetimofficial/blk-design-system-sketch/tree/sketch)
+### With 4 stunning visual themes
 
 
 
+#### Default
+<a target="_blank" href="http://akveo.com/ngx-admin/pages/dashboard?theme=default&utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=themes"><img src="https://i.imgur.com/Kn3xDKQ.png"/></a>
 
+#### Dark
+<a target="_blank" href="http://akveo.com/ngx-admin/pages/dashboard?theme=dark&utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=themes"><img src="https://i.imgur.com/FAn5iXY.png"/></a>
 
+#### Cosmic
+<a target="_blank" href="http://akveo.com/ngx-admin/pages/dashboard?theme=cosmic&utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=themes"><img src="https://i.imgur.com/iJu2YDF.png"/></a>
 
-| HTML | Angular | React |
-| --- | --- | --- |
-| [![BLK Design System  HTML](https://github.com/creativetimofficial/public-assets/blob/master/blk-design-system/opt_blk_thumbnail.jpg?raw=true)](https://www.creative-tim.com/product/blk-design-system)  | [![BLK Design System  Angular](https://github.com/creativetimofficial/public-assets/blob/master/blk-design-system-angular/opt_blk_angular_thumbnail.jpg?raw=true)](https://www.creative-tim.com/product/blk-design-system-angular)| [![BLK Design System  React](https://github.com/creativetimofficial/public-assets/blob/master/blk-design-system-react/blk-design-system-react.jpg?raw=true)](https://www.creative-tim.com/product/blk-design-system-react)
+#### Corporate
+<a target="_blank" href="http://akveo.com/ngx-admin/pages/dashboard?theme=corporate&utm_source=github&utm_medium=ngx_admin_readme&utm_campaign=themes"><img src="https://i.imgur.com/GpUt6NW.png"/></a>
 
-## Demo
+### What's included:
 
-| Buttons | Inputs | Navbars  |
-| --- | --- | ---  |
-| [![Buttons](https://github.com/creativetimofficial/public-assets/blob/master/blk-design-system-angular/buttons.png?raw=true)](https://demos.creative-tim.com/blk-design-system-angular/#/)  | [![Inputs](https://github.com/creativetimofficial/public-assets/blob/master/blk-design-system-angular/inputs.png?raw=true)](https://demos.creative-tim.com/blk-design-system-angular/#/)  | [![Navbar](https://github.com/creativetimofficial/public-assets/blob/master/blk-design-system-angular/navbars.png?raw=true)](https://demos.creative-tim.com/blk-design-system-angular/#/)  
+- Angular 8+ & Typescript
+- Bootstrap 4+ & SCSS
+- Responsive layout
+- RTL support
+- High resolution
+- Flexibly configurable themes with **hot-reload** (3 themes included)
+- Authentication module with multiple providers
+- 40+ Angular Components
+- 60+ Usage Examples
 
-| Register Page | Landing Page | Profile Page  |
-| --- | --- | ---  |
-| [![Register Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/blk-design-system-angular/register.png)](https://demos.creative-tim.com/blk-design-system-angular/#/register)  | [![Landing Page](https://github.com/creativetimofficial/public-assets/blob/master/blk-design-system-angular/landing.png?raw=true)](https://demos.creative-tim.com/blk-design-system-angular/#/landing)  | [![Profile Page](https://github.com/creativetimofficial/public-assets/blob/master/blk-design-system-angular/profile.png?raw=true)](https://demos.creative-tim.com/blk-design-system-angular/#/profile)  
+### Demo
 
-[View More](https://demos.creative-tim.com/blk-design-system-angular)
-
-
-## Quick start
-
-- `npm i blk-design-system-angular`
-- [Download from Github](https://github.com/creativetimofficial/blk-design-system-angular/archive/master.zip).
-- [Download from Creative Tim](https://www.creative-tim.com/product/blk-design-system-angular).
-- Clone the repo: `git clone https://github.com/creativetimofficial/blk-design-system-angular.git`.
-
+<a target="_blank" href="http://akveo.com/ngx-admin/">Live Demo</a>
 
 ## Documentation
-The documentation for the BLK Design System Angular is hosted at our [website](https://demos.creative-tim.com/blk-design-system-angular/#/documentation/overview).
+This template is using [Nebular](https://github.com/akveo/nebular) modules set, [here you can find documentation and other useful articles](https://akveo.github.io/nebular/docs/guides/install-based-on-starter-kit).
 
+### Empty starter kit
+Don't need all the pages and modules and just looking for an empty starter kit for your next project? Check out our [starter-kit branch](https://github.com/akveo/ngx-admin/tree/starter-kit).
 
-## File Structure
-Within the download you'll find the following directories and files:
+## BrowserStack
+This project runs its tests on multiple desktop and mobile browsers using [BrowserStack](http://www.browserstack.com).
 
-```
-Blk• Design System Angular
-├── CHANGELOG.md
-├── ISSUE_TEMPLATE.md
-├── LICENSE.md
-├── README.md
-├── angular.json
-├── e2e
-├── package-lock.json
-├── package.json
-├── src
-│   ├── app
-│   │   ├── app-routing.module.ts
-│   │   ├── app.component.html
-│   │   ├── app.component.scss
-│   │   ├── app.component.spec.ts
-│   │   ├── app.component.ts
-│   │   ├── app.module.ts
-│   │   └── pages
-│   │       ├── examples
-│   │       │   ├── landingpage
-│   │       │   │   ├── landingpage.component.html
-│   │       │   │   └── landingpage.component.ts
-│   │       │   ├── profilepage
-│   │       │   │   ├── profilepage.component.html
-│   │       │   │   └── profilepage.component.ts
-│   │       │   └── registerpage
-│   │       │       ├── registerpage.component.html
-│   │       │       └── registerpage.component.ts
-│   │       ├── index
-│   │       │   ├── index.component.html
-│   │       │   └── index.component.ts
-│   │       └── pages.module.ts
-│   ├── assets
-│   │   ├── css
-│   │   │   └── nucleo-icons.css
-│   │   ├── demo
-│   │   ├── fonts
-│   │   ├── img
-│   │   └── scss
-│   │       ├── blk-design-system
-│   │       │   ├── angular
-│   │       │   ├── bootstrap
-│   │       │   └── custom
-│   │       └── blk-design-system.scss
-│   ├── browserslist
-│   ├── environments
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── karma.conf.js
-│   ├── main.ts
-│   ├── polyfills.ts
-│   ├── styles.scss
-│   ├── test.ts
-│   ├── tsconfig.app.json
-│   ├── tsconfig.spec.json
-│   └── tslint.json
-├── tsconfig.json
-└── tslint.json
-```
+<img src="https://cloud.githubusercontent.com/assets/131406/22254249/534d889e-e254-11e6-8427-a759fb23b7bd.png" height="40" />
 
+## More from Akveo
 
-## Browser Support
+- [Eva Icons](https://github.com/akveo/eva-icons) - 480+ beautiful Open Source icons
+- [Nebular](https://github.com/akveo/nebular) - Angular Components, Auth and Security
 
-At present, we officially aim to support the last two versions of the following browsers:
+### How can I support developers?
+- Star our GitHub repo :star:
+- Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
+- Follow us on [Twitter](https://twitter.com/akveo_inc) :feet:
+- Like our page on [Facebook](https://www.facebook.com/akveo/) :thumbsup:
 
-<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
+### Looking for engineering services? 
+Visit [our homepage](http://akveo.com/) or simply leave us a message to [contact@akveo.com](mailto:contact@akveo.com). We will be happy to work with you!
 
-
-
-## Resources
-- Demo: <https://demos.creative-tim.com/blk-design-system-angular/#/>
-- Download Page: <https://www.creative-tim.com/product/blk-design-system-angular>
-- Documentation: <https://demos.creative-tim.com/blk-design-system-angular/#/documentation/overview>
-- License Agreement: <https://www.creative-tim.com/license>
-- Support: <https://www.creative-tim.com/contact-us>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/blk-design-system-angular/issues)
-- **Dashboards:**
-
-| HTML | Angular | Vue  | React  |
-| --- | --- | ---  | ---  |
-| [![Black Dashboard  HTML](https://github.com/creativetimofficial/public-assets/blob/master/black-dashboard/black-dashboard.jpg?raw=true)](https://www.creative-tim.com/product/black-dashboard) | [![Black Dashboard  Angular](https://github.com/creativetimofficial/public-assets/blob/master/black-dashboard-angular/opt_bd_angular_thumbnail.jpg?raw=true)](https://www.creative-tim.com/product/black-dashboard-angular) | [![Vue Black Dashboard](https://github.com/creativetimofficial/public-assets/blob/master/vue-black-dashboard/vue-black-dashboard.jpg?raw=true)](https://www.creative-tim.com/product/vue-black-dashboard)  | [![Black Dashboard React](https://github.com/creativetimofficial/public-assets/blob/master/black-dashboard-react/black-dashboard-react.jpg?raw=true)](https://www.creative-tim.com/product/black-dashboard-react)  |
-
-## Reporting Issues
-
-We use GitHub Issues as the official bug tracker for the BLK Design System Angular. Here are some advices for our users that want to report an issue:
-
-1. Make sure that you are using the latest version of the BLK Design System Angular. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=blkdsa-readme).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
-
-## Licensing
-
-- Copyright 2018 Creative Tim (https://www.creative-tim.com/?ref=blkdsa-readme)
-
-- Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-angular/blob/master/LICENSE.md)
-
-## Useful Links
-
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref="blkdsa-github-readme") (earn money)
-- [Blog Creative Tim](http://blog.creative-tim.com/)
-- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref="blkdsa-github-readme") from Creative Tim
-- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref="blkdsa-github-readme") from Creative Tim
-- [Angular Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref="blkdsa-github-readme") from Creative Tim
-- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-theme?ref="blkdsa-github-readme") from Creative Tim
-- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref="blkdsa-github-readme") from Creative Tim
-- [More products](https://www.creative-tim.com/bootstrap-themes?ref="blkdsa-github-readme") from Creative Tim
-- Check our Bundles [here](https://www.creative-tim.com/bundles?ref="blkdsa-github-readme")
-
-### Social Media
-
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Instagram: <https://www.instagram.com/CreativeTimOfficial>
+### From Developers
+Made with :heart: by [Akveo team](http://akveo.com/). Follow us on [Twitter](https://twitter.com/akveo_inc) to get the latest news first!
+We're always happy to receive your feedback!
