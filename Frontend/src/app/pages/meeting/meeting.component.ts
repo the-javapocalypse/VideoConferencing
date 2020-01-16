@@ -34,7 +34,7 @@ export class MeetingComponent implements OnInit {
   currentVideoInputDeviceID = 0;
 
   // Flag to render device management screen or meeting screen
-  deviceManagementFLAG = true;
+  deviceManagementFLAG = false;
 
   // Meeting Name
   meetingName = 'Meeting Demo';
@@ -65,7 +65,7 @@ export class MeetingComponent implements OnInit {
 
   ngOnInit() {
     // set meeting name
-    this.meetingName = this.route.snapshot.paramMap.get('meeting_id');
+    this.meetingName = this.route.snapshot.paramMap.get('ID');
     // setup dropdowns for device management
     this.initializeUIComponents();
   }

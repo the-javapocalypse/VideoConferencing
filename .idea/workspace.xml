@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="" />
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Backup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/pages.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +113,7 @@
       <workItem from="1578981669839" duration="3259000" />
       <workItem from="1578986380688" duration="8837000" />
       <workItem from="1579072977501" duration="6722000" />
-      <workItem from="1579157439372" duration="4587000" />
+      <workItem from="1579157439372" duration="9733000" />
     </task>
     <task id="LOCAL-00010" summary="Meeting Component Added">
       <created>1578129554793</created>

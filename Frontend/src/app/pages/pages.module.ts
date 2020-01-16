@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import {
-  NbButtonModule,
-  NbCardModule,
-  NbInputModule,
-  NbMenuModule, NbProgressBarModule,
-  NbSelectModule,
-  NbStepperModule
+    NbActionsModule,
+    NbButtonModule,
+    NbCardModule,
+    NbInputModule,
+    NbMenuModule, NbProgressBarModule,
+    NbSelectModule,
+    NbStepperModule
 } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
@@ -19,21 +20,22 @@ import { MeetingComponent } from './meeting/meeting.component';
 import {FormsModule} from "@angular/forms";
 
 @NgModule({
-  imports: [
-    PagesRoutingModule,
-    ThemeModule,
-    NbMenuModule,
-    DashboardModule,
-    ECommerceModule,
-    MiscellaneousModule,
-    NbCardModule,
-    NbInputModule,
-    NbButtonModule,
-    NbStepperModule,
-    FormsModule,
-    NbSelectModule,
-    NbProgressBarModule,
-  ],
+    imports: [
+        PagesRoutingModule,
+        ThemeModule,
+        NbMenuModule,
+        DashboardModule,
+        ECommerceModule,
+        MiscellaneousModule,
+        NbCardModule,
+        NbInputModule,
+        NbButtonModule,
+        NbStepperModule,
+        FormsModule,
+        NbSelectModule,
+        NbProgressBarModule,
+        NbActionsModule,
+    ],
   declarations: [
     PagesComponent,
     JoinComponent,

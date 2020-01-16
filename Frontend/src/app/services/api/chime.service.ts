@@ -25,7 +25,7 @@ import {
   TimeoutScheduler,
   VideoTileState,
   ScreenShareFacadeObserver,
-} from '../../../assets/vendor/chimeCompiled/index.js';
+} from '../../../assets/vendor/chimeCompiled/index';
 
 
 @Injectable({
