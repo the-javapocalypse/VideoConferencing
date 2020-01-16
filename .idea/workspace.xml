@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Backup">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/meeting/meeting.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/pages.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,14 +108,7 @@
       <workItem from="1578981669839" duration="3259000" />
       <workItem from="1578986380688" duration="8837000" />
       <workItem from="1579072977501" duration="6722000" />
-      <workItem from="1579157439372" duration="9733000" />
-    </task>
-    <task id="LOCAL-00010" summary="Meeting Component Added">
-      <created>1578129554793</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1578129554793</updated>
+      <workItem from="1579157439372" duration="9996000" />
     </task>
     <task id="LOCAL-00011" summary="Removed Global style for light bg dark text">
       <created>1578129585310</created>
@@ -458,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579161547287</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Audio mute handler">
+      <created>1579173880219</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1579173880220</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +478,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Added Video Input Toggle" />
     <MESSAGE value="UI Tweaked" />
     <MESSAGE value="Audio Chat Working" />
     <MESSAGE value="Btn for audio and video input toggle" />
@@ -508,6 +502,7 @@
     <MESSAGE value="Manage Devices UI Refactored" />
     <MESSAGE value="Manage Device Done" />
     <MESSAGE value="Backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backup" />
+    <MESSAGE value="Audio mute handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Audio mute handler" />
   </component>
 </project>

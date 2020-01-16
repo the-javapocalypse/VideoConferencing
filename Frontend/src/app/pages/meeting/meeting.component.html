@@ -114,7 +114,11 @@
                                    (click)="muteHandler()">
                         </nb-action>
                         <!--       Audio Mute Handler End      -->
-                        <nb-action icon="power-outline"></nb-action>
+                        <!--       Video Input On Handler Start      -->
+                        <nb-action icon='{{videoInput ? "video-outline" : "video-off-outline"}}'
+                                   (click)="videoInputHandler()">
+                        </nb-action>
+                        <!--       Video Input On Handler End      -->
                         <nb-action icon="person-outline"></nb-action>
                         <nb-action icon="home-outline"></nb-action>
                         <nb-action>Some Action</nb-action>
@@ -144,7 +148,7 @@
 <!--            <i class="fas fa-microphone-slash" [class.d-none]="audioInputUnmute"></i>-->
 <!--          </button>-->
 <!--       Audio Mute Handler End      -->
-<!--          &lt;!&ndash;       Video Input On Handler Start      &ndash;&gt;-->
+<!--       Video Input On Handler Start      -->
 <!--          <button class="btn btn-primary btn-fab btn-icon btn-round" (click)="videoInputHandler()">-->
 <!--            <i class="fas fa-video" [class.d-none]="!videoInput"></i>-->
 <!--            <i class="fas fa-video-slash" [class.d-none]="videoInput"></i>-->
