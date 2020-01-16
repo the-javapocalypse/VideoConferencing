@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Updated Audio Input Preview">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ngx-admin/src/app/pages/join/join.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ngx-admin/src/app/pages/join/join.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ngx-admin/src/app/pages/join/join.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ngx-admin/src/app/pages/meeting/meeting.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ngx-admin/src/app/pages/meeting/meeting.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ngx-admin/src/app/pages/meeting/meeting.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ngx-admin/src/app/services/localStorage/storage.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ngx-admin/src/assets/audio/audiotest.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngx-admin" beforeDir="false" afterPath="$PROJECT_DIR$/ngx-admin" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +27,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ngx-admin" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="1VbKNovz4a66q5iJRkjS49ICi1E" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -107,14 +116,7 @@
       <workItem from="1578981669839" duration="3259000" />
       <workItem from="1578986380688" duration="8837000" />
       <workItem from="1579072977501" duration="6722000" />
-      <workItem from="1579157439372" duration="2841000" />
-    </task>
-    <task id="LOCAL-00007" summary="Created Get Attendee API">
-      <created>1578052041109</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1578052041109</updated>
+      <workItem from="1579157439372" duration="3089000" />
     </task>
     <task id="LOCAL-00008" summary="initializing meeting in-progress">
       <created>1578052080283</created>
@@ -452,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579159042722</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Manage Devices UI Refactored">
+      <created>1579160357489</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1579160357489</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,8 +483,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Added comments" />
-    <MESSAGE value="Connection Strength UI" />
     <MESSAGE value="Mute Unmute integrated" />
     <MESSAGE value="Added Video Input Toggle" />
     <MESSAGE value="UI Tweaked" />
@@ -499,6 +506,8 @@
     <MESSAGE value="Updated Audio Input UI" />
     <MESSAGE value="Updated Audio Output UI" />
     <MESSAGE value="Updated Audio Input Preview" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Audio Input Preview" />
+    <MESSAGE value="Manage Devices UI Refactored" />
+    <MESSAGE value="Manage Device Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manage Device Done" />
   </component>
 </project>
