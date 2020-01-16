@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ngx-admin" beforeDir="false" afterPath="$PROJECT_DIR$/ngx-admin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,14 +107,7 @@
       <workItem from="1578981669839" duration="3259000" />
       <workItem from="1578986380688" duration="8837000" />
       <workItem from="1579072977501" duration="6722000" />
-      <workItem from="1579157439372" duration="686000" />
-    </task>
-    <task id="LOCAL-00004" summary="Join Meeting Api Params">
-      <created>1577961822850</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1577961822850</updated>
+      <workItem from="1579157439372" duration="1452000" />
     </task>
     <task id="LOCAL-00005" summary="Join Api Integrated">
       <created>1577963524546</created>
@@ -452,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579157975124</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Updated Audio Input UI">
+      <created>1579158341769</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1579158341769</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,7 +474,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactored UI" />
     <MESSAGE value="Attendee List UI" />
     <MESSAGE value="Real Time Attendee Data" />
     <MESSAGE value="Added comments" />
@@ -499,6 +498,7 @@
     <MESSAGE value="Enabled console.log" />
     <MESSAGE value="Backend Added Meeting" />
     <MESSAGE value="Updated Video Quality UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Video Quality UI" />
+    <MESSAGE value="Updated Audio Input UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Audio Input UI" />
   </component>
 </project>
