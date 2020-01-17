@@ -110,22 +110,39 @@
                     <!--   Device Toggle Control Start     -->
                     <nb-actions fullWidth>
                         <!--       Audio Mute Handler Start      -->
-                        <nb-action icon='{{audioInputUnmute ? "mic-outline" : "mic-off-outline"}}'
-                                   (click)="muteHandler()">
+                        <nb-action>
+                            <nb-icon icon='{{audioInputUnmute ? "mic-outline" : "mic-off-outline"}}'
+                                     (click)="muteHandler()"
+                                     nbTooltip='{{audioInputUnmute ? "Mute Mic" : "Unmute Mic"}}'
+                                     status='{{audioInputUnmute ? "primary" : "default"}}'>
+                            </nb-icon>
                         </nb-action>
                         <!--       Audio Mute Handler End      -->
                         <!--       Video Input On Handler Start      -->
-                        <nb-action icon='{{videoInput ? "video-outline" : "video-off-outline"}}'
-                                   (click)="videoInputHandler()">
+                        <nb-action>
+                            <nb-icon icon='{{videoInput ? "video-outline" : "video-off-outline"}}'
+                                     (click)="videoInputHandler()"
+                                     nbTooltip='{{videoInput ? "Stop sharing video" : "Start sharing video"}}'
+                                     status='{{videoInput ? "primary" : "default"}}'>
+                            </nb-icon>
                         </nb-action>
                         <!--       Video Input On Handler End      -->
                         <!--       Screen Share Handler Start      -->
-                        <nb-action icon='{{shareScreen ? "close-square-outline" : "cast-outline"}}'
-                                   (click)="shareScreenInputHandler()">
+                        <nb-action>
+                            <nb-icon  icon='{{shareScreen ? "close-square-outline" : "cast-outline"}}'
+                                      (click)="shareScreenInputHandler()"
+                                      nbTooltip='{{shareScreen ? "Stop sharing screen" : "Start sharing screen"}}'
+                                     status='{{shareScreen ? "primary" : "default"}}'>
+                            </nb-icon>
                         </nb-action>
                         <!--       Screen Share Handler End      -->
-                        <nb-action icon="home-outline"></nb-action>
-                        <nb-action status="danger">Leave</nb-action>
+                        <!--       Leave meeting handler start     -->
+                        <nb-action>
+                            <nb-icon status="danger" icon="phone-outline"
+                                     nbTooltip="Leave meeting" nbTooltipStatus="danger">
+                            </nb-icon>
+                        </nb-action>
+                        <!--       Leave meeting handler end      -->
                     </nb-actions>
                     <!--   Device Toggle Control End     -->
                     <hr>
@@ -257,7 +274,7 @@
 <!--            </ng-template>-->
 
 
-            <!--                            DEMO -->
+<!--                            DEMO -->
 <!--            <div class="active-bg">-->
 <!--              <div class="pt-md-1 pb-md-1 row no-gutters">-->
 <!--                <div class="col-md-9">-->
@@ -275,18 +292,18 @@
 <!--                    &lt;!&ndash;                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">&ndash;&gt;-->
 <!--                    &lt;!&ndash;                                                    speaking&ndash;&gt;-->
 <!--                    &lt;!&ndash;                                                </span>&ndash;&gt;-->
-                    <!--    Signal Indicator    -->
+<!--    Signal Indicator    -->
 <!--                    <i class="tim-icoNbRegisterComponentns icon-wifi"-->
 <!--                       [class.text-red]="0 < 1"-->
 <!--                       [class.text-green]="0 > 1"></i>-->
-                    <!--    Mute Indicator    -->
+<!--    Mute Indicator    -->
 <!--                    <i class="fas fa-microphone-slash text-red" [class.d-none]="false"></i>-->
 <!--                  </div>-->
 <!--                </div>-->
 <!--              </div>-->
 <!---->
 <!--            </div>-->
-            <!--                            DEMO -->
+<!--                            DEMO -->
 
 
 <!--&lt;!&ndash;            <div *ngFor="let data of rosterData">&ndash;&gt;-->
