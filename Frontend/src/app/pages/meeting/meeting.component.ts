@@ -3,6 +3,8 @@ import {DOCUMENT} from '@angular/common';
 import {ChimeService} from '../../services/api/chime.service';
 import {Router, ActivatedRoute} from '@angular/router';
 import {interval} from 'rxjs';
+import {NbIconConfig, NbToastrService} from '@nebular/theme';
+
 
 @Component({
     selector: 'ngx-meeting',
@@ -17,7 +19,8 @@ export class MeetingComponent implements OnInit {
                 public chime: ChimeService,
                 private router: Router,
                 private route: ActivatedRoute,
-                ) {
+                private toastrService: NbToastrService,
+    ) {
     }
 
 
@@ -236,5 +239,13 @@ export class MeetingComponent implements OnInit {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
+    // Show Toast
+    showToast(msg, title, status, iconName) {
+        const iconConfig: NbIconConfig = { icon: iconName, pack: 'eva' };
+        this.toastrService.show(
+            msg,
+            title,
+            {position: 'top-right', status, iconConfig});
+    }
 
 }
