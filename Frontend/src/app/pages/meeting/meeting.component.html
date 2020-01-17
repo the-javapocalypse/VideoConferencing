@@ -102,7 +102,7 @@
     <div class="row">
         <!--  Meeting Info (Left Div) Start  -->
         <div class="col-md-4">
-            <nb-card accent="info" class="min-vh-75">
+            <nb-card accent="primary" class="min-vh-75">
                 <nb-card-header>
                     {{meetingName}}
                 </nb-card-header>
@@ -133,27 +133,41 @@
                     <nb-tabset fullWidth>
                         <!--   Attendees List Start  -->
                         <nb-tab tabTitle="Attendees" tabIcon="person-outline" class="p-0" responsive>
-                            <nb-list style="max-height: 40vh">
+                            <nb-list class="attendee-card-height">
                                 <nb-list-item>
-                                    <div class="row no-gutters p-0 m-0">
+                                    <div class="row no-gutters p-0 m-0 py-1">
                                         <div class="col-md-8">
-                                            <nb-user size="large"
+                                            <nb-user size="medium"
                                                      name="Jonh Doe"
-                                                     title="Engineer"
+                                                     title="Attendee"
                                                      showTitle=false>
                                             </nb-user>
                                         </div>
-                                        <div class="col-md-4 pt-3">
-                                            <nb-icon icon="star"></nb-icon>
-                                            <nb-icon icon="star"></nb-icon>
-                                            <nb-icon icon="star"></nb-icon>
+                                        <div class="col-md-4 pt-2 text-right">
+                                            <nb-icon status="success" icon="volume-up-outline"
+                                                     nbTooltip="is speaking" nbTooltipStatus="success">
+                                            </nb-icon>
+                                            <nb-icon status="danger" icon="mic-off-outline"
+                                                     nbTooltip="mic is muted" nbTooltipStatus="danger">
+                                            </nb-icon>
+                                            <nb-icon icon="wifi-outline"
+                                                     nbTooltip="Strong connection" nbTooltipStatus="success">
+                                            </nb-icon>
                                         </div>
                                     </div>
-                                    <nb-user size="large"
-                                             name="Jonh Doe"
-                                             title="Engineer"
-                                             showTitle=false>
-                                    </nb-user>
+                                    <div class="row no-gutters p-0 m-0">
+                                        <div class="col-md-8">
+                                            <nb-user size="medium"
+                                                     name="Jonh Doe"
+                                                     title="Attendee"
+                                                     showTitle=false>
+                                            </nb-user>
+                                        </div>
+                                        <div class="col-md-4 pt-2 text-right">
+                                            <nb-icon status="danger" icon="mic-off-outline"></nb-icon>
+                                            <nb-icon icon="wifi-outline"></nb-icon>
+                                        </div>
+                                    </div>
                                     <nb-user size="large"
                                              name="Jonh Doe"
                                              title="Engineer"
@@ -243,36 +257,36 @@
 <!--            </ng-template>-->
 
 
-<!--&lt;!&ndash;            &lt;!&ndash;                            DEMO &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;            <div class="active-bg">&ndash;&gt;-->
-<!--&lt;!&ndash;              <div class="pt-md-1 pb-md-1 row no-gutters">&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="col-md-9">&ndash;&gt;-->
-<!--&lt;!&ndash;                  <img alt="Raised circle image"&ndash;&gt;-->
-<!--&lt;!&ndash;                       class="img-fluid rounded-circle shadow-lg attendeeAvatar"&ndash;&gt;-->
-<!--&lt;!&ndash;                       src='https://ui-avatars.com/api/?name=alI&rounded=true&background=000&color=fff'>&ndash;&gt;-->
-<!--&lt;!&ndash;                  <h6 class="pt-md-3 pl-md-3 controls-inline">&ndash;&gt;-->
-<!--&lt;!&ndash;                    Muhammad Ali&ndash;&gt;-->
-<!--&lt;!&ndash;                  </h6>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="col-md-3">&ndash;&gt;-->
-<!--&lt;!&ndash;                  <div class="pt-md-3">&ndash;&gt;-->
-<!--&lt;!&ndash;                    &lt;!&ndash;    Speaking Indicator    &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                    &lt;!&ndash;                                            <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                    &lt;!&ndash;                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                    &lt;!&ndash;                                                    speaking&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                    &lt;!&ndash;                                                </span>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                    &lt;!&ndash;    Signal Indicator    &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                    <i class="tim-icoNbRegisterComponentns icon-wifi"&ndash;&gt;-->
-<!--&lt;!&ndash;                       [class.text-red]="0 < 1"&ndash;&gt;-->
-<!--&lt;!&ndash;                       [class.text-green]="0 > 1"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;                    &lt;!&ndash;    Mute Indicator    &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                    <i class="fas fa-microphone-slash text-red" [class.d-none]="false"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-<!--&lt;!&ndash;              </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            &lt;!&ndash;                            DEMO &ndash;&gt;&ndash;&gt;-->
+            <!--                            DEMO -->
+<!--            <div class="active-bg">-->
+<!--              <div class="pt-md-1 pb-md-1 row no-gutters">-->
+<!--                <div class="col-md-9">-->
+<!--                  <img alt="Raised circle image"-->
+<!--                       class="img-fluid rounded-circle shadow-lg attendeeAvatar"-->
+<!--                       src='https://ui-avatars.com/api/?name=alI&rounded=true&background=000&color=fff'>-->
+<!--                  <h6 class="pt-md-3 pl-md-3 controls-inline">-->
+<!--                    Muhammad Ali-->
+<!--                  </h6>-->
+<!--                </div>-->
+<!--                <div class="col-md-3">-->
+<!--                  <div class="pt-md-3">-->
+<!--                    &lt;!&ndash;    Speaking Indicator    &ndash;&gt;-->
+<!--                    &lt;!&ndash;                                            <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                                    speaking&ndash;&gt;-->
+<!--                    &lt;!&ndash;                                                </span>&ndash;&gt;-->
+                    <!--    Signal Indicator    -->
+<!--                    <i class="tim-icoNbRegisterComponentns icon-wifi"-->
+<!--                       [class.text-red]="0 < 1"-->
+<!--                       [class.text-green]="0 > 1"></i>-->
+                    <!--    Mute Indicator    -->
+<!--                    <i class="fas fa-microphone-slash text-red" [class.d-none]="false"></i>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!---->
+<!--            </div>-->
+            <!--                            DEMO -->
 
 
 <!--&lt;!&ndash;            <div *ngFor="let data of rosterData">&ndash;&gt;-->

@@ -6,7 +6,7 @@ import {
     NbInputModule, NbListModule,
     NbMenuModule, NbProgressBarModule,
     NbSelectModule,
-    NbStepperModule, NbTabsetModule, NbUserModule
+    NbStepperModule, NbTabsetModule, NbTooltipModule, NbUserModule
 } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
@@ -39,6 +39,7 @@ import {FormsModule} from "@angular/forms";
         NbListModule,
         NbUserModule,
         NbIconModule,
+        NbTooltipModule,
     ],
   declarations: [
     PagesComponent,
