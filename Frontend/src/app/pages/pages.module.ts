@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import {
     NbActionsModule,
     NbButtonModule,
-    NbCardModule,
-    NbInputModule,
+    NbCardModule, NbIconModule,
+    NbInputModule, NbListModule,
     NbMenuModule, NbProgressBarModule,
     NbSelectModule,
-    NbStepperModule, NbTabsetModule
+    NbStepperModule, NbTabsetModule, NbUserModule
 } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
@@ -36,6 +36,9 @@ import {FormsModule} from "@angular/forms";
         NbProgressBarModule,
         NbActionsModule,
         NbTabsetModule,
+        NbListModule,
+        NbUserModule,
+        NbIconModule,
     ],
   declarations: [
     PagesComponent,
