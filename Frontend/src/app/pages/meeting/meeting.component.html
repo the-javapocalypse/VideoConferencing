@@ -129,9 +129,9 @@
                         <!--       Video Input On Handler End      -->
                         <!--       Screen Share Handler Start      -->
                         <nb-action>
-                            <nb-icon  icon='{{shareScreen ? "close-square-outline" : "cast-outline"}}'
-                                      (click)="shareScreenInputHandler()"
-                                      nbTooltip='{{shareScreen ? "Stop sharing screen" : "Start sharing screen"}}'
+                            <nb-icon icon='{{shareScreen ? "close-square-outline" : "cast-outline"}}'
+                                     (click)="shareScreenInputHandler()"
+                                     nbTooltip='{{shareScreen ? "Stop sharing screen" : "Start sharing screen"}}'
                                      status='{{shareScreen ? "primary" : "default"}}'>
                             </nb-icon>
                         </nb-action>
@@ -151,81 +151,37 @@
                         <!--   Attendees List Start  -->
                         <nb-tab tabTitle="Attendees" tabIcon="person-outline" class="p-0" responsive>
                             <nb-list class="attendee-card-height">
-                                <nb-list-item>
+                                <nb-list-item *ngFor="let data of rosterData">
                                     <div class="row no-gutters p-0 m-0 py-1">
+                                        <!--   Attendee name and avatar  -->
                                         <div class="col-md-8">
                                             <nb-user size="medium"
-                                                     name="Jonh Doe"
+                                                     name="{{roster[data].name}}"
                                                      title="Attendee"
                                                      showTitle=false>
                                             </nb-user>
                                         </div>
+                                        <!--   Attendee device indicators  -->
                                         <div class="col-md-4 pt-2 text-right">
+                                            <!--   Speaking indicator  -->
                                             <nb-icon status="success" icon="volume-up-outline"
-                                                     nbTooltip="is speaking" nbTooltipStatus="success">
+                                                     nbTooltip="{{roster[data].name}} is speaking"
+                                                     nbTooltipStatus="success"
+                                                     [class.d-none]="roster[data].muted || !roster[data].active">
                                             </nb-icon>
+                                            <!--   Mute indicator  -->
                                             <nb-icon status="danger" icon="mic-off-outline"
-                                                     nbTooltip="mic is muted" nbTooltipStatus="danger">
+                                                     nbTooltip="{{roster[data].name}}'s mic is muted"
+                                                     nbTooltipStatus="danger"
+                                                     [class.d-none]="!roster[data].muted">
                                             </nb-icon>
+                                            <!--   Signals indicator  -->
                                             <nb-icon icon="wifi-outline"
+                                                     status="{{roster[data].signalStrength < 1 ? (roster[data].signalStrength === 0 ? 'danger' : 'warning') : 'success'}}"
                                                      nbTooltip="Strong connection" nbTooltipStatus="success">
                                             </nb-icon>
                                         </div>
                                     </div>
-                                    <div class="row no-gutters p-0 m-0">
-                                        <div class="col-md-8">
-                                            <nb-user size="medium"
-                                                     name="Jonh Doe"
-                                                     title="Attendee"
-                                                     showTitle=false>
-                                            </nb-user>
-                                        </div>
-                                        <div class="col-md-4 pt-2 text-right">
-                                            <nb-icon status="danger" icon="mic-off-outline"></nb-icon>
-                                            <nb-icon icon="wifi-outline"></nb-icon>
-                                        </div>
-                                    </div>
-                                    <nb-user size="large"
-                                             name="Jonh Doe"
-                                             title="Engineer"
-                                             showTitle=false>
-                                    </nb-user>
-                                    <nb-user size="large"
-                                             name="Jonh Doe"
-                                             title="Engineer"
-                                             showTitle=false>
-                                    </nb-user>
-                                    <nb-user size="large"
-                                             name="Jonh Doe"
-                                             title="Engineer"
-                                             showTitle=false>
-                                    </nb-user>
-                                    <nb-user size="large"
-                                             name="Jonh Doe"
-                                             title="Engineer"
-                                             showTitle=false>
-                                    </nb-user>
-                                    <nb-user size="large"
-                                             name="Jonh Doe"
-                                             title="Engineer"
-                                             showTitle=false>
-                                    </nb-user>
-                                    <nb-user size="large"
-                                             name="Jonh Doe"
-                                             title="Engineer"
-                                             showTitle=false>
-                                    </nb-user>
-                                    <nb-user size="large"
-                                             name="Jonh Doe"
-                                             title="Engineer"
-                                             showTitle=false>
-                                    </nb-user>
-                                    <nb-user size="large"
-                                             name="Jonh Doe"
-                                             title="Engineer"
-                                             showTitle=false>
-                                    </nb-user>
-
                                 </nb-list-item>
                             </nb-list>
                         </nb-tab>
@@ -242,6 +198,11 @@
     </div>
 </div>
 <!--In Meeting Screen End-->
+<audio id="meeting-audio" style="display:none"></audio>
+
+
+
+
 
 <!--<div [class.d-none]="deviceManagementFLAG" class="wrapper container-fluid m-0 p-0 m-h-100vh">-->
 <!--  <div class="row no-gutters">-->
@@ -253,107 +214,75 @@
 <!--            {{meetingName}}-->
 <!--          </h1>-->
 <!--          <hr class="line-success">-->
-<!--       Audio Mute Handler Start      -->
+<!--       Audio Mute Handler Start-->
 <!--          <button class="btn btn-primary btn-fab btn-icon btn-round" (click)="muteHandler()">-->
 <!--            <i class="fas fa-microphone" [class.d-none]="!audioInputUnmute"></i>-->
 <!--            <i class="fas fa-microphone-slash" [class.d-none]="audioInputUnmute"></i>-->
 <!--          </button>-->
-<!--       Audio Mute Handler End      -->
-<!--       Video Input On Handler Start      -->
+<!--       Audio Mute Handler End-->
+<!--       Video Input On Handler Start-->
 <!--          <button class="btn btn-primary btn-fab btn-icon btn-round" (click)="videoInputHandler()">-->
 <!--            <i class="fas fa-video" [class.d-none]="!videoInput"></i>-->
 <!--            <i class="fas fa-video-slash" [class.d-none]="videoInput"></i>-->
 <!--          </button>-->
 <!--        </div>-->
-<!--       Video Input On Handler End      -->
+<!--       Video Input On Handler End-->
 <!--        <tabset class="nav-tabs-primary">-->
-<!--          &lt;!&ndash;       Attendees List Tab Start      &ndash;&gt;-->
+<!--       Attendees List Tab Start-->
 <!--          <tab>-->
 <!--            <ng-template tabHeading>-->
 <!--              <i class="tim-icons icon-single-02"></i>Attendees-->
 <!--            </ng-template>-->
 
 
-<!--                            DEMO -->
-<!--            <div class="active-bg">-->
-<!--              <div class="pt-md-1 pb-md-1 row no-gutters">-->
-<!--                <div class="col-md-9">-->
-<!--                  <img alt="Raised circle image"-->
-<!--                       class="img-fluid rounded-circle shadow-lg attendeeAvatar"-->
-<!--                       src='https://ui-avatars.com/api/?name=alI&rounded=true&background=000&color=fff'>-->
-<!--                  <h6 class="pt-md-3 pl-md-3 controls-inline">-->
-<!--                    Muhammad Ali-->
-<!--                  </h6>-->
-<!--                </div>-->
-<!--                <div class="col-md-3">-->
-<!--                  <div class="pt-md-3">-->
-<!--                    &lt;!&ndash;    Speaking Indicator    &ndash;&gt;-->
-<!--                    &lt;!&ndash;                                            <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>&ndash;&gt;-->
-<!--                    &lt;!&ndash;                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">&ndash;&gt;-->
-<!--                    &lt;!&ndash;                                                    speaking&ndash;&gt;-->
-<!--                    &lt;!&ndash;                                                </span>&ndash;&gt;-->
-<!--    Signal Indicator    -->
-<!--                    <i class="tim-icoNbRegisterComponentns icon-wifi"-->
-<!--                       [class.text-red]="0 < 1"-->
-<!--                       [class.text-green]="0 > 1"></i>-->
-<!--    Mute Indicator    -->
-<!--                    <i class="fas fa-microphone-slash text-red" [class.d-none]="false"></i>-->
+
+<!--            <div *ngFor="let data of rosterData">-->
+<!--              <div class="pt-md-1 pb-md-1">-->
+<!--                <div class="row no-gutters">-->
+<!--                  <div class="col-md-9">-->
+<!--                    <img alt="Raised circle image"-->
+<!--                         class="img-fluid rounded-circle shadow-lg attendeeAvatar"-->
+<!--                         src='https://ui-avatars.com/api/?name={{roster[data].name}}&rounded=true&background=000&color=fff'>-->
+<!--                    <h6 class="pt-md-3 pl-md-3 controls-inline">-->
+<!--                      {{roster[data].name}}-->
+<!--                    </h6>-->
+<!--                  </div>-->
+<!--                  <div class="col-md-3">-->
+<!--                    <div class="pt-md-3">-->
+<!--    Speaking Indicator-->
+<!--                      <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>-->
+<!--                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">-->
+<!--                                                    speaking-->
+<!--                                                </span>-->
+<!--    Signal Indicator-->
+<!--                      <i class="tim-icons icon-wifi"-->
+<!--                         [class.text-red]="roster[data].signalStrength < 1"-->
+<!--                         [class.text-green]="roster[data].signalStrength > 1"></i>-->
+<!--                      &lt;!&ndash;    Mute Indicator    &ndash;&gt;-->
+<!--                      <i class="fas fa-microphone-slash text-red" [class.d-none]="!roster[data].muted"></i>-->
+<!--                    </div>-->
 <!--                  </div>-->
 <!--                </div>-->
+
 <!--              </div>-->
-<!---->
 <!--            </div>-->
-<!--                            DEMO -->
+<!--          </tab>-->
+<!--          &lt;!&ndash;       Attendees List Tab End      &ndash;&gt;-->
 
+<!--          <tab>-->
+<!--            <ng-template tabHeading>-->
+<!--              <i class="tim-icons icon-chat-33"> </i> Chat-->
+<!--            </ng-template>-->
+<!--            <p>-->
 
-<!--&lt;!&ndash;            <div *ngFor="let data of rosterData">&ndash;&gt;-->
-<!--&lt;!&ndash;              <div class="pt-md-1 pb-md-1">&ndash;&gt;-->
-<!--&lt;!&ndash;                <div class="row no-gutters">&ndash;&gt;-->
-<!--&lt;!&ndash;                  <div class="col-md-9">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <img alt="Raised circle image"&ndash;&gt;-->
-<!--&lt;!&ndash;                         class="img-fluid rounded-circle shadow-lg attendeeAvatar"&ndash;&gt;-->
-<!--&lt;!&ndash;                         src='https://ui-avatars.com/api/?name={{roster[data].name}}&rounded=true&background=000&color=fff'>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <h6 class="pt-md-3 pl-md-3 controls-inline">&ndash;&gt;-->
-<!--&lt;!&ndash;                      {{roster[data].name}}&ndash;&gt;-->
-<!--&lt;!&ndash;                    </h6>&ndash;&gt;-->
-<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                  <div class="col-md-3">&ndash;&gt;-->
-<!--&lt;!&ndash;                    <div class="pt-md-3">&ndash;&gt;-->
-<!--&lt;!&ndash;                      &lt;!&ndash;    Speaking Indicator    &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                      <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;                      &lt;!&ndash;                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                      &lt;!&ndash;                                                    speaking&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                      &lt;!&ndash;                                                </span>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                      &lt;!&ndash;    Signal Indicator    &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                      <i class="tim-icons icon-wifi"&ndash;&gt;-->
-<!--&lt;!&ndash;                         [class.text-red]="roster[data].signalStrength < 1"&ndash;&gt;-->
-<!--&lt;!&ndash;                         [class.text-green]="roster[data].signalStrength > 1"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;                      &lt;!&ndash;    Mute Indicator    &ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;                      <i class="fas fa-microphone-slash text-red" [class.d-none]="!roster[data].muted"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                  </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                </div>&ndash;&gt;-->
-
-<!--&lt;!&ndash;              </div>&ndash;&gt;-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--&lt;!&ndash;          </tab>&ndash;&gt;-->
-<!--&lt;!&ndash;          &lt;!&ndash;       Attendees List Tab End      &ndash;&gt;&ndash;&gt;-->
-
-<!--&lt;!&ndash;          <tab>&ndash;&gt;-->
-<!--&lt;!&ndash;            <ng-template tabHeading>&ndash;&gt;-->
-<!--&lt;!&ndash;              <i class="tim-icons icon-chat-33"> </i> Chat&ndash;&gt;-->
-<!--&lt;!&ndash;            </ng-template>&ndash;&gt;-->
-<!--&lt;!&ndash;            <p>&ndash;&gt;-->
-
-<!--&lt;!&ndash;              Dramatically visualize customer directed convergence&ndash;&gt;-->
-<!--&lt;!&ndash;              without revolutionary ROI.&ndash;&gt;-->
-<!--&lt;!&ndash;            </p>&ndash;&gt;-->
-<!--&lt;!&ndash;          </tab>&ndash;&gt;-->
-<!--&lt;!&ndash;        </tabset>&ndash;&gt;-->
+<!--              Dramatically visualize customer directed convergence-->
+<!--              without revolutionary ROI.-->
+<!--            </p>-->
+<!--          </tab>-->
+<!--        </tabset>-->
 <!--      </div>-->
 <!--    </div>-->
 
-<!--&lt;!&ndash;    Meeting Audio   &ndash;&gt;-->
-<!--    <audio id="meeting-audio" style="display:none"></audio>-->
+<!--    Meeting Audio-->
 <!--  </div>-->
 <!--</div>-->

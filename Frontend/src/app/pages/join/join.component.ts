@@ -17,11 +17,11 @@ export class JoinComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private chime: ChimeService,
               private localStorage: StorageService) {
     // Check if user's roaster info is already present in localstorage
-    if (this.localStorage.roasterInfoIsSet()) {
-      // join meeting
-      this.joinMeetingTrigger(this.localStorage.getRoasterInfo().meetingId,
-        this.localStorage.getRoasterInfo().attendeeName);
-    }
+    // if (this.localStorage.roasterInfoIsSet()) {
+    //   // join meeting
+    //   this.joinMeetingTrigger(this.localStorage.getRoasterInfo().meetingId,
+    //     this.localStorage.getRoasterInfo().attendeeName);
+    // }
   }
 
   ngOnInit() {
@@ -48,7 +48,7 @@ export class JoinComponent implements OnInit {
     console.log('Joining meting...');
     this.chime.joinMeeting({
       title: meetingId,
-      name: attendeeName
+      name: attendeeName,
     }).subscribe((res: any) => {
         console.log('Successfully joined...');
         this.chime.startSession(res.JoinInfo.Meeting, res.JoinInfo.Attendee);

@@ -26,7 +26,7 @@ export class MeetingComponent implements OnInit {
 
     // interval to get roster data asynchronously from chime and update UI.
     // invkoed in joinMeeting()
-    source = interval(500);
+    source = interval(30000);
     subscribe = null;
 
     // Default label text for device management dropdown
@@ -40,7 +40,7 @@ export class MeetingComponent implements OnInit {
     currentVideoInputDeviceID = 0;
 
     // Flag to render device management screen or meeting screen
-    deviceManagementFLAG = false;
+    deviceManagementFLAG = true;
 
     // Meeting Name
     meetingName = 'Meeting Demo';
@@ -75,6 +75,7 @@ export class MeetingComponent implements OnInit {
     ngOnInit() {
         // set meeting name
         this.meetingName = this.route.snapshot.paramMap.get('ID');
+
         // setup dropdowns for device management
         this.initializeUIComponents();
     }
@@ -182,12 +183,15 @@ export class MeetingComponent implements OnInit {
 
     // Def: show meeting screen and subscribe to meeting using chime's api
     async joinMeeting() {
+        console.log('custom - join meeting triggered');
         await this.chime.startMeeting();
         this.deviceManagementFLAG = false;
         // update roster of attendees every x ms
         this.subscribe = this.source.subscribe(async val => {
             this.roster = await this.chime.getRoster();
             this.rosterData = Object.keys(this.roster);
+            console.log('custom');
+            console.log(this.roster);
         });
 
         // Setup input and output audio device for meeting
@@ -204,7 +208,7 @@ export class MeetingComponent implements OnInit {
             this.chime.audioVideo.realtimeUnmuteLocalAudio();
         } else {
             // Mute audio input
-            if (this.chime.audioVideo.realtimeCanUnmuteLocalAudio()) {
+                if (this.chime.audioVideo.realtimeCanUnmuteLocalAudio()) {
                 this.chime.audioVideo.realtimeMuteLocalAudio();
             }
         }
