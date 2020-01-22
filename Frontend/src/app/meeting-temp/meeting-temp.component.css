@@ -1,0 +1,20 @@
+.controllerMeetingDiv {
+  min-height: 100vh;
+  background-color: #F4F3F3; }
+
+#AttendeeList {
+  height: 65vh !important;
+  overflow-y: scroll; }
+  #AttendeeList::-webkit-scrollbar-track {
+    background-color: #F4F3F3; }
+  #AttendeeList::-webkit-scrollbar {
+    width: 3px;
+    background-color: #F4F3F3; }
+  #AttendeeList::-webkit-scrollbar-thumb {
+    background-color: #9c9c9c; }
+  #AttendeeList .list-group-item {
+    background-color: transparent !important; }
+  #AttendeeList .attendeeAvatar {
+    width: 2.8rem; }
+
+/*# sourceMappingURL=meeting-temp.component.css.map */
