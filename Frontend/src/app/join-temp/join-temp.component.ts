@@ -16,10 +16,10 @@ export class JoinTempComponent implements OnInit {
   // tslint:disable-next-line:max-line-length
   constructor(private route: ActivatedRoute, private router: Router, private chime: ChimeService, private localStorage: LocalStorageService) {
     // Check if user's roaster info is already present in localstorage
-    // if (this.localStorage.roasterInfoIsSet()) {
-    //   // join meeting
-    //   this.joinMeetingTrigger(this.localStorage.getRoasterInfo().meetingId, this.localStorage.getRoasterInfo().attendeeName);
-    // }
+    if (this.localStorage.roasterInfoIsSet()) {
+      // join meeting
+      this.joinMeetingTrigger(this.localStorage.getRoasterInfo().meetingId, this.localStorage.getRoasterInfo().attendeeName);
+    }
   }
 
 
