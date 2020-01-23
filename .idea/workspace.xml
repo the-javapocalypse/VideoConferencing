@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +37,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/custom-frontend/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/ngx-admin (copy)/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -115,14 +118,8 @@
       <workItem from="1579326008538" duration="14564000" />
       <workItem from="1579349488320" duration="432000" />
       <workItem from="1579447391622" duration="53000" />
-      <workItem from="1579764333388" duration="1115000" />
-    </task>
-    <task id="LOCAL-00018" summary="Update Input Audio Device">
-      <created>1578311434656</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1578311434656</updated>
+      <workItem from="1579764333388" duration="7391000" />
+      <workItem from="1579776133440" duration="3794000" />
     </task>
     <task id="LOCAL-00019" summary="Video Preview working">
       <created>1578387921996</created>
@@ -460,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579249972266</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Join redirect to meeting if data saved in local storage">
+      <created>1579765558503</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1579765558503</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +489,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Updated Package" />
     <MESSAGE value="chime code added" />
     <MESSAGE value="Disabled sidebar" />
     <MESSAGE value="Disabled sidebar collapse button" />
@@ -510,6 +513,7 @@
     <MESSAGE value="Attendee list tooltips" />
     <MESSAGE value="Tooltips for in-meeting device handlers" />
     <MESSAGE value="Integrated toaster" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrated toaster" />
+    <MESSAGE value="Join redirect to meeting if data saved in local storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Join redirect to meeting if data saved in local storage" />
   </component>
 </project>
