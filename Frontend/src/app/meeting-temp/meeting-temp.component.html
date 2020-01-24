@@ -1,7 +1,7 @@
 <!--Device Management-->
-<div [class.d-none]="!deviceManagementFLAG" class="wrapper">
-  <div class="container">
-    <div class="pt-5">
+<div [class.d-none]="!deviceManagementFLAG" class="wrapper bg-animated">
+  <div class="container d-flex" style="height: 100vh">
+    <div class="justify-content-center align-self-center m-auto">
       <div class="card ">
         <div class="card-body p-5">
           <h2 class="card-title text-center">
@@ -13,7 +13,7 @@
                 Microphone
               </h4>
               <!--    AUDIO INPUT CONTROLS START     -->
-              <button class="btn btn-secondary dropdown-toggle btn-block" type="button" id="audioInputBtn"
+              <button class="btn btn-outline-primary dropdown-toggle btn-block" type="button" id="audioInputBtn"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ currentAudioInputDevice  | slice:0:24}}
               </button>
@@ -31,7 +31,7 @@
               </h4>
               <!--    VIDEO INPUT CONTROLS START     -->
               <div class="dropdown controls-inline">
-                <button class="btn btn-default dropdown-toggle btn-block" type="button"
+                <button class="btn btn-outline-primary dropdown-toggle btn-block" type="button"
                         data-toggle="dropdown">
                   {{currentVideoInputDevice | slice:0:24}}
                 </button>
@@ -52,7 +52,7 @@
                 Speaker
               </h4>
               <!--    AUDIO OUTPUT CONTROLS START     -->
-              <button class="btn btn-secondary dropdown-toggle btn-block" type="button"
+              <button class="btn btn-outline-primary dropdown-toggle btn-block" type="button"
                       id="audioOutputBtn"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{currentAudioOutputDevice | slice:0:24}}
@@ -71,7 +71,7 @@
               </h4>
               <!--    VIDEO QUALITY CONTROLS START     -->
               <div class="dropdown controls-inline">
-                <button class="btn btn-default dropdown-toggle btn-block" type="button"
+                <button class="btn btn-outline-primary dropdown-toggle btn-block" type="button"
                         data-toggle="dropdown">
                   {{videoQualityPreview | slice:0:24}}
                 </button>
@@ -101,7 +101,7 @@
                 <!--    AUDIO PREVIEW END     -->
               </div>
               <!--    TEST SPEAKER START     -->
-              <button id='buttonTestSound' class="btn btn-outline-secondary btn-block mt-3"
+              <button id='buttonTestSound' class="btn btn-outline-primary btn-block mt-3"
                       (click)="playAudio()" [class.disabled]="speakerTestFlag">Test Speakers
               </button>
               <video id="video-preview" class="w-100 h-100 p-md-3"></video>

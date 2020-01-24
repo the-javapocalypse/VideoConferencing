@@ -70,8 +70,6 @@ export class MeetingTempComponent implements OnInit {
     rosterData = [];
 
 
-    tileCounter = 0;
-
     ngOnInit() {
         // set meeting name
         this.meetingName = this.route.snapshot.paramMap.get('meeting_id');
@@ -81,9 +79,14 @@ export class MeetingTempComponent implements OnInit {
 
     // Def: setup dropdowns for device management. Fetch available devices from chime
     async initializeUIComponents() {
-        this.videoInputDevices = await this.chime.audioVideo.listVideoInputDevices();
-        this.audioOutputDevices = await this.chime.audioVideo.listAudioOutputDevices();
-        this.audioInputDevices = await this.chime.audioVideo.listAudioInputDevices();
+        try {
+            this.videoInputDevices = await this.chime.audioVideo.listVideoInputDevices();
+            this.audioOutputDevices = await this.chime.audioVideo.listAudioOutputDevices();
+            this.audioInputDevices = await this.chime.audioVideo.listAudioInputDevices();
+        } catch (err) {
+            // Devices not initialized which means user haven't joined the meeting, so redirect to /join
+            this.router.navigate(['/join/' + this.meetingName]);
+        }
     }
 
     // Def: invoked when audio input device is changed. It updates chime's audio input source and UI

@@ -1,2 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.css'
+
+
+.bg-animated
+  background: linear-gradient(321deg, #9da5bd, #3a4c7a, #0e255a, #040c23)
+  background-size: 400% 400%
+  animation: gradient 30s ease infinite
+
+@keyframes gradient
+  0%
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0% 50%

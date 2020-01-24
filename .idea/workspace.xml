@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,14 +121,8 @@
       <workItem from="1579447391622" duration="53000" />
       <workItem from="1579764333388" duration="7391000" />
       <workItem from="1579776133440" duration="4836000" />
-      <workItem from="1579846423704" duration="5423000" />
-    </task>
-    <task id="LOCAL-00021" summary="Added speaker test and video quality">
-      <created>1578470685056</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1578470685056</updated>
+      <workItem from="1579846423704" duration="7984000" />
+      <workItem from="1579861378509" duration="3073000" />
     </task>
     <task id="LOCAL-00022" summary="Refactored UI Device Management">
       <created>1578471907823</created>
@@ -465,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579846499790</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Multiple sources can share video">
+      <created>1579852693897</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1579852693897</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +492,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Disabled sidebar collapse button" />
     <MESSAGE value="Join form init" />
     <MESSAGE value="Join form basic ui done" />
     <MESSAGE value="init meeting component" />
@@ -515,6 +516,7 @@
     <MESSAGE value="Join redirect to meeting if data saved in local storage" />
     <MESSAGE value="Updated UI" />
     <MESSAGE value="Video Sync Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Video Sync Done" />
+    <MESSAGE value="Multiple sources can share video" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple sources can share video" />
   </component>
 </project>
