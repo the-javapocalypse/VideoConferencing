@@ -105,7 +105,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
   static readonly BASE_URL: string = [location.protocol, '//', location.host, location.pathname.replace(/\/*$/, '/')].join('');
 
   // Todo: Export in other file
-  private host = 'http://localhost:8080/';
+  private host = 'https://192.168.100.131:8080/';
   private apiUrl = this.host + 'vc/';
 
 
