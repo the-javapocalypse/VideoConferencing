@@ -1,11 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap')
+
+$text-dark: #040C23
+
+body
+  font-family: 'Noto Sans', sans-serif
+
+.text-dark
+  color: $text-dark
+
+.btn-p-c
+  background: #4e54c8
+  background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8)
+  background: linear-gradient(to right, #8f94fb, #4e54c8)
+  color: #fff
+  border: 3px solid #eee
 
 .bg-animated
-  background: linear-gradient(321deg, #9da5bd, #3a4c7a, #0e255a, #040c23)
-  background-size: 400% 400%
-  animation: gradient 30s ease infinite
+  background: linear-gradient(270deg, #f7dfdd, #f5bbb0, #f15e42, #c44228, #040c23, #0e255a, #4285f5, #a8cdf7)
+  background-size: 1600% 1600%
+  animation: gradient 40s ease infinite
 
 @keyframes gradient
   0%
