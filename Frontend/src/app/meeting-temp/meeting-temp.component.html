@@ -96,8 +96,8 @@
               <div class="progress-container progress-danger">
                 <h4 class="progress-badge"> Microphone Test </h4>
                 <!--    AUDIO PREVIEW START     -->
-                <!--                <progressbar class="progress-bar-danger" [value]="audioInputPreview">-->
-                <!--                </progressbar>-->
+                <nz-progress [nzShowInfo]="false" [nzPercent]="audioInputPreview"
+                             [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"></nz-progress>
                 <!--    AUDIO PREVIEW END     -->
               </div>
               <!--    TEST SPEAKER START     -->
@@ -211,6 +211,11 @@
         </div>
         <!--  Attendees Div END  -->
       </div>
+    </div>
+    <div class="col-md-9">
+      <video id="video-self" class="w-100 h-100 p-md-3"></video>
+      <video id="video-1" class="w-100 h-100 p-md-3"></video>
+      <video id="video-2" class="w-100 h-100 p-md-3"></video>
     </div>
     <!--Meeting Controllers END-->
   </div>
