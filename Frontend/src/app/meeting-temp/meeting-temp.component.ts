@@ -4,6 +4,7 @@ import {ChimeService} from '../services/api/chime.service';
 import {Router, ActivatedRoute} from '@angular/router';
 import {interval} from 'rxjs';
 import {NzMessageService} from 'ng-zorro-antd';
+import {LocalStorageService} from '../services/storage/local-storage.service';
 
 @Component({
     selector: 'app-meeting-temp',
@@ -17,7 +18,8 @@ export class MeetingTempComponent implements OnInit {
                 public chime: ChimeService,
                 private router: Router,
                 private route: ActivatedRoute,
-                private toast: NzMessageService) {
+                private toast: NzMessageService,
+                public storage: LocalStorageService) {
 
     }
 
@@ -70,7 +72,11 @@ export class MeetingTempComponent implements OnInit {
     rosterData = [];
 
 
+    deviceScreenInitFLAG = false;
+
+
     ngOnInit() {
+        this.deviceScreenInitFLAG = false;
         // set meeting name
         this.meetingName = this.route.snapshot.paramMap.get('meeting_id');
         // setup dropdowns for device management
@@ -83,6 +89,21 @@ export class MeetingTempComponent implements OnInit {
             this.videoInputDevices = await this.chime.audioVideo.listVideoInputDevices();
             this.audioOutputDevices = await this.chime.audioVideo.listAudioOutputDevices();
             this.audioInputDevices = await this.chime.audioVideo.listAudioInputDevices();
+
+            // setup default devices at index 0
+            if (this.audioInputDevices.length > 0) {
+                this.updateCurrentAudioInputDevice(this.audioInputDevices[0].label, this.audioInputDevices[0].deviceId);
+            }
+            if (this.audioOutputDevices.length > 0) {
+                this.updateCurrentAudioOutputDevice(this.audioOutputDevices[0].label, this.audioOutputDevices[0].deviceId);
+            }
+            if (this.videoInputDevices.length > 0) {
+                this.updateCurrentVideoInputDevice(this.videoInputDevices[0].label, this.videoInputDevices[0].deviceId);
+            }
+            this.updateVideoQualityPreview('540p');
+
+            // Screen Loaded, show UI
+            this.deviceScreenInitFLAG = true;
         } catch (err) {
             // Devices not initialized which means user haven't joined the meeting, so redirect to /join
             this.router.navigate(['/join/' + this.meetingName]);
