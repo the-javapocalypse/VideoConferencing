@@ -14,12 +14,12 @@
                             <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
                         </div>
                     </div>
-                    <div class="row pt-3 pt-md-5" [class.d-none]="!deviceScreenInitFLAG">
+                    <div class="row pt-4" [class.d-none]="!deviceScreenInitFLAG">
                         <div class="col-12 col-md-3">
+                            <!--    AUDIO INPUT CONTROLS START     -->
                             <h5>
                                 Microphone
                             </h5>
-                            <!--    AUDIO INPUT CONTROLS START     -->
                             <button class="btn btn-outline-primary dropdown-toggle btn-block" type="button"
                                     id="audioInputBtn"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -34,10 +34,10 @@
                                 </div>
                             </div>
                             <!--    AUDIO INPUT CONTROLS END     -->
-                            <h5 class="pt-3 pt-md-5">
+                            <!--    VIDEO INPUT CONTROLS START     -->
+                            <h5 class="pt-4">
                                 Camera
                             </h5>
-                            <!--    VIDEO INPUT CONTROLS START     -->
                             <div class="dropdown controls-inline">
                                 <button class="btn btn-outline-primary dropdown-toggle btn-block" type="button"
                                         data-toggle="dropdown">
@@ -51,15 +51,20 @@
                                 </div>
                             </div>
                             <!--    VIDEO INPUT CONTROLS END     -->
+                            <!--    AUDIO PREVIEW START     -->
+                            <h5 class="pt-4"> Microphone Test </h5>
+                            <nz-progress [nzShowInfo]="false" [nzPercent]="audioInputPreview"
+                                         [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"></nz-progress>
+                            <!--    AUDIO PREVIEW END     -->
                         </div>
 
                         <div class="col-md-1 col-0"></div>
 
                         <div class="col-md-3 col-12">
-                            <h5 class="pt-3 pt-md-0">
+                            <!--    AUDIO OUTPUT CONTROLS START     -->
+                            <h5 class="pt-4 pt-md-0">
                                 Speaker
                             </h5>
-                            <!--    AUDIO OUTPUT CONTROLS START     -->
                             <button class="btn btn-outline-primary dropdown-toggle btn-block" type="button"
                                     id="audioOutputBtn"
                                     data-toggle="dropdown">
@@ -74,10 +79,10 @@
                                 </div>
                             </div>
                             <!--    AUDIO OUTPUT CONTROLS END     -->
-                            <h5 class="pt-3 pt-md-5">
+                            <!--    VIDEO QUALITY CONTROLS START     -->
+                            <h5 class="pt-4">
                                 Video Quality
                             </h5>
-                            <!--    VIDEO QUALITY CONTROLS START     -->
                             <div class="dropdown controls-inline">
                                 <button class="btn btn-outline-primary dropdown-toggle btn-block" type="button"
                                         data-toggle="dropdown">
@@ -96,27 +101,26 @@
                                 </div>
                             </div>
                             <!--    VIDEO QUALITY CONTROLS END     -->
+                            <!--    TEST SPEAKER START     -->
+                            <div class="pt-4">
+                                <button id='buttonTestSound' class="btn btn-outline-primary btn-block mt-3"
+                                        (click)="playAudio()" [class.disabled]="speakerTestFlag">Test Speakers
+                                </button>
+                            </div>
+                            <!--    TEST SPEAKER END     -->
                         </div>
 
                         <div class="col-md-1 col-0"></div>
 
+                        <!--    VIDEO PREVIEW START     -->
                         <div class="col-md-4 col-0">
-                            <h5 class="pt-3 pb-1 p-md-0"> Microphone Test </h5>
-                            <!--    AUDIO PREVIEW START     -->
-                            <nz-progress [nzShowInfo]="false" [nzPercent]="audioInputPreview"
-                                         [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"></nz-progress>
-                            <!--    AUDIO PREVIEW END     -->
-                            <!--    TEST SPEAKER START     -->
-                            <button id='buttonTestSound' class="btn btn-outline-primary btn-block mt-3"
-                                    (click)="playAudio()" [class.disabled]="speakerTestFlag">Test Speakers
-                            </button>
-                            <h5 class="pt-3 pt-md-0 pt-md-2"> Video Preview </h5>
-                            <video id="video-preview" class="meetingVideo px-3 pt-3 px-md-3 pt-md-2"></video>
-                            <!--    TEST SPEAKER END     -->
+                            <h5 class="pt-3 pt-md-4"> Video Preview </h5>
+                            <video id="video-preview" class="meetingVideo px-2 pt-3 pt-md-2"></video>
+                            <!--    VIDEO PREVIEW END     -->
                         </div>
                     </div>
                     <div class="row" [class.d-none]="!deviceScreenInitFLAG">
-                        <div class="col-md-8 col-12 pt-5 pt-md-0">
+                        <div class="col-md-8 col-12 pt-5 pt-md-3">
                             <button class="btn btn-block btn-primary" (click)="joinMeeting()">
                                 Join
                             </button>
@@ -130,10 +134,10 @@
 <!--Device Management END-->
 
 <!--Meeting Screen Start-->
-<div [class.d-none]="deviceManagementFLAG" class="container-fluid m-0 p-0 m-h-100vh">
+<div [class.d-none]="deviceManagementFLAG" class="container-fluid m-0 p-0 h-100vh">
     <div class="row no-gutters">
         <!--Meeting Controllers START-->
-        <div class="col-md-3 m-h-100vh controllerMeetingDiv">
+        <div class="col-md-3 h-100vh controllerMeetingDiv">
             <div class="container">
                 <!--  Meeting Name    -->
                 <h3 class="text-center py-2 pt-3">
@@ -143,32 +147,33 @@
                 <div class="d-inline-block w-100">
                     <h4 class="p-md-1 text-center">
                         <!--  Mute Handler  -->
-                        <span class="px-md-3">
-              <i nz-icon nzType="audio"
-                 nzTheme="{{ audioInputUnmute ? 'twotone' : 'outline' }}"
-                 (click)="muteHandler()"
-                 nz-tooltip nzTooltipTitle="{{ audioInputUnmute ? 'Mic on' : 'Mic off' }}"></i>
-            </span>
+                        <span class="px-3">
+                          <i nz-icon nzType="audio"
+                             nzTheme="{{ audioInputUnmute ? 'twotone' : 'outline' }}"
+                             (click)="muteHandler()"
+                             nz-tooltip nzTooltipTitle="{{ audioInputUnmute ? 'Mic on' : 'Mic off' }}"></i>
+                        </span>
                         <!--  Video Handler  -->
-                        <span class="px-md-3">
-              <i nz-icon nzType="video-camera"
-                 nzTheme="{{ videoInput ? 'twotone' : 'outline' }}"
-                 (click)="videoInputHandler()"
-                 nz-tooltip nzTooltipTitle="{{ videoInput ? 'Video on' : 'Video off' }}"></i>
-            </span>
+                        <span class="px-3">
+                          <i nz-icon nzType="video-camera"
+                             nzTheme="{{ videoInput ? 'twotone' : 'outline' }}"
+                             (click)="videoInputHandler()"
+                             nz-tooltip nzTooltipTitle="{{ videoInput ? 'Video on' : 'Video off' }}"></i>
+                        </span>
                         <!--  Screen Share Handler  -->
-                        <span class="px-md-3">
-              <i nz-icon nzType="credit-card"
-                 nzTheme="{{ shareScreen ? 'twotone' : 'outline' }}"
-                 (click)="shareScreenInputHandler()"
-                 nz-tooltip nzTooltipTitle="{{ shareScreen ? 'Screen is sharing' : 'Screen is not sharing' }}"></i>
-            </span>
+                        <span class="px-3">
+                          <i nz-icon nzType="credit-card"
+                             nzTheme="{{ shareScreen ? 'twotone' : 'outline' }}"
+                             (click)="shareScreenInputHandler()"
+                             nz-tooltip
+                             nzTooltipTitle="{{ shareScreen ? 'Screen is sharing' : 'Screen is not sharing' }}"></i>
+                        </span>
                         <!--  Leave Meeting Handler  -->
-                        <span class="px-md-3">
-              <i nz-icon nzType="phone" [nzTwotoneColor]="'#eb2f96'"
-                 nzTheme="twotone"
-                 nz-tooltip nzTooltipTitle="Leave Meeting"></i>
-            </span>
+                        <span class="px-3">
+                          <i nz-icon nzType="phone" [nzTwotoneColor]="'#eb2f96'"
+                             nzTheme="twotone"
+                             nz-tooltip nzTooltipTitle="Leave Meeting"></i>
+                        </span>
                     </h4>
                 </div>
                 <!--  Attendees Div START  -->
@@ -182,19 +187,19 @@
                         <li class="list-group-item px-md-2 m-0" *ngFor="let data of rosterData">
                             <div class="row no-gutters">
                                 <!--  Attendees Avatar col  -->
-                                <div class="col-md-2">
+                                <div class="col-md-2 col-2">
                                     <img alt="Raised circle image"
                                          class="img-fluid rounded-circle shadow-lg attendeeAvatar"
                                          src='https://ui-avatars.com/api/?name={{roster[data].name}}&rounded=true&background=000&color=fff'>
                                 </div>
                                 <!--  Attendees Name col  -->
-                                <div class="col-md-7">
-                                    <p class="pt-md-2 pl-md-1 text-wrap d-inline-block">
+                                <div class="col-md-7 col-7">
+                                    <p class="pt-2 pl-1 text-wrap d-inline-block">
                                         {{roster[data].name}}
                                     </p>
                                 </div>
                                 <!--  Attendees Indicators col  -->
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-3">
                                     <h5>
                                         <!--  Todo: Screen Sharing Indicator  -->
                                         <!--                    <i nz-icon nzType="credit-card" nzTheme="twotone"></i>-->
@@ -221,7 +226,14 @@
                 <!--  Attendees Div END  -->
             </div>
         </div>
-        <div class="col-md-9" style="background-color: red">
+        <div class="col-md-9" style="background-color: #040C23">
+
+<!--            <div class="h-100vh d-flex">-->
+<!--                <h2 class="m-auto text-light">-->
+<!--                    Nobody is sharing video-->
+<!--                </h2>-->
+<!--            </div>-->
+
             <div class="row no-gutters">
                 <div class="col-md-3">
                     <video id="video-1" class="meetingVideo"></video>
@@ -239,119 +251,6 @@
         </div>
         <!--Meeting Controllers END-->
     </div>
-
-    <!--  <div class="row no-gutters">-->
-    <!--    <div class="col-md-3">-->
-    <!--      <div class="card m-h-100vh">-->
-    <!--        <div class="container">-->
-    <!--          &lt;!&ndash;       Meeting Name       &ndash;&gt;-->
-    <!--          <h1 class="display-3 pt-md-3 pt-0 pb-md-0 mb-md-0">-->
-    <!--            {{meetingName}}-->
-    <!--          </h1>-->
-    <!--          <hr class="line-success">-->
-    <!--          &lt;!&ndash;       Audio Mute Handler Start      &ndash;&gt;-->
-    <!--          <button class="btn btn-primary btn-fab btn-icon btn-round" (click)="muteHandler()">-->
-    <!--            <i class="fas fa-microphone" [class.d-none]="!audioInputUnmute"></i>-->
-    <!--            <i class="fas fa-microphone-slash" [class.d-none]="audioInputUnmute"></i>-->
-    <!--          </button>-->
-    <!--          &lt;!&ndash;       Audio Mute Handler End      &ndash;&gt;-->
-    <!--          &lt;!&ndash;       Video Input On Handler Start      &ndash;&gt;-->
-    <!--          <button class="btn btn-primary btn-fab btn-icon btn-round" (click)="videoInputHandler()">-->
-    <!--            <i class="fas fa-video" [class.d-none]="!videoInput"></i>-->
-    <!--            <i class="fas fa-video-slash" [class.d-none]="videoInput"></i>-->
-    <!--          </button>-->
-    <!--        </div>-->
-    <!--        &lt;!&ndash;       Video Input On Handler End      &ndash;&gt;-->
-
-
-    <!--        <tabset class="nav-tabs-primary">-->
-    <!--          &lt;!&ndash;       Attendees List Tab Start      &ndash;&gt;-->
-    <!--          <tab>-->
-    <!--            <ng-template tabHeading>-->
-    <!--              <i class="tim-icons icon-single-02"></i>Attendees-->
-    <!--            </ng-template>-->
-    <!--            -->
-    <!--            -->
-
-    <!--            &lt;!&ndash;                            DEMO &ndash;&gt;-->
-    <!--            <div class="active-bg">-->
-    <!--              <div class="pt-md-1 pb-md-1 row no-gutters">-->
-    <!--                <div class="col-md-9">-->
-    <!--                  <img alt="Raised circle image"-->
-    <!--                       class="img-fluid rounded-circle shadow-lg attendeeAvatar"-->
-    <!--                       src='https://ui-avatars.com/api/?name=alI&rounded=true&background=000&color=fff'>-->
-    <!--                  <h6 class="pt-md-3 pl-md-3 controls-inline">-->
-    <!--                    Muhammad Ali-->
-    <!--                  </h6>-->
-    <!--                </div>-->
-    <!--                <div class="col-md-3">-->
-    <!--                  <div class="pt-md-3">-->
-    <!--                    &lt;!&ndash;    Speaking Indicator    &ndash;&gt;-->
-    <!--                    &lt;!&ndash;                                            <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>&ndash;&gt;-->
-    <!--                    &lt;!&ndash;                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">&ndash;&gt;-->
-    <!--                    &lt;!&ndash;                                                    speaking&ndash;&gt;-->
-    <!--                    &lt;!&ndash;                                                </span>&ndash;&gt;-->
-    <!--                    &lt;!&ndash;    Signal Indicator    &ndash;&gt;-->
-    <!--                    <i class="tim-icoNbRegisterComponentns icon-wifi"-->
-    <!--                       [class.text-red]="0 < 1"-->
-    <!--                       [class.text-green]="0 > 1"></i>-->
-    <!--                    &lt;!&ndash;    Mute Indicator    &ndash;&gt;-->
-    <!--                    <i class="fas fa-microphone-slash text-red" [class.d-none]="false"></i>-->
-    <!--                  </div>-->
-    <!--                </div>-->
-    <!--              </div>-->
-
-    <!--            </div>-->
-    <!--            &lt;!&ndash;                            DEMO &ndash;&gt;-->
-
-
-    <!--            <div *ngFor="let data of rosterData">-->
-    <!--              <div class="pt-md-1 pb-md-1">-->
-    <!--                <div class="row no-gutters">-->
-    <!--                  <div class="col-md-9">-->
-    <!--                    <img alt="Raised circle image"-->
-    <!--                         class="img-fluid rounded-circle shadow-lg attendeeAvatar"-->
-    <!--                         src='https://ui-avatars.com/api/?name={{roster[data].name}}&rounded=true&background=000&color=fff'>-->
-    <!--                    <h6 class="pt-md-3 pl-md-3 controls-inline">-->
-    <!--                      {{roster[data].name}}-->
-    <!--                    </h6>-->
-    <!--                  </div>-->
-    <!--                  <div class="col-md-3">-->
-    <!--                    <div class="pt-md-3">-->
-    <!--                      &lt;!&ndash;    Speaking Indicator    &ndash;&gt;-->
-    <!--                      <i class="fas fa-microphone text-green" [class.d-none]="!roster[data].active" [class.d-none]="roster[data].muted"></i>-->
-    <!--                      &lt;!&ndash;                                                <span [class.d-none]="!roster[data].active" class="badge badge-pill badge-info">&ndash;&gt;-->
-    <!--                      &lt;!&ndash;                                                    speaking&ndash;&gt;-->
-    <!--                      &lt;!&ndash;                                                </span>&ndash;&gt;-->
-    <!--                      &lt;!&ndash;    Signal Indicator    &ndash;&gt;-->
-    <!--                      <i class="tim-icons icon-wifi"-->
-    <!--                         [class.text-red]="roster[data].signalStrength < 1"-->
-    <!--                         [class.text-green]="roster[data].signalStrength > 1"></i>-->
-    <!--                      &lt;!&ndash;    Mute Indicator    &ndash;&gt;-->
-    <!--                      <i class="fas fa-microphone-slash text-red" [class.d-none]="!roster[data].muted"></i>-->
-    <!--                    </div>-->
-    <!--                  </div>-->
-    <!--                </div>-->
-
-    <!--              </div>-->
-    <!--            </div>-->
-    <!--          </tab>-->
-    <!--          &lt;!&ndash;       Attendees List Tab End      &ndash;&gt;-->
-
-    <!--          <tab>-->
-    <!--            <ng-template tabHeading>-->
-    <!--              <i class="tim-icons icon-chat-33"> </i> Chat-->
-    <!--            </ng-template>-->
-    <!--            <p>-->
-
-    <!--              Dramatically visualize customer directed convergence-->
-    <!--              without revolutionary ROI.-->
-    <!--            </p>-->
-    <!--          </tab>-->
-    <!--        </tabset>-->
-    <!--      </div>-->
-    <!--    </div>-->
-
     <audio id="meeting-audio" style="display:none"></audio>
-    <!--  </div>-->
+
 </div>

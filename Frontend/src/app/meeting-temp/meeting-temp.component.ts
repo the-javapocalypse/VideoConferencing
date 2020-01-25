@@ -25,7 +25,7 @@ export class MeetingTempComponent implements OnInit {
 
     // interval to get roster data asynchronously from chime and update UI.
     // invkoed in joinMeeting()
-    source = interval(500);
+    source = interval(1000);
     subscribe = null;
 
     // Default label text for device management dropdown
@@ -211,7 +211,7 @@ export class MeetingTempComponent implements OnInit {
         this.chime.audioVideo.stopVideoPreviewForVideoInput(document.getElementById(
             'video-preview'
         ) as HTMLVideoElement);
-        this.chime.audioVideo.chooseVideoInputDevice(null);
+        // this.chime.audioVideo.chooseVideoInputDevice(null);
         // Set meeting screen flag
         this.deviceManagementFLAG = false;
         // update roster of attendees every x ms
@@ -255,23 +255,25 @@ export class MeetingTempComponent implements OnInit {
     }
 
 
+
+
     updateTile() {
         console.log(this.chime.audioVideo.getAllVideoTiles().length);
         // this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-self') as HTMLVideoElement);
-        // for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
-        //     const state = tile.state();
-        //     console.log('custom ---');
-        //     console.log(JSON.stringify(state));
-        //     if (state.active) {
-        //         console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
-        //         const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
-        //         this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-        //     } else {
-        //         console.log('unbinding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
-        //         const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
-        //         this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-        //     }
-        // }
+        for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
+            const state = tile.state();
+            console.log('custom ---');
+            console.log(JSON.stringify(state));
+            if (state.active) {
+                console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
+                const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
+                this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+            } else {
+                console.log('unbinding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
+                const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
+                this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+            }
+        }
     }
 
     bindTileToAttendee() {
@@ -280,6 +282,45 @@ export class MeetingTempComponent implements OnInit {
         //     this.log(`binding video tile ${tileState.tileId} to ${videoElement.id}`);
         //     this.audioVideo.bindVideoElement(tileState.tileId, videoElement);
     }
+
+
+
+    // updateTile() {
+    //     console.log(this.chime.audioVideo.getAllVideoTiles().length);
+    //     // this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-self') as HTMLVideoElement);
+    //     for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
+    //
+    //         const state = tile.state();
+    //         console.log(state);
+    //         const videoElement = document.getElementById(`video-1`) as HTMLVideoElement;
+    //         this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+    //
+    //         // const state = tile.state();
+    //         // console.log('custom ---');
+    //         // console.log(JSON.stringify(state));
+    //         // console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
+    //         // const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
+    //         // this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+    //
+    //
+    //         // if (state.active) {
+    //         //     console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
+    //         //     const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
+    //         //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+    //         // } else {
+    //         //     console.log('unbinding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
+    //         //     const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
+    //         //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+    //         // }
+    //     }
+    // }
+    //
+    // bindTileToAttendee() {
+    //     const videoElement = document.getElementById(`video-1`) as HTMLVideoElement;
+    //     //     const nameplateElement = document.getElementById(`nameplate-${tileIndex}`) as HTMLDivElement;
+    //     //     this.log(`binding video tile ${tileState.tileId} to ${videoElement.id}`);
+    //     //     this.audioVideo.bindVideoElement(tileState.tileId, videoElement);
+    // }
 
 
     shareScreenInputHandler() {
