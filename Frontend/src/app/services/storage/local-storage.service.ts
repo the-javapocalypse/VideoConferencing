@@ -18,7 +18,6 @@ export class LocalStorageService {
   }
 
   public getRoasterInfo() {
-    console.log('reading roaster info');
     let data = JSON.parse(localStorage.getItem(this.videoConferenceRoasterInformation));
     if (!data) return null;
     return data.roasterInfo;
