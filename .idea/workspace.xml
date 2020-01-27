@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
@@ -122,14 +121,8 @@
       <workItem from="1579861378509" duration="6138000" />
       <workItem from="1579931504166" duration="15780000" />
       <workItem from="1580110153806" duration="4998000" />
-      <workItem from="1580122404895" duration="5574000" />
-    </task>
-    <task id="LOCAL-00032" summary="Connection Strength UI">
-      <created>1578732844099</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1578732844099</updated>
+      <workItem from="1580122404895" duration="6916000" />
+      <workItem from="1580143858008" duration="1279000" />
     </task>
     <task id="LOCAL-00033" summary="Mute Unmute integrated">
       <created>1578741260385</created>
@@ -467,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580126364053</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Video working, error in tile ordering">
+      <created>1580128076844</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1580128076844</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +492,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Manage Devices UI Refactored" />
     <MESSAGE value="Manage Device Done" />
     <MESSAGE value="Backup" />
     <MESSAGE value="Audio mute handler" />
@@ -517,6 +516,7 @@
     <MESSAGE value="Added error message and flag" />
     <MESSAGE value="Storing default devices info in variables" />
     <MESSAGE value="Remove logging to make console cleaner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove logging to make console cleaner" />
+    <MESSAGE value="Video working, error in tile ordering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Video working, error in tile ordering" />
   </component>
 </project>

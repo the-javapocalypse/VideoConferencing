@@ -271,15 +271,21 @@ export class MeetingTempComponent implements OnInit {
 
 
     updateTile() {
-        console.log(this.chime.audioVideo.getAllVideoTiles().length);
+        console.log('custom: len -> ' + this.chime.audioVideo.getAllVideoTiles().length.toString());
+        let c = 1;
         // this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-self') as HTMLVideoElement);
         for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
+
             const state = tile.state();
-            console.log('custom ---');
-            console.log(JSON.stringify(state));
-            console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
-            const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
+
+            console.log('custom: id-> ' + state.tileId.toString() + '   c -> ' + c.toString());
+            console.log('custom: binding ' + `video-` + c.toString() + ' to ' + state.tileId.toString());
+
+            const videoElement = document.getElementById(`video-` + c.toString()) as HTMLVideoElement;
+
             this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+
+            c++;
             // if (state.active) {
             //     console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
             //     const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
