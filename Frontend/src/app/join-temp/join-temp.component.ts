@@ -13,18 +13,21 @@ export class JoinTempComponent implements OnInit {
     meetingId = null;
     attendeeName = null;
     joiningFlag = false;
+    joinErrorFlag = false;
 
     // tslint:disable-next-line:max-line-length
     constructor(private route: ActivatedRoute, private router: Router, private chime: ChimeService, private localStorage: LocalStorageService) {
-        // Check if user's roaster info is already present in localstorage
-        if (this.localStorage.roasterInfoIsSet()) {
-          // join meeting
-          this.joinMeetingTrigger(this.localStorage.getRoasterInfo().meetingId, this.localStorage.getRoasterInfo().attendeeName);
-        }
     }
 
 
     ngOnInit() {
+        // reset error flag
+        this.joinErrorFlag = false;
+        // Check if user's roaster info is already present in localstorage
+        if (this.localStorage.roasterInfoIsSet()) {
+            // join meeting
+            this.joinMeetingTrigger(this.localStorage.getRoasterInfo().meetingId, this.localStorage.getRoasterInfo().attendeeName);
+        }
         // Grab meeting id from url
         this.meetingId = this.route.snapshot.paramMap.get('meeting_id');
     }
@@ -55,7 +58,9 @@ export class JoinTempComponent implements OnInit {
                 this.router.navigate(['/meeting/' + meetingId]);
             },
             (err: any) => {
-                console.log(err);
+                // console.log(err);
+                this.joinErrorFlag = true;
+                this.joiningFlag = false; // reset spinner flag
             }
         );
 
