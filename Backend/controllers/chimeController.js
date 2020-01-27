@@ -54,6 +54,7 @@ module.exports = {
             res.end();
         }
         catch (e) {
+            log(e);
             res.status(messages.INTERNAL_SERVER_ERROR.code).send(JSON.stringify(e));
             res.end();
         }
@@ -74,6 +75,7 @@ module.exports = {
             res.end();
         }
         catch (e) {
+            log(e);
             res.status(messages.INTERNAL_SERVER_ERROR.code).send(JSON.stringify(e));
             res.end();
         }
