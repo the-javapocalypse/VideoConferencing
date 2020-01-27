@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,28 +122,7 @@
       <workItem from="1579861378509" duration="6138000" />
       <workItem from="1579931504166" duration="15780000" />
       <workItem from="1580110153806" duration="4998000" />
-      <workItem from="1580122404895" duration="3761000" />
-    </task>
-    <task id="LOCAL-00029" summary="Real Time Attendee Data">
-      <created>1578729789457</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1578729789457</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Added comments">
-      <created>1578731382623</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1578731382623</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Added comments">
-      <created>1578731516409</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1578731516409</updated>
+      <workItem from="1580122404895" duration="5574000" />
     </task>
     <task id="LOCAL-00032" summary="Connection Strength UI">
       <created>1578732844099</created>
@@ -470,7 +446,28 @@
       <option name="project" value="LOCAL" />
       <updated>1580121559362</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Added error message and flag">
+      <created>1580126283511</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1580126283511</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Storing default devices info in variables">
+      <created>1580126340593</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1580126340593</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Remove logging to make console cleaner">
+      <created>1580126364053</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1580126364053</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,9 +492,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Updated Audio Input UI" />
-    <MESSAGE value="Updated Audio Output UI" />
-    <MESSAGE value="Updated Audio Input Preview" />
     <MESSAGE value="Manage Devices UI Refactored" />
     <MESSAGE value="Manage Device Done" />
     <MESSAGE value="Backup" />
@@ -520,6 +514,9 @@
     <MESSAGE value="Compile errors solved" />
     <MESSAGE value="Exception handling in backend" />
     <MESSAGE value="Added logging on exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logging on exception" />
+    <MESSAGE value="Added error message and flag" />
+    <MESSAGE value="Storing default devices info in variables" />
+    <MESSAGE value="Remove logging to make console cleaner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove logging to make console cleaner" />
   </component>
 </project>

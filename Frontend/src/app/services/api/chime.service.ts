@@ -1009,6 +1009,8 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
           }
           if (!this.roster[attendeeId].name) {
             // Get attendee info if not already present
+            // Todo: Dont read from local storage everytime, instead save it in a variable and read from local storage
+            // todo: if only the variable is empty
             const response = await this.getAttendeeInfo({
               title: this.storage.getRoasterInfo().meetingId,
               attendee: attendeeId

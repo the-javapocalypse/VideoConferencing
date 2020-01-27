@@ -141,7 +141,12 @@ export class MeetingTempComponent implements OnInit {
         this.currentVideoInputDeviceID = id;
         console.log('updating video input device');
         await this.chime.audioVideo.chooseVideoInputDevice(id);
-        this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-preview') as HTMLVideoElement);
+
+        if (this.deviceManagementFLAG) {
+            this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-preview') as HTMLVideoElement);
+        } else {
+            this.chime.audioVideo.startLocalVideoTile();
+        }
     }
 
 
@@ -217,7 +222,9 @@ export class MeetingTempComponent implements OnInit {
         this.chime.audioVideo.stopVideoPreviewForVideoInput(document.getElementById(
             'video-preview'
         ) as HTMLVideoElement);
-        // this.chime.audioVideo.chooseVideoInputDevice(null);
+        // release video input device
+        console.log('custom : releasing video device');
+        await this.chime.audioVideo.chooseVideoInputDevice(null);
         // Set meeting screen flag
         this.deviceManagementFLAG = false;
         // update roster of attendees every x ms
@@ -252,7 +259,7 @@ export class MeetingTempComponent implements OnInit {
         this.videoInput = !this.videoInput;
         if (this.videoInput) {
             // Start video input
-            this.updateCurrentVideoInputDevice(this.videoInputDevices[0].label, this.videoInputDevices[0].deviceId);
+            this.updateCurrentVideoInputDevice(this.currentVideoInputDevice, this.currentVideoInputDeviceID);
             this.chime.audioVideo.startLocalVideoTile();
         } else {
             // Stop video input
@@ -263,8 +270,6 @@ export class MeetingTempComponent implements OnInit {
     }
 
 
-
-
     updateTile() {
         console.log(this.chime.audioVideo.getAllVideoTiles().length);
         // this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-self') as HTMLVideoElement);
@@ -272,15 +277,18 @@ export class MeetingTempComponent implements OnInit {
             const state = tile.state();
             console.log('custom ---');
             console.log(JSON.stringify(state));
-            if (state.active) {
-                console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
-                const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
-                this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-            } else {
-                console.log('unbinding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
-                const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
-                this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-            }
+            console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
+            const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
+            this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+            // if (state.active) {
+            //     console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
+            //     const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
+            //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+            // } else {
+            //     console.log('unbinding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
+            //     const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
+            //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+            // }
         }
     }
 
@@ -290,7 +298,6 @@ export class MeetingTempComponent implements OnInit {
         //     this.log(`binding video tile ${tileState.tileId} to ${videoElement.id}`);
         //     this.audioVideo.bindVideoElement(tileState.tileId, videoElement);
     }
-
 
 
     // updateTile() {
