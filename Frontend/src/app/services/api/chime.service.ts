@@ -713,6 +713,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     configuration.enableWebAudio = this.enableWebAudio;
     this.meetingSession = new DefaultMeetingSession(configuration, logger, deviceController);
     this.audioVideo = this.meetingSession.audioVideo;
+    // @ts-ignore
     this.audioVideo.addDeviceChangeObserver(this);
     this.setupDeviceLabelTrigger();
     await this.populateAllDeviceLists();
@@ -720,6 +721,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     this.setupCanUnmuteHandler();
     this.setupSubscribeToAttendeeIdPresenceHandler();
     this.setupScreenViewing();
+    // @ts-ignore
     this.audioVideo.addObserver(this);
   }
 
@@ -954,6 +956,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
 
   // Setup Mute handler
   setupMuteHandler(): void {
+    // tslint:disable-next-line:no-shadowed-variable
     const handler = (isMuted: boolean): void => {
       this.log(`muted = ${isMuted}`);
     };
@@ -986,6 +989,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
       this.audioVideo.realtimeSubscribeToVolumeIndicator(
         attendeeId,
         async (
+            // tslint:disable-next-line:no-shadowed-variable
           attendeeId: string,
           volume: number | null,
           muted: boolean | null,
@@ -1020,6 +1024,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     };
     this.audioVideo.realtimeSubscribeToAttendeeIdPresence(handler);
     const activeSpeakerHandler = (attendeeIds: string[]): void => {
+      // tslint:disable-next-line:forin
       for (const attendeeId in this.roster) {
         this.roster[attendeeId].active = false;
       }
@@ -1121,6 +1126,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
         const rosterEntry = self.roster[screenMessageDetail.attendeeId];
         // document.getElementById('nameplate-17').innerHTML = rosterEntry ? rosterEntry.name : '';
       },
+      // tslint:disable-next-line:variable-name
       streamDidStop(_screenMessageDetail: ScreenMessageDetail): void {
         // document.getElementById('nameplate-17').innerHTML = 'No one is sharing screen';
       },

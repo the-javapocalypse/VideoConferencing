@@ -9,11 +9,14 @@ import MediaRecordingOptions from './MediaRecordingOptions';
 
 export default class WebMMediaRecording implements MediaRecording {
   private static readonly browser = new DefaultBrowserBehavior();
+  // @ts-ignore
   private static readonly options: MediaRecorderOptions = {
     mimeType: 'video/webm; codecs=vp8',
   };
 
+  // @ts-ignore
   private delegate: MediaRecorder | null = null;
+  // @ts-ignore
   readonly options: MediaRecorderOptions;
   private timeSliceMs: number;
   private listeners = new Map<string, Set<EventListener>>();
@@ -29,7 +32,9 @@ export default class WebMMediaRecording implements MediaRecording {
   key(): void {
     const delegate = this.delegate;
     const mediaStream = delegate === null ? this.mediaStream : this.mediaStream.clone();
+    // @ts-ignore
     this.delegate = new MediaRecorder(mediaStream, this.options);
+    // @ts-ignore
     this.delegate.addEventListener('dataavailable', (event: BlobEvent) => {
       this.dispatchEvent(event);
     });

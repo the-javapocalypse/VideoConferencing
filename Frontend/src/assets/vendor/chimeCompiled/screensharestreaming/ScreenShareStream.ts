@@ -19,6 +19,7 @@ export default class ScreenShareStream implements ScreenShareStreaming {
   }
 
   start(timeSliceMs?: number): void {
+    // @ts-ignore
     this.mediaRecording.addEventListener('dataavailable', (event: BlobEvent) => {
       this.onDataAvailable(event);
     });
@@ -71,6 +72,7 @@ export default class ScreenShareStream implements ScreenShareStreaming {
     }
   }
 
+  // @ts-ignore
   private onDataAvailable(event: BlobEvent): void {
     if (event.data.size !== 0) {
       const message: ScreenSharingMessage = {
