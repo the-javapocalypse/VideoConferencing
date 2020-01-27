@@ -185,7 +185,7 @@
                     <!--  Attendees List START  -->
                     <ul class="list-group list-group-flush" id="AttendeeList">
                         <li class="list-group-item px-md-2 m-0" *ngFor="let data of rosterData">
-                            <div class="row no-gutters">
+                            <div class="row no-gutters" *ngIf="roster[data].name !== null">
                                 <!--  Attendees Avatar col  -->
                                 <div class="col-md-2 col-2">
                                     <img alt="Raised circle image"
