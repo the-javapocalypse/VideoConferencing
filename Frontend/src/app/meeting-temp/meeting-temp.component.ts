@@ -25,7 +25,7 @@ export class MeetingTempComponent implements OnInit {
 
     // interval to get roster data asynchronously from chime and update UI.
     // invkoed in joinMeeting()
-    source = interval(1000);
+    source = interval(10000);
     subscribe = null;
 
     // Default label text for device management dropdown
@@ -92,13 +92,19 @@ export class MeetingTempComponent implements OnInit {
 
             // setup default devices at index 0
             if (this.audioInputDevices.length > 0) {
-                this.updateCurrentAudioInputDevice(this.audioInputDevices[0].label, this.audioInputDevices[0].deviceId);
+                this.currentAudioInputDevice = this.audioInputDevices[0].label;
+                this.currentAudioInputDeviceID = this.audioInputDevices[0].deviceId;
+                this.updateCurrentAudioInputDevice(this.currentAudioInputDevice, this.currentAudioInputDeviceID);
             }
             if (this.audioOutputDevices.length > 0) {
-                this.updateCurrentAudioOutputDevice(this.audioOutputDevices[0].label, this.audioOutputDevices[0].deviceId);
+                this.currentAudioOutputDevice = this.audioOutputDevices[0].label;
+                this.currentAudioOutputDeviceID = this.audioOutputDevices[0].deviceId;
+                this.updateCurrentAudioOutputDevice(this.currentAudioOutputDevice, this.currentAudioOutputDeviceID);
             }
             if (this.videoInputDevices.length > 0) {
-                this.updateCurrentVideoInputDevice(this.videoInputDevices[0].label, this.videoInputDevices[0].deviceId);
+                this.currentVideoInputDevice = this.videoInputDevices[0].label;
+                this.currentVideoInputDeviceID = this.videoInputDevices[0].deviceId;
+                this.updateCurrentVideoInputDevice(this.currentVideoInputDevice, this.currentVideoInputDeviceID);
             }
             this.updateVideoQualityPreview('540p');
 
@@ -246,9 +252,11 @@ export class MeetingTempComponent implements OnInit {
         this.videoInput = !this.videoInput;
         if (this.videoInput) {
             // Start video input
+            this.updateCurrentVideoInputDevice(this.videoInputDevices[0].label, this.videoInputDevices[0].deviceId);
             this.chime.audioVideo.startLocalVideoTile();
         } else {
             // Stop video input
+            console.log('custom --- stopping video tile');
             this.chime.audioVideo.stopLocalVideoTile();
         }
         this.updateTile();
