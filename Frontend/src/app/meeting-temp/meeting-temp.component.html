@@ -220,7 +220,7 @@
                                         <i nz-icon nzType="wifi" nzTheme="outline"
                                            class="{{ roster[data].signalStrength == 0 ? 'text-danger' : roster[data].signalStrength >= 1 ? 'text-success' : 'text-warning'}}"
                                            nz-tooltip
-                                           nzTooltipTitle="{{ roster[data].signalStrength == 0 ? 'Poor connection' : roster[data].signalStrength >= 1 ? 'Strong connection' : 'Wean connection'}}"></i>
+                                           nzTooltipTitle="{{ roster[data].signalStrength == 0 ? 'Poor connection' : roster[data].signalStrength >= 1 ? 'Strong connection' : 'Weak connection'}}"></i>
                                     </h5>
                                 </div>
                             </div>
@@ -233,7 +233,7 @@
         </div>
         <div class="col-md-9" style="background-color: #040C23">
 
-<!--            <div class="h-100vh d-flex">-->
+<!--            <div class="h-100vh d-flex" *ngIf="noVideoInputFlag">-->
 <!--                <h2 class="m-auto text-light">-->
 <!--                    Nobody is sharing video-->
 <!--                </h2>-->
@@ -251,17 +251,6 @@
                 </div>
             </div>
 
-            <div class="row no-gutters">
-                <div class="col-md-12 videoStream">
-                    <video id="video-3" class="meetingVideo"></video>
-                </div>
-            </div>
-
-            <div class="row no-gutters">
-                <div class="col-md-12 videoStream">
-                    <video id="video-4" class="meetingVideo"></video>
-                </div>
-            </div>
         </div>
         <!--Meeting Controllers END-->
     </div>

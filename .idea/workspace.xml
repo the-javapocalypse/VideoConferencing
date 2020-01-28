@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/chimeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/chimeController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,14 +122,7 @@
       <workItem from="1579931504166" duration="15780000" />
       <workItem from="1580110153806" duration="4998000" />
       <workItem from="1580122404895" duration="6916000" />
-      <workItem from="1580143858008" duration="4604000" />
-    </task>
-    <task id="LOCAL-00038" summary="UI Updated">
-      <created>1578917399624</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1578917399624</updated>
+      <workItem from="1580143858008" duration="6475000" />
     </task>
     <task id="LOCAL-00039" summary="Added New Frontend">
       <created>1578985082706</created>
@@ -467,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580193803631</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Logging in server">
+      <created>1580194846405</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1580194846405</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +492,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Meeting Controls UI Done" />
     <MESSAGE value="Attendees List init UI" />
     <MESSAGE value="Attendee list tooltips" />
     <MESSAGE value="Tooltips for in-meeting device handlers" />
@@ -517,6 +516,7 @@
     <MESSAGE value="Leave video integration" />
     <MESSAGE value="Code Optimization" />
     <MESSAGE value="Removed Junk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed Junk" />
+    <MESSAGE value="Logging in server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logging in server" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-import {Component, OnInit, Inject} from '@angular/core';
+import {Component, OnInit, Inject, OnDestroy} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import {ChimeService} from '../services/api/chime.service';
 import {Router, ActivatedRoute} from '@angular/router';
@@ -11,7 +11,7 @@ import {LocalStorageService} from '../services/storage/local-storage.service';
     templateUrl: './meeting-temp.component.html',
     styleUrls: ['./meeting-temp.component.sass']
 })
-export class MeetingTempComponent implements OnInit {
+export class MeetingTempComponent implements OnInit, OnDestroy {
 
 
     constructor(@Inject(DOCUMENT) document,
@@ -19,7 +19,8 @@ export class MeetingTempComponent implements OnInit {
                 private router: Router,
                 private route: ActivatedRoute,
                 private toast: NzMessageService,
-                public storage: LocalStorageService) {
+                public storage: LocalStorageService,
+    ) {
 
     }
 
@@ -61,6 +62,7 @@ export class MeetingTempComponent implements OnInit {
     // variable to see if video input is on or not
     videoInput = false;
 
+
     // variable to see if screen sharing input is on or not
     shareScreen = false;
 
@@ -81,6 +83,10 @@ export class MeetingTempComponent implements OnInit {
         this.meetingName = this.route.snapshot.paramMap.get('meeting_id');
         // setup dropdowns for device management
         this.initializeUIComponents();
+    }
+
+    ngOnDestroy() {
+        this.leaveMeeting();
     }
 
     // Def: setup dropdowns for device management. Fetch available devices from chime
@@ -271,14 +277,14 @@ export class MeetingTempComponent implements OnInit {
 
 
     updateTile() {
-        console.log('custom: len -> ' + this.chime.audioVideo.getAllVideoTiles().length.toString());
+        console.log('custom: tiles -> ' + this.chime.audioVideo.getAllVideoTiles().length.toString());
         let c = 1;
         // this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-self') as HTMLVideoElement);
         for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
 
             const state = tile.state();
 
-            console.log('custom: id-> ' + state.tileId.toString() + '   c -> ' + c.toString());
+            console.log('custom: id-> ' + state.tileId.toString() + '   counter -> ' + c.toString() + '   active -> ' + state.active);
             console.log('custom: binding ' + `video-` + c.toString() + ' to ' + state.tileId.toString());
 
             const videoElement = document.getElementById(`video-` + c.toString()) as HTMLVideoElement;
@@ -298,11 +304,14 @@ export class MeetingTempComponent implements OnInit {
         }
     }
 
-    bindTileToAttendee() {
-        const videoElement = document.getElementById(`video-1`) as HTMLVideoElement;
-        //     const nameplateElement = document.getElementById(`nameplate-${tileIndex}`) as HTMLDivElement;
-        //     this.log(`binding video tile ${tileState.tileId} to ${videoElement.id}`);
-        //     this.audioVideo.bindVideoElement(tileState.tileId, videoElement);
+    getActiveTileCount() {
+        let counter = 0;
+        for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
+            if (tile.state().active) {
+                counter++;
+            }
+        }
+        return counter;
     }
 
 
