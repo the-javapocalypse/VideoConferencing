@@ -22,6 +22,9 @@ module.exports = {
             const title = req.body.title;
             const name = req.body.name;
 
+            log(meetingCache[title]);
+            log(attendeeCache[title]);
+
             // check if meeting exists
             if (!meetingCache[title]) {
                 meetingCache[title] = await chime
