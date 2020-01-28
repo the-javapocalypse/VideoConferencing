@@ -26,7 +26,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
     // interval to get roster data asynchronously from chime and update UI.
     // invkoed in joinMeeting()
-    source = interval(10000);
+    source = interval(500);
     subscribe = null;
 
     // Default label text for device management dropdown
@@ -86,7 +86,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        this.leaveMeeting();
+        // this.leaveMeeting();
     }
 
     // Def: setup dropdowns for device management. Fetch available devices from chime
@@ -237,8 +237,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
         this.subscribe = this.source.subscribe(async val => {
             this.roster = await this.chime.getRoster();
             this.rosterData = Object.keys(this.roster);
-            console.log('custom ---');
-            console.log(JSON.stringify(this.roster));
+            console.log('custom: ' + JSON.stringify(this.roster));
             this.updateTile();
         });
         this.updateCurrentAudioInputDevice(this.currentAudioInputDevice, this.currentAudioInputDeviceID);
@@ -277,19 +276,31 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
 
     updateTile() {
-        console.log('custom: tiles -> ' + this.chime.audioVideo.getAllVideoTiles().length.toString());
+        console.log('video: tiles -> ' + this.chime.audioVideo.getAllVideoTiles().length.toString());
         let c = 1;
         // this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-self') as HTMLVideoElement);
         for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
 
             const state = tile.state();
 
-            console.log('custom: id-> ' + state.tileId.toString() + '   counter -> ' + c.toString() + '   active -> ' + state.active);
-            console.log('custom: binding ' + `video-` + c.toString() + ' to ' + state.tileId.toString());
+            // console.log('video: id-> ' + state.tileId.toString() + '   counter -> ' + c.toString() + '   active -> ' + state.active + '  tile info ->  ' + JSON.stringify(state.boundAttendeeId));
+            // console.log('video: binding ' + `video-` + c.toString() + ' to ' + state.tileId.toString());
+
+            // console.log('Video: ' + this.roster[state.boundAttendeeId].name);
 
             const videoElement = document.getElementById(`video-` + c.toString()) as HTMLVideoElement;
 
             this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+
+            if (this.roster[state.boundAttendeeId].active || !this.roster[state.boundAttendeeId].muted) {
+                console.log('video: is actvie ' + this.roster[state.boundAttendeeId].name);
+                document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
+                document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+            } else {
+                console.log('video: is not active ' + this.roster[state.boundAttendeeId].name);
+                document.getElementById(`tile-` + c.toString()).classList.remove('videoStreamActive');
+                document.getElementById(`tile-` + c.toString()).classList.add('videoStream');
+            }
 
             c++;
             // if (state.active) {
