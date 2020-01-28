@@ -356,6 +356,12 @@ export class MeetingTempComponent implements OnInit {
         }
     }
 
+
+    leaveMeeting() {
+        this.chime.leave();
+        this.router.navigate(['/join/' + this.meetingName]);
+    }
+
     // Display Toast Message
     createToast(type: string, body: string): void {
         this.toast.create(type, body);

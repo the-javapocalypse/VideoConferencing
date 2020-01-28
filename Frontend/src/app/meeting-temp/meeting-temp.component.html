@@ -172,7 +172,12 @@
                         <span class="px-3">
                           <i nz-icon nzType="phone" [nzTwotoneColor]="'#eb2f96'"
                              nzTheme="twotone"
-                             nz-tooltip nzTooltipTitle="Leave Meeting"></i>
+                             nz-tooltip nzTooltipTitle="Leave Meeting"
+                             nz-popconfirm
+                             nzPopconfirmTitle="Are you sure you want to leave meeting?"
+                             nzPopconfirmPlacement="bottom"
+                             nzOkText="Leave"
+                             (nzOnConfirm)="leaveMeeting()"></i>
                         </span>
                     </h4>
                 </div>

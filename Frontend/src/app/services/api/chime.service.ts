@@ -105,7 +105,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
   static readonly BASE_URL: string = [location.protocol, '//', location.host, location.pathname.replace(/\/*$/, '/')].join('');
 
   // Todo: Export in other file
-  private host = 'https://192.168.0.109:8080/';
+  private host = 'https://192.168.100.131:8080/';
   private apiUrl = this.host + 'vc/';
 
 
@@ -557,18 +557,18 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
   }
 
   // Leave meeting
-  // leave(): void {
-  //     this.meetingSession.screenShare
-  //         .stop()
-  //         .catch(() => {
-  //         })
-  //         .finally(() => {
-  //             return this.meetingSession.screenShare.close();
-  //         });
-  //     this.meetingSession.screenShareView.close();
-  //     this.audioVideo.stop();
-  //     this.roster = {};
-  // }
+  leave(): void {
+      this.meetingSession.screenShare
+          .stop()
+          .catch(() => {
+          })
+          .finally(() => {
+              return this.meetingSession.screenShare.close();
+          });
+      this.meetingSession.screenShareView.close();
+      this.audioVideo.stop();
+      this.roster = {};
+  }
 
 
   // End meeting
