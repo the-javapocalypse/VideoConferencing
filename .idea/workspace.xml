@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Null name check in UI">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -123,14 +120,7 @@
       <workItem from="1579931504166" duration="15780000" />
       <workItem from="1580110153806" duration="4998000" />
       <workItem from="1580122404895" duration="6916000" />
-      <workItem from="1580143858008" duration="3092000" />
-    </task>
-    <task id="LOCAL-00035" summary="UI Tweaked">
-      <created>1578742780185</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1578742780185</updated>
+      <workItem from="1580143858008" duration="3450000" />
     </task>
     <task id="LOCAL-00036" summary="Audio Chat Working">
       <created>1578904970454</created>
@@ -468,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580145417022</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Leave video integration">
+      <created>1580193307985</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1580193307985</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +490,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Audio mute handler" />
     <MESSAGE value="Video input handler" />
     <MESSAGE value="Toggle Screen Sharing UI" />
     <MESSAGE value="Meeting Controls UI Done" />
@@ -518,6 +514,7 @@
     <MESSAGE value="Video working, error in tile ordering" />
     <MESSAGE value="Video divs working" />
     <MESSAGE value="Null name check in UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Null name check in UI" />
+    <MESSAGE value="Leave video integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Leave video integration" />
   </component>
 </project>
