@@ -409,6 +409,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
     leaveMeeting() {
         this.chime.leave();
+        this.subscribe.unsubscribe();
         this.router.navigate(['/join/' + this.meetingName]);
     }
 
