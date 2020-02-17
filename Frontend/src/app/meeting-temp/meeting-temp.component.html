@@ -45,6 +45,10 @@
                                 </button>
                                 <div class="dropdown-menu" *ngFor="let videoInput of videoInputDevices">
                                     <a class="dropdown-item"
+                                       (click)="updateCurrentVideoInputDevice('None',null)">
+                                        None
+                                    </a>
+                                    <a class="dropdown-item"
                                        (click)="updateCurrentVideoInputDevice(videoInput.label, videoInput.deviceId)">
                                         {{videoInput.label | slice:0:20}}{{ videoInput.length > 20 ? '...' : '' }}
                                     </a>

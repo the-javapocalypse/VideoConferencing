@@ -122,6 +122,10 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
                 this.currentVideoInputDevice = this.videoInputDevices[0].label;
                 this.currentVideoInputDeviceID = this.videoInputDevices[0].deviceId;
                 this.updateCurrentVideoInputDevice(this.currentVideoInputDevice, this.currentVideoInputDeviceID);
+            } else {
+                this.currentVideoInputDevice = 'None';
+                this.currentVideoInputDeviceID = null;
+                this.updateCurrentVideoInputDevice(this.currentVideoInputDevice, this.currentVideoInputDeviceID);
             }
             this.updateVideoQualityPreview('540p');
 
@@ -160,7 +164,11 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
         await this.chime.audioVideo.chooseVideoInputDevice(id);
 
         if (this.deviceManagementFLAG) {
-            this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-preview') as HTMLVideoElement);
+            if (id === null) {
+                this.chime.audioVideo.stopVideoPreviewForVideoInput(document.getElementById('video-preview') as HTMLVideoElement);
+            } else {
+                this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-preview') as HTMLVideoElement);
+            }
         } else {
             this.chime.audioVideo.startLocalVideoTile();
         }
