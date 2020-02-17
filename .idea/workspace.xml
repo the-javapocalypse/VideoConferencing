@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -124,14 +123,7 @@
       <workItem from="1580143858008" duration="11559000" />
       <workItem from="1580209928507" duration="36000" />
       <workItem from="1581919921333" duration="8216000" />
-      <workItem from="1581932209715" duration="542000" />
-    </task>
-    <task id="LOCAL-00043" summary="chime code added">
-      <created>1578996194083</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1578996194083</updated>
+      <workItem from="1581932209715" duration="874000" />
     </task>
     <task id="LOCAL-00044" summary="Disabled sidebar">
       <created>1579000528470</created>
@@ -469,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581925526844</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Leave meeting on page refresh">
+      <created>1581932814263</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1581932814264</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +493,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Join redirect to meeting if data saved in local storage" />
     <MESSAGE value="Updated UI" />
     <MESSAGE value="Video Sync Done" />
     <MESSAGE value="Multiple sources can share video" />
@@ -519,6 +517,7 @@
     <MESSAGE value="Video Size Responsive" />
     <MESSAGE value="One video tile active stack" />
     <MESSAGE value="Unsub handler on leaving meeting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unsub handler on leaving meeting" />
+    <MESSAGE value="Leave meeting on page refresh" />
+    <option name="LAST_COMMIT_MESSAGE" value="Leave meeting on page refresh" />
   </component>
 </project>

@@ -24,8 +24,10 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
         window.addEventListener('beforeunload', (event) => {
             event.preventDefault();
-            this.chime.leave();
-            this.subscribe.unsubscribe();
+            if (!this.deviceManagementFLAG) {
+                this.chime.leave();
+                this.subscribe.unsubscribe();
+            }
             return event;
         });
 
