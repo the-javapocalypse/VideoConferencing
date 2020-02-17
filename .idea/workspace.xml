@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Video Size Responsive">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
     </list>
@@ -123,21 +123,8 @@
       <workItem from="1580122404895" duration="6916000" />
       <workItem from="1580143858008" duration="11559000" />
       <workItem from="1580209928507" duration="36000" />
-      <workItem from="1581919921333" duration="4914000" />
-    </task>
-    <task id="LOCAL-00041" summary="Added Self Signed Certificates">
-      <created>1578985412112</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1578985412112</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Updated Package">
-      <created>1578985543279</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1578985543279</updated>
+      <workItem from="1581919921333" duration="8216000" />
+      <workItem from="1581932209715" duration="542000" />
     </task>
     <task id="LOCAL-00043" summary="chime code added">
       <created>1578996194083</created>
@@ -468,7 +455,21 @@
       <option name="project" value="LOCAL" />
       <updated>1580200717698</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="One video tile active stack">
+      <created>1581925507111</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1581925507111</updated>
+    </task>
+    <task id="LOCAL-00091" summary="Unsub handler on leaving meeting">
+      <created>1581925526844</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1581925526844</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,8 +494,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Tooltips for in-meeting device handlers" />
-    <MESSAGE value="Integrated toaster" />
     <MESSAGE value="Join redirect to meeting if data saved in local storage" />
     <MESSAGE value="Updated UI" />
     <MESSAGE value="Video Sync Done" />
@@ -518,6 +517,8 @@
     <MESSAGE value="Logging in server" />
     <MESSAGE value="Leave meeting when navigating out" />
     <MESSAGE value="Video Size Responsive" />
-    <option name="LAST_COMMIT_MESSAGE" value="Video Size Responsive" />
+    <MESSAGE value="One video tile active stack" />
+    <MESSAGE value="Unsub handler on leaving meeting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unsub handler on leaving meeting" />
   </component>
 </project>

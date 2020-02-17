@@ -22,6 +22,13 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
                 public storage: LocalStorageService,
     ) {
 
+        window.addEventListener('beforeunload', (event) => {
+            event.preventDefault();
+            this.chime.leave();
+            this.subscribe.unsubscribe();
+            return event;
+        });
+
     }
 
     // interval to get roster data asynchronously from chime and update UI.
