@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +25,11 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SyscryptPortfolio" />
+    <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -124,14 +124,7 @@
       <workItem from="1580143858008" duration="11559000" />
       <workItem from="1580209928507" duration="36000" />
       <workItem from="1581919921333" duration="8216000" />
-      <workItem from="1581932209715" duration="1311000" />
-    </task>
-    <task id="LOCAL-00045" summary="Disabled sidebar collapse button">
-      <created>1579000586697</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1579000586697</updated>
+      <workItem from="1581932209715" duration="2248000" />
     </task>
     <task id="LOCAL-00046" summary="Join form init">
       <created>1579003454872</created>
@@ -469,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581933106754</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="None type for video input">
+      <created>1581933672584</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1581933672584</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +494,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Updated UI" />
     <MESSAGE value="Video Sync Done" />
     <MESSAGE value="Multiple sources can share video" />
     <MESSAGE value="Meeting Device UI" />
@@ -519,6 +518,7 @@
     <MESSAGE value="One video tile active stack" />
     <MESSAGE value="Unsub handler on leaving meeting" />
     <MESSAGE value="Leave meeting on page refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Leave meeting on page refresh" />
+    <MESSAGE value="None type for video input" />
+    <option name="LAST_COMMIT_MESSAGE" value="None type for video input" />
   </component>
 </project>
