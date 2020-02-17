@@ -63,6 +63,8 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
     videoInput = false;
 
 
+    activeTileStack = [];
+
     // variable to see if screen sharing input is on or not
     shareScreen = false;
 
@@ -292,15 +294,43 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
             this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
 
-            if (this.roster[state.boundAttendeeId].active || !this.roster[state.boundAttendeeId].muted) {
+            if (this.roster[state.boundAttendeeId].volume > 40 && !this.roster[state.boundAttendeeId].muted) {
                 console.log('video: is actvie ' + this.roster[state.boundAttendeeId].name);
-                document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
-                document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
-            } else {
-                console.log('video: is not active ' + this.roster[state.boundAttendeeId].name);
-                document.getElementById(`tile-` + c.toString()).classList.remove('videoStreamActive');
-                document.getElementById(`tile-` + c.toString()).classList.add('videoStream');
+
+                // Remove existing other active tile if present
+                if (this.activeTileStack.length > 0) {
+
+                    if (this.activeTileStack[0] !== c) {
+
+                        // Remove old tile
+                        document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.remove('videoStreamActive');
+                        document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.add('videoStream');
+                        this.activeTileStack.pop();
+
+                        // New tile
+                        this.activeTileStack.push(c);
+                        document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
+                        document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+                    }
+
+                } else {
+                    this.activeTileStack.push(c);
+                    document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
+                    document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+                }
+
+
             }
+
+            // if (this.roster[state.boundAttendeeId].active && !this.roster[state.boundAttendeeId].muted) {
+            //     console.log('video: is actvie ' + this.roster[state.boundAttendeeId].name);
+            //     document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
+            //     document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+            // } else {
+            //     console.log('video: is not active ' + this.roster[state.boundAttendeeId].name);
+            //     document.getElementById(`tile-` + c.toString()).classList.remove('videoStreamActive');
+            //     document.getElementById(`tile-` + c.toString()).classList.add('videoStream');
+            // }
 
             c++;
             // if (state.active) {

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Video Size Responsive">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,13 +27,13 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SyscryptPortfolio" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/ngx-admin (copy)/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/Frontend/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -123,14 +121,9 @@
       <workItem from="1579931504166" duration="15780000" />
       <workItem from="1580110153806" duration="4998000" />
       <workItem from="1580122404895" duration="6916000" />
-      <workItem from="1580143858008" duration="10453000" />
-    </task>
-    <task id="LOCAL-00040" summary="Added chime sdk in new frontend">
-      <created>1578985231368</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1578985231368</updated>
+      <workItem from="1580143858008" duration="11559000" />
+      <workItem from="1580209928507" duration="36000" />
+      <workItem from="1581919921333" duration="4914000" />
     </task>
     <task id="LOCAL-00041" summary="Added Self Signed Certificates">
       <created>1578985412112</created>
@@ -468,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580196775736</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="Video Size Responsive">
+      <created>1580200717698</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1580200717698</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +493,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Attendee list tooltips" />
     <MESSAGE value="Tooltips for in-meeting device handlers" />
     <MESSAGE value="Integrated toaster" />
     <MESSAGE value="Join redirect to meeting if data saved in local storage" />
@@ -518,6 +517,7 @@
     <MESSAGE value="Removed Junk" />
     <MESSAGE value="Logging in server" />
     <MESSAGE value="Leave meeting when navigating out" />
-    <option name="LAST_COMMIT_MESSAGE" value="Leave meeting when navigating out" />
+    <MESSAGE value="Video Size Responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="Video Size Responsive" />
   </component>
 </project>
