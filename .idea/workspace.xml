@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/dist/frontend/main-es2015.a258f38c442670eaf858.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/dist/frontend/main-es5.a258f38c442670eaf858.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/node_modules/.cache/angular-build-dl/content-v2/sha512/8e/e3/f03a0e04754f85388cc17b1801dd6443b016433e77246093b22ebc7cbb0c621f58b5dd44c6504cff466b9a6a032bafc336320efd3bc53a296359be6cec78" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/node_modules/.cache/angular-build-dl/content-v2/sha512/f5/ce/b66d2bcd1804adf24d7df36210e4e71e00aba28be2c541137b502da8e39b6346b5ae3bb77d2699332ebfef96644e4c8145222c38adbc3d48cfe7178f842c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/node_modules/.cache/angular-build-dl/index-v5/3a/aa/1a734b87fbfdcb60b3fdd52b019a7bdf33dfb2926c8f3bea5dac2a8a9258" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/node_modules/.cache/angular-build-dl/index-v5/66/58/0cdd04f7414fe5affdab82435c9c9fb2bb0a8648b90ad3f9cf49c691771f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/ee/dc/07a290e759b953b3a67536112ab09d520db382d7f65970ee60b436784c7bfe8239f52f0180da8f2d3c03ad6963878fbf1584355e15968301a9c2e2b52689" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/node_modules/.cache/terser-webpack-plugin/index-v5/13/c4/b3028f01154e9ce37c214c6873061b6fd3d38774c0a94d1e9155fe115d55" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/dist/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/main-es2015.7fe6374fe0793809133c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/main-es5.7fe6374fe0793809133c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/www" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,14 +129,7 @@
       <workItem from="1581932209715" duration="2248000" />
       <workItem from="1582006167498" duration="5767000" />
       <workItem from="1582372303592" duration="33000" />
-      <workItem from="1582531520441" duration="3312000" />
-    </task>
-    <task id="LOCAL-00048" summary="init meeting component">
-      <created>1579076277413</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1579076277413</updated>
+      <workItem from="1582531520441" duration="3567000" />
     </task>
     <task id="LOCAL-00049" summary="Added join meeting backend">
       <created>1579076602457</created>
@@ -486,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582532041146</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="New build updated host">
+      <created>1582535670192</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1582535670192</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

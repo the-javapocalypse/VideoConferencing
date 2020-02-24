@@ -19,7 +19,7 @@ var debug = require('debug')('chimebackend:server');
 /**
  * Server config.
  */
-var protocol = 'https';
+var protocol = 'http';
 let options = {
   key: fs.readFileSync('./ssl.key'),
   cert: fs.readFileSync('./ssl.crt')
