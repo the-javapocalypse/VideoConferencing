@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -145,14 +144,9 @@
       <workItem from="1582006167498" duration="5767000" />
       <workItem from="1582372303592" duration="33000" />
       <workItem from="1582531520441" duration="4809000" />
-      <workItem from="1582611960320" duration="6697000" />
-    </task>
-    <task id="LOCAL-00051" summary="Backend Added Meeting">
-      <created>1579085784327</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1579085784328</updated>
+      <workItem from="1582611960320" duration="9532000" />
+      <workItem from="1582627174525" duration="1108000" />
+      <workItem from="1582628870113" duration="566000" />
     </task>
     <task id="LOCAL-00052" summary="Updated Video Quality UI">
       <created>1579157975124</created>
@@ -490,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582614727962</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Added collapsible menu">
+      <created>1582618913760</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1582618913760</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +516,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="join page ui tweaked" />
     <MESSAGE value="Compile errors solved" />
     <MESSAGE value="Exception handling in backend" />
     <MESSAGE value="Added logging on exception" />
@@ -540,6 +540,7 @@
     <MESSAGE value="New build updated host" />
     <MESSAGE value="Backend for deployed env" />
     <MESSAGE value="Final commit deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final commit deployment" />
+    <MESSAGE value="Added collapsible menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added collapsible menu" />
   </component>
 </project>

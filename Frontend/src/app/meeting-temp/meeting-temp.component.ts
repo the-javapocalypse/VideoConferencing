@@ -49,7 +49,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
     currentVideoInputDeviceID = 0;
 
     // Flag to render device management screen or meeting screen
-    deviceManagementFLAG = false;
+    deviceManagementFLAG = true;
 
     // Meeting Name
     meetingName = 'Meeting Demo';

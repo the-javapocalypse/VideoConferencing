@@ -141,103 +141,103 @@
 <div [class.d-none]="deviceManagementFLAG" class="container-fluid m-0 p-0 h-100vh">
     <div class="row no-gutters">
         <!--Meeting Controllers START-->
-        <div class="col-md-0 h-100vh controllerMeetingDiv">
-            <div class="container">
-                <!--  Meeting Name    -->
-                <h3 class="text-center py-2 pt-3">
-                    {{meetingName}}
-                </h3>
-                <!--  Meeting Device Controllers    -->
-                <div class="d-inline-block w-100">
-                    <h4 class="p-md-1 text-center">
-                        <!--  Mute Handler  -->
-                        <span class="px-3">
-                          <i nz-icon nzType="audio"
-                             nzTheme="{{ audioInputUnmute ? 'twotone' : 'outline' }}"
-                             (click)="muteHandler()"
-                             nz-tooltip nzTooltipTitle="{{ audioInputUnmute ? 'Mic on' : 'Mic off' }}"></i>
-                        </span>
-                        <!--  Video Handler  -->
-                        <span class="px-3">
-                          <i nz-icon nzType="video-camera"
-                             nzTheme="{{ videoInput ? 'twotone' : 'outline' }}"
-                             (click)="videoInputHandler()"
-                             nz-tooltip nzTooltipTitle="{{ videoInput ? 'Video on' : 'Video off' }}"></i>
-                        </span>
-                        <!--  Screen Share Handler  -->
-                        <span class="px-3">
-                          <i nz-icon nzType="credit-card"
-                             nzTheme="{{ shareScreen ? 'twotone' : 'outline' }}"
-                             (click)="shareScreenInputHandler()"
-                             nz-tooltip
-                             nzTooltipTitle="{{ shareScreen ? 'Screen is sharing' : 'Screen is not sharing' }}"></i>
-                        </span>
-                        <!--  Leave Meeting Handler  -->
-                        <span class="px-3">
-                          <i nz-icon nzType="phone" [nzTwotoneColor]="'#eb2f96'"
-                             nzTheme="twotone"
-                             nz-tooltip nzTooltipTitle="Leave Meeting"
-                             nz-popconfirm
-                             nzPopconfirmTitle="Are you sure you want to leave meeting?"
-                             nzPopconfirmPlacement="bottom"
-                             nzOkText="Leave"
-                             (nzOnConfirm)="leaveMeeting()"></i>
-                        </span>
-                    </h4>
-                </div>
-                <!--  Attendees Div START  -->
-                <div>
-                    <nz-divider nzText="Attendees" nzOrientation="left"></nz-divider>
-                    <!--  Show spinner while joining meeting  -->
-                    <nz-spin nzSimple [nzSize]="'large'" class="text-center pt-5"
-                             [class.d-none]="rosterData.length > 0"></nz-spin>
-                    <!--  Attendees List START  -->
-                    <ul class="list-group list-group-flush" id="AttendeeList">
-                        <li class="list-group-item px-md-2 m-0" *ngFor="let data of rosterData">
-                            <div class="row no-gutters" *ngIf="roster[data].name !== null">
-                                <!--  Attendees Avatar col  -->
-                                <div class="col-md-2 col-2">
-                                    <img alt="Raised circle image"
-                                         class="img-fluid rounded-circle shadow-lg attendeeAvatar"
-                                         src='https://ui-avatars.com/api/?name={{roster[data].name}}&rounded=true&background=000&color=fff'>
-                                </div>
-                                <!--  Attendees Name col  -->
-                                <div class="col-md-7 col-7">
-                                    <p class="pt-2 pl-1 text-wrap d-inline-block">
-                                        {{roster[data].name}}
-                                    </p>
-                                </div>
-                                <!--  Attendees Indicators col  -->
-                                <div class="col-md-3 col-3">
-                                    <h5>
-                                        <!--  Todo: Screen Sharing Indicator  -->
-                                        <!--                    <i nz-icon nzType="credit-card" nzTheme="twotone"></i>-->
-                                        <!--  Speaking Indicator  -->
-                                        <i nz-icon nzType="audio" nzTheme="twotone"
-                                           [class.d-none]="!roster[data].active || roster[data].muted"
-                                           nz-tooltip nzTooltipTitle="{{roster[data].name}} is speaking"></i>&nbsp;
-                                        <!--  Mute Indicator  -->
-                                        <i nz-icon nzType="audio" nzTheme="twotone" [nzTwotoneColor]="'#eb2f96'"
-                                           [class.d-none]="!roster[data].muted"
-                                           nz-tooltip nzTooltipTitle="{{roster[data].name}}'s mic is muted"></i>&nbsp;
-                                        <!--  Wifi signals Indicator  -->
-                                        <i nz-icon nzType="wifi" nzTheme="outline"
-                                           class="{{ roster[data].signalStrength == 0 ? 'text-danger' : roster[data].signalStrength >= 1 ? 'text-success' : 'text-warning'}}"
-                                           nz-tooltip
-                                           nzTooltipTitle="{{ roster[data].signalStrength == 0 ? 'Poor connection' : roster[data].signalStrength >= 1 ? 'Strong connection' : 'Weak connection'}}"></i>
-                                    </h5>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <!--  Attendees List END  -->
-                </div>
-                <!--  Attendees Div END  -->
-            </div>
-        </div>
+<!--        <div class="col-md-0 h-100vh controllerMeetingDiv">-->
+<!--            <div class="container">-->
+<!--                &lt;!&ndash;  Meeting Name    &ndash;&gt;-->
+<!--                <h3 class="text-center py-2 pt-3">-->
+<!--                    {{meetingName}}-->
+<!--                </h3>-->
+<!--                &lt;!&ndash;  Meeting Device Controllers    &ndash;&gt;-->
+<!--                <div class="d-inline-block w-100">-->
+<!--                    <h4 class="p-md-1 text-center">-->
+<!--                        &lt;!&ndash;  Mute Handler  &ndash;&gt;-->
+<!--                        <span class="px-3">-->
+<!--                          <i nz-icon nzType="audio"-->
+<!--                             nzTheme="{{ audioInputUnmute ? 'twotone' : 'outline' }}"-->
+<!--                             (click)="muteHandler()"-->
+<!--                             nz-tooltip nzTooltipTitle="{{ audioInputUnmute ? 'Mic on' : 'Mic off' }}"></i>-->
+<!--                        </span>-->
+<!--                        &lt;!&ndash;  Video Handler  &ndash;&gt;-->
+<!--                        <span class="px-3">-->
+<!--                          <i nz-icon nzType="video-camera"-->
+<!--                             nzTheme="{{ videoInput ? 'twotone' : 'outline' }}"-->
+<!--                             (click)="videoInputHandler()"-->
+<!--                             nz-tooltip nzTooltipTitle="{{ videoInput ? 'Video on' : 'Video off' }}"></i>-->
+<!--                        </span>-->
+<!--                        &lt;!&ndash;  Screen Share Handler  &ndash;&gt;-->
+<!--                        <span class="px-3">-->
+<!--                          <i nz-icon nzType="credit-card"-->
+<!--                             nzTheme="{{ shareScreen ? 'twotone' : 'outline' }}"-->
+<!--                             (click)="shareScreenInputHandler()"-->
+<!--                             nz-tooltip-->
+<!--                             nzTooltipTitle="{{ shareScreen ? 'Screen is sharing' : 'Screen is not sharing' }}"></i>-->
+<!--                        </span>-->
+<!--                        &lt;!&ndash;  Leave Meeting Handler  &ndash;&gt;-->
+<!--                        <span class="px-3">-->
+<!--                          <i nz-icon nzType="phone" [nzTwotoneColor]="'#eb2f96'"-->
+<!--                             nzTheme="twotone"-->
+<!--                             nz-tooltip nzTooltipTitle="Leave Meeting"-->
+<!--                             nz-popconfirm-->
+<!--                             nzPopconfirmTitle="Are you sure you want to leave meeting?"-->
+<!--                             nzPopconfirmPlacement="bottom"-->
+<!--                             nzOkText="Leave"-->
+<!--                             (nzOnConfirm)="leaveMeeting()"></i>-->
+<!--                        </span>-->
+<!--                    </h4>-->
+<!--                </div>-->
+<!--                &lt;!&ndash;  Attendees Div START  &ndash;&gt;-->
+<!--                <div>-->
+<!--                    <nz-divider nzText="Attendees" nzOrientation="left"></nz-divider>-->
+<!--                    &lt;!&ndash;  Show spinner while joining meeting  &ndash;&gt;-->
+<!--                    <nz-spin nzSimple [nzSize]="'large'" class="text-center pt-5"-->
+<!--                             [class.d-none]="rosterData.length > 0"></nz-spin>-->
+<!--                    &lt;!&ndash;  Attendees List START  &ndash;&gt;-->
+<!--                    <ul class="list-group list-group-flush" id="AttendeeList">-->
+<!--                        <li class="list-group-item px-md-2 m-0" *ngFor="let data of rosterData">-->
+<!--                            <div class="row no-gutters" *ngIf="roster[data].name !== null">-->
+<!--                                &lt;!&ndash;  Attendees Avatar col  &ndash;&gt;-->
+<!--                                <div class="col-md-2 col-2">-->
+<!--                                    <img alt="Raised circle image"-->
+<!--                                         class="img-fluid rounded-circle shadow-lg attendeeAvatar"-->
+<!--                                         src='https://ui-avatars.com/api/?name={{roster[data].name}}&rounded=true&background=000&color=fff'>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash;  Attendees Name col  &ndash;&gt;-->
+<!--                                <div class="col-md-7 col-7">-->
+<!--                                    <p class="pt-2 pl-1 text-wrap d-inline-block">-->
+<!--                                        {{roster[data].name}}-->
+<!--                                    </p>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash;  Attendees Indicators col  &ndash;&gt;-->
+<!--                                <div class="col-md-3 col-3">-->
+<!--                                    <h5>-->
+<!--                                        &lt;!&ndash;  Todo: Screen Sharing Indicator  &ndash;&gt;-->
+<!--                                        &lt;!&ndash;                    <i nz-icon nzType="credit-card" nzTheme="twotone"></i>&ndash;&gt;-->
+<!--                                        &lt;!&ndash;  Speaking Indicator  &ndash;&gt;-->
+<!--                                        <i nz-icon nzType="audio" nzTheme="twotone"-->
+<!--                                           [class.d-none]="!roster[data].active || roster[data].muted"-->
+<!--                                           nz-tooltip nzTooltipTitle="{{roster[data].name}} is speaking"></i>&nbsp;-->
+<!--                                        &lt;!&ndash;  Mute Indicator  &ndash;&gt;-->
+<!--                                        <i nz-icon nzType="audio" nzTheme="twotone" [nzTwotoneColor]="'#eb2f96'"-->
+<!--                                           [class.d-none]="!roster[data].muted"-->
+<!--                                           nz-tooltip nzTooltipTitle="{{roster[data].name}}'s mic is muted"></i>&nbsp;-->
+<!--                                        &lt;!&ndash;  Wifi signals Indicator  &ndash;&gt;-->
+<!--                                        <i nz-icon nzType="wifi" nzTheme="outline"-->
+<!--                                           class="{{ roster[data].signalStrength == 0 ? 'text-danger' : roster[data].signalStrength >= 1 ? 'text-success' : 'text-warning'}}"-->
+<!--                                           nz-tooltip-->
+<!--                                           nzTooltipTitle="{{ roster[data].signalStrength == 0 ? 'Poor connection' : roster[data].signalStrength >= 1 ? 'Strong connection' : 'Weak connection'}}"></i>-->
+<!--                                    </h5>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                    &lt;!&ndash;  Attendees List END  &ndash;&gt;-->
+<!--                </div>-->
+<!--                &lt;!&ndash;  Attendees Div END  &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
 
 
-        <div class="col-md-12" style="background-color: #040C23">
+        <div class="col-md-12" style="background-color: #040C23; height: 100vh; width: 100vw;">
 
             <!--            <div class="h-100vh d-flex" *ngIf="noVideoInputFlag">-->
             <!--                <h2 class="m-auto text-light">-->
@@ -247,7 +247,7 @@
 
 
             <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed"
-                style="max-width: 20vw; max-height: 100vh">
+                style="max-width: 15vw; max-height: 100vh; position: absolute; z-index: 99">
                 <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? 'Expand Menu' : ''"
                     (click)="toggleCollapsed()">
                     <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
@@ -297,31 +297,54 @@
                         Leave Meeting
                     </span>
                 </li>
-                <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? 'Navigation One' : ''"
-                    >
-                    <i nz-icon nzType="mail"></i>
-                    <span>Navigation One</span>
-                </li>
-                <li nz-submenu nzTitle="Navigation Two" nzIcon="appstore">
-                    <ul>
-                        <li nz-menu-item>Option 5</li>
-                        <li nz-menu-item>Option 6</li>
-                        <li nz-submenu nzTitle="Submenu">
-                            <ul>
-                                <li nz-menu-item>Option 7</li>
-                                <li nz-menu-item>Option 8</li>
-                            </ul>
+                <li nz-submenu nzTitle="Attendees" nzIcon="setting">
+
+                    <!--  Spinner  -->
+                    <nz-spin nzSimple class="text-center py-2"
+                             [class.d-none]="rosterData.length > 0"></nz-spin>
+                    <!--  Attendees List START  -->
+                    <ul class="list-group list-group-flush" id="AttendeeList">
+                        <li class="list-group-item px-md-2 m-0" *ngFor="let data of rosterData">
+                            <div class="row no-gutters" *ngIf="roster[data].name !== null">
+                                <!--  Attendees Avatar col  -->
+                                <div class="col-md-3">
+                                    <img alt="Raised circle image"
+                                         class="img-fluid rounded-circle shadow-lg attendeeAvatar"
+                                         src='https://ui-avatars.com/api/?name={{roster[data].name}}&rounded=true&background=000&color=fff'>
+                                </div>
+                                <!--  Attendees Name col  -->
+                                <div class="col-md-8">
+                                    <h6 class="pt-2 px-1 text-wrap d-inline-block">
+                                        {{roster[data].name}}
+                                    </h6>
+                                </div>
+                                <!--  Attendees Indicators col  -->
+                                <div class="col-md-1">
+                                    <p>
+                                        <!--  Todo: Screen Sharing Indicator  -->
+                                        <!--                    <i nz-icon nzType="credit-card" nzTheme="twotone"></i>-->
+                                        <!--  Wifi signals Indicator  -->
+                                        <i nz-icon nzType="wifi" nzTheme="outline"
+                                           class="{{ roster[data].signalStrength == 0 ? 'text-danger' : roster[data].signalStrength >= 1 ? 'text-success' : 'text-warning'}}"
+                                           nz-tooltip nzPlacement="right"
+                                           nzTooltipTitle="{{ roster[data].signalStrength == 0 ? 'Poor connection' : roster[data].signalStrength >= 1 ? 'Strong connection' : 'Weak connection'}}"></i>
+                                        <!--  Speaking Indicator  -->
+                                        <i nz-icon nzType="audio" nzTheme="twotone" nzPlacement="right"
+                                           [class.d-none]="!roster[data].active || roster[data].muted"
+                                           nz-tooltip nzTooltipTitle="{{roster[data].name}} is speaking"></i>&nbsp;
+                                        <!--  Mute Indicator  -->
+                                        <i nz-icon nzType="audio" nzTheme="twotone" [nzTwotoneColor]="'#eb2f96'"
+                                           [class.d-none]="!roster[data].muted" nzPlacement="right"
+                                           nz-tooltip nzTooltipTitle="{{roster[data].name}}'s mic is muted"></i>&nbsp;
+                                       </p>
+                                </div>
+                            </div>
                         </li>
                     </ul>
-                </li>
-                <li nz-submenu nzTitle="Navigation Three" nzIcon="setting">
-                    <ul>
-                        <li nz-menu-item>Option 9</li>
-                        <li nz-menu-item>Option 10</li>
-                        <li nz-menu-item>Option 11</li>
-                    </ul>
+                    <!--  Attendees List END  -->
                 </li>
             </ul>
+
 
             <div class="row no-gutters">
                 <div class="col-md-12 videoStream" id="tile-1">
