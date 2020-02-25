@@ -248,6 +248,9 @@
 
             <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed"
                 style="max-width: 15vw; max-height: 100vh; position: absolute; z-index: 99;">
+                <li nz-menu-item *ngIf="!isCollapsed">
+                    <img src="../../assets/img/logo.png" class="img-fluid" />
+                </li>
                 <li nz-menu-item
                     (click)="toggleCollapsed()">
                     <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
@@ -320,7 +323,7 @@
                                 </div>
                                 <!--  Attendees Indicators col  -->
                                 <div class="col-md-1">
-                                    <p>
+                                    <p class="cursor-pointer mb-0">
                                         <!--  Todo: Screen Sharing Indicator  -->
                                         <!--                    <i nz-icon nzType="credit-card" nzTheme="twotone"></i>-->
                                         <!--  Wifi signals Indicator  -->
