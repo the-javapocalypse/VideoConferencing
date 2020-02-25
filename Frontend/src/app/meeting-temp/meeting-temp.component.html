@@ -141,7 +141,7 @@
 <div [class.d-none]="deviceManagementFLAG" class="container-fluid m-0 p-0 h-100vh">
     <div class="row no-gutters">
         <!--Meeting Controllers START-->
-        <div class="col-md-3 h-100vh controllerMeetingDiv">
+        <div class="col-md-0 h-100vh controllerMeetingDiv">
             <div class="container">
                 <!--  Meeting Name    -->
                 <h3 class="text-center py-2 pt-3">
@@ -235,13 +235,93 @@
                 <!--  Attendees Div END  -->
             </div>
         </div>
-        <div class="col-md-9" style="background-color: #040C23">
 
-<!--            <div class="h-100vh d-flex" *ngIf="noVideoInputFlag">-->
-<!--                <h2 class="m-auto text-light">-->
-<!--                    Nobody is sharing video-->
-<!--                </h2>-->
-<!--            </div>-->
+
+        <div class="col-md-12" style="background-color: #040C23">
+
+            <!--            <div class="h-100vh d-flex" *ngIf="noVideoInputFlag">-->
+            <!--                <h2 class="m-auto text-light">-->
+            <!--                    Nobody is sharing video-->
+            <!--                </h2>-->
+            <!--            </div>-->
+
+
+            <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed"
+                style="max-width: 20vw; max-height: 100vh">
+                <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? 'Expand Menu' : ''"
+                    (click)="toggleCollapsed()">
+                    <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+                    <span>
+                        {{meetingName}}
+                    </span>
+                </li>
+                <li nz-menu-item (click)="muteHandler()">
+                    <!--  Mute Handler  -->
+                        <i nz-icon nzType="audio"
+                           nzTheme="{{ audioInputUnmute ? 'fill' : 'outline' }}"
+                           >
+                        </i>
+                    <span>
+                        {{ audioInputUnmute ? 'Mic on' : 'Mic off' }}
+                    </span>
+                </li>
+                <li nz-menu-item (click)="videoInputHandler()">
+                    <!--  Video Handler  -->
+                    <i nz-icon nzType="video-camera"
+                       nzTheme="{{ videoInput ? 'fill' : 'outline' }}"
+                       >
+                    </i>
+                    <span>
+                        {{ videoInput ? 'Video on' : 'Video off' }}
+                    </span>
+                </li>
+                <li nz-menu-item (click)="shareScreenInputHandler()">
+                    <!--  Screenshare Handler  -->
+                    <i nz-icon nzType="credit-card"
+                       nzTheme="{{ shareScreen ? 'fill' : 'outline' }}"
+                    >
+                    </i>
+                    <span>
+                        {{ shareScreen ? 'Screen is sharing' : 'Screen is not sharing' }}
+                    </span>
+                </li>
+                <li nz-menu-item nz-popconfirm nzPopconfirmTitle="Are you sure you want to leave meeting?"
+                    nzPopconfirmPlacement="bottom"
+                    nzOkText="Leave"
+                    (nzOnConfirm)="leaveMeeting()">
+                    <!--  Leave Meeting Handler  -->
+                    <i nz-icon nzType="phone" [nzTwotoneColor]="'#eb2f96'"
+                       nzTheme="twotone"
+                    ></i>
+                    <span>
+                        Leave Meeting
+                    </span>
+                </li>
+                <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? 'Navigation One' : ''"
+                    >
+                    <i nz-icon nzType="mail"></i>
+                    <span>Navigation One</span>
+                </li>
+                <li nz-submenu nzTitle="Navigation Two" nzIcon="appstore">
+                    <ul>
+                        <li nz-menu-item>Option 5</li>
+                        <li nz-menu-item>Option 6</li>
+                        <li nz-submenu nzTitle="Submenu">
+                            <ul>
+                                <li nz-menu-item>Option 7</li>
+                                <li nz-menu-item>Option 8</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li nz-submenu nzTitle="Navigation Three" nzIcon="setting">
+                    <ul>
+                        <li nz-menu-item>Option 9</li>
+                        <li nz-menu-item>Option 10</li>
+                        <li nz-menu-item>Option 11</li>
+                    </ul>
+                </li>
+            </ul>
 
             <div class="row no-gutters">
                 <div class="col-md-12 videoStream" id="tile-1">
