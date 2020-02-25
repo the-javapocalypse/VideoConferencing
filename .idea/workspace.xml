@@ -4,8 +4,6 @@
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,14 +144,7 @@
       <workItem from="1582531520441" duration="4809000" />
       <workItem from="1582611960320" duration="9532000" />
       <workItem from="1582627174525" duration="1108000" />
-      <workItem from="1582628870113" duration="566000" />
-    </task>
-    <task id="LOCAL-00052" summary="Updated Video Quality UI">
-      <created>1579157975124</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1579157975124</updated>
+      <workItem from="1582628870113" duration="2652000" />
     </task>
     <task id="LOCAL-00053" summary="Updated Audio Input UI">
       <created>1579158341769</created>
@@ -491,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582618913760</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Sidebar basic UI done">
+      <created>1582629663744</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1582629663745</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +514,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Compile errors solved" />
     <MESSAGE value="Exception handling in backend" />
     <MESSAGE value="Added logging on exception" />
     <MESSAGE value="Added error message and flag" />
@@ -541,6 +538,7 @@
     <MESSAGE value="Backend for deployed env" />
     <MESSAGE value="Final commit deployment" />
     <MESSAGE value="Added collapsible menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added collapsible menu" />
+    <MESSAGE value="Sidebar basic UI done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sidebar basic UI done" />
   </component>
 </project>

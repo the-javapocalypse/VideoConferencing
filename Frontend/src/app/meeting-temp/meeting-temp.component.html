@@ -247,12 +247,24 @@
 
 
             <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed"
-                style="max-width: 15vw; max-height: 100vh; position: absolute; z-index: 99">
-                <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? 'Expand Menu' : ''"
+                style="max-width: 15vw; max-height: 100vh; position: absolute; z-index: 99;">
+                <li nz-menu-item
                     (click)="toggleCollapsed()">
                     <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
                     <span>
                         {{meetingName}}
+                    </span>
+                </li>
+                <li nz-menu-item nz-popconfirm nzPopconfirmTitle="Are you sure you want to leave meeting?"
+                    nzPopconfirmPlacement="bottom"
+                    nzOkText="Leave"
+                    (nzOnConfirm)="leaveMeeting()">
+                    <!--  Leave Meeting Handler  -->
+                    <i nz-icon nzType="phone" [nzTwotoneColor]="'#eb2f96'"
+                       nzTheme="twotone"
+                    ></i>
+                    <span>
+                        Leave Meeting
                     </span>
                 </li>
                 <li nz-menu-item (click)="muteHandler()">
@@ -282,29 +294,17 @@
                     >
                     </i>
                     <span>
-                        {{ shareScreen ? 'Screen is sharing' : 'Screen is not sharing' }}
+                        {{ shareScreen ? 'Screen sharing' : 'Screen sharing off' }}
                     </span>
                 </li>
-                <li nz-menu-item nz-popconfirm nzPopconfirmTitle="Are you sure you want to leave meeting?"
-                    nzPopconfirmPlacement="bottom"
-                    nzOkText="Leave"
-                    (nzOnConfirm)="leaveMeeting()">
-                    <!--  Leave Meeting Handler  -->
-                    <i nz-icon nzType="phone" [nzTwotoneColor]="'#eb2f96'"
-                       nzTheme="twotone"
-                    ></i>
-                    <span>
-                        Leave Meeting
-                    </span>
-                </li>
-                <li nz-submenu nzTitle="Attendees" nzIcon="setting">
+                <li nz-submenu nzTitle="Attendees" nzIcon="user">
 
                     <!--  Spinner  -->
                     <nz-spin nzSimple class="text-center py-2"
                              [class.d-none]="rosterData.length > 0"></nz-spin>
                     <!--  Attendees List START  -->
                     <ul class="list-group list-group-flush" id="AttendeeList">
-                        <li class="list-group-item px-md-2 m-0" *ngFor="let data of rosterData">
+                        <li class="list-group-item px-md-2 m-0" *ngFor="let data of rosterData" style="background-color: rgba(255,255,255,0.9)">
                             <div class="row no-gutters" *ngIf="roster[data].name !== null">
                                 <!--  Attendees Avatar col  -->
                                 <div class="col-md-3">
