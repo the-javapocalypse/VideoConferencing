@@ -88,7 +88,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
     deviceScreenInitFLAG = false;
 
 
-    isCollapsed = false;
+    isCollapsed = true;
 
     toggleCollapsed(): void {
         this.isCollapsed = !this.isCollapsed;

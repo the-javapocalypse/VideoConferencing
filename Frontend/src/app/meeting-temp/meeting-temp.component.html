@@ -246,13 +246,13 @@
             <!--            </div>-->
 
 
-            <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed"
+            <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed" [class.transparent-bg]="isCollapsed"
                 style="max-width: 15vw; max-height: 100vh; position: absolute; z-index: 99;">
                 <li nz-menu-item *ngIf="!isCollapsed">
                     <img src="../../assets/img/logo.png" class="img-fluid" />
                 </li>
-                <li nz-menu-item
-                    (click)="toggleCollapsed()">
+                <li nz-menu-item nz-tooltip nzTooltipTitle="{{ isCollapsed ? 'Expand controls' : 'Shrink controls' }}"
+                    nzTooltipPlacement="right" (click)="toggleCollapsed()">
                     <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
                     <span>
                         {{meetingName}}
@@ -263,14 +263,15 @@
                     nzOkText="Leave"
                     (nzOnConfirm)="leaveMeeting()">
                     <!--  Leave Meeting Handler  -->
-                    <i nz-icon nzType="phone" [nzTwotoneColor]="'#eb2f96'"
-                       nzTheme="twotone"
+                    <i nz-icon nzType="phone"
+                       nzTheme="fill" style="color: #eb2f96"
                     ></i>
                     <span>
                         Leave Meeting
                     </span>
                 </li>
-                <li nz-menu-item (click)="muteHandler()">
+                <li nz-menu-item nz-tooltip nzTooltipTitle="{{ audioInputUnmute ? 'Mic on' : 'Mic off' }}"
+                    nzTooltipPlacement="right" (click)="muteHandler()">
                     <!--  Mute Handler  -->
                         <i nz-icon nzType="audio"
                            nzTheme="{{ audioInputUnmute ? 'fill' : 'outline' }}"
@@ -280,7 +281,8 @@
                         {{ audioInputUnmute ? 'Mic on' : 'Mic off' }}
                     </span>
                 </li>
-                <li nz-menu-item (click)="videoInputHandler()">
+                <li nz-menu-item nz-tooltip nzTooltipTitle="{{ videoInput ? 'Video on' : 'Video off' }}"
+                    nzTooltipPlacement="right" (click)="videoInputHandler()">
                     <!--  Video Handler  -->
                     <i nz-icon nzType="video-camera"
                        nzTheme="{{ videoInput ? 'fill' : 'outline' }}"
@@ -290,7 +292,8 @@
                         {{ videoInput ? 'Video on' : 'Video off' }}
                     </span>
                 </li>
-                <li nz-menu-item (click)="shareScreenInputHandler()">
+                <li nz-menu-item nz-tooltip nzTooltipTitle="{{ shareScreen ? 'Screenshare on' : 'Screenshare off' }}"
+                    nzTooltipPlacement="right" (click)="shareScreenInputHandler()">
                     <!--  Screenshare Handler  -->
                     <i nz-icon nzType="credit-card"
                        nzTheme="{{ shareScreen ? 'fill' : 'outline' }}"
@@ -300,7 +303,8 @@
                         {{ shareScreen ? 'Screen sharing' : 'Screen sharing off' }}
                     </span>
                 </li>
-                <li nz-submenu nzTitle="Attendees" nzIcon="user">
+                <li nz-submenu nzTitle="Attendees" nz-tooltip nzTooltipTitle="Attendees list"
+                    nzTooltipPlacement="right" nzIcon="user">
 
                     <!--  Spinner  -->
                     <nz-spin nzSimple class="text-center py-2"
@@ -350,7 +354,7 @@
 
 
             <div class="row no-gutters">
-                <div class="col-md-12 videoStream" id="tile-1">
+                <div class="col-md-10 videoStream" id="tile-1">
                     <video id="video-1" class="meetingVideo"></video>
                 </div>
             </div>
