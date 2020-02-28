@@ -334,18 +334,33 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
                 let old_active = this.activeTileUserId;
                 let new_active = state.boundAttendeeId;
 
+                // get current elems
+                let old_vid = document.getElementById(`video-` + this.videoElemUserMapping[old_active]) as HTMLVideoElement;
+                let new_vid = document.getElementById(`video-` + this.videoElemUserMapping[new_active]) as HTMLVideoElement;
+
+                // unbind old elems
+                this.chime.audioVideo.unbindVideoElement(this.tileUserMapping[old_active].tileId, old_vid);
+                this.chime.audioVideo.unbindVideoElement(this.tileUserMapping[new_active].tileId, new_vid);
 
                 this.videoElemUserMapping[old_active] = this.videoElemUserMapping[new_active];
                 this.videoElemUserMapping[new_active] = 'active';
 
+                // bind new elems
+                old_vid = document.getElementById(`video-` + this.videoElemUserMapping[old_active]) as HTMLVideoElement;
+                new_vid = document.getElementById(`video-` + this.videoElemUserMapping[new_active]) as HTMLVideoElement;
+
+                this.chime.audioVideo.bindVideoElement(this.tileUserMapping[old_active].tileId, old_vid);
+                this.chime.audioVideo.bindVideoElement(this.tileUserMapping[new_active].tileId, new_vid);
+
                 this.activeTileUserId = state.boundAttendeeId;
+            } else {
+                // get video elem
+                const videoElement = document.getElementById(`video-` + this.videoElemUserMapping[state.boundAttendeeId]) as HTMLVideoElement;
+
+                // bind elem
+                this.chime.audioVideo.bindVideoElement(this.tileUserMapping[state.boundAttendeeId].tileId, videoElement);
             }
 
-            // get video elem
-            const videoElement = document.getElementById(`video-` + this.videoElemUserMapping[state.boundAttendeeId]) as HTMLVideoElement;
-
-            // bind elem
-            this.chime.audioVideo.bindVideoElement(this.tileUserMapping[state.boundAttendeeId].tileId, videoElement);
 
             console.log('tileRes: tile-user' + JSON.stringify(this.tileUserMapping));
             console.log('tileRes: video-user' + JSON.stringify(this.videoElemUserMapping));

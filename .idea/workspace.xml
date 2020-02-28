@@ -148,14 +148,7 @@
       <workItem from="1582634826339" duration="2363000" />
       <workItem from="1582695940807" duration="11699000" />
       <workItem from="1582785485420" duration="514000" />
-      <workItem from="1582883248697" duration="7996000" />
-    </task>
-    <task id="LOCAL-00057" summary="Manage Device Done">
-      <created>1579160535492</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1579160535492</updated>
+      <workItem from="1582883248697" duration="11037000" />
     </task>
     <task id="LOCAL-00058" summary="Backup">
       <created>1579161547287</created>
@@ -493,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582888203444</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Video responsive basic done">
+      <created>1582891450525</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1582891450525</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,8 +518,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Remove logging to make console cleaner" />
-    <MESSAGE value="Video working, error in tile ordering" />
     <MESSAGE value="Video divs working" />
     <MESSAGE value="Null name check in UI" />
     <MESSAGE value="Leave video integration" />
@@ -543,6 +541,8 @@
     <MESSAGE value="Sidebar UI tweaks" />
     <MESSAGE value="Sidebar UI completed" />
     <MESSAGE value="Video UI init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Video UI init" />
+    <MESSAGE value="Video responsive basic done" />
+    <MESSAGE value="Video responsive updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Video responsive updated" />
   </component>
 </project>
