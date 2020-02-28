@@ -90,6 +90,10 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
     isCollapsed = true;
 
+
+    tileUserMapping = {};
+    videoElemUserMapping = {};
+
     toggleCollapsed(): void {
         this.isCollapsed = !this.isCollapsed;
     }
@@ -301,71 +305,75 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
 
     updateTile() {
-        console.log('video: tiles -> ' + this.chime.audioVideo.getAllVideoTiles().length.toString());
-        let c = 1;
-        // this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-self') as HTMLVideoElement);
-        for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
 
+        const tileCount = this.chime.audioVideo.getAllVideoTiles().length;
+
+        for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
             const state = tile.state();
 
-            // console.log('video: id-> ' + state.tileId.toString() + '   counter -> ' + c.toString() + '   active -> ' + state.active + '  tile info ->  ' + JSON.stringify(state.boundAttendeeId));
-            // console.log('video: binding ' + `video-` + c.toString() + ' to ' + state.tileId.toString());
-
-            // console.log('Video: ' + this.roster[state.boundAttendeeId].name);
-
-            const videoElement = document.getElementById(`video-` + c.toString()) as HTMLVideoElement;
-
-            this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-
-            if (this.roster[state.boundAttendeeId].volume > 40 && !this.roster[state.boundAttendeeId].muted) {
-                console.log('video: is actvie ' + this.roster[state.boundAttendeeId].name);
-
-                // Remove existing other active tile if present
-                if (this.activeTileStack.length > 0) {
-
-                    if (this.activeTileStack[0] !== c) {
-
-                        // Remove old tile
-                        document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.remove('videoStreamActive');
-                        document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.add('videoStream');
-                        this.activeTileStack.pop();
-
-                        // New tile
-                        this.activeTileStack.push(c);
-                        document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
-                        document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
-                    }
-
+            // New video
+            if (this.tileUserMapping[state.boundAttendeeId] === undefined) {
+                // store tile-user mapping
+                this.tileUserMapping[state.boundAttendeeId] = state;
+                // store videoElem-user mapping
+                if (tileCount === 1) {
+                    this.videoElemUserMapping[state.boundAttendeeId] = 'active';
                 } else {
-                    this.activeTileStack.push(c);
-                    document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
-                    document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+                    this.videoElemUserMapping[state.boundAttendeeId] = tileCount.toString();
                 }
-
-
+            } else {
+                this.tileUserMapping[state.boundAttendeeId] = state;
             }
 
-            // if (this.roster[state.boundAttendeeId].active && !this.roster[state.boundAttendeeId].muted) {
-            //     console.log('video: is actvie ' + this.roster[state.boundAttendeeId].name);
-            //     document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
-            //     document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
-            // } else {
-            //     console.log('video: is not active ' + this.roster[state.boundAttendeeId].name);
-            //     document.getElementById(`tile-` + c.toString()).classList.remove('videoStreamActive');
-            //     document.getElementById(`tile-` + c.toString()).classList.add('videoStream');
-            // }
+            // get video elem
+            const videoElement = document.getElementById(`video-` + this.videoElemUserMapping[state.boundAttendeeId]) as HTMLVideoElement;
 
-            c++;
-            // if (state.active) {
-            //     console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
-            //     const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
-            //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-            // } else {
-            //     console.log('unbinding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
-            //     const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
-            //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-            // }
+            // bind elem
+            this.chime.audioVideo.bindVideoElement(this.tileUserMapping[state.boundAttendeeId].tileId, videoElement);
+
+            console.log('tileRes: tile-user' + JSON.stringify(this.tileUserMapping));
+            console.log('tileRes: video-user' + JSON.stringify(this.videoElemUserMapping));
         }
+
+        // console.log('video: tiles -> ' + this.chime.audioVideo.getAllVideoTiles().length.toString());
+        // let c = 1;
+        // for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
+        //
+        //     const state = tile.state();
+        //
+        //     const videoElement = document.getElementById(`video-` + c.toString()) as HTMLVideoElement;
+        //
+        //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+        //
+        //     if (this.roster[state.boundAttendeeId].volume > 40 && !this.roster[state.boundAttendeeId].muted) {
+        //         console.log('video: is actvie ' + this.roster[state.boundAttendeeId].name);
+        //
+        //         // Remove existing other active tile if present
+        //         if (this.activeTileStack.length > 0) {
+        //
+        //             if (this.activeTileStack[0] !== c) {
+        //
+        //                 // Remove old tile
+        //                 document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.remove('videoStreamActive');
+        //                 document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.add('videoStream');
+        //                 this.activeTileStack.pop();
+        //
+        //                 // New tile
+        //                 this.activeTileStack.push(c);
+        //                 document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
+        //                 document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+        //             }
+        //
+        //         } else {
+        //             this.activeTileStack.push(c);
+        //             document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
+        //             document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+        //         }
+        //
+        //
+        //     }
+        //     c++;
+        // }
     }
 
     getActiveTileCount() {

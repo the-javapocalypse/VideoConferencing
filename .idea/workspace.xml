@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Sidebar UI tweaks">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Sidebar UI completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" afterDir="false" />
@@ -148,14 +148,9 @@
       <workItem from="1582627174525" duration="1108000" />
       <workItem from="1582628870113" duration="5238000" />
       <workItem from="1582634826339" duration="2363000" />
-      <workItem from="1582695940807" duration="6618000" />
-    </task>
-    <task id="LOCAL-00055" summary="Updated Audio Input Preview">
-      <created>1579159042722</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1579159042722</updated>
+      <workItem from="1582695940807" duration="11699000" />
+      <workItem from="1582785485420" duration="514000" />
+      <workItem from="1582883248697" duration="4730000" />
     </task>
     <task id="LOCAL-00056" summary="Manage Devices UI Refactored">
       <created>1579160357489</created>
@@ -493,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582636570606</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Sidebar UI completed">
+      <created>1582704639551</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1582704639552</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +520,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Added error message and flag" />
     <MESSAGE value="Storing default devices info in variables" />
     <MESSAGE value="Remove logging to make console cleaner" />
     <MESSAGE value="Video working, error in tile ordering" />
@@ -543,6 +544,7 @@
     <MESSAGE value="Sidebar basic UI done" />
     <MESSAGE value="Sidebar done" />
     <MESSAGE value="Sidebar UI tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sidebar UI tweaks" />
+    <MESSAGE value="Sidebar UI completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sidebar UI completed" />
   </component>
 </project>
