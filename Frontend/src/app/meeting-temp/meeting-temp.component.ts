@@ -74,6 +74,8 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
     activeTileStack = [];
 
+    activeTileUserId = '';
+
     // variable to see if screen sharing input is on or not
     shareScreen = false;
 
@@ -318,11 +320,25 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
                 // store videoElem-user mapping
                 if (tileCount === 1) {
                     this.videoElemUserMapping[state.boundAttendeeId] = 'active';
+                    this.activeTileUserId = state.boundAttendeeId;
                 } else {
                     this.videoElemUserMapping[state.boundAttendeeId] = tileCount.toString();
                 }
             } else {
                 this.tileUserMapping[state.boundAttendeeId] = state;
+            }
+
+
+            // Update tile for active speaker
+            if (this.roster[state.boundAttendeeId].volume > 60 && !this.roster[state.boundAttendeeId].muted && state.boundAttendeeId !== this.activeTileUserId) {
+                let old_active = this.activeTileUserId;
+                let new_active = state.boundAttendeeId;
+
+
+                this.videoElemUserMapping[old_active] = this.videoElemUserMapping[new_active];
+                this.videoElemUserMapping[new_active] = 'active';
+
+                this.activeTileUserId = state.boundAttendeeId;
             }
 
             // get video elem
