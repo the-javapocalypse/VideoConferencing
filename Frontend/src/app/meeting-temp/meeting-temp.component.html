@@ -237,7 +237,7 @@
 <!--        </div>-->
 
 
-        <div class="col-md-12" style="background-color: #040C23; height: 100vh; width: 100vw; overflow-x: hidden">
+        <div class="col-md-12" style="background-color: #040C23; height: 100vh; width: 100vw; overflow-y: hidden">
 
             <!--            <div class="h-100vh d-flex" *ngIf="noVideoInputFlag">-->
             <!--                <h2 class="m-auto text-light">-->
@@ -364,11 +364,12 @@
             </ul>
 
             <div class="row no-gutters meetingVideo">
-                <div class="mt-auto" *ngIf="showStatsFLAG" style="position: absolute; z-index: 999; top: 91vh;">
-                    <small>
+                <div class="mt-auto" *ngIf="showStatsFLAG" style="position: absolute; z-index: 999; top: 96vh;">
+                    <small class="p-0 m-0" style="color: #fff">
                         <i nz-icon nzType="arrow-up" nzTheme="outline"></i>
                         {{uploadBandwidth}} kbps
-                        <br>
+                    </small>
+                    <small class="p-0 m-0" style="color: #fff">
                         <i nz-icon nzType="arrow-down" nzTheme="outline"></i>
                         {{downloadBandwidth}} kbps
                     </small>
