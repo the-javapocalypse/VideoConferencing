@@ -152,14 +152,7 @@
       <workItem from="1582785485420" duration="514000" />
       <workItem from="1582883248697" duration="11072000" />
       <workItem from="1582955361990" duration="7746000" />
-      <workItem from="1582964147299" duration="377000" />
-    </task>
-    <task id="LOCAL-00059" summary="Audio mute handler">
-      <created>1579173880219</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1579173880220</updated>
+      <workItem from="1582964147299" duration="1724000" />
     </task>
     <task id="LOCAL-00060" summary="Video input handler">
       <created>1579174075680</created>
@@ -497,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582894418425</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="Added Stats">
+      <created>1582964548899</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1582964548900</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +522,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Video divs working" />
     <MESSAGE value="Null name check in UI" />
     <MESSAGE value="Leave video integration" />
     <MESSAGE value="Code Optimization" />
@@ -547,6 +546,7 @@
     <MESSAGE value="Video UI init" />
     <MESSAGE value="Video responsive basic done" />
     <MESSAGE value="Video responsive updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Video responsive updated" />
+    <MESSAGE value="Added Stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Stats" />
   </component>
 </project>

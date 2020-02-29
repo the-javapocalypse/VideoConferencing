@@ -49,7 +49,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
     currentVideoInputDeviceID = 0;
 
     // Flag to render device management screen or meeting screen
-    deviceManagementFLAG = false;
+    deviceManagementFLAG = true;
 
     // Meeting Name
     meetingName = 'Meeting Demo';
@@ -150,7 +150,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
             this.deviceScreenInitFLAG = true;
         } catch (err) {
             // Devices not initialized which means user haven't joined the meeting, so redirect to /join
-            // this.router.navigate(['/join/' + this.meetingName]);
+            this.router.navigate(['/join/' + this.meetingName]);
         }
     }
 

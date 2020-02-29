@@ -534,7 +534,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
         if (typeof availableSendBandwidth === 'number' && !isNaN(availableSendBandwidth)) {
             // (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
             //     'Available Uplink Bandwidth: ' + String(availableSendBandwidth / 1000) + ' Kbps';
-            this.uploadBandwidth = availableSendBandwidth / 1000;
+            this.uploadBandwidth = Math.floor(availableSendBandwidth / 1000);
         } else {
             // (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
             //     'Available Uplink Bandwidth: Unknown';
@@ -543,7 +543,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
         if (typeof availableRecvBandwidth === 'number' && !isNaN(availableRecvBandwidth)) {
             // (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
             //     'Available Downlink Bandwidth: ' + String(availableRecvBandwidth / 1000) + ' Kbps';
-            this.downloadBandwidth = availableRecvBandwidth / 1000;
+            this.downloadBandwidth = Math.floor(availableRecvBandwidth / 1000);
         } else {
             // (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
             //     'Available Downlink Bandwidth: Unknown';
