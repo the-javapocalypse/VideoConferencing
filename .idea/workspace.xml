@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,14 +150,9 @@
       <workItem from="1582634826339" duration="2363000" />
       <workItem from="1582695940807" duration="11699000" />
       <workItem from="1582785485420" duration="514000" />
-      <workItem from="1582883248697" duration="11037000" />
-    </task>
-    <task id="LOCAL-00058" summary="Backup">
-      <created>1579161547287</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1579161547287</updated>
+      <workItem from="1582883248697" duration="11072000" />
+      <workItem from="1582955361990" duration="7746000" />
+      <workItem from="1582964147299" duration="377000" />
     </task>
     <task id="LOCAL-00059" summary="Audio mute handler">
       <created>1579173880219</created>
@@ -493,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582891450525</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Video responsive updated">
+      <created>1582894418425</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1582894418425</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

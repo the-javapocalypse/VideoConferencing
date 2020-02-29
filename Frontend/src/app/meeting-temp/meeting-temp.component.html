@@ -237,7 +237,7 @@
 <!--        </div>-->
 
 
-        <div class="col-md-12" style="background-color: #040C23; height: 100vh; width: 100vw;">
+        <div class="col-md-12" style="background-color: #040C23; height: 100vh; width: 100vw; overflow-x: hidden">
 
             <!--            <div class="h-100vh d-flex" *ngIf="noVideoInputFlag">-->
             <!--                <h2 class="m-auto text-light">-->
@@ -350,9 +350,29 @@
                     </ul>
                     <!--  Attendees List END  -->
                 </li>
+                <li nz-menu-item nz-tooltip nzTooltipTitle="{{ showStatsFLAG ? 'Stats on' : 'Stats off' }}"
+                    nzTooltipPlacement="right" (click)="toggleStatsFlag()">
+                    <!--  Screenshare Handler  -->
+                    <i nz-icon nzType="info-circle"
+                       nzTheme="{{ showStatsFLAG ? 'fill' : 'outline' }}"
+                    >
+                    </i>
+                    <span>
+                        {{ shareScreen ? 'Stats off' : 'Stats on' }}
+                    </span>
+                </li>
             </ul>
 
             <div class="row no-gutters meetingVideo">
+                <div class="mt-auto" *ngIf="showStatsFLAG" style="position: absolute; z-index: 999; top: 91vh;">
+                    <p>
+                        <i nz-icon nzType="arrow-up" nzTheme="outline"></i>
+                        {{uploadBandwidth}} kbps
+                        <br>
+                        <i nz-icon nzType="arrow-down" nzTheme="outline"></i>
+                        {{downloadBandwidth}} kbps
+                    </p>
+                </div>
                 <!--  Active video tile START  -->
                 <div class="col-md-10">
                     <video id="video-active" class="activeVideoTile"></video>

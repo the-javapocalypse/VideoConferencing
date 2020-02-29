@@ -111,6 +111,10 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // Store meeting id instead of reading from local storage everytime
     meetingId = null;
 
+    // custom vars to sync info
+    uploadBandwidth = 0;
+    downloadBandwidth = 0;
+
     showActiveSpeakerScores = false;
     // activeSpeakerLayout = true;
     // meeting: string | null = null;
@@ -523,25 +527,29 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // }
 
     // Bandwith and metrics available
-    // metricsDidReceive(clientMetricReport: ClientMetricReport): void {
-    //     const metricReport = clientMetricReport.getObservableMetrics();
-    //     const availableSendBandwidth = metricReport.availableSendBandwidth;
-    //     const availableRecvBandwidth = metricReport.availableReceiveBandwidth;
-    //     if (typeof availableSendBandwidth === 'number' && !isNaN(availableSendBandwidth)) {
-    //         (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
-    //             'Available Uplink Bandwidth: ' + String(availableSendBandwidth / 1000) + ' Kbps';
-    //     } else {
-    //         (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
-    //             'Available Uplink Bandwidth: Unknown';
-    //     }
-    //     if (typeof availableRecvBandwidth === 'number' && !isNaN(availableRecvBandwidth)) {
-    //         (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
-    //             'Available Downlink Bandwidth: ' + String(availableRecvBandwidth / 1000) + ' Kbps';
-    //     } else {
-    //         (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
-    //             'Available Downlink Bandwidth: Unknown';
-    //     }
-    // }
+    metricsDidReceive(clientMetricReport: ClientMetricReport): void {
+        const metricReport = clientMetricReport.getObservableMetrics();
+        const availableSendBandwidth = metricReport.availableSendBandwidth;
+        const availableRecvBandwidth = metricReport.availableReceiveBandwidth;
+        if (typeof availableSendBandwidth === 'number' && !isNaN(availableSendBandwidth)) {
+            // (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
+            //     'Available Uplink Bandwidth: ' + String(availableSendBandwidth / 1000) + ' Kbps';
+            this.uploadBandwidth = availableSendBandwidth / 1000;
+        } else {
+            // (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
+            //     'Available Uplink Bandwidth: Unknown';
+            this.uploadBandwidth = 0;
+        }
+        if (typeof availableRecvBandwidth === 'number' && !isNaN(availableRecvBandwidth)) {
+            // (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
+            //     'Available Downlink Bandwidth: ' + String(availableRecvBandwidth / 1000) + ' Kbps';
+            this.downloadBandwidth = availableRecvBandwidth / 1000;
+        } else {
+            // (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
+            //     'Available Downlink Bandwidth: Unknown';
+            this.downloadBandwidth = 0;
+        }
+    }
 
 
     // Set click handler

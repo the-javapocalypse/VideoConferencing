@@ -49,7 +49,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
     currentVideoInputDeviceID = 0;
 
     // Flag to render device management screen or meeting screen
-    deviceManagementFLAG = true;
+    deviceManagementFLAG = false;
 
     // Meeting Name
     meetingName = 'Meeting Demo';
@@ -95,6 +95,11 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
     tileUserMapping = {};
     videoElemUserMapping = {};
+
+    uploadBandwidth = 0;
+    downloadBandwidth = 0;
+
+    showStatsFLAG = true;
 
     toggleCollapsed(): void {
         this.isCollapsed = !this.isCollapsed;
@@ -270,6 +275,8 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
             this.rosterData = Object.keys(this.roster);
             console.log('custom: ' + JSON.stringify(this.roster));
             this.updateTile();
+            this.uploadBandwidth = this.chime.uploadBandwidth;
+            this.downloadBandwidth = this.chime.downloadBandwidth;
         });
         this.updateCurrentAudioInputDevice(this.currentAudioInputDevice, this.currentAudioInputDeviceID);
         this.updateCurrentAudioOutputDevice(this.currentAudioOutputDevice, this.currentAudioOutputDeviceID);
@@ -339,8 +346,8 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
                 let new_vid = document.getElementById(`video-` + this.videoElemUserMapping[new_active]) as HTMLVideoElement;
 
                 // unbind old elems
-                this.chime.audioVideo.unbindVideoElement(this.tileUserMapping[old_active].tileId, old_vid);
-                this.chime.audioVideo.unbindVideoElement(this.tileUserMapping[new_active].tileId, new_vid);
+                this.chime.audioVideo.unbindVideoElement(this.tileUserMapping[old_active].tileId);
+                this.chime.audioVideo.unbindVideoElement(this.tileUserMapping[new_active].tileId);
 
                 this.videoElemUserMapping[old_active] = this.videoElemUserMapping[new_active];
                 this.videoElemUserMapping[new_active] = 'active';
@@ -485,5 +492,9 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
+
+    toggleStatsFlag(){
+        this.showStatsFLAG = !this.showStatsFLAG;
+    }
 
 }
