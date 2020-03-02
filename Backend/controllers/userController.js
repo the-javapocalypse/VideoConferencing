@@ -19,7 +19,8 @@ module.exports = {
             if (!matched) {
                 // Send error in response if invalid data
                 res.status(msg.BAD_REQUEST.code).send(validate.errors);
-                res.end()
+                res.end();
+                return;
             }
             // If data is valid proceed
 
