@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,14 +148,7 @@
       <workItem from="1582883248697" duration="11072000" />
       <workItem from="1582955361990" duration="7746000" />
       <workItem from="1582964147299" duration="3009000" />
-      <workItem from="1583128167546" duration="9136000" />
-    </task>
-    <task id="LOCAL-00066" summary="Integrated toaster">
-      <created>1579249972266</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1579249972266</updated>
+      <workItem from="1583128167546" duration="9419000" />
     </task>
     <task id="LOCAL-00067" summary="Join redirect to meeting if data saved in local storage">
       <created>1579765558503</created>
@@ -498,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583136972558</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Added validators">
+      <created>1583137658104</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1583137658104</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +518,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Video Size Responsive" />
     <MESSAGE value="One video tile active stack" />
     <MESSAGE value="Unsub handler on leaving meeting" />
     <MESSAGE value="Leave meeting on page refresh" />
@@ -548,6 +542,7 @@
     <MESSAGE value="userController init" />
     <MESSAGE value="Routes segregation and added logs" />
     <MESSAGE value="Passport|Jwt init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Passport|Jwt init" />
+    <MESSAGE value="Added validators" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added validators" />
   </component>
 </project>
