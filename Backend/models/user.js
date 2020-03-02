@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   User.associate = function(models) {
     // associations can be defined here
-    User.belongsTo(models.Role, {foreignKey: 'role', as: 'role'})
+    User.belongsTo(models.Role, {foreignKey: 'role', as: 'userRole'})
     User.belongsToMany(models.Room, {through: 'User_Room', foreignKey: 'user_id', as: 'attendees'})
   };
   return User;

@@ -9,6 +9,7 @@ const cors = require('cors');
 // Router
 var indexRouter = require('./routes/index');
 var vcRouter = require('./routes/videoConference');
+var userRouter = require('./routes/user');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/vc', vcRouter);
+app.use('/user', userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
