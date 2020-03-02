@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="" />
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/migrations/20200302070207-create-user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/migrations/20200302070207-create-user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/node_modules/uuid/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/node_modules/uuid/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/node_modules/uuid/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/node_modules/uuid/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/node_modules/uuid/lib/bytesToUuid.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/node_modules/uuid/lib/bytesToUuid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/node_modules/uuid/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/node_modules/uuid/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/node_modules/uuid/v1.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/node_modules/uuid/v1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,14 +160,7 @@
       <workItem from="1582883248697" duration="11072000" />
       <workItem from="1582955361990" duration="7746000" />
       <workItem from="1582964147299" duration="3009000" />
-      <workItem from="1583128167546" duration="9419000" />
-    </task>
-    <task id="LOCAL-00067" summary="Join redirect to meeting if data saved in local storage">
-      <created>1579765558503</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1579765558503</updated>
+      <workItem from="1583128167546" duration="10596000" />
     </task>
     <task id="LOCAL-00068" summary="Updated UI">
       <created>1579781048812</created>
@@ -493,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583137658104</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Refactored user model">
+      <created>1583137934042</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1583137934042</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +530,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="One video tile active stack" />
     <MESSAGE value="Unsub handler on leaving meeting" />
     <MESSAGE value="Leave meeting on page refresh" />
     <MESSAGE value="None type for video input" />
@@ -543,6 +554,7 @@
     <MESSAGE value="Routes segregation and added logs" />
     <MESSAGE value="Passport|Jwt init" />
     <MESSAGE value="Added validators" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added validators" />
+    <MESSAGE value="Refactored user model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored user model" />
   </component>
 </project>
