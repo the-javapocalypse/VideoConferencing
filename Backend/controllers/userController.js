@@ -38,7 +38,13 @@ module.exports = {
                 token: token,
                 is_active: false
             }).then( user => {
-                res.send('okokok');
+                // Send email for verification
+                let subject = 'Email Verification | ' + process.env.AppName;
+                let body = 'Dear user, Thank you for registering for free trial of Fixona. To activate your account, please click ' +
+                    'on the following link: http://' + process.env.ClientDomain + '/activate/' + token;
+                console.log(body);
+                mailer.send(req.body.user_email, subject, body);
+                res.status(messages.SUCCESSFUL_CREATE.code).send(messages.SUCCESSFUL_CREATE);
             });
         });
 
