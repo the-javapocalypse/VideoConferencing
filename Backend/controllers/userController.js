@@ -28,7 +28,18 @@ module.exports = {
             // Generate token to verify user email
             const uidgen = new UIDGenerator(256);
             let token = uidgen.generateSync();
-            res.send('okokok');
+
+            // Create User
+            models.User.create({
+                name: req.body.name,
+                email: req.body.email,
+                password: hash,
+                role: 2,
+                token: token,
+                is_active: false
+            }).then( user => {
+                res.send('okokok');
+            });
         });
 
     }
