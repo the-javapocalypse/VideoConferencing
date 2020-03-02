@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -150,14 +151,7 @@
       <workItem from="1582883248697" duration="11072000" />
       <workItem from="1582955361990" duration="7746000" />
       <workItem from="1582964147299" duration="3009000" />
-      <workItem from="1583128167546" duration="11386000" />
-    </task>
-    <task id="LOCAL-00070" summary="Multiple sources can share video">
-      <created>1579852693897</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1579852693897</updated>
+      <workItem from="1583128167546" duration="11628000" />
     </task>
     <task id="LOCAL-00071" summary="Meeting Device UI">
       <created>1579865019400</created>
@@ -495,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583139480950</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="Added env">
+      <created>1583139750457</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1583139750457</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +521,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="None type for video input" />
     <MESSAGE value="New build and htaccess added" />
     <MESSAGE value="New build for host" />
     <MESSAGE value="New build updated host" />
@@ -545,6 +545,7 @@
     <MESSAGE value="Refactored user model" />
     <MESSAGE value="Added seeders" />
     <MESSAGE value="Added mailer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added mailer" />
+    <MESSAGE value="Added env" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added env" />
   </component>
 </project>

@@ -3,6 +3,7 @@ const msg = require('../utils/messages');
 const log = require('../utils/logger');
 const bcrypt = require('bcryptjs');
 const validator = require('../utils/validator');
+const mailer = require('../utils/mailer');
 const UIDGenerator = require('uid-generator');
 
 
@@ -40,11 +41,10 @@ module.exports = {
             }).then( user => {
                 // Send email for verification
                 let subject = 'Email Verification | ' + process.env.AppName;
-                let body = 'Dear user, Thank you for registering for free trial of Fixona. To activate your account, please click ' +
-                    'on the following link: http://' + process.env.ClientDomain + '/activate/' + token;
-                console.log(body);
-                mailer.send(req.body.user_email, subject, body);
-                res.status(messages.SUCCESSFUL_CREATE.code).send(messages.SUCCESSFUL_CREATE);
+                let body = 'Dear user, Thank you for registering with Syscon. To activate your account, please click ' +
+                    'on the following link: https://' + process.env.ClientDomain + '/activate/' + token;
+                mailer.send(req.body.email, subject, body);
+                res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
             });
         });
 
