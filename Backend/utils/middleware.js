@@ -14,7 +14,7 @@ module.exports.validateToken = function (req,res,next) {
         if (err) {
             res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR.message);
         }
-        if (info != undefined) {
+        if (info != undefined || !user) {
             res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED.message);
         } else {
             res.locals.user = user;

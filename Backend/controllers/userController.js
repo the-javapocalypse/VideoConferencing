@@ -14,7 +14,7 @@ const jwt = require('jsonwebtoken');
 module.exports = {
 
     // Create basic user
-    create(req, res){
+    create(req, res) {
         log('Creating User');
 
         // Validate request
@@ -32,32 +32,37 @@ module.exports = {
             const hash = bcrypt.hashSync(req.body.password, 10);
 
             // Generate token to verify user email
-            const uidgen = new UIDGenerator(256);
-            let token = uidgen.generateSync();
+            const uidgen = new UIDGenerator(512);
 
-            // Create User
-            models.User.create({
-                name: req.body.name,
-                email: req.body.email,
-                password: hash,
-                role: 2,
-                token: token,
-                is_active: false
-            }).then( user => {
-                // Send email for verification
-                let subject = 'Email Verification | ' + process.env.AppName;
-                let body = 'Dear user, Thank you for registering with Syscon. To activate your account, please click ' +
-                    'on the following link: https://' + process.env.ClientDomain + '/activate/' + token;
-                mailer.send(req.body.email, subject, body);
-                res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
-            });
+
+            // Async generate token
+            uidgen.generate()
+                .then(token => {
+                    // Create User
+                    models.User.create({
+                        name: req.body.name,
+                        email: req.body.email,
+                        password: hash,
+                        role: 2,
+                        token: token,
+                        is_active: false
+                    }).then(user => {
+                        // Send email for verification
+                        let subject = 'Email Verification | ' + process.env.AppName;
+                        let body = 'Dear user, Thank you for registering with Syscon. To activate your account, please click ' +
+                            'on the following link: https://' + process.env.ClientDomain + '/activate/' + token;
+                        mailer.send(req.body.email, subject, body);
+                        res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
+                    });
+                });
+
         });
 
     },
 
 
     //login method
-    login(req, res){
+    login(req, res) {
         // Log request
         log('Login user request');
         // Get user by email
@@ -75,33 +80,69 @@ module.exports = {
                 // if authenticated
                 if (user_auth) {
                     // Check if user is activated
-                    if(!user.is_active){
+                    if (!user.is_active) {
                         res.status(msg.NOT_ACTIVE.code).send(msg.NOT_ACTIVE);
                         return;
                     }
 
-                    // user data present and user is active
-                    const token = jwt.sign(
-                        {
-                            email: user.email,
-                            name: user.name,
-                            role: user.role
-                        }, jwtSecret);
+                    // Generate token to verify user email
+                    const uidgen = new UIDGenerator(512);
 
-                    // User info to send
-                    const UserInfo = {
-                        id: user.id,
-                        name: user.name,
-                        email: user.email,
-                        role: user.role,
-                    };
-                    res.status(msg.SUCCESSFUL.code).send({
-                        auth: true,
-                        token: token,
-                        user: UserInfo,
-                        message: 'Successfully Logged in',
-                    });
-                }else{
+
+                    // Async generate token
+                    uidgen.generate()
+                        .then(token => {
+                            // Get user by token
+                            models.User.update(
+                                {
+                                    token: token,
+                                },
+                                {where: {email: user.email}}
+                            );
+
+                            // user data present and user is active
+                            const jwtToken = jwt.sign(
+                                {
+                                    token: token
+                                }, jwtSecret);
+
+                            // User info to send
+                            const UserInfo = {
+                                id: user.id,
+                                name: user.name,
+                                email: user.email,
+                                role: user.role,
+                            };
+                            res.status(msg.SUCCESSFUL.code).send({
+                                auth: true,
+                                token: jwtToken,
+                                user: UserInfo,
+                                message: 'Successfully Logged in',
+                            });
+                        });
+
+                    // // user data present and user is active
+                    // const token = jwt.sign(
+                    //     {
+                    //         email: user.email,
+                    //         name: user.name,
+                    //         role: user.role
+                    //     }, jwtSecret);
+                    //
+                    // // User info to send
+                    // const UserInfo = {
+                    //     id: user.id,
+                    //     name: user.name,
+                    //     email: user.email,
+                    //     role: user.role,
+                    // };
+                    // res.status(msg.SUCCESSFUL.code).send({
+                    //     auth: true,
+                    //     token: token,
+                    //     user: UserInfo,
+                    //     message: 'Successfully Logged in',
+                    // });
+                } else {
                     // Passwords don't match
                     res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
                 }
@@ -119,24 +160,27 @@ module.exports = {
         log('Activate user request');
 
         // Refresh token
-        const uidgen = new UIDGenerator();
-        let token = uidgen.generateSync();
+        const uidgen = new UIDGenerator(512);
+        uidgen.generate()
+            .then(token => {
+                // Get user by token
+                models.User.update(
+                    {
+                        is_active: true,
+                        token: token,
+                    },
+                    {where: {token: req.params.token}}
+                )
+                    .then(result => {
+                            res.status(msg.SUCCESSFUL_UPDATE.code).send(msg.SUCCESSFUL_UPDATE);
+                        }
+                    )
+                    .catch(err => {
+                            res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
+                        }
+                    )
+            });
 
-        // Get user by token
-        models.User.update(
-            {
-                is_active: true,
-                token: token,
-            },
-            {where: {token: req.params.token}}
-        )
-            .then(result => {
-                    res.status(msg.SUCCESSFUL_UPDATE.code).send(msg.SUCCESSFUL_UPDATE);
-                }
-            )
-            .catch(err => {
-                    res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
-                }
-            )
+
     },
 };

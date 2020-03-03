@@ -21,7 +21,7 @@ passport.use(
         try {
             User.findOne({
                 where: {
-                    email: jwt_payload.email,
+                    token: jwt_payload.token,
                 },
             }).then(userData => {
                 if (userData) {

@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/passport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/utils/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/utils/middleware.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -156,14 +153,8 @@
       <workItem from="1582883248697" duration="11072000" />
       <workItem from="1582955361990" duration="7746000" />
       <workItem from="1582964147299" duration="3009000" />
-      <workItem from="1583128167546" duration="18079000" />
-    </task>
-    <task id="LOCAL-00073" summary="meeting page ui done">
-      <created>1579941178333</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1579941178335</updated>
+      <workItem from="1583128167546" duration="18468000" />
+      <workItem from="1583217117436" duration="5983000" />
     </task>
     <task id="LOCAL-00074" summary="join page ui tweaked">
       <created>1579947563590</created>
@@ -501,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583140289610</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="JWT init completed">
+      <created>1583150565270</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1583150565271</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +524,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="New build updated host" />
     <MESSAGE value="Backend for deployed env" />
     <MESSAGE value="Final commit deployment" />
     <MESSAGE value="Added collapsible menu" />
@@ -551,6 +548,7 @@
     <MESSAGE value="Added env" />
     <MESSAGE value="User registration done" />
     <MESSAGE value="User registration tweaked" />
-    <option name="LAST_COMMIT_MESSAGE" value="User registration tweaked" />
+    <MESSAGE value="JWT init completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT init completed" />
   </component>
 </project>
