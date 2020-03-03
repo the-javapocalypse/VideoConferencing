@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,14 +154,7 @@
       <workItem from="1582955361990" duration="7746000" />
       <workItem from="1582964147299" duration="3009000" />
       <workItem from="1583128167546" duration="18468000" />
-      <workItem from="1583217117436" duration="7537000" />
-    </task>
-    <task id="LOCAL-00075" summary="Compile errors solved">
-      <created>1580120192210</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1580120192211</updated>
+      <workItem from="1583217117436" duration="11266000" />
     </task>
     <task id="LOCAL-00076" summary="Exception handling in backend">
       <created>1580120984050</created>
@@ -499,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583231987605</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="Room route and controller init">
+      <created>1583233469854</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1583233469854</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +524,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Final commit deployment" />
     <MESSAGE value="Added collapsible menu" />
     <MESSAGE value="Sidebar basic UI done" />
     <MESSAGE value="Sidebar done" />
@@ -549,6 +548,7 @@
     <MESSAGE value="User registration tweaked" />
     <MESSAGE value="JWT init completed" />
     <MESSAGE value="JWT policy updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="JWT policy updated" />
+    <MESSAGE value="Room route and controller init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Room route and controller init" />
   </component>
 </project>
