@@ -1,6 +1,6 @@
 const SimpleCrypto = require("simple-crypto-js").default;
 
-var _secretKey = "some-unique-key";
+var _secretKey = process.env.cryptoKey;
 var simpleCrypto = new SimpleCrypto(_secretKey);
 
 module.exports = {

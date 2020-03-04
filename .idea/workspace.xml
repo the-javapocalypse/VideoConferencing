@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/routes/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/config/jwtConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/jwtConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/utils/crypto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/utils/crypto.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,14 +156,7 @@
       <workItem from="1583128167546" duration="18468000" />
       <workItem from="1583217117436" duration="12849000" />
       <workItem from="1583301927433" duration="1029000" />
-      <workItem from="1583303028027" duration="1430000" />
-    </task>
-    <task id="LOCAL-00077" summary="Added logging on exception">
-      <created>1580121559362</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1580121559362</updated>
+      <workItem from="1583303028027" duration="1974000" />
     </task>
     <task id="LOCAL-00078" summary="Added error message and flag">
       <created>1580126283511</created>
@@ -500,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583237281449</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Get room api">
+      <created>1583304678898</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1583304678899</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +526,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Sidebar basic UI done" />
     <MESSAGE value="Sidebar done" />
     <MESSAGE value="Sidebar UI tweaks" />
     <MESSAGE value="Sidebar UI completed" />
@@ -550,6 +550,7 @@
     <MESSAGE value="JWT policy updated" />
     <MESSAGE value="Room route and controller init" />
     <MESSAGE value="Create room api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create room api" />
+    <MESSAGE value="Get room api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Get room api" />
   </component>
 </project>
