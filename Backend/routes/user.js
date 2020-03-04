@@ -11,6 +11,11 @@ router.post('/create',  function(req, res, next) {
     controllers.user.create(req, res, next);
 });
 
+// Create Attendee
+router.post('/createAttendee',  function(req, res, next) {
+    controllers.user.createAttendee(req, res, next);
+});
+
 // Login User
 router.post('/login',  function(req, res, next) {
     controllers.user.login(req, res, next);

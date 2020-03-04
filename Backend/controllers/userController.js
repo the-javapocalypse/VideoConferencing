@@ -120,28 +120,6 @@ module.exports = {
                                 message: 'Successfully Logged in',
                             });
                         });
-
-                    // // user data present and user is active
-                    // const token = jwt.sign(
-                    //     {
-                    //         email: user.email,
-                    //         name: user.name,
-                    //         role: user.role
-                    //     }, jwtSecret);
-                    //
-                    // // User info to send
-                    // const UserInfo = {
-                    //     id: user.id,
-                    //     name: user.name,
-                    //     email: user.email,
-                    //     role: user.role,
-                    // };
-                    // res.status(msg.SUCCESSFUL.code).send({
-                    //     auth: true,
-                    //     token: token,
-                    //     user: UserInfo,
-                    //     message: 'Successfully Logged in',
-                    // });
                 } else {
                     // Passwords don't match
                     res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
@@ -183,4 +161,51 @@ module.exports = {
 
 
     },
+
+
+    // create visitor/attendee to use system without logging in
+    createAttendee(req, res, next) {
+        // Validate request
+        let validate = validator.createAttendee(req);
+        validate.check().then((matched) => {
+            if (!matched) {
+                // Send error in response if invalid data
+                res.status(msg.BAD_REQUEST.code).send(validate.errors);
+                res.end();
+                return;
+            }
+            // If data is valid proceed
+
+            // Generate token
+            const uidgen = new UIDGenerator(128);
+
+            // Hash email + datetime to create password (since a attendee, wont be logging in)
+            const hash = bcrypt.hashSync(req.body.email + new Date().toLocaleTimeString(), 10);
+
+            // Async generate token
+            uidgen.generate()
+                .then(token => {
+                    // Create User
+                    models.User.create({
+                        name: req.body.name,
+                        email: req.body.email,
+                        password: hash,
+                        role: 3,    // attendee
+                        token: token,
+                        is_active: true     // no login required
+                    })
+                    .then(user => {
+                        res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
+                    });
+                });
+
+        });
+
+    }
+
+
 };
