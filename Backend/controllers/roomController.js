@@ -20,25 +20,32 @@ module.exports = {
                 return;
             }
 
-
-
-            // create room
-            models.Room.create({
-                name: req.body.title,
-                digest: ct,
-                created_by: res.locals.user.id,
-                is_active: true
-            })
+            // check if room already exists
+            models.Room.findOne(
+                {where: {name: req.body.title, created_by: res.locals.user.id}}
+            )
                 .then(room => {
-                    // add user in the room created
-                    this.addUserToRoom(res.locals.user.id, room.dataValues.id);
-                    res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
-                })
-                .catch(error => {
-                    console.log(error);
-                    res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
+                    if (room != null){
+                        res.status(msg.ALREADY_EXIST.code).send(msg.ALREADY_EXIST);
+                    }else{
+                        // create room
+                        models.Room.create({
+                            name: req.body.title,
+                            digest: ct,
+                            created_by: res.locals.user.id,
+                            is_active: true
+                        })
+                            .then(room => {
+                                // add user in the room created
+                                this.addUserToRoom(res.locals.user.id, room.dataValues.id);
+                                res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
+                            })
+                            .catch(error => {
+                                console.log(error);
+                                res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
+                            });
+                    }
                 });
-
         } else {
             res.status(msg.BAD_REQUEST.code).send(msg.BAD_REQUEST);
         }
