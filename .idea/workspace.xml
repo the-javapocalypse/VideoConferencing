@@ -4,8 +4,7 @@
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/room.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Frontend/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
@@ -154,14 +153,9 @@
       <workItem from="1582955361990" duration="7746000" />
       <workItem from="1582964147299" duration="3009000" />
       <workItem from="1583128167546" duration="18468000" />
-      <workItem from="1583217117436" duration="11266000" />
-    </task>
-    <task id="LOCAL-00076" summary="Exception handling in backend">
-      <created>1580120984050</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1580120984050</updated>
+      <workItem from="1583217117436" duration="12849000" />
+      <workItem from="1583301927433" duration="1029000" />
+      <workItem from="1583303028027" duration="1430000" />
     </task>
     <task id="LOCAL-00077" summary="Added logging on exception">
       <created>1580121559362</created>
@@ -499,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583233469854</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Create room api">
+      <created>1583237281449</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1583237281449</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +525,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Added collapsible menu" />
     <MESSAGE value="Sidebar basic UI done" />
     <MESSAGE value="Sidebar done" />
     <MESSAGE value="Sidebar UI tweaks" />
@@ -549,6 +549,7 @@
     <MESSAGE value="JWT init completed" />
     <MESSAGE value="JWT policy updated" />
     <MESSAGE value="Room route and controller init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Room route and controller init" />
+    <MESSAGE value="Create room api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create room api" />
   </component>
 </project>

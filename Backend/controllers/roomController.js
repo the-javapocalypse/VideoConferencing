@@ -22,15 +22,37 @@ module.exports = {
                 is_active: true
             })
                 .then(succ => {
-                    res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL.message);
+                    res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
                 })
                 .catch(error => {
-                    res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR.message);
+                    res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
                 });
 
         } else {
-            res.status(msg.BAD_REQUEST.code).send(msg.BAD_REQUEST.message);
+            res.status(msg.BAD_REQUEST.code).send(msg.BAD_REQUEST);
         }
+    },
+
+
+    // get all rooms info of currently logged in user (user info via jwt)
+    getRoom(req, res, next) {
+        models.Room.findAll(
+            {where: {created_by: res.locals.user.id}}
+        )
+            .then(room => {
+                if (room == null) {
+                    res.status(msg.NOT_FOUND.code).send(msg.NOT_FOUND);
+                    res.end();
+                } else {
+                    res.status(msg.SUCCESSFUL.code).send(room);
+                    res.end();
+                }
+            })
+    },
+
+    // decrypt digest to get room title
+    getRoomTitle(req, res, next) {
+
     }
 
 };
