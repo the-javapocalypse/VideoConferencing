@@ -13,6 +13,7 @@ import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { MeetingComponent } from './pages/video/meeting/meeting.component';
 
 registerLocaleData(en);
 
@@ -20,7 +21,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     JoinTempComponent,
-    MeetingTempComponent
+    MeetingTempComponent,
+    MeetingComponent
   ],
   imports: [
     BrowserModule,

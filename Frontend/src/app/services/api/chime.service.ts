@@ -105,11 +105,15 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     static readonly BASE_URL: string = [location.protocol, '//', location.host, location.pathname.replace(/\/*$/, '/')].join('');
 
     // Todo: Export in other file
-    private host = 'https://192.168.100.131:8080/'; // 'https://backend.syscon.io/' 'https://192.168.100.131:8080/'
+    private host = 'https://backend.syscon.io/'; // 'https://backend.syscon.io/' 'https://192.168.100.131:8080/'
     private apiUrl = this.host + 'vc/';
 
     // Store meeting id instead of reading from local storage everytime
     meetingId = null;
+
+    // custom vars to sync info
+    uploadBandwidth = 0;
+    downloadBandwidth = 0;
 
     showActiveSpeakerScores = false;
     // activeSpeakerLayout = true;
@@ -523,25 +527,29 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // }
 
     // Bandwith and metrics available
-    // metricsDidReceive(clientMetricReport: ClientMetricReport): void {
-    //     const metricReport = clientMetricReport.getObservableMetrics();
-    //     const availableSendBandwidth = metricReport.availableSendBandwidth;
-    //     const availableRecvBandwidth = metricReport.availableReceiveBandwidth;
-    //     if (typeof availableSendBandwidth === 'number' && !isNaN(availableSendBandwidth)) {
-    //         (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
-    //             'Available Uplink Bandwidth: ' + String(availableSendBandwidth / 1000) + ' Kbps';
-    //     } else {
-    //         (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
-    //             'Available Uplink Bandwidth: Unknown';
-    //     }
-    //     if (typeof availableRecvBandwidth === 'number' && !isNaN(availableRecvBandwidth)) {
-    //         (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
-    //             'Available Downlink Bandwidth: ' + String(availableRecvBandwidth / 1000) + ' Kbps';
-    //     } else {
-    //         (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
-    //             'Available Downlink Bandwidth: Unknown';
-    //     }
-    // }
+    metricsDidReceive(clientMetricReport: ClientMetricReport): void {
+        const metricReport = clientMetricReport.getObservableMetrics();
+        const availableSendBandwidth = metricReport.availableSendBandwidth;
+        const availableRecvBandwidth = metricReport.availableReceiveBandwidth;
+        if (typeof availableSendBandwidth === 'number' && !isNaN(availableSendBandwidth)) {
+            // (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
+            //     'Available Uplink Bandwidth: ' + String(availableSendBandwidth / 1000) + ' Kbps';
+            this.uploadBandwidth = Math.floor(availableSendBandwidth / 1000);
+        } else {
+            // (document.getElementById('video-uplink-bandwidth') as HTMLSpanElement).innerHTML =
+            //     'Available Uplink Bandwidth: Unknown';
+            this.uploadBandwidth = 0;
+        }
+        if (typeof availableRecvBandwidth === 'number' && !isNaN(availableRecvBandwidth)) {
+            // (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
+            //     'Available Downlink Bandwidth: ' + String(availableRecvBandwidth / 1000) + ' Kbps';
+            this.downloadBandwidth = Math.floor(availableRecvBandwidth / 1000);
+        } else {
+            // (document.getElementById('video-downlink-bandwidth') as HTMLSpanElement).innerHTML =
+            //     'Available Downlink Bandwidth: Unknown';
+            this.downloadBandwidth = 0;
+        }
+    }
 
 
     // Set click handler

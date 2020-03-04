@@ -74,6 +74,8 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
     activeTileStack = [];
 
+    activeTileUserId = '';
+
     // variable to see if screen sharing input is on or not
     shareScreen = false;
 
@@ -87,6 +89,21 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
     deviceScreenInitFLAG = false;
 
+
+    isCollapsed = true;
+
+
+    tileUserMapping = {};
+    videoElemUserMapping = {};
+
+    uploadBandwidth = 0;
+    downloadBandwidth = 0;
+
+    showStatsFLAG = true;
+
+    toggleCollapsed(): void {
+        this.isCollapsed = !this.isCollapsed;
+    }
 
     ngOnInit() {
         this.deviceScreenInitFLAG = false;
@@ -259,6 +276,8 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
             this.rosterData = Object.keys(this.roster);
             console.log('custom: ' + JSON.stringify(this.roster));
             this.updateTile();
+            this.uploadBandwidth = this.chime.uploadBandwidth;
+            this.downloadBandwidth = this.chime.downloadBandwidth;
         });
         this.updateCurrentAudioInputDevice(this.currentAudioInputDevice, this.currentAudioInputDeviceID);
         this.updateCurrentAudioOutputDevice(this.currentAudioOutputDevice, this.currentAudioOutputDeviceID);
@@ -296,71 +315,104 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
 
     updateTile() {
-        console.log('video: tiles -> ' + this.chime.audioVideo.getAllVideoTiles().length.toString());
-        let c = 1;
-        // this.chime.audioVideo.startVideoPreviewForVideoInput(document.getElementById('video-self') as HTMLVideoElement);
-        for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
 
+        const tileCount = this.chime.audioVideo.getAllVideoTiles().length;
+
+        for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
             const state = tile.state();
 
-            // console.log('video: id-> ' + state.tileId.toString() + '   counter -> ' + c.toString() + '   active -> ' + state.active + '  tile info ->  ' + JSON.stringify(state.boundAttendeeId));
-            // console.log('video: binding ' + `video-` + c.toString() + ' to ' + state.tileId.toString());
-
-            // console.log('Video: ' + this.roster[state.boundAttendeeId].name);
-
-            const videoElement = document.getElementById(`video-` + c.toString()) as HTMLVideoElement;
-
-            this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-
-            if (this.roster[state.boundAttendeeId].volume > 40 && !this.roster[state.boundAttendeeId].muted) {
-                console.log('video: is actvie ' + this.roster[state.boundAttendeeId].name);
-
-                // Remove existing other active tile if present
-                if (this.activeTileStack.length > 0) {
-
-                    if (this.activeTileStack[0] !== c) {
-
-                        // Remove old tile
-                        document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.remove('videoStreamActive');
-                        document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.add('videoStream');
-                        this.activeTileStack.pop();
-
-                        // New tile
-                        this.activeTileStack.push(c);
-                        document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
-                        document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
-                    }
-
+            // New video
+            if (this.tileUserMapping[state.boundAttendeeId] === undefined) {
+                // store tile-user mapping
+                this.tileUserMapping[state.boundAttendeeId] = state;
+                // store videoElem-user mapping
+                if (tileCount === 1) {
+                    this.videoElemUserMapping[state.boundAttendeeId] = 'active';
+                    this.activeTileUserId = state.boundAttendeeId;
                 } else {
-                    this.activeTileStack.push(c);
-                    document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
-                    document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+                    this.videoElemUserMapping[state.boundAttendeeId] = tileCount.toString();
                 }
-
-
+            } else {
+                this.tileUserMapping[state.boundAttendeeId] = state;
             }
 
-            // if (this.roster[state.boundAttendeeId].active && !this.roster[state.boundAttendeeId].muted) {
-            //     console.log('video: is actvie ' + this.roster[state.boundAttendeeId].name);
-            //     document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
-            //     document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
-            // } else {
-            //     console.log('video: is not active ' + this.roster[state.boundAttendeeId].name);
-            //     document.getElementById(`tile-` + c.toString()).classList.remove('videoStreamActive');
-            //     document.getElementById(`tile-` + c.toString()).classList.add('videoStream');
-            // }
 
-            c++;
-            // if (state.active) {
-            //     console.log('binding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
-            //     const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
-            //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-            // } else {
-            //     console.log('unbinding ' + `video-` + state.tileId.toString() + ' to ' + state.tileId.toString());
-            //     const videoElement = document.getElementById(`video-` + state.tileId.toString()) as HTMLVideoElement;
-            //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
-            // }
+            // Update tile for active speaker
+            if (this.roster[state.boundAttendeeId].volume > 60 && !this.roster[state.boundAttendeeId].muted && state.boundAttendeeId !== this.activeTileUserId) {
+                let old_active = this.activeTileUserId;
+                let new_active = state.boundAttendeeId;
+
+                // get current elems
+                let old_vid = document.getElementById(`video-` + this.videoElemUserMapping[old_active]) as HTMLVideoElement;
+                let new_vid = document.getElementById(`video-` + this.videoElemUserMapping[new_active]) as HTMLVideoElement;
+
+                // unbind old elems
+                this.chime.audioVideo.unbindVideoElement(this.tileUserMapping[old_active].tileId);
+                this.chime.audioVideo.unbindVideoElement(this.tileUserMapping[new_active].tileId);
+
+                this.videoElemUserMapping[old_active] = this.videoElemUserMapping[new_active];
+                this.videoElemUserMapping[new_active] = 'active';
+
+                // bind new elems
+                old_vid = document.getElementById(`video-` + this.videoElemUserMapping[old_active]) as HTMLVideoElement;
+                new_vid = document.getElementById(`video-` + this.videoElemUserMapping[new_active]) as HTMLVideoElement;
+
+                this.chime.audioVideo.bindVideoElement(this.tileUserMapping[old_active].tileId, old_vid);
+                this.chime.audioVideo.bindVideoElement(this.tileUserMapping[new_active].tileId, new_vid);
+
+                this.activeTileUserId = state.boundAttendeeId;
+            } else {
+                // get video elem
+                const videoElement = document.getElementById(`video-` + this.videoElemUserMapping[state.boundAttendeeId]) as HTMLVideoElement;
+
+                // bind elem
+                this.chime.audioVideo.bindVideoElement(this.tileUserMapping[state.boundAttendeeId].tileId, videoElement);
+            }
+
+
+            console.log('tileRes: tile-user' + JSON.stringify(this.tileUserMapping));
+            console.log('tileRes: video-user' + JSON.stringify(this.videoElemUserMapping));
         }
+
+        // console.log('video: tiles -> ' + this.chime.audioVideo.getAllVideoTiles().length.toString());
+        // let c = 1;
+        // for (const tile of this.chime.audioVideo.getAllVideoTiles()) {
+        //
+        //     const state = tile.state();
+        //
+        //     const videoElement = document.getElementById(`video-` + c.toString()) as HTMLVideoElement;
+        //
+        //     this.chime.audioVideo.bindVideoElement(state.tileId, videoElement);
+        //
+        //     if (this.roster[state.boundAttendeeId].volume > 40 && !this.roster[state.boundAttendeeId].muted) {
+        //         console.log('video: is actvie ' + this.roster[state.boundAttendeeId].name);
+        //
+        //         // Remove existing other active tile if present
+        //         if (this.activeTileStack.length > 0) {
+        //
+        //             if (this.activeTileStack[0] !== c) {
+        //
+        //                 // Remove old tile
+        //                 document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.remove('videoStreamActive');
+        //                 document.getElementById(`tile-` + this.activeTileStack[0].toString()).classList.add('videoStream');
+        //                 this.activeTileStack.pop();
+        //
+        //                 // New tile
+        //                 this.activeTileStack.push(c);
+        //                 document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
+        //                 document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+        //             }
+        //
+        //         } else {
+        //             this.activeTileStack.push(c);
+        //             document.getElementById(`tile-` + c.toString()).classList.remove('videoStream');
+        //             document.getElementById(`tile-` + c.toString()).classList.add('videoStreamActive');
+        //         }
+        //
+        //
+        //     }
+        //     c++;
+        // }
     }
 
     getActiveTileCount() {
@@ -441,5 +493,9 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
+
+    toggleStatsFlag(){
+        this.showStatsFLAG = !this.showStatsFLAG;
+    }
 
 }
