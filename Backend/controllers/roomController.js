@@ -14,6 +14,14 @@ module.exports = {
             let pt = req.body.title + '~~~' + res.locals.user.email;
             let ct = crypto.encrypt(pt);
 
+            // check role for rights
+            if (res.locals.user.role === 3) {
+                res.status(msg.UNAUTHORIZED.code).send(msg.UNAUTHORIZED);
+                return;
+            }
+
+
+
             // create room
             models.Room.create({
                 name: req.body.title,
@@ -23,7 +31,7 @@ module.exports = {
             })
                 .then(room => {
                     // add user in the room created
-                    this.addAttendeeToRoom(res.locals.user.id, room.dataValues.id);
+                    this.addUserToRoom(res.locals.user.id, room.dataValues.id);
                     res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
                 })
                 .catch(error => {
@@ -55,12 +63,13 @@ module.exports = {
 
 
     // add attendee to room API
-    addAttendee(req, res, next){
-
+    addAttendeeToRoom(req, res, next) {
+        this.addUserToRoom(res.locals.user.id, req.body.room_id);
+        res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
     },
 
     // add attendees to room
-    addAttendeeToRoom(user_id, room_id) {
+    addUserToRoom(user_id, room_id) {
         models.User_Room.create({
             user_id,
             room_id,

@@ -15,4 +15,10 @@ router.get('/', middleware.validateToken, function(req, res, next) {
     controllers.room.getRoom(req, res, next);
 });
 
+
+// add attendee to a room
+router.post('/addToRoom', middleware.validateToken, function(req, res, next) {
+    controllers.room.addAttendeeToRoom(req, res, next);
+});
+
 module.exports = router;

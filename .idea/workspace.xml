@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/room.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,14 +155,7 @@
       <workItem from="1583128167546" duration="18468000" />
       <workItem from="1583217117436" duration="12849000" />
       <workItem from="1583301927433" duration="1029000" />
-      <workItem from="1583303028027" duration="6610000" />
-    </task>
-    <task id="LOCAL-00081" summary="Video working, error in tile ordering">
-      <created>1580128076844</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1580128076844</updated>
+      <workItem from="1583303028027" duration="8149000" />
     </task>
     <task id="LOCAL-00082" summary="Video divs working">
       <created>1580145329381</created>
@@ -500,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583307944841</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Login Attendee API">
+      <created>1583309724650</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1583309724650</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +525,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Video UI init" />
     <MESSAGE value="Video responsive basic done" />
     <MESSAGE value="Video responsive updated" />
     <MESSAGE value="Added Stats" />
@@ -550,6 +549,7 @@
     <MESSAGE value="Stored encryption keys in env" />
     <MESSAGE value="Add attendees to room api" />
     <MESSAGE value="Create Attendee API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Attendee API" />
+    <MESSAGE value="Login Attendee API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Attendee API" />
   </component>
 </project>
