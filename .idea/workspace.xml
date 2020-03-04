@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/config/jwtConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/jwtConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/utils/crypto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/utils/crypto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,14 +154,7 @@
       <workItem from="1583128167546" duration="18468000" />
       <workItem from="1583217117436" duration="12849000" />
       <workItem from="1583301927433" duration="1029000" />
-      <workItem from="1583303028027" duration="1974000" />
-    </task>
-    <task id="LOCAL-00078" summary="Added error message and flag">
-      <created>1580126283511</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1580126283511</updated>
+      <workItem from="1583303028027" duration="3426000" />
     </task>
     <task id="LOCAL-00079" summary="Storing default devices info in variables">
       <created>1580126340593</created>
@@ -501,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583304678899</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Stored encryption keys in env">
+      <created>1583305022139</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1583305022139</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +524,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Sidebar done" />
     <MESSAGE value="Sidebar UI tweaks" />
     <MESSAGE value="Sidebar UI completed" />
     <MESSAGE value="Video UI init" />
@@ -551,6 +548,7 @@
     <MESSAGE value="Room route and controller init" />
     <MESSAGE value="Create room api" />
     <MESSAGE value="Get room api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get room api" />
+    <MESSAGE value="Stored encryption keys in env" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stored encryption keys in env" />
   </component>
 </project>

@@ -21,10 +21,13 @@ module.exports = {
                 created_by: res.locals.user.id,
                 is_active: true
             })
-                .then(succ => {
+                .then(room => {
+                    // add user in the room created
+                    this.addAttendeeToRoom(res.locals.user.id, room.dataValues.id);
                     res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
                 })
                 .catch(error => {
+                    console.log(error);
                     res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
                 });
 
@@ -50,9 +53,18 @@ module.exports = {
             })
     },
 
-    // decrypt digest to get room title
-    getRoomTitle(req, res, next) {
 
+    // add attendee to room API
+    addAttendee(req, res, next){
+
+    },
+
+    // add attendees to room
+    addAttendeeToRoom(user_id, room_id) {
+        models.User_Room.create({
+            user_id,
+            room_id,
+        });
     }
 
 };
