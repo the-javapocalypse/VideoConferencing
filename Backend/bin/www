@@ -9,7 +9,7 @@ const url = require('url');
 const uuid = require('uuid/v4');
 const AWS = require('aws-sdk');
 const https = require('https');
-
+const log = require('../utils/logger');
 
 var app = require('../app');
 var debug = require('debug')('chimebackend:server');
@@ -51,6 +51,7 @@ server.listen(port, hostname);
 server.on('error', onError);
 server.on('listening', onListening);
 
+log('Server started at ' + protocol + '://' + hostname + ':' + port);
 /**
  * Normalize a port into a number, string, or false.
  */

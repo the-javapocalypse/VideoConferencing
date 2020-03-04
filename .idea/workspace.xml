@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +27,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="sprint_1_changes_UI" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +46,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Frontend/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
@@ -151,168 +151,10 @@
       <workItem from="1582883248697" duration="11072000" />
       <workItem from="1582955361990" duration="7746000" />
       <workItem from="1582964147299" duration="3009000" />
-      <workItem from="1583128167546" duration="1120000" />
-    </task>
-    <task id="LOCAL-00061" summary="Toggle Screen Sharing UI">
-      <created>1579174552090</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1579174552090</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Meeting Controls UI Done">
-      <created>1579175477381</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1579175477381</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Attendees List init UI">
-      <created>1579242275708</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1579242275709</updated>
-    </task>
-    <task id="LOCAL-00064" summary="Attendee list tooltips">
-      <created>1579245802572</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1579245802572</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Tooltips for in-meeting device handlers">
-      <created>1579248594695</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1579248594695</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Integrated toaster">
-      <created>1579249972266</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1579249972266</updated>
-    </task>
-    <task id="LOCAL-00067" summary="Join redirect to meeting if data saved in local storage">
-      <created>1579765558503</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1579765558503</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Updated UI">
-      <created>1579781048812</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1579781048813</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Video Sync Done">
-      <created>1579846499789</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1579846499790</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Multiple sources can share video">
-      <created>1579852693897</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1579852693897</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Meeting Device UI">
-      <created>1579865019400</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1579865019401</updated>
-    </task>
-    <task id="LOCAL-00072" summary="join page ui done">
-      <created>1579867822563</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1579867822563</updated>
-    </task>
-    <task id="LOCAL-00073" summary="meeting page ui done">
-      <created>1579941178333</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1579941178335</updated>
-    </task>
-    <task id="LOCAL-00074" summary="join page ui tweaked">
-      <created>1579947563590</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1579947563590</updated>
-    </task>
-    <task id="LOCAL-00075" summary="Compile errors solved">
-      <created>1580120192210</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1580120192211</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Exception handling in backend">
-      <created>1580120984050</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1580120984050</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Added logging on exception">
-      <created>1580121559362</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1580121559362</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Added error message and flag">
-      <created>1580126283511</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1580126283511</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Storing default devices info in variables">
-      <created>1580126340593</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1580126340593</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Remove logging to make console cleaner">
-      <created>1580126364053</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1580126364053</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Video working, error in tile ordering">
-      <created>1580128076844</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1580128076844</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Video divs working">
-      <created>1580145329381</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1580145329381</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Null name check in UI">
-      <created>1580145417021</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1580145417022</updated>
+      <workItem from="1583128167546" duration="18468000" />
+      <workItem from="1583217117436" duration="12849000" />
+      <workItem from="1583301927433" duration="1029000" />
+      <workItem from="1583303028027" duration="10352000" />
     </task>
     <task id="LOCAL-00084" summary="Leave video integration">
       <created>1580193307985</created>
@@ -496,7 +338,168 @@
       <option name="project" value="LOCAL" />
       <updated>1582965988425</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Attendees list">
+      <created>1583129392246</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1583129392247</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Added models and migrations">
+      <created>1583134398352</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1583134398352</updated>
+    </task>
+    <task id="LOCAL-00112" summary="userController init">
+      <created>1583134649641</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1583134649642</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Routes segregation and added logs">
+      <created>1583135742952</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1583135742952</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Passport|Jwt init">
+      <created>1583136972558</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1583136972558</updated>
+    </task>
+    <task id="LOCAL-00115" summary="Added validators">
+      <created>1583137658104</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1583137658104</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Refactored user model">
+      <created>1583137934042</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1583137934042</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Added seeders">
+      <created>1583139113057</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1583139113057</updated>
+    </task>
+    <task id="LOCAL-00118" summary="Added mailer">
+      <created>1583139480949</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1583139480950</updated>
+    </task>
+    <task id="LOCAL-00119" summary="Added env">
+      <created>1583139750457</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1583139750457</updated>
+    </task>
+    <task id="LOCAL-00120" summary="User registration done">
+      <created>1583140008056</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1583140008056</updated>
+    </task>
+    <task id="LOCAL-00121" summary="User registration tweaked">
+      <created>1583140289610</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1583140289610</updated>
+    </task>
+    <task id="LOCAL-00122" summary="JWT init completed">
+      <created>1583150565270</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1583150565271</updated>
+    </task>
+    <task id="LOCAL-00123" summary="JWT policy updated">
+      <created>1583231987604</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1583231987605</updated>
+    </task>
+    <task id="LOCAL-00124" summary="Room route and controller init">
+      <created>1583233469854</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1583233469854</updated>
+    </task>
+    <task id="LOCAL-00125" summary="Create room api">
+      <created>1583237281449</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1583237281449</updated>
+    </task>
+    <task id="LOCAL-00126" summary="Get room api">
+      <created>1583304678898</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1583304678899</updated>
+    </task>
+    <task id="LOCAL-00127" summary="Stored encryption keys in env">
+      <created>1583305022139</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1583305022139</updated>
+    </task>
+    <task id="LOCAL-00128" summary="Add attendees to room api">
+      <created>1583306675787</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1583306675787</updated>
+    </task>
+    <task id="LOCAL-00129" summary="Create Attendee API">
+      <created>1583307944841</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1583307944841</updated>
+    </task>
+    <task id="LOCAL-00130" summary="Login Attendee API">
+      <created>1583309724650</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1583309724650</updated>
+    </task>
+    <task id="LOCAL-00131" summary="Added role check in room creation API">
+      <created>1583311299906</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1583311299906</updated>
+    </task>
+    <task id="LOCAL-00132" summary="Constraint to check if room is already created">
+      <created>1583319262989</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1583319262989</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,31 +524,31 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Leave video integration" />
-    <MESSAGE value="Code Optimization" />
-    <MESSAGE value="Removed Junk" />
-    <MESSAGE value="Logging in server" />
-    <MESSAGE value="Leave meeting when navigating out" />
-    <MESSAGE value="Video Size Responsive" />
-    <MESSAGE value="One video tile active stack" />
-    <MESSAGE value="Unsub handler on leaving meeting" />
-    <MESSAGE value="Leave meeting on page refresh" />
-    <MESSAGE value="None type for video input" />
-    <MESSAGE value="New build and htaccess added" />
-    <MESSAGE value="New build for host" />
-    <MESSAGE value="New build updated host" />
-    <MESSAGE value="Backend for deployed env" />
-    <MESSAGE value="Final commit deployment" />
-    <MESSAGE value="Added collapsible menu" />
-    <MESSAGE value="Sidebar basic UI done" />
-    <MESSAGE value="Sidebar done" />
-    <MESSAGE value="Sidebar UI tweaks" />
-    <MESSAGE value="Sidebar UI completed" />
-    <MESSAGE value="Video UI init" />
-    <MESSAGE value="Video responsive basic done" />
-    <MESSAGE value="Video responsive updated" />
     <MESSAGE value="Added Stats" />
     <MESSAGE value="stats done" />
-    <option name="LAST_COMMIT_MESSAGE" value="stats done" />
+    <MESSAGE value="Attendees list" />
+    <MESSAGE value="Added models and migrations" />
+    <MESSAGE value="userController init" />
+    <MESSAGE value="Routes segregation and added logs" />
+    <MESSAGE value="Passport|Jwt init" />
+    <MESSAGE value="Added validators" />
+    <MESSAGE value="Refactored user model" />
+    <MESSAGE value="Added seeders" />
+    <MESSAGE value="Added mailer" />
+    <MESSAGE value="Added env" />
+    <MESSAGE value="User registration done" />
+    <MESSAGE value="User registration tweaked" />
+    <MESSAGE value="JWT init completed" />
+    <MESSAGE value="JWT policy updated" />
+    <MESSAGE value="Room route and controller init" />
+    <MESSAGE value="Create room api" />
+    <MESSAGE value="Get room api" />
+    <MESSAGE value="Stored encryption keys in env" />
+    <MESSAGE value="Add attendees to room api" />
+    <MESSAGE value="Create Attendee API" />
+    <MESSAGE value="Login Attendee API" />
+    <MESSAGE value="Added role check in room creation API" />
+    <MESSAGE value="Constraint to check if room is already created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Constraint to check if room is already created" />
   </component>
 </project>
