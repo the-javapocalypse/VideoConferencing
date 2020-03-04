@@ -132,6 +132,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
             // Screen Loaded, show UI
             this.deviceScreenInitFLAG = true;
         } catch (err) {
+            console.log(err);
             // Devices not initialized which means user haven't joined the meeting, so redirect to /join
             this.router.navigate(['/join/' + this.meetingName]);
         }
