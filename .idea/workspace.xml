@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/utils/validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/utils/validator.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -156,14 +155,7 @@
       <workItem from="1583128167546" duration="18468000" />
       <workItem from="1583217117436" duration="12849000" />
       <workItem from="1583301927433" duration="1029000" />
-      <workItem from="1583303028027" duration="4700000" />
-    </task>
-    <task id="LOCAL-00080" summary="Remove logging to make console cleaner">
-      <created>1580126364053</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1580126364053</updated>
+      <workItem from="1583303028027" duration="6610000" />
     </task>
     <task id="LOCAL-00081" summary="Video working, error in tile ordering">
       <created>1580128076844</created>
@@ -501,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583306675787</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Create Attendee API">
+      <created>1583307944841</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1583307944841</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +525,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Sidebar UI completed" />
     <MESSAGE value="Video UI init" />
     <MESSAGE value="Video responsive basic done" />
     <MESSAGE value="Video responsive updated" />
@@ -551,6 +549,7 @@
     <MESSAGE value="Get room api" />
     <MESSAGE value="Stored encryption keys in env" />
     <MESSAGE value="Add attendees to room api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add attendees to room api" />
+    <MESSAGE value="Create Attendee API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Attendee API" />
   </component>
 </project>

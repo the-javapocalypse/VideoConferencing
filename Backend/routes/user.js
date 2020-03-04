@@ -21,6 +21,11 @@ router.post('/login',  function(req, res, next) {
     controllers.user.login(req, res, next);
 });
 
+// Login Attendee
+router.post('/loginAttendee',  function(req, res, next) {
+    controllers.user.loginAttendee(req, res, next);
+});
+
 // Activate User
 router.get('/activateUser/:token', controllers.user.activate);
 

@@ -15,7 +15,6 @@ module.exports = {
 
     // Create basic user
     create(req, res) {
-        log('Creating User');
 
         // Validate request
         let validate = validator.createUser(req);
@@ -63,8 +62,6 @@ module.exports = {
 
     //login method
     login(req, res) {
-        // Log request
-        log('Login user request');
         // Get user by email
         models.User.findOne(
             {where: {email: req.body.email}}
@@ -134,9 +131,6 @@ module.exports = {
 
     // Activate User
     activate(req, res) {
-        // Log request
-        log('Activate user request');
-
         // Refresh token
         const uidgen = new UIDGenerator(512);
         uidgen.generate()
@@ -158,7 +152,6 @@ module.exports = {
                         }
                     )
             });
-
 
     },
 
@@ -194,17 +187,74 @@ module.exports = {
                         token: token,
                         is_active: true     // no login required
                     })
-                    .then(user => {
-                        res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
-                    })
-                    .catch(err => {
-                        console.log(err);
-                        res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
-                    });
+                        .then(user => {
+                            res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
+                        })
+                        .catch(err => {
+                            console.log(err);
+                            res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
+                        });
                 });
 
         });
 
+    },
+
+
+    // login attendee (no password required)
+    loginAttendee(req, res, next) {
+        // Get user by email
+        models.User.findOne(
+            {where: {email: req.body.email, role: 3}}
+        )
+            .then(user => {
+                // Check if record exists
+                if (user == null) {
+                    res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
+                    res.end();
+                    return;
+                }
+
+                // Generate token to verify user email
+                const uidgen = new UIDGenerator(512);
+
+
+                // Async generate token
+                uidgen.generate()
+                    .then(token => {
+                        // Get user by token
+                        models.User.update(
+                            {
+                                token: token,
+                            },
+                            {where: {email: user.email}}
+                        );
+
+                        // user data present and user is active
+                        const jwtToken = jwt.sign(
+                            {
+                                token: token
+                            }, jwtSecret);
+
+                        // User info to send
+                        const UserInfo = {
+                            id: user.id,
+                            name: user.name,
+                            email: user.email,
+                            role: user.role,
+                        };
+                        res.status(msg.SUCCESSFUL.code).send({
+                            auth: true,
+                            token: jwtToken,
+                            user: UserInfo,
+                            message: 'Successfully Logged in',
+                        });
+                    });
+            })
+            .catch(err => {
+                log('Error in finding user when logging in');
+                res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
+            });
     }
 
 
