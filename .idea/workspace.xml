@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,14 +151,7 @@
       <workItem from="1583128167546" duration="18468000" />
       <workItem from="1583217117436" duration="12849000" />
       <workItem from="1583301927433" duration="1029000" />
-      <workItem from="1583303028027" duration="10352000" />
-    </task>
-    <task id="LOCAL-00084" summary="Leave video integration">
-      <created>1580193307985</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1580193307985</updated>
+      <workItem from="1583303028027" duration="10935000" />
     </task>
     <task id="LOCAL-00085" summary="Code Optimization">
       <created>1580193635671</created>
@@ -499,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583319262989</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="New build">
+      <created>1583319770428</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1583319770428</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +521,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Added Stats" />
     <MESSAGE value="stats done" />
     <MESSAGE value="Attendees list" />
     <MESSAGE value="Added models and migrations" />
@@ -549,6 +545,7 @@
     <MESSAGE value="Login Attendee API" />
     <MESSAGE value="Added role check in room creation API" />
     <MESSAGE value="Constraint to check if room is already created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Constraint to check if room is already created" />
+    <MESSAGE value="New build" />
+    <option name="LAST_COMMIT_MESSAGE" value="New build" />
   </component>
 </project>
