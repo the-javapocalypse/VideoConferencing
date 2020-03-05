@@ -7,7 +7,7 @@ const crypto = require('../utils/crypto');
 module.exports = {
 
     // Create room
-    create(req, res, next) {
+    async create(req, res, next) {
         if (req.body.title) {
 
             // plaint text to encrypt
@@ -37,8 +37,8 @@ module.exports = {
                         })
                             .then(room => {
                                 // add user in the room created
-                                this.addUserToRoom(res.locals.user.id, room.dataValues.id);
-                                res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
+                                msgReturn = this.addUserToRoom(res.locals.user.id, room.dataValues.id);
+                                res.status(msgReturn.code).send(msgReturn);
                             })
                             .catch(error => {
                                 console.log(error);
@@ -70,17 +70,28 @@ module.exports = {
 
 
     // add attendee to room API
-    addAttendeeToRoom(req, res, next) {
-        this.addUserToRoom(res.locals.user.id, req.body.room_id);
-        res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
+    async addAttendeeToRoom(req, res, next) {
+        msgReturn = await this.addUserToRoom(res.locals.user.id, req.body.room_id);
+        res.status(msgReturn.code).send(msgReturn);
     },
 
     // add attendees to room
-    addUserToRoom(user_id, room_id) {
-        models.User_Room.create({
-            user_id,
-            room_id,
-        });
+    async addUserToRoom(user_id, room_id) {
+        return await models.User_Room.findOne({where: {user_id, room_id}})
+            .then(user_room => {
+                if (!user_room) {
+                    models.User_Room.create({
+                        user_id,
+                        room_id,
+                    });
+                    return msg.SUCCESSFUL_CREATE;
+                } else {
+                    return msg.ALREADY_EXIST;
+                }
+            })
+            .catch(err => {
+                return msg.INTERNAL_SERVER_ERROR;
+            });
     }
 
 };
