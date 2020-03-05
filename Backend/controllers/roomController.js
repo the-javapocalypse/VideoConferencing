@@ -4,9 +4,13 @@ const log = require('../utils/logger');
 const validator = require('../utils/validator');
 const crypto = require('../utils/crypto');
 
+// Get env
+const env = process.env.NODE_ENV || 'development';
+
+
 module.exports = {
 
-    // Create room
+    // Create new room
     async create(req, res, next) {
         if (req.body.title) {
 
@@ -25,9 +29,9 @@ module.exports = {
                 {where: {name: req.body.title, created_by: res.locals.user.id}}
             )
                 .then(room => {
-                    if (room != null){
+                    if (room != null) {
                         res.status(msg.ALREADY_EXIST.code).send(msg.ALREADY_EXIST);
-                    }else{
+                    } else {
                         // create room
                         models.Room.create({
                             name: req.body.title,
@@ -45,6 +49,12 @@ module.exports = {
                                 res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
                             });
                     }
+                })
+                .catch(error => {
+                    if (env === 'development') {
+                        log(error);
+                    }
+                    res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
                 });
         } else {
             res.status(msg.BAD_REQUEST.code).send(msg.BAD_REQUEST);
@@ -66,6 +76,12 @@ module.exports = {
                     res.end();
                 }
             })
+            .catch(error => {
+                if(env === 'development'){
+                    log(error);
+                }
+                res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR)
+            })
     },
 
 
@@ -75,9 +91,10 @@ module.exports = {
         res.status(msgReturn.code).send(msgReturn);
     },
 
+
     // add attendees to room
     async addUserToRoom(user_id, room_id) {
-        if(!user_id || !room_id){
+        if (!user_id || !room_id) {
             return msg.BAD_REQUEST;
         }
         return await models.User_Room.findOne({where: {user_id, room_id}})
@@ -92,7 +109,10 @@ module.exports = {
                     return msg.ALREADY_EXIST;
                 }
             })
-            .catch(err => {
+            .catch(error => {
+                if(env === 'development'){
+                    log(error);
+                }
                 return msg.INTERNAL_SERVER_ERROR;
             });
     }

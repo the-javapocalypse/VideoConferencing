@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Handle bad request when adding attendee to room">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +42,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/Frontend/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
@@ -136,14 +139,7 @@
       <workItem from="1582372303592" duration="33000" />
       <workItem from="1582531520441" duration="4809000" />
       <workItem from="1582611960320" duration="2638000" />
-      <workItem from="1583388311050" duration="6722000" />
-    </task>
-    <task id="LOCAL-00052" summary="Updated Video Quality UI">
-      <created>1579157975124</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1579157975124</updated>
+      <workItem from="1583388311050" duration="11384000" />
     </task>
     <task id="LOCAL-00053" summary="Updated Audio Input UI">
       <created>1579158341769</created>
@@ -481,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583401700910</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Handle bad request when adding attendee to room">
+      <created>1583402017435</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1583402017457</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +509,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="join page ui tweaked" />
     <MESSAGE value="Compile errors solved" />
     <MESSAGE value="Exception handling in backend" />
     <MESSAGE value="Added logging on exception" />
@@ -531,6 +533,7 @@
     <MESSAGE value="New build updated host" />
     <MESSAGE value="Backend for deployed env" />
     <MESSAGE value="Check if room already exists in a room when adding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check if room already exists in a room when adding" />
+    <MESSAGE value="Handle bad request when adding attendee to room" />
+    <option name="LAST_COMMIT_MESSAGE" value="Handle bad request when adding attendee to room" />
   </component>
 </project>

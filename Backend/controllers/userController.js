@@ -6,16 +6,22 @@ const validator = require('../utils/validator');
 const mailer = require('../utils/mailer');
 const UIDGenerator = require('uid-generator');
 
+// Get env
+const env = process.env.NODE_ENV || 'development';
 
+// Jwt config
 const jwtSecret = require('../config/jwtConfig').jwtSecret;
 const jwt = require('jsonwebtoken');
+
+// Token generators
+const uidgen = new UIDGenerator(512);
+const uidgen128 = new UIDGenerator(128);
 
 
 module.exports = {
 
-    // Create basic user
+    // register user with role 2
     create(req, res) {
-
         // Validate request
         let validate = validator.createUser(req);
         validate.check().then((matched) => {
@@ -29,10 +35,7 @@ module.exports = {
 
             // Hash password
             const hash = bcrypt.hashSync(req.body.password, 10);
-
             // Generate token to verify user email
-            const uidgen = new UIDGenerator(512);
-
 
             // Async generate token
             uidgen.generate()
@@ -45,94 +48,113 @@ module.exports = {
                         role: 2,
                         token: token,
                         is_active: false
-                    }).then(user => {
-                        // Send email for verification
-                        let subject = 'Email Verification | ' + process.env.AppName;
-                        let body = 'Dear user, Thank you for registering with Syscon. To activate your account, please click ' +
-                            'on the following link: https://' + process.env.ClientDomain + '/activate/' + token;
-                        mailer.send(req.body.email, subject, body);
-                        res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
-                    });
+                    })
+                        .then(user => {
+                            // Send email for verification
+                            let subject = 'Email Verification | ' + process.env.AppName;
+                            let body = 'Dear user, Thank you for registering with Syscon. To activate your account, please click ' +
+                                'on the following link: https://' + process.env.ClientDomain + '/activate/' + token;
+                            mailer.send(req.body.email, subject, body);
+                            res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
+                        })
+                        .catch(error => {
+                            if (env === 'development') {
+                                log(error);
+                            }
+                            res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR)
+                        });
+                })
+                .catch(error => {
+                    if (env === 'development') {
+                        log(error);
+                    }
+                    res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR)
                 });
+
 
         });
 
     },
 
 
-    //login method
+    //login method for registered user
     login(req, res) {
         // Get user by email
         models.User.findOne(
             {where: {email: req.body.email}}
-        ).then(user => {
-            // Check if record exists
-            if (user == null) {
-                res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
-                res.end();
-                return;
-            }
-            // Check password
-            bcrypt.compare(req.body.password, user.password, function (err, user_auth) {
-                // if authenticated
-                if (user_auth) {
-                    // Check if user is activated
-                    if (!user.is_active) {
-                        res.status(msg.NOT_ACTIVE.code).send(msg.NOT_ACTIVE);
-                        return;
-                    }
-
-                    // Generate token to verify user email
-                    const uidgen = new UIDGenerator(512);
-
-
-                    // Async generate token
-                    uidgen.generate()
-                        .then(token => {
-                            // Get user by token
-                            models.User.update(
-                                {
-                                    token: token,
-                                },
-                                {where: {email: user.email}}
-                            );
-
-                            // user data present and user is active
-                            const jwtToken = jwt.sign(
-                                {
-                                    token: token
-                                }, jwtSecret);
-
-                            // User info to send
-                            const UserInfo = {
-                                id: user.id,
-                                name: user.name,
-                                email: user.email,
-                                role: user.role,
-                            };
-                            res.status(msg.SUCCESSFUL.code).send({
-                                auth: true,
-                                token: jwtToken,
-                                user: UserInfo,
-                                message: 'Successfully Logged in',
-                            });
-                        });
-                } else {
-                    // Passwords don't match
+        )
+            .then(user => {
+                // Check if record exists
+                if (user == null) {
                     res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
+                    res.end();
+                    return;
                 }
-            });
-        })
-            .catch(err => {
-                log('Error in finding user when logging in');
+                // Check password
+                bcrypt.compare(req.body.password, user.password, function (err, user_auth) {
+                    // if authenticated
+                    if (user_auth) {
+                        // Check if user is activated
+                        if (!user.is_active) {
+                            res.status(msg.NOT_ACTIVE.code).send(msg.NOT_ACTIVE);
+                            return;
+                        }
+
+
+                        // Async generate token
+                        uidgen.generate()
+                            .then(token => {
+                                // Get user by token
+                                models.User.update(
+                                    {
+                                        token: token,
+                                    },
+                                    {where: {email: user.email}}
+                                );
+
+                                // user data present and user is active
+                                const jwtToken = jwt.sign(
+                                    {
+                                        token: token
+                                    }, jwtSecret);
+
+                                // User info to send
+                                const UserInfo = {
+                                    id: user.id,
+                                    name: user.name,
+                                    email: user.email,
+                                    role: user.role,
+                                };
+                                res.status(msg.SUCCESSFUL.code).send({
+                                    auth: true,
+                                    token: jwtToken,
+                                    user: UserInfo,
+                                    message: 'Successfully Logged in',
+                                });
+                            })
+                            .catch(error => {
+                                if (env === 'development') {
+                                    log(error);
+                                }
+                                res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR)
+                            });
+                    } else {
+                        // Passwords don't match
+                        res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
+                    }
+                });
+            })
+            .catch(error => {
+                if (env === 'development') {
+                    log(error);
+                }
                 res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
             });
     },
 
-    // Activate User
+    // Activate user account via email confirmation
     activate(req, res) {
         // Refresh token
-        const uidgen = new UIDGenerator(512);
         uidgen.generate()
             .then(token => {
                 // Get user by token
@@ -147,16 +169,26 @@ module.exports = {
                             res.status(msg.SUCCESSFUL_UPDATE.code).send(msg.SUCCESSFUL_UPDATE);
                         }
                     )
-                    .catch(err => {
+                    .catch(error => {
+                            if (env === 'development') {
+                                log(error);
+                            }
                             res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
                         }
-                    )
-            });
+                    );
+            })
+            .catch(error => {
+                    if (env === 'development') {
+                        log(error);
+                    }
+                    res.status(msg.AUTHENTICATION_FAILED.code).send(msg.AUTHENTICATION_FAILED);
+                }
+            );
 
     },
 
 
-    // create visitor/attendee to use system without logging in
+    // create visitor/attendee to use system without logging in (with role 3)
     createAttendee(req, res, next) {
         // Validate request
         let validate = validator.createAttendee(req);
@@ -169,14 +201,11 @@ module.exports = {
             }
             // If data is valid proceed
 
-            // Generate token
-            const uidgen = new UIDGenerator(128);
-
             // Hash email + datetime to create password (since a attendee, wont be logging in)
             const hash = bcrypt.hashSync(req.body.email + new Date().toLocaleTimeString(), 10);
 
             // Async generate token
-            uidgen.generate()
+            uidgen128.generate()
                 .then(token => {
                     // Create User
                     models.User.create({
@@ -190,10 +219,18 @@ module.exports = {
                         .then(user => {
                             res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
                         })
-                        .catch(err => {
-                            console.log(err);
+                        .catch(error => {
+                            if (env === 'development') {
+                                log(error);
+                            }
                             res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
                         });
+                })
+                .catch(error => {
+                    if (env === 'development') {
+                        log(error);
+                    }
+                    res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
                 });
 
         });
@@ -201,7 +238,7 @@ module.exports = {
     },
 
 
-    // login attendee (no password required)
+    // login attendee (no password required, role is 3)
     loginAttendee(req, res, next) {
         // Get user by email
         models.User.findOne(
@@ -214,10 +251,6 @@ module.exports = {
                     res.end();
                     return;
                 }
-
-                // Generate token to verify user email
-                const uidgen = new UIDGenerator(512);
-
 
                 // Async generate token
                 uidgen.generate()
@@ -249,10 +282,18 @@ module.exports = {
                             user: UserInfo,
                             message: 'Successfully Logged in',
                         });
+                    })
+                    .catch(error => {
+                        if (env === 'development') {
+                            log(error);
+                        }
+                        res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
                     });
             })
-            .catch(err => {
-                log('Error in finding user when logging in');
+            .catch(error => {
+                if (env === 'development') {
+                    log(error);
+                }
                 res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
             });
     }
