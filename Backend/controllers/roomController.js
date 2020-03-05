@@ -77,6 +77,9 @@ module.exports = {
 
     // add attendees to room
     async addUserToRoom(user_id, room_id) {
+        if(!user_id || !room_id){
+            return msg.BAD_REQUEST;
+        }
         return await models.User_Room.findOne({where: {user_id, room_id}})
             .then(user_room => {
                 if (!user_room) {

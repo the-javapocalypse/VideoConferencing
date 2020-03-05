@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Backend for deployed env">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/www" afterDir="false" />
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -138,14 +136,7 @@
       <workItem from="1582372303592" duration="33000" />
       <workItem from="1582531520441" duration="4809000" />
       <workItem from="1582611960320" duration="2638000" />
-      <workItem from="1583388311050" duration="6371000" />
-    </task>
-    <task id="LOCAL-00051" summary="Backend Added Meeting">
-      <created>1579085784327</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1579085784328</updated>
+      <workItem from="1583388311050" duration="6722000" />
     </task>
     <task id="LOCAL-00052" summary="Updated Video Quality UI">
       <created>1579157975124</created>
@@ -483,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583321818497</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Check if room already exists in a room when adding">
+      <created>1583401700909</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1583401700910</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +506,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="meeting page ui done" />
     <MESSAGE value="join page ui tweaked" />
     <MESSAGE value="Compile errors solved" />
     <MESSAGE value="Exception handling in backend" />
@@ -533,6 +530,7 @@
     <MESSAGE value="New build for host" />
     <MESSAGE value="New build updated host" />
     <MESSAGE value="Backend for deployed env" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backend for deployed env" />
+    <MESSAGE value="Check if room already exists in a room when adding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check if room already exists in a room when adding" />
   </component>
 </project>
