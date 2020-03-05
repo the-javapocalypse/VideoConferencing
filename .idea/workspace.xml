@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Handle bad request when adding attendee to room">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes/videoConference.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/videoConference.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -139,14 +137,7 @@
       <workItem from="1582372303592" duration="33000" />
       <workItem from="1582531520441" duration="4809000" />
       <workItem from="1582611960320" duration="2638000" />
-      <workItem from="1583388311050" duration="11384000" />
-    </task>
-    <task id="LOCAL-00053" summary="Updated Audio Input UI">
-      <created>1579158341769</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1579158341769</updated>
+      <workItem from="1583388311050" duration="12275000" />
     </task>
     <task id="LOCAL-00054" summary="Updated Audio Output UI">
       <created>1579158915977</created>
@@ -484,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583402017457</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Error handling in dev env">
+      <created>1583407901861</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1583407901861</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +507,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Compile errors solved" />
     <MESSAGE value="Exception handling in backend" />
     <MESSAGE value="Added logging on exception" />
     <MESSAGE value="Added error message and flag" />
@@ -534,6 +531,7 @@
     <MESSAGE value="Backend for deployed env" />
     <MESSAGE value="Check if room already exists in a room when adding" />
     <MESSAGE value="Handle bad request when adding attendee to room" />
-    <option name="LAST_COMMIT_MESSAGE" value="Handle bad request when adding attendee to room" />
+    <MESSAGE value="Error handling in dev env" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error handling in dev env" />
   </component>
 </project>
