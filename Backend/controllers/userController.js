@@ -296,6 +296,31 @@ module.exports = {
                 }
                 res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
             });
+    },
+
+
+
+    logout (req, res, next) {
+        models.User.findOne(
+            {where: {email: res.locals.user.email}}
+        )
+            .then(user => {
+                if (user){
+                    user.update({
+                        token: ''
+                    }).then(succ => {
+                        res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL)
+                    })
+                }else{
+                    res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR)
+                }
+            })
+            .catch(error => {
+                if (env === 'development') {
+                    log(error);
+                }
+                res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR)
+            })
     }
 
 

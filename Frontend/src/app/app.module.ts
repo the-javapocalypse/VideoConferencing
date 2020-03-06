@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { MeetingComponent } from './pages/video/meeting/meeting.component';
+import { LoginComponent } from './pages/auth/login/login.component';
 
 registerLocaleData(en);
 
@@ -22,7 +23,8 @@ registerLocaleData(en);
     AppComponent,
     JoinTempComponent,
     MeetingTempComponent,
-    MeetingComponent
+    MeetingComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

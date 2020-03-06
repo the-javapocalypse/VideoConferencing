@@ -29,11 +29,12 @@ router.post('/loginAttendee',  function(req, res, next) {
 // Activate User
 router.get('/activateUser/:token', controllers.user.activate);
 
-// protected route
-router.post('/test', middleware.validateToken, function(req, res, next) {
-    console.log(res.locals.user);
-    res.send('Yeyy');
+
+// Login User
+router.get('/logout', middleware.validateToken, function(req, res, next) {
+    controllers.user.logout(req, res, next);
 });
+
 
 
 module.exports = router;

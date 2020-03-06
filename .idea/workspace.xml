@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/routes/videoConference.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/videoConference.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,6 +141,8 @@
       <workItem from="1582531520441" duration="4809000" />
       <workItem from="1582611960320" duration="2638000" />
       <workItem from="1583388311050" duration="12275000" />
+      <workItem from="1583478482579" duration="4207000" />
+      <workItem from="1583493143724" duration="842000" />
     </task>
     <task id="LOCAL-00054" summary="Updated Audio Output UI">
       <created>1579158915977</created>
@@ -507,7 +512,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Exception handling in backend" />
     <MESSAGE value="Added logging on exception" />
     <MESSAGE value="Added error message and flag" />
     <MESSAGE value="Storing default devices info in variables" />
@@ -532,6 +536,7 @@
     <MESSAGE value="Check if room already exists in a room when adding" />
     <MESSAGE value="Handle bad request when adding attendee to room" />
     <MESSAGE value="Error handling in dev env" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error handling in dev env" />
+    <MESSAGE value="Logout User Api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logout User Api" />
   </component>
 </project>
