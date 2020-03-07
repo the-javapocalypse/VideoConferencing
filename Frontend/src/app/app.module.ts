@@ -15,6 +15,8 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { MeetingComponent } from './pages/video/meeting/meeting.component';
 import { LoginComponent } from './pages/auth/login/login.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
+import { AccountComponent } from './pages/auth/account/account.component';
 
 registerLocaleData(en);
 
@@ -24,7 +26,9 @@ registerLocaleData(en);
     JoinTempComponent,
     MeetingTempComponent,
     MeetingComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

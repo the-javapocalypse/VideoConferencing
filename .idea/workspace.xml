@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.component.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/join-temp/join-temp.component.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +144,9 @@
       <workItem from="1583388311050" duration="12275000" />
       <workItem from="1583478482579" duration="4207000" />
       <workItem from="1583493143724" duration="842000" />
+      <workItem from="1583560943901" duration="1580000" />
+      <workItem from="1583563967962" duration="1924000" />
+      <workItem from="1583567362244" duration="1235000" />
     </task>
     <task id="LOCAL-00054" summary="Updated Audio Output UI">
       <created>1579158915977</created>
