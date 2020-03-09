@@ -7,9 +7,9 @@ export class ConfigService {
 
     private host = 'https://192.168.100.131:8080/'; // 'https://backend.syscon.io/' 'https://192.168.100.131:8080/'
 
-    private userApi = '/user/';
-    private roomApi = '/room/';
-    private chimeApi = '/vc/';
+    private userApi = 'user/';
+    private roomApi = 'room/';
+    private chimeApi = 'vc/';
 
     constructor() {
     }

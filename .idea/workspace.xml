@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/account/account.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/account/account.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/register/register.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/config.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/config.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,14 +150,7 @@
       <workItem from="1583583046831" duration="1487000" />
       <workItem from="1583733824973" duration="4109000" />
       <workItem from="1583739049044" duration="47000" />
-      <workItem from="1583739142432" duration="8637000" />
-    </task>
-    <task id="LOCAL-00060" summary="Video input handler">
-      <created>1579174075680</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1579174075680</updated>
+      <workItem from="1583739142432" duration="12960000" />
     </task>
     <task id="LOCAL-00061" summary="Toggle Screen Sharing UI">
       <created>1579174552090</created>
@@ -492,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583745313639</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Rest API services init">
+      <created>1583752365532</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1583752365532</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +520,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Null name check in UI" />
     <MESSAGE value="Leave video integration" />
     <MESSAGE value="Code Optimization" />
     <MESSAGE value="Removed Junk" />
@@ -542,6 +544,7 @@
     <MESSAGE value="Login UI done" />
     <MESSAGE value="Login UI" />
     <MESSAGE value="Registration form + events in accounts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration form + events in accounts" />
+    <MESSAGE value="Rest API services init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rest API services init" />
   </component>
 </project>
