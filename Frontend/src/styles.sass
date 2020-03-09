@@ -2,13 +2,20 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.css'
 @import '../node_modules/@angular/material/prebuilt-themes/indigo-pink.css'
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap')
+//@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap')
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Nunito:600,700&display=swap')
+
 
 $dark: #040C23
 $light: #4e54c8
+$primary: #3F53B5
 
 body
-  font-family: 'Noto Sans', sans-serif
+  font-family: 'Montserrat', sans-serif
+
+.nunito
+  font-family: 'Nunito'!important
 
 .text-dark
   color: $dark
@@ -16,6 +23,8 @@ body
 .text-light
   color: $dark
 
+.text-primary
+  color: $primary!important
 
 .btn-p-c
   background: #4e54c8
@@ -42,3 +51,13 @@ body
 
 .h-100vh
   height: 100vh
+
+.full-width
+  width: 100%!important
+
+.cursor-pointer:hover
+  cursor: pointer
+
+.highlight:hover
+  color: $primary!important
+  transition: 0.3s linear
