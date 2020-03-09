@@ -1,11 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.sass']
 })
+
 export class LoginComponent implements OnInit {
+
+    @Output() registerForm: EventEmitter<any> = new EventEmitter<any>();
+
 
     // control variables
     hidePassword = true;
@@ -27,4 +31,7 @@ export class LoginComponent implements OnInit {
         // Reset Errors
     }
 
+    register() {
+        this.registerForm.emit();
+    }
 }

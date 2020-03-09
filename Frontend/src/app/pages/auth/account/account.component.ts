@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -10,17 +10,14 @@ import {Router, ActivatedRoute} from '@angular/router';
 export class AccountComponent implements OnInit {
 
     isLoginScreen = true; // show login form by default
-    constructor(private route: ActivatedRoute, private router: Router) {
+    constructor(private router: Router) {
     }
 
     ngOnInit() {
+    }
 
-        // Get param from url to toggle login/register screen
-        if (this.route.snapshot.paramMap.get('action').toLowerCase() === 'login') {
-            this.isLoginScreen = true;
-        } else {
-            this.isLoginScreen = false;
-        }
+    showLoginScreen(toggle) {
+        this.isLoginScreen = toggle;
     }
 
 }

@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.sass']
+    selector: 'app-register',
+    templateUrl: './register.component.html',
+    styleUrls: ['./register.component.sass']
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+    @Output() loginForm: EventEmitter<any> = new EventEmitter<any>();
 
-  ngOnInit() {
-  }
+    // control variables
+    hidePassword = true;
+
+    constructor() {
+    }
+
+    ngOnInit() {
+    }
+
+    login() {
+        this.loginForm.emit();
+    }
+
+    register(data) {
+
+    }
 
 }
