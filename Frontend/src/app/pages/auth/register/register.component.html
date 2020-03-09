@@ -4,7 +4,7 @@
             New Here?
         </h3>
         <p class="text-muted">
-            Create an account & start using Syscon
+            Register with Syscon
         </p>
     </div>
     <!--  Form Start  -->
@@ -31,7 +31,9 @@
                 <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
         </mat-form-field>
-        <button type="submit" mat-raised-button color="primary" class="btn-block">Register</button>
+        <div class="pt-4">
+            <button type="submit" mat-raised-button color="primary" class="btn-block">Register</button>
+        </div>
     </form>
     <!--  Form End  -->
     <small class="cursor-pointer">Already a member? <span class="text-primary" (click)="login()">Login</span></small>

@@ -1,4 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {RestService} from '../../../services/api/rest.service';
+
 
 @Component({
     selector: 'app-register',
@@ -12,7 +14,12 @@ export class RegisterComponent implements OnInit {
     // control variables
     hidePassword = true;
 
-    constructor() {
+    // error variables
+    nameError = false;
+    passwordError = false;
+    emailError = false;
+
+    constructor(private api: RestService) {
     }
 
     ngOnInit() {
