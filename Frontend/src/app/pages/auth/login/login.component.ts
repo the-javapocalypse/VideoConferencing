@@ -10,10 +10,21 @@ export class LoginComponent implements OnInit {
     // control variables
     hidePassword = true;
 
+    // error variables
+    passwordErr = false;
+    emailEmptyErr = false;
+    emailTakenErr = false;
+
     constructor() {
     }
 
     ngOnInit() {
+    }
+
+
+    login(data) {
+        console.log(data);
+        // Reset Errors
     }
 
 }

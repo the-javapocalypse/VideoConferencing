@@ -7,30 +7,37 @@
            Log in to continue
        </p>
    </div>
-    <mat-form-field class="full-width">
-        <mat-label>Email</mat-label>
-        <input type="email" matInput placeholder="john@example.com">
-    </mat-form-field>
-    <mat-form-field class="full-width">
-        <mat-label>Password</mat-label>
-        <input matInput [type]="hidePassword ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'"
-                [attr.aria-pressed]="hidePassword">
-            <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-    </mat-form-field>
-    <div class="full-width pb-4">
-        <div class="row no-gutters">
-            <div class="col-md-6 col-sm-12">
-                <small class="text-muted">
-                    <mat-checkbox>Remember me</mat-checkbox>
-                </small>
-            </div>
-            <div class="col-md-6 col-sm-12 text-right">
-                <small class="text-muted cursor-pointer highlight">Forgot password</small>
+    <!--  Form Start  -->
+    <form #userlogin = "ngForm" (ngSubmit) = "login(userlogin.value)">
+        <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="john@example.com" name="email" ngModel>
+            <mat-error>
+                Please enter a valid email address
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hidePassword ? 'password' : 'text'" type="text" name="password" ngModel>
+            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <div class="full-width pb-4">
+            <div class="row no-gutters">
+                <div class="col-md-6 col-sm-12">
+                    <small class="text-muted">
+                        <mat-checkbox name="rememberMe" ngModel>Remember me</mat-checkbox>
+                    </small>
+                </div>
+                <div class="col-md-6 col-sm-12 text-right">
+                    <small class="text-muted cursor-pointer highlight">Forgot password</small>
+                </div>
             </div>
         </div>
-    </div>
-    <button mat-raised-button color="primary" class="btn-block">Login</button>
+        <button type="submit" mat-raised-button color="primary" class="btn-block">Login</button>
+    </form>
+    <!--  Form End  -->
     <small class="cursor-pointer">Not a member? <span class="text-primary">Register</span></small>
 </div>

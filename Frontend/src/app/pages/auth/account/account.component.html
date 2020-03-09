@@ -10,7 +10,8 @@
                         <img src="../../../../assets/img/logo.png" class="img-fluid" id="logo" />
                     </div>
                     <div class="px-2">
-                        <app-login> </app-login>
+                        <app-login *ngIf="isLoginScreen"> </app-login>
+                        <app-register *ngIf="!isLoginScreen"> </app-register>
                     </div>
                 </div>
             </div>
