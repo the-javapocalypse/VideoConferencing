@@ -26,4 +26,10 @@ export class RestService {
     createUser(body) {
         return this.http.post(this.host + this.userEndPoint + 'create', body, httpOptions);
     }
+
+    // Login User
+    loginUser(body) {
+        return this.http.post(this.host + this.userEndPoint + 'login', body, httpOptions);
+    }
+
 }

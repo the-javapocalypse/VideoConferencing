@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/utils/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/utils/messages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/account/account.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/account/account.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,14 +151,7 @@
       <workItem from="1583733824973" duration="4109000" />
       <workItem from="1583739049044" duration="47000" />
       <workItem from="1583739142432" duration="13029000" />
-      <workItem from="1583822638119" duration="3703000" />
-    </task>
-    <task id="LOCAL-00063" summary="Attendees List init UI">
-      <created>1579242275708</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1579242275709</updated>
+      <workItem from="1583822638119" duration="7229000" />
     </task>
     <task id="LOCAL-00064" summary="Attendee list tooltips">
       <created>1579245802572</created>
@@ -496,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583825002739</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Updated response messages">
+      <created>1583828059445</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1583828059445</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +521,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Removed Junk" />
     <MESSAGE value="Logging in server" />
     <MESSAGE value="Leave meeting when navigating out" />
     <MESSAGE value="Video Size Responsive" />
@@ -546,6 +545,7 @@
     <MESSAGE value="Rest API services init" />
     <MESSAGE value="User Registration Done" />
     <MESSAGE value="User Registration Spinner Bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Registration Spinner Bug" />
+    <MESSAGE value="Updated response messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated response messages" />
   </component>
 </project>

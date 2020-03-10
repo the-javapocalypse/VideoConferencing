@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class AccountComponent implements OnInit {
 
-    isLoginScreen = false; // show login form by default
+    isLoginScreen = true; // show login form by default
     constructor(private router: Router) {
     }
 

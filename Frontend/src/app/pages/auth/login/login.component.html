@@ -4,31 +4,37 @@
            Welcome Back
        </h3>
        <p class="text-muted">
-           Log in to continue
+           Log in to continue {{f.email.errors}}
        </p>
    </div>
     <!--  Form Start  -->
-    <form #userlogin = "ngForm" (ngSubmit) = "login(userlogin.value)">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
         <mat-form-field class="full-width">
             <mat-label>Email</mat-label>
-            <input type="email" matInput placeholder="john@example.com" name="email" ngModel>
-            <mat-error>
+            <input type="email" matInput placeholder="john@example.com" name="email" formControlName="email">
+            <mat-error *ngIf="f.email.touched && f.email.errors?.required">
                 Please enter a valid email address
             </mat-error>
         </mat-form-field>
         <mat-form-field class="full-width">
             <mat-label>Password</mat-label>
-            <input matInput [type]="hidePassword ? 'password' : 'text'" type="text" name="password" ngModel>
+            <input matInput [type]="hidePassword ? 'password' : 'text'" type="text" name="password" formControlName="password">
             <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'"
                     [attr.aria-pressed]="hidePassword">
                 <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
+            <mat-error *ngIf="f.password.touched && f.password.errors?.required">
+                Please enter a password
+            </mat-error>
+            <mat-error *ngIf="f.password.touched && f.password.errors?.serverError">
+                {{f.password.errors.serverError}}
+            </mat-error>
         </mat-form-field>
         <div class="full-width pb-4">
             <div class="row no-gutters">
                 <div class="col-md-6 col-sm-12">
                     <small class="text-muted">
-                        <mat-checkbox name="rememberMe" ngModel>Remember me</mat-checkbox>
+                        <mat-checkbox name="rememberMe">Remember me</mat-checkbox>
                     </small>
                 </div>
                 <div class="col-md-6 col-sm-12 text-right">
@@ -36,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit" mat-raised-button color="primary" class="btn-block">Login</button>
+        <button type="submit" mat-raised-button color="primary" class="btn-block" (click)="onSubmit()">Login</button>
     </form>
     <!--  Form End  -->
     <small class="cursor-pointer">Not a member? <span class="text-primary" (click)="register()">Register</span></small>
