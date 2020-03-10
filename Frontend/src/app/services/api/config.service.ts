@@ -21,4 +21,8 @@ export class ConfigService {
     public getUserEndPoint() {
         return this.userApi;
     }
+
+    public getRoomEndPoint() {
+        return this.roomApi;
+    }
 }

@@ -15,11 +15,13 @@ export class RestService {
 
     host = '';
     userEndPoint = '';
+    roomEndPoint = '';
 
     constructor(private config: ConfigService,
                 private http: HttpClient) {
         this.host = config.getHost();
         this.userEndPoint = config.getUserEndPoint();
+        this.userEndPoint = config.getRoomEndPoint();
     }
 
     // Create User
@@ -32,4 +34,8 @@ export class RestService {
         return this.http.post(this.host + this.userEndPoint + 'login', body, httpOptions);
     }
 
+    // Create Room
+    createRoom(body) {
+        return this.http.post(this.host + this.roomEndPoint + 'create', body, httpOptions);
+    }
 }

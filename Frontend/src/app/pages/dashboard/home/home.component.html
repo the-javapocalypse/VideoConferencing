@@ -21,9 +21,10 @@
                     <p class="">
                         <mat-form-field appearance="outline" style="width: 30%!important;">
                             <mat-label>Create new room</mat-label>
-                            <input matInput placeholder="Room Name">
+                            <input matInput placeholder="Room Name" [(ngModel)]="createRoomName">
                         </mat-form-field>
-                        <button mat-raised-button color="primary" class="" style="padding: 0.78em 2em; position: relative; bottom: 0.36em">
+                        <button mat-raised-button color="primary" (click)="createRoom()"
+                                id="createRoomBtn"  [disabled]="createRoomName === '' || creatingRoomFLAG">
                             Create Room
                         </button>
                     </p>
