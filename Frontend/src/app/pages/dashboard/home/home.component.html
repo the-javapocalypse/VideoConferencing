@@ -3,7 +3,7 @@
     <section>
         <div class="row">
             <div class="col-md-12">
-                <img src="../../../../assets/img/logo.png" class="img-fluid mt-3 ml-3" id="logo" />
+                <img src="../../../../assets/img/logo.png" class="img-fluid mt-3 ml-3" id="logo"/>
             </div>
         </div>
     </section>
@@ -24,7 +24,7 @@
                             <input matInput placeholder="Room Name" [(ngModel)]="createRoomName">
                         </mat-form-field>
                         <button mat-raised-button color="primary" (click)="createRoom()"
-                                id="createRoomBtn"  [disabled]="createRoomName === '' || creatingRoomFLAG">
+                                id="createRoomBtn" [disabled]="createRoomName === '' || creatingRoomFLAG">
                             Create Room
                         </button>
                     </p>
@@ -32,18 +32,60 @@
             </div>
         </div>
     </section>
-
-    <div>Some tags before</div>
-    <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide>Slide 1</ng-template>
-        <ng-template carouselSlide>Slide 2</ng-template>
-        <ng-template carouselSlide>Slide 3</ng-template>
-        <ng-template carouselSlide>Slide 4</ng-template>
-        <ng-template carouselSlide>Slide 5</ng-template>
-        <ng-template carouselSlide>Slide 6</ng-template>
-        <ng-template carouselSlide>Slide 7</ng-template>
-    </owl-carousel-o>
-    <div>Some tags after</div>
     <!--  Content Section End -->
+
+    <!--  Existing Rooms  -->
+    <!--    <div>Some tags before</div>-->
+    <!--    <owl-carousel-o [options]="customOptions">-->
+    <!--        <ng-template carouselSlide>Slide 1</ng-template>-->
+    <!--        <ng-template carouselSlide>Slide 2</ng-template>-->
+    <!--        <ng-template carouselSlide>Slide 3</ng-template>-->
+    <!--        <ng-template carouselSlide>Slide 4</ng-template>-->
+    <!--        <ng-template carouselSlide>Slide 5</ng-template>-->
+    <!--        <ng-template carouselSlide>Slide 6</ng-template>-->
+    <!--        <ng-template carouselSlide>Slide 7</ng-template>-->
+    <!--    </owl-carousel-o>-->
+    <!--    <div>Some tags after</div>-->
+
+    <section>
+        <div class="container">
+            <!--    Owl Carousel    -->
+            <owl-carousel-o [options]="customOptions">
+                <!--    Room Card Start    -->
+                <ng-template carouselSlide *ngFor="let room of allRooms">
+                    <div class="py-md-3 px-md-3">
+                        <mat-card class="shadow">
+                            <mat-card-header>
+                                <div class="row full-width">
+                                    <div class="col-md-10 col-10">
+                                        <h4>
+                                            {{room.name}}
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-2 col-2 text-right">
+                                        <mat-icon matBadge="15" matBadgeColor="success">account_circle</mat-icon>
+                                    </div>
+                                </div>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <p>
+                                    Participant count
+                                </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button mat-button>Copy Invite Link</button>
+                                <button mat-button>Update</button>
+                                <button mat-button>Delete</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                    <!--    Room Card End    -->
+                </ng-template>
+            </owl-carousel-o>
+
+        </div>
+    </section>
+
+    <!--  Existing Rooms End -->
 
 </div>

@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,14 +151,7 @@
       <workItem from="1583739049044" duration="47000" />
       <workItem from="1583739142432" duration="13029000" />
       <workItem from="1583822638119" duration="13854000" />
-      <workItem from="1583903013616" duration="10092000" />
-    </task>
-    <task id="LOCAL-00074" summary="join page ui tweaked">
-      <created>1579947563590</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1579947563590</updated>
+      <workItem from="1583903013616" duration="16044000" />
     </task>
     <task id="LOCAL-00075" summary="Compile errors solved">
       <created>1580120192210</created>
@@ -499,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583912728804</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Added Owl Carousel">
+      <created>1583913227023</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1583913227023</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +521,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Backend for deployed env" />
     <MESSAGE value="Check if room already exists in a room when adding" />
     <MESSAGE value="Handle bad request when adding attendee to room" />
     <MESSAGE value="Error handling in dev env" />
@@ -549,6 +545,7 @@
     <MESSAGE value="Route Guard Redirect" />
     <MESSAGE value="API fixed" />
     <MESSAGE value="Create Room Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Room Done" />
+    <MESSAGE value="Added Owl Carousel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Owl Carousel" />
   </component>
 </project>

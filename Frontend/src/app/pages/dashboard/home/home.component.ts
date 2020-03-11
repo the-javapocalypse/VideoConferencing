@@ -16,12 +16,14 @@ export class HomeComponent implements OnInit {
 
     // data variables
     createRoomName = '';
+    allRooms: any;
 
     // control flags
     creatingRoomFLAG = false;
 
+    // Owl Carousel for Rooms
     customOptions: OwlOptions = {
-        loop: true,
+        loop: false,
         mouseDrag: true,
         touchDrag: true,
         pullDrag: true,
@@ -33,13 +35,13 @@ export class HomeComponent implements OnInit {
                 items: 1
             },
             400: {
-                items: 2
+                items: 1
             },
             740: {
                 items: 3
             },
             940: {
-                items: 4
+                items: 3
             }
         },
         nav: true
@@ -52,6 +54,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         this.userInfo = this.storage.retrieveJWT().userInfo;
+        this.getRooms();
     }
 
     // Create Room
@@ -75,6 +78,18 @@ export class HomeComponent implements OnInit {
                     'Oops! Something went wrong',
                     ''
                 );
+            }
+        );
+    }
+
+    // Get rooms of user
+    getRooms() {
+        this.api.getRooms().subscribe(
+            (res: any) => {
+                this.allRooms = res.body;
+            },
+            (err: any) => {
+                console.log(err);
             }
         );
     }

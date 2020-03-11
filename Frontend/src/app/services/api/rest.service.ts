@@ -75,4 +75,12 @@ export class RestService {
         }
         return this.http.post(this.host + this.roomEndPoint + 'create', body, this.httpOptionsAuth);
     }
+
+    // AUTH: Get all rooms of user
+    getRooms() {
+        if (this.token === '') {
+            this.readToken();
+        }
+        return this.http.get(this.host + this.roomEndPoint + '/', this.httpOptionsAuth);
+    }
 }

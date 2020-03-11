@@ -25,6 +25,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HomeComponent } from './pages/dashboard/home/home.component';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import {MatCardModule} from "@angular/material/card";
+import {MatBadgeModule} from "@angular/material/badge";
 
 registerLocaleData(en);
 
@@ -53,6 +55,8 @@ registerLocaleData(en);
         MatCheckboxModule,
         ReactiveFormsModule,
         CarouselModule,
+        MatCardModule,
+        MatBadgeModule,
     ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
