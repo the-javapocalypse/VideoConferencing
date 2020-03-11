@@ -29,9 +29,6 @@ export class RestService {
                 private http: HttpClient,
                 private storage: LocalStorageService) {
 
-        // Get Token
-        this.token = storage.retrieveJWT().jwt;
-
         // Init API config
         this.host = config.getHost();
         this.userEndPoint = config.getUserEndPoint();
@@ -42,6 +39,13 @@ export class RestService {
             headers: new HttpHeaders({'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'}),
             observe: 'response' as 'body'
         };
+    }
+
+    // Read token from localstorage (invoke this method after logging in only)
+    readToken() {
+        // Get Token
+        this.token = this.storage.retrieveJWT().jwt;
+        // Auth headers
         this.httpOptionsAuth = {
             headers: new HttpHeaders(
                 {
@@ -64,8 +68,11 @@ export class RestService {
         return this.http.post(this.host + this.userEndPoint + 'login', body, this.httpOptions);
     }
 
-    // Create Room
+    // AUTH: Create Room
     createRoom(body) {
+        if (this.token === '') {
+            this.readToken();
+        }
         return this.http.post(this.host + this.roomEndPoint + 'create', body, this.httpOptionsAuth);
     }
 }

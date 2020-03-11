@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {RestService} from '../../../services/api/rest.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {LocalStorageService} from '../../../services/storage/local-storage.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-login',
@@ -23,7 +24,8 @@ export class LoginComponent implements OnInit {
 
     constructor(private api: RestService,
                 private formBuilder: FormBuilder,
-                private storage: LocalStorageService) {
+                private storage: LocalStorageService,
+                private router: Router) {
     }
 
     ngOnInit() {
@@ -50,6 +52,7 @@ export class LoginComponent implements OnInit {
         this.api.loginUser(this.loginForm.value).subscribe((res: any) => {
                 this.storage.storeJWT(res.body.token, res.body.user);
                 this.spinner = false; // hide spinner
+                this.router.navigate(['/home']);
             },
             (err: any) => {
                 this.spinner = false; // hide spinner
