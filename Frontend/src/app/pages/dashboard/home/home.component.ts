@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {LocalStorageService} from '../../../services/storage/local-storage.service';
 import {RestService} from '../../../services/api/rest.service';
-import {NzNotificationService} from "ng-zorro-antd";
+import {NzNotificationService} from 'ng-zorro-antd';
+import {OwlOptions} from 'ngx-owl-carousel-o';
 
 @Component({
     selector: 'app-home',
@@ -18,6 +19,31 @@ export class HomeComponent implements OnInit {
 
     // control flags
     creatingRoomFLAG = false;
+
+    customOptions: OwlOptions = {
+        loop: true,
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
+        dots: false,
+        navSpeed: 700,
+        navText: ['', ''],
+        responsive: {
+            0: {
+                items: 1
+            },
+            400: {
+                items: 2
+            },
+            740: {
+                items: 3
+            },
+            940: {
+                items: 4
+            }
+        },
+        nav: true
+    };
 
     constructor(private storage: LocalStorageService,
                 private api: RestService,

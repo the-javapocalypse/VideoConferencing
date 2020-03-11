@@ -17,12 +17,14 @@ import { MeetingComponent } from './pages/video/meeting/meeting.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { RegisterComponent } from './pages/auth/register/register.component';
 import { AccountComponent } from './pages/auth/account/account.component';
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatButtonModule} from "@angular/material/button";
-import {MatInputModule} from "@angular/material/input";
-import {MatIconModule} from "@angular/material/icon";
-import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HomeComponent } from './pages/dashboard/home/home.component';
+
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 registerLocaleData(en);
 
@@ -35,7 +37,7 @@ registerLocaleData(en);
     LoginComponent,
     RegisterComponent,
     AccountComponent,
-    HomeComponent
+    HomeComponent,
   ],
     imports: [
         BrowserModule,
@@ -50,6 +52,7 @@ registerLocaleData(en);
         MatIconModule,
         MatCheckboxModule,
         ReactiveFormsModule,
+        CarouselModule,
     ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
