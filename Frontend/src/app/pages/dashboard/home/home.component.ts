@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
             (res: any) => {
                 this.creatingRoomFLAG = false; // reset flag
                 // show notification
-                this.notification.blank(
+                this.notification.create(
                     'success',
                     res.body.message,
                     ''
@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
             (err: any) => {
                 this.creatingRoomFLAG = false; // reset flag
                 // show notification
-                this.notification.blank(
+                this.notification.create(
                     'warning',
                     'Oops! Something went wrong',
                     ''

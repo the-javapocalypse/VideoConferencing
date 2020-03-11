@@ -55,7 +55,8 @@ export class RegisterComponent implements OnInit {
                 console.log(res);
                 this.spinner = false; // hide spinner
                 // show notification
-                this.notification.blank(
+                this.notification.create(
+                    'success',
                     'Registered successfully',
                     'We have sent you an email. Click on the link present in the email to activate your account.'
                 );
