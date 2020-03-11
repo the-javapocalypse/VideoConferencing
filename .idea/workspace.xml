@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/room.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,14 +149,7 @@
       <workItem from="1583739049044" duration="47000" />
       <workItem from="1583739142432" duration="13029000" />
       <workItem from="1583822638119" duration="13854000" />
-      <workItem from="1583903013616" duration="17875000" />
-    </task>
-    <task id="LOCAL-00076" summary="Exception handling in backend">
-      <created>1580120984050</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1580120984050</updated>
+      <workItem from="1583903013616" duration="18772000" />
     </task>
     <task id="LOCAL-00077" summary="Added logging on exception">
       <created>1580121559362</created>
@@ -493,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583926052266</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Home banner">
+      <created>1583928593821</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1583928593821</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +519,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Handle bad request when adding attendee to room" />
     <MESSAGE value="Error handling in dev env" />
     <MESSAGE value="Logout User Api" />
     <MESSAGE value="Login | register components" />
@@ -543,6 +543,7 @@
     <MESSAGE value="Create Room Done" />
     <MESSAGE value="Added Owl Carousel" />
     <MESSAGE value="Rooms UI init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rooms UI init" />
+    <MESSAGE value="Home banner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home banner" />
   </component>
 </project>

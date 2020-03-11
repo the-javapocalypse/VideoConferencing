@@ -81,13 +81,31 @@ module.exports = {
                 }
             })
             .catch(error => {
-                if(env === 'development'){
+                if (env === 'development') {
                     log(error);
                 }
                 res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR)
             })
     },
 
+    // Get attendee count in room
+    getRoomAttendeeCount(req, res, next) {
+        models.User_Room.count({
+            where: {
+                room_id: req.body.room_id
+            },
+        })
+            .then(function (count) {
+                // count is an integer
+                res.status(msg.SUCCESSFUL.code).send({'count': count});
+            })
+            .catch((error) => {
+                if (env === 'development') {
+                    log(error);
+                }
+                return msg.INTERNAL_SERVER_ERROR;
+            });
+    },
 
     // add attendee to room API
     async addAttendeeToRoom(req, res, next) {
@@ -116,7 +134,7 @@ module.exports = {
                 }
             })
             .catch(error => {
-                if(env === 'development'){
+                if (env === 'development') {
                     log(error);
                 }
                 return msg.INTERNAL_SERVER_ERROR;
