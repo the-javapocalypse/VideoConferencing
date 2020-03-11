@@ -14,12 +14,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="nunito font-weight-bolder text-dark mat-display-3 pt-5 mt-5">
+                    <h1 class="nunito font-weight-bolder text-dark pt-5 mt-5">
                         Hello {{userInfo.name}}
                     </h1>
 
                     <p class="">
-                        <mat-form-field appearance="outline" style="width: 30%!important;">
+                        <mat-form-field appearance="outline" id="roomNameInput">
                             <mat-label>Create new room</mat-label>
                             <input matInput placeholder="Room Name" [(ngModel)]="createRoomName">
                         </mat-form-field>

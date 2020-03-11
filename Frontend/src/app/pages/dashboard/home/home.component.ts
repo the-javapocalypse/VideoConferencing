@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LocalStorageService} from '../../../services/storage/local-storage.service';
+import {RestService} from '../../../services/api/rest.service';
+import {NzNotificationService} from "ng-zorro-antd";
 
 @Component({
     selector: 'app-home',
@@ -17,7 +19,9 @@ export class HomeComponent implements OnInit {
     // control flags
     creatingRoomFLAG = false;
 
-    constructor(private storage: LocalStorageService) {
+    constructor(private storage: LocalStorageService,
+                private api: RestService,
+                private notification: NzNotificationService) {
     }
 
     ngOnInit() {
@@ -26,6 +30,26 @@ export class HomeComponent implements OnInit {
 
     // Create Room
     createRoom() {
-
+        this.creatingRoomFLAG = true; // set flag
+        this.api.createRoom({title: this.createRoomName}).subscribe(
+            (res: any) => {
+                this.creatingRoomFLAG = false; // reset flag
+                // show notification
+                this.notification.blank(
+                    'success',
+                    res.body.message,
+                    ''
+                );
+            },
+            (err: any) => {
+                this.creatingRoomFLAG = false; // reset flag
+                // show notification
+                this.notification.blank(
+                    'warning',
+                    'Oops! Something went wrong',
+                    ''
+                );
+            }
+        );
     }
 }
