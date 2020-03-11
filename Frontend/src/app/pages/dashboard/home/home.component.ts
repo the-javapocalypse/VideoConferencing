@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
                 // show notification
                 this.notification.create(
                     'success',
-                    res.body.message,
+                    'Room ' + res.body.message.toLowerCase(),
                     ''
                 );
             },
