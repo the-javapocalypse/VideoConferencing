@@ -41,11 +41,15 @@ module.exports = {
                         })
                             .then(room => {
                                 // add user in the room created
-                                msgReturn = this.addUserToRoom(res.locals.user.id, room.dataValues.id);
-                                res.status(msgReturn.code).send(msgReturn);
+                                this.addUserToRoom(res.locals.user.id, room.dataValues.id)
+                                    .then(msg => {
+                                        res.status(msg.code).send(msg);
+                                    })
                             })
                             .catch(error => {
-                                console.log(error);
+                                if (env === 'development') {
+                                    log(error);
+                                }
                                 res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
                             });
                     }
@@ -87,8 +91,10 @@ module.exports = {
 
     // add attendee to room API
     async addAttendeeToRoom(req, res, next) {
-        msgReturn = await this.addUserToRoom(res.locals.user.id, req.body.room_id);
-        res.status(msgReturn.code).send(msgReturn);
+        this.addUserToRoom(res.locals.user.id, req.body.room_id)
+            .then(msg => {
+                res.status(msg.code).send(msg);
+            });
     },
 
 
