@@ -103,7 +103,7 @@ module.exports = {
                 if (env === 'development') {
                     log(error);
                 }
-                return msg.INTERNAL_SERVER_ERROR;
+                res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
             });
     },
 
@@ -139,6 +139,27 @@ module.exports = {
                 }
                 return msg.INTERNAL_SERVER_ERROR;
             });
+    },
+
+
+    roomIsValid(req, res, next){
+        models.Room.findOne(
+            {where: {digest: req.body.digest}}
+        )
+            .then( room => {
+                if(!room){
+                    res.status(msg.NOT_FOUND.code).send(msg.NOT_FOUND);
+                }else {
+                    res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
+                }
+            })
+            .catch(error => {
+                if (env === 'development') {
+                    log(error);
+                }
+                res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
+            });
     }
+
 
 };
