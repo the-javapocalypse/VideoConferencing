@@ -27,6 +27,8 @@ import { HomeComponent } from './pages/dashboard/home/home.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {MatCardModule} from "@angular/material/card";
 import {MatBadgeModule} from "@angular/material/badge";
+import { ClipboardModule } from 'ngx-clipboard';
+
 
 registerLocaleData(en);
 
@@ -57,6 +59,7 @@ registerLocaleData(en);
         CarouselModule,
         MatCardModule,
         MatBadgeModule,
+        ClipboardModule,
     ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

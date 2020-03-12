@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LocalStorageService} from '../../../services/storage/local-storage.service';
 import {RestService} from '../../../services/api/rest.service';
-import {NzNotificationService} from 'ng-zorro-antd';
+import {NzMessageService, NzNotificationService} from 'ng-zorro-antd';
 import {OwlOptions} from 'ngx-owl-carousel-o';
 
 @Component({
@@ -12,7 +12,12 @@ import {OwlOptions} from 'ngx-owl-carousel-o';
 export class HomeComponent implements OnInit {
 
     // User info from local storage
-    userInfo = {};
+    userInfo = {
+        id: undefined,
+        name: undefined,
+        email: undefined,
+        role: undefined
+    };
 
     // data variables
     createRoomName = '';
@@ -49,7 +54,9 @@ export class HomeComponent implements OnInit {
 
     constructor(private storage: LocalStorageService,
                 private api: RestService,
-                private notification: NzNotificationService) {
+                private notification: NzNotificationService,
+                private message: NzMessageService,
+                ) {
     }
 
     ngOnInit() {
@@ -94,15 +101,10 @@ export class HomeComponent implements OnInit {
         );
     }
 
-
-    getAttendeeCount(id) {
-        this.api.getAttendeesCount({room_id: id}).subscribe(
-            (res: any) => {
-                console.log(res);
-            },
-            (error: any) => {
-                console.log(error);
-            }
-        );
+    // Show toast
+    showToast(e) {
+        this.message.info('Invitation link copied');
     }
+
+
 }
