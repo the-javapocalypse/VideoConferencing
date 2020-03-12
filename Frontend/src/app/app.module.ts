@@ -28,6 +28,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import {MatCardModule} from "@angular/material/card";
 import {MatBadgeModule} from "@angular/material/badge";
 import { ClipboardModule } from 'ngx-clipboard';
+import { JoinComponent } from './pages/video/join/join.component';
 
 
 registerLocaleData(en);
@@ -42,6 +43,7 @@ registerLocaleData(en);
     RegisterComponent,
     AccountComponent,
     HomeComponent,
+    JoinComponent,
   ],
     imports: [
         BrowserModule,

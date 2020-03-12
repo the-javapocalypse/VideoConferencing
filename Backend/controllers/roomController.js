@@ -144,7 +144,7 @@ module.exports = {
 
     roomIsValid(req, res, next){
         models.Room.findOne(
-            {where: {digest: req.body.digest}}
+            {where: {digest: req.params.digest}}
         )
             .then( room => {
                 if(!room){
