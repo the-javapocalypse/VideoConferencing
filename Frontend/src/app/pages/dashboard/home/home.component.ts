@@ -93,4 +93,16 @@ export class HomeComponent implements OnInit {
             }
         );
     }
+
+
+    getAttendeeCount(id) {
+        this.api.getAttendeesCount({room_id: id}).subscribe(
+            (res: any) => {
+                console.log(res);
+            },
+            (error: any) => {
+                console.log(error);
+            }
+        );
+    }
 }
