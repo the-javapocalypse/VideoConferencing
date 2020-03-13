@@ -64,7 +64,7 @@
                                 <button mat-button ngxClipboard [cbContent]="room.digest" (cbOnSuccess)="showToast($event)">
                                     Copy Invite Link
                                 </button>
-                                <button mat-button  routerLink="/startMeeting/{{formatURL(room.digest)}}" target="_blank">
+                                <button mat-button (click)="openInNewTab(formatURL(room.digest))">
                                     Join
                                 </button>
                             </mat-card-actions>

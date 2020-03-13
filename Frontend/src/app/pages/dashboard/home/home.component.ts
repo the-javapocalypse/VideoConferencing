@@ -3,6 +3,7 @@ import {LocalStorageService} from '../../../services/storage/local-storage.servi
 import {RestService} from '../../../services/api/rest.service';
 import {NzMessageService, NzNotificationService} from 'ng-zorro-antd';
 import {OwlOptions} from 'ngx-owl-carousel-o';
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-home',
@@ -56,6 +57,7 @@ export class HomeComponent implements OnInit {
                 private api: RestService,
                 private notification: NzNotificationService,
                 private message: NzMessageService,
+                private router: Router,
     ) {
     }
 
@@ -110,6 +112,17 @@ export class HomeComponent implements OnInit {
     // Format URL encoding
     formatURL(url) {
         return url.replace(/\//g, '%2F');
+    }
+
+    // Open tab in new url
+    openInNewTab(digest) {
+        // Converts the route into a string that can be used /startMeeting/{{formatURL(room.digest)}}
+        // with the window.open() function
+        const url = this.router.serializeUrl(
+            this.router.createUrlTree([`/startMeeting/` + this.formatURL(digest)])
+        );
+        console.log(url);
+        window.open(url, '_blank');
     }
 
 }
