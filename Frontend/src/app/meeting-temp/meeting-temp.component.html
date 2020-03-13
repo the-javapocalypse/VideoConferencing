@@ -6,10 +6,10 @@
                 <div class="card-body p-md-5">
                     <h5 class="card-title text-center">
                         Hello
-                        {{storage.getRoasterInfo().attendeeName }},
+                        {{userInfo.name}},
                         Let's setup audio and video settings before starting the meeting.
                     </h5>
-                    <div class="row p-5" [class.d-none]="deviceScreenInitFLAG">
+                    <div ceelass="row p-5" [class.d-none]="deviceScreenInitFLAG">
                         <div class="text-center m-auto">
                             <nz-spin nzSimple [nzSize]="'large'"></nz-spin>
                         </div>
@@ -255,7 +255,8 @@
                     nzTooltipPlacement="right" (click)="toggleCollapsed()">
                     <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
                     <span>
-                        {{meetingName}}
+                        Meeting Name Here
+<!--                        {{meetingName}} -->
                     </span>
                 </li>
                 <li nz-menu-item nz-popconfirm nzPopconfirmTitle="Are you sure you want to leave meeting?"
