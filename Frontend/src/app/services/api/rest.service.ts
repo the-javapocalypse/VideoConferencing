@@ -81,11 +81,11 @@ export class RestService {
         if (this.token === '') {
             this.readToken();
         }
-        return this.http.get(this.host + this.roomEndPoint + '/', this.httpOptionsAuth);
+        return this.http.get(this.host + this.roomEndPoint, this.httpOptionsAuth);
     }
 
 
     roomIsValid(digest) {
-        return this.http.get(this.host + this.roomEndPoint + '/roomExist/' + digest, this.httpOptions);
+        return this.http.get(this.host + this.roomEndPoint + 'roomExist/' + digest, this.httpOptions);
     }
 }
