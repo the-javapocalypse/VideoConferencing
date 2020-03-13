@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
                 private api: RestService,
                 private notification: NzNotificationService,
                 private message: NzMessageService,
-                ) {
+    ) {
     }
 
     ngOnInit() {
@@ -106,5 +106,10 @@ export class HomeComponent implements OnInit {
         this.message.info('Invitation link copied');
     }
 
+
+    // Format URL encoding
+    formatURL(url) {
+        return url.replace(/\//g, '%2F');
+    }
 
 }
