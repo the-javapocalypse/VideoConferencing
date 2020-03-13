@@ -25,11 +25,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HomeComponent } from './pages/dashboard/home/home.component';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import {MatCardModule} from "@angular/material/card";
-import {MatBadgeModule} from "@angular/material/badge";
+import {MatCardModule} from '@angular/material/card';
+import {MatBadgeModule} from '@angular/material/badge';
 import { ClipboardModule } from 'ngx-clipboard';
 import { JoinComponent } from './pages/video/join/join.component';
 
+
+import {CustomUrlSerializer} from './custom/CustomUrlSerializer';
+import {UrlSerializer} from "@angular/router";
 
 registerLocaleData(en);
 
@@ -63,7 +66,7 @@ registerLocaleData(en);
         MatBadgeModule,
         ClipboardModule,
     ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, { provide: UrlSerializer, useClass: CustomUrlSerializer}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
