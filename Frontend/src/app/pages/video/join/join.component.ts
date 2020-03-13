@@ -38,6 +38,10 @@ export class JoinComponent implements OnInit {
     ngOnInit() {
         // Grab meeting id from url
         this.digest = this.route.snapshot.paramMap.get('digest');
+        // this.route.params.subscribe(params => {
+        //     console.log(params.digest); // prints: referral_code=jk
+        // });
+
 
         // Get user info from local storage
         this.userInfo = this.storage.retrieveJWT().userInfo;
@@ -50,7 +54,7 @@ export class JoinComponent implements OnInit {
     checkRoomIsExists() {
         this.api.roomIsValid(this.digest).subscribe(
             (res: any) => {
-                console.log(res);
+                this.joinMeetingTrigger(this.digest, this.userInfo.name);
             },
             (err: any) => {
                 this.roomNotExistsFlag = false;
@@ -67,11 +71,11 @@ export class JoinComponent implements OnInit {
             name: attendeeName
         }).subscribe((res: any) => {
                 console.log('Successfully joined...');
-                this.chime.startSession(res.JoinInfo.Meeting, res.JoinInfo.Attendee);
+                this.chime.startSession(res.body.JoinInfo.Meeting, res.body.JoinInfo.Attendee);
                 this.router.navigate(['/meeting/' + meetingId]);
             },
             (err: any) => {
-                // console.log(err);
+                console.log(err);
                 this.joinErrorFlag = true;
             }
         );
