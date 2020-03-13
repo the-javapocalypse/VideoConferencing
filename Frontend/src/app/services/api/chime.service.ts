@@ -1386,7 +1386,16 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     // Params: meeting id, attendee name and region
     // Return <promise>: join info with meeting and attendee info
     joinMeeting(body) {
-        return this.http.post(this.apiUrl + 'join', body);
+        return this.http.post(this.apiUrl + 'join', body, {
+            headers: new HttpHeaders(
+                {
+                    'Access-Control-Allow-Origin': '*',
+                    'Content-Type': 'application/json',
+                    Authorization: 'JWT ' + this.storage.retrieveJWT().jwt,
+                    Accept: '*/*',
+                }),
+            observe: 'response' as 'body'
+        });
     }
 
     // Def: Initialize session, get audio and video permissions, initialize and get list of all audio and video devices
