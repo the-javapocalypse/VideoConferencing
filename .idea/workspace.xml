@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/room.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join/join.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join/join.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -151,14 +152,8 @@
       <workItem from="1583822638119" duration="13854000" />
       <workItem from="1583903013616" duration="19974000" />
       <workItem from="1583993415688" duration="1771000" />
-      <workItem from="1583999091093" duration="9672000" />
-    </task>
-    <task id="LOCAL-00082" summary="Video divs working">
-      <created>1580145329381</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1580145329381</updated>
+      <workItem from="1583999091093" duration="10053000" />
+      <workItem from="1584078878161" duration="1258000" />
     </task>
     <task id="LOCAL-00083" summary="Null name check in UI">
       <created>1580145417021</created>
@@ -496,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584015220312</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="Join init">
+      <created>1584016214493</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1584016214493</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +523,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Login UI done" />
     <MESSAGE value="Login UI" />
     <MESSAGE value="Registration form + events in accounts" />
     <MESSAGE value="Rest API services init" />
@@ -546,6 +547,7 @@
     <MESSAGE value="Copy invite code done" />
     <MESSAGE value="Room API fixed" />
     <MESSAGE value="Check if room exists API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Check if room exists API" />
+    <MESSAGE value="Join init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Join init" />
   </component>
 </project>

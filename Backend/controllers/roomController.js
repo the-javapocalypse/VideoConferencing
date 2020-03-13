@@ -159,7 +159,8 @@ module.exports = {
                 }
                 res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
             });
-    }
+    },
+
 
 
 };

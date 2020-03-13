@@ -32,4 +32,6 @@ router.get('/roomExist/:digest', function(req, res, next) {
     controllers.room.roomIsValid(req, res, next);
 });
 
+
+
 module.exports = router;
