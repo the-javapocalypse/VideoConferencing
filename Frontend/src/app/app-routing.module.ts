@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'account', component: AccountComponent},
   { path: 'join_old/:meeting_id', component: JoinTempComponent },
   { path: 'meeting_old/:meeting_id', component: MeetingTempComponent},
-  { path: 'join/:digest', component: JoinComponent},
+  { path: 'startMeeting/:digest', component: JoinComponent},
   { path: 'meeting/:meeting_id', component: MeetingComponent},
 ];
 

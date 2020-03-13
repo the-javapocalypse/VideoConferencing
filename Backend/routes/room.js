@@ -21,11 +21,6 @@ router.post('/addToRoom', middleware.validateToken, function(req, res, next) {
     controllers.room.addAttendeeToRoom(req, res, next);
 });
 
-// get attendee count in a room
-// Todo: Not in use. Update this
-router.post('/attendeeCount', middleware.validateToken, function(req, res, next) {
-    controllers.room.getRoomAttendeeCount(req, res, next);
-});
 
 // check if room exists
 router.get('/roomExist/:digest', function(req, res, next) {

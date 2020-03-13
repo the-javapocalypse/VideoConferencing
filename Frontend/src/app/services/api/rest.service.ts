@@ -84,11 +84,8 @@ export class RestService {
         return this.http.get(this.host + this.roomEndPoint + '/', this.httpOptionsAuth);
     }
 
-    // AUTH: Get attendees count in room
-    getAttendeesCount(body) {
-        if (this.token === '') {
-            this.readToken();
-        }
-        return this.http.post(this.host + this.roomEndPoint + '/attendeeCount', body, this.httpOptionsAuth);
+
+    roomIsValid(digest) {
+        return this.http.get(this.host + this.roomEndPoint + '/roomExist/' + digest, this.httpOptions);
     }
 }
