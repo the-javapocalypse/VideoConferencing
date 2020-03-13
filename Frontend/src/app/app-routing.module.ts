@@ -13,9 +13,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
   { path: 'account', component: AccountComponent},
   { path: 'join_old/:meeting_id', component: JoinTempComponent },
-  { path: 'meeting_old/:meeting_id', component: MeetingTempComponent},
+  { path: 'meeting/:meeting_id', component: MeetingTempComponent},
   { path: 'startMeeting/:digest', component: JoinComponent},
-  { path: 'meeting/:meeting_id', component: MeetingComponent},
+  { path: 'meeting_new/:meeting_id', component: MeetingComponent},
 ];
 
 @NgModule({
