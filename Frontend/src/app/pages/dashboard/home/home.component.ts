@@ -3,7 +3,8 @@ import {LocalStorageService} from '../../../services/storage/local-storage.servi
 import {RestService} from '../../../services/api/rest.service';
 import {NzMessageService, NzNotificationService} from 'ng-zorro-antd';
 import {OwlOptions} from 'ngx-owl-carousel-o';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
+import { environment } from '../../../../environments/environment';
 
 @Component({
     selector: 'app-home',
@@ -12,6 +13,8 @@ import {Router} from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
+    // domain name form env
+    domain = '';
     // User info from local storage
     userInfo = {
         id: undefined,
@@ -64,6 +67,7 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
         this.userInfo = this.storage.retrieveJWT().userInfo;
         this.getRooms();
+        this.domain = environment.domain;
     }
 
     // Create Room
