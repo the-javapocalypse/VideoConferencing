@@ -63,9 +63,19 @@ export class RestService {
         return this.http.post(this.host + this.userEndPoint + 'create', body, this.httpOptions);
     }
 
+    // Create Attendee
+    createAttendee(body) {
+        return this.http.post(this.host + this.userEndPoint + 'createAttendee', body, this.httpOptions);
+    }
+
     // Login User
     loginUser(body) {
         return this.http.post(this.host + this.userEndPoint + 'login', body, this.httpOptions);
+    }
+
+    // Login Attendee
+    loginAttendee(body) {
+        return this.http.post(this.host + this.userEndPoint + 'loginAttendee', body, this.httpOptions);
     }
 
     // AUTH: Create Room
