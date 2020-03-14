@@ -1,18 +1,19 @@
 import {Injectable} from '@angular/core';
 
 import {SimpleCrypto} from 'simple-crypto-js';
-
+import {environment} from '../../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
 })
 export class CryptoService {
 
-    secretKey = 'ch!m3sy$cOn@!@';
+    secretKey = '';
     simpleCrypto: any;
 
     constructor() {
         this.simpleCrypto = new SimpleCrypto(this.secretKey);
+        this.secretKey = environment.cryptoKey;
     }
 
     encrypt(pt) {
