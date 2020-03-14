@@ -1,17 +1,19 @@
 import {Injectable} from '@angular/core';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ConfigService {
 
-    private host = 'https://192.168.100.131:8080/'; // 'https://backend.syscon.io/' 'https://192.168.100.131:8080/'
+    private host = '';
 
     private userApi = 'user/';
     private roomApi = 'room/';
     private chimeApi = 'vc/';
 
     constructor() {
+        this.host = environment.domain;
     }
 
     public getHost() {

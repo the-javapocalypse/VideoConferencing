@@ -3,6 +3,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {LocalStorageService} from '../storage/local-storage.service';
 
+import {environment} from '../../../environments/environment';
+
 import {
     AsyncScheduler,
     AudioVideoFacade,
@@ -105,7 +107,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     static readonly BASE_URL: string = [location.protocol, '//', location.host, location.pathname.replace(/\/*$/, '/')].join('');
 
     // Todo: Export in other file
-    private host = 'https://192.168.100.131:8080/'; // 'https://backend.syscon.io/' 'https://192.168.100.131:8080/'
+    private host = '';
     private apiUrl = this.host + 'vc/';
 
     // Store meeting id instead of reading from local storage everytime
@@ -146,6 +148,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     enableWebAudio = false;
 
     constructor(private http: HttpClient, private storage: LocalStorageService) {
+        this.host = environment.domain;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         // (global as any).app = this;
         // this.switchToFlow('flow-authenticate');

@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/util/crypto.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/util/crypto.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/config.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/config.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -160,49 +153,7 @@
       <workItem from="1583993415688" duration="1771000" />
       <workItem from="1583999091093" duration="10053000" />
       <workItem from="1584078878161" duration="13036000" />
-      <workItem from="1584166974742" duration="14924000" />
-    </task>
-    <task id="LOCAL-00098" summary="Backend for deployed env">
-      <created>1582535934584</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1582535934584</updated>
-    </task>
-    <task id="LOCAL-00099" summary="Backend for deployed env">
-      <created>1583321818497</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1583321818497</updated>
-    </task>
-    <task id="LOCAL-00100" summary="Check if room already exists in a room when adding">
-      <created>1583401700909</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1583401700910</updated>
-    </task>
-    <task id="LOCAL-00101" summary="Handle bad request when adding attendee to room">
-      <created>1583402017435</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1583402017457</updated>
-    </task>
-    <task id="LOCAL-00102" summary="Error handling in dev env">
-      <created>1583407901861</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1583407901861</updated>
-    </task>
-    <task id="LOCAL-00103" summary="Login | register components">
-      <created>1583568867273</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1583568867274</updated>
+      <workItem from="1584166974742" duration="15418000" />
     </task>
     <task id="LOCAL-00104" summary="Integrated material design">
       <created>1583570600521</created>
@@ -505,7 +456,49 @@
       <option name="project" value="LOCAL" />
       <updated>1584184465889</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="Added env vars">
+      <created>1584188825753</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1584188825753</updated>
+    </task>
+    <task id="LOCAL-00148" summary="Domain from env">
+      <created>1584188846449</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1584188846449</updated>
+    </task>
+    <task id="LOCAL-00149" summary="Join attendee done">
+      <created>1584188863737</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1584188863737</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Crypto key from env">
+      <created>1584188967150</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1584188967150</updated>
+    </task>
+    <task id="LOCAL-00151" summary="Fixed bug">
+      <created>1584188979491</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1584188979492</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Login Attendee api">
+      <created>1584188992549</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1584188992549</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,11 +523,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Create Room Done" />
-    <MESSAGE value="Added Owl Carousel" />
-    <MESSAGE value="Rooms UI init" />
-    <MESSAGE value="Home banner" />
-    <MESSAGE value="Attendees count in room" />
     <MESSAGE value="Compilation failed" />
     <MESSAGE value="Copy invite code done" />
     <MESSAGE value="Room API fixed" />
@@ -553,8 +541,13 @@
     <MESSAGE value="Open room in new tab" />
     <MESSAGE value="Added crypto pkg in frontend" />
     <MESSAGE value="Added route for attendee meeting join" />
-    <MESSAGE value="Fixed bug" />
     <MESSAGE value="Home component tweaked" />
-    <option name="LAST_COMMIT_MESSAGE" value="Home component tweaked" />
+    <MESSAGE value="Added env vars" />
+    <MESSAGE value="Domain from env" />
+    <MESSAGE value="Join attendee done" />
+    <MESSAGE value="Crypto key from env" />
+    <MESSAGE value="Fixed bug" />
+    <MESSAGE value="Login Attendee api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login Attendee api" />
   </component>
 </project>
