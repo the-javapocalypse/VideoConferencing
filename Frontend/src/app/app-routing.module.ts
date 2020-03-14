@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: 'account', component: AccountComponent},
   { path: 'join_old/:meeting_id', component: JoinTempComponent },
   { path: 'meeting/:meeting_id', component: MeetingTempComponent},
-  { path: 'join_room/:digest', component: JoinComponent, canActivate: [AuthGuardService]},
-  { path: 'join/:digest', component: JoinAttendeeComponent, canActivate: [AuthGuardService]},
+  { path: 'join_room/:digest', component: JoinComponent},
+  { path: 'join/:digest', component: JoinAttendeeComponent},
   { path: 'meeting_new/:meeting_id', component: MeetingComponent},
 ];
 

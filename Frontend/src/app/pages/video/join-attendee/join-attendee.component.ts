@@ -6,6 +6,7 @@ import {CryptoService} from '../../../services/util/crypto.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {RestService} from '../../../services/api/rest.service';
 
+
 @Component({
     selector: 'app-join-attendee',
     templateUrl: './join-attendee.component.html',
@@ -81,19 +82,6 @@ export class JoinAttendeeComponent implements OnInit {
     }
 
 
-    onSubmitJoinChat(formData) {
-        this.attendeeName = formData.attendeeName;
-        let region = 'us-east-1'; // default region
-
-        this.localStorage.setRoasterInfo({
-            meetingId: this.meetingId,
-            attendeeName: this.attendeeName
-        });
-
-        // join meeting
-        this.joinMeetingTrigger(this.meetingId, this.attendeeName);
-    }
-
     async joinMeetingTrigger(meetingId, attendeeName) {
         console.log('Joining meting...');
         this.joiningFlag = true;  // flag to show spinner
@@ -102,12 +90,12 @@ export class JoinAttendeeComponent implements OnInit {
             name: attendeeName
         }).subscribe((res: any) => {
                 console.log('Successfully joined...');
-                this.chime.startSession(res.JoinInfo.Meeting, res.JoinInfo.Attendee);
+                this.chime.startSession(res.body.JoinInfo.Meeting, res.body.JoinInfo.Attendee);
                 this.joiningFlag = false; // reset flag
                 this.router.navigate(['/meeting/' + meetingId]);
             },
             (err: any) => {
-                // console.log(err);
+                console.log(err);
                 this.joinErrorFlag = true;
                 this.joiningFlag = false; // reset spinner flag
             }
@@ -120,11 +108,49 @@ export class JoinAttendeeComponent implements OnInit {
         return this.attendeeJoinForm.controls;
     }
 
+    // todo: If attendee got an account, redirect to login page.
+    //  Home page will contain all available rooms attendee owns or is added too.
+    //  At the moment, we process in either case
     onSubmit() {
         // stop here if form is invalid
         if (this.attendeeJoinForm.invalid) {
             return;
         }
+
+        // If form is valid
+        this.api.createAttendee(this.attendeeJoinForm.value).subscribe(
+            (res: any) => {
+                console.log(res);
+                this.api.loginAttendee({
+                    email: this.attendeeJoinForm.value.email
+                }).subscribe(
+                    (response: any) => {
+                        /// !!!! Join in either case
+                        this.localStorage.storeJWT(response.body.token, response.body.user); // store login info
+                        this.joinMeetingTrigger(this.digest, this.attendeeJoinForm.value.name);
+                    },
+                    (error: any) => {
+                        // Error in loggin in
+                    }
+                );
+            },
+            // Account already exists
+            (err: any) => {
+                console.log(err);
+                this.api.loginAttendee({
+                    email: this.attendeeJoinForm.value.email
+                }).subscribe(
+                    (response: any) => {
+                        /// !!!! Join in either case
+                        this.localStorage.storeJWT(response.body.token, response.body.user); // store login info
+                        this.joinMeetingTrigger(this.digest, this.attendeeJoinForm.value.name);
+                    },
+                    (error: any) => {
+                        /// error loggin in
+                    }
+                );
+            }
+        );
     }
 
 }

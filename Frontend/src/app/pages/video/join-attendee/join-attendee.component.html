@@ -51,8 +51,7 @@
                                         <nz-alert class="mb-4" *ngIf="invalidInviteLinkFlag" nzType="error"
                                                   nzMessage="The invitation link is invalid"></nz-alert>
                                         <!--  Button  -->
-                                        <button type="submit" mat-raised-button color="primary" class="btn-block"
-                                                (click)="onSubmit()">
+                                        <button type="submit" mat-raised-button color="primary" class="btn-block">
                                             <!--  Spinner  -->
                                             <i nz-icon [nzType]="'loading'" [class.d-none]="!joiningFlag"
                                                class="pb-2"></i>
