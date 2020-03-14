@@ -13,7 +13,7 @@ export class ConfigService {
     private chimeApi = 'vc/';
 
     constructor() {
-        this.host = environment.domain;
+        this.host = environment.server;
     }
 
     public getHost() {

@@ -107,7 +107,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     static readonly BASE_URL: string = [location.protocol, '//', location.host, location.pathname.replace(/\/*$/, '/')].join('');
 
     // Todo: Export in other file
-    private host = '';
+    private host = 'https://192.168.100.131:8080/'; // 'https://backend.syscon.io/' 'https://192.168.100.131:8080/'
     private apiUrl = this.host + 'vc/';
 
     // Store meeting id instead of reading from local storage everytime
@@ -148,7 +148,7 @@ export class ChimeService implements AudioVideoObserver, DeviceChangeObserver {
     enableWebAudio = false;
 
     constructor(private http: HttpClient, private storage: LocalStorageService) {
-        this.host = environment.domain;
+        // this.host = environment.domain;
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         // (global as any).app = this;
         // this.switchToFlow('flow-authenticate');
