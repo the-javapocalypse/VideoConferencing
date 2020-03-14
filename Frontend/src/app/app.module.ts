@@ -33,6 +33,7 @@ import { JoinComponent } from './pages/video/join/join.component';
 
 import {CustomUrlSerializer} from './custom/CustomUrlSerializer';
 import {UrlSerializer} from "@angular/router";
+import { JoinAttendeeComponent } from './pages/video/join-attendee/join-attendee.component';
 
 registerLocaleData(en);
 
@@ -47,6 +48,7 @@ registerLocaleData(en);
     AccountComponent,
     HomeComponent,
     JoinComponent,
+    JoinAttendeeComponent,
   ],
     imports: [
         BrowserModule,
