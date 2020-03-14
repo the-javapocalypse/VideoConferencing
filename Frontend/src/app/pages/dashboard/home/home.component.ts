@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
                 items: 1
             },
             400: {
-                items: 1
+                items: 2
             },
             740: {
                 items: 3
@@ -119,7 +119,7 @@ export class HomeComponent implements OnInit {
         // Converts the route into a string that can be used /startMeeting/{{formatURL(room.digest)}}
         // with the window.open() function
         const url = this.router.serializeUrl(
-            this.router.createUrlTree([`/startMeeting/` + this.formatURL(digest)])
+            this.router.createUrlTree([`/join_room/` + this.formatURL(digest)])
         );
         console.log(url);
         window.open(url, '_blank');
