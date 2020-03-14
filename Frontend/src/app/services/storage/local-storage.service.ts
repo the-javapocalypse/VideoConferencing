@@ -57,7 +57,7 @@ export class LocalStorageService {
     public roasterInfoIsSet() {
         console.log('checking roaster info');
         let data = JSON.parse(localStorage.getItem(this.videoConferenceRoasterInformation));
-        if (!data) return false;
+        if (!data.roasterInfo) return false;
         return true;
     }
 
