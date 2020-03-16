@@ -1,0 +1,57 @@
+<div class="container-fluid pt-2">
+    <div class="pb-2">
+        <h3 class="text-dark nunito">
+            New Here?
+        </h3>
+        <p class="text-muted">
+            Register with Syscon
+        </p>
+    </div>
+    <!--  Form Start  -->
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="full-width">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput placeholder="John Doe" name="name" formControlName="name">
+            <mat-error *ngIf="f.name.touched && f.name.errors?.required">
+                Please enter a name
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="john@example.com" name="email" formControlName="email">
+            <mat-error *ngIf="f.email.touched && f.email.errors?.required">
+                Please enter a valid email address
+            </mat-error>
+            <mat-hint class="text-danger" *ngIf="emailExistsErr">
+                Email already exists
+            </mat-hint>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hidePassword ? 'password' : 'text'" type="text" name="password"
+                   formControlName="password">
+            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-hint>
+                Password must be at least 6 characters
+            </mat-hint>
+            <mat-error *ngIf="f.password.touched && f.password.errors?.required">
+                Please enter a password
+            </mat-error>
+        </mat-form-field>
+        <div class="pt-4">
+            <button type="submit" mat-raised-button color="primary" class="btn-block" (click)="onSubmit()">
+                <span *ngIf="!spinner">
+                    Register
+                </span>
+                <span *ngIf="spinner">
+                    <nz-spin nzSimple></nz-spin>
+                </span>
+            </button>
+        </div>
+    </form>
+    <!--  Form End  -->
+    <small class="cursor-pointer">Already a member? <span class="text-primary" (click)="login()">Login</span></small>
+</div>

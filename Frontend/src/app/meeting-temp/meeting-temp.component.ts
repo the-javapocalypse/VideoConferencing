@@ -33,6 +33,14 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
     }
 
+    // User info from local storage
+    userInfo = {
+        id: undefined,
+        name: undefined,
+        email: undefined,
+        role: undefined
+    };
+
     // interval to get roster data asynchronously from chime and update UI.
     // invkoed in joinMeeting()
     source = interval(500);
@@ -109,6 +117,8 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
         this.deviceScreenInitFLAG = false;
         // set meeting name
         this.meetingName = this.route.snapshot.paramMap.get('meeting_id');
+        // Get user info from local storage
+        this.userInfo = this.storage.retrieveJWT().userInfo;
         // setup dropdowns for device management
         this.initializeUIComponents();
     }

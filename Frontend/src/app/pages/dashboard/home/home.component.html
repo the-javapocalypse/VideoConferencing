@@ -1,0 +1,82 @@
+<div class="container-fluid w-100vw h-100vh" style="background-image: url('../../../../assets/img/home_banner.png'); background-size: 100% 100%;">
+    <!--  header Section  -->
+    <section>
+        <div class="row">
+            <div class="col-md-12">
+                <img src="../../../../assets/img/logo.png" class="img-fluid mt-3 ml-3" id="logo"/>
+            </div>
+        </div>
+    </section>
+    <!--  header Section End -->
+
+    <!--  Content Section  -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="nunito font-weight-bolder text-dark pt-5 mt-5">
+                        Hello {{userInfo.name}}
+                    </h1>
+
+                    <p class="">
+                        <mat-form-field appearance="outline" id="roomNameInput">
+                            <mat-label>Create new room</mat-label>
+                            <input matInput placeholder="Room Name" [(ngModel)]="createRoomName">
+                        </mat-form-field>
+                        <button mat-raised-button color="primary" (click)="createRoom()"
+                                id="createRoomBtn" [disabled]="createRoomName === '' || creatingRoomFLAG">
+                            Create Room
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Content Section End -->
+
+    <!--  Existing Rooms  -->
+    <section>
+        <div class="container">
+            <!--    Owl Carousel    -->
+            <owl-carousel-o [options]="customOptions">
+                <!--    Room Card Start    -->
+                <ng-template carouselSlide *ngFor="let room of allRooms">
+                    <div class="py-md-3 px-md-3">
+                        <mat-card class="shadow">
+                            <mat-card-header>
+                                <div class="row full-width">
+                                    <div class="col-md-10 col-10">
+                                        <h4>
+                                            {{room.name}}
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-2 col-2 text-right">
+                                        <mat-icon matBadge="15" matBadgeColor="success">account_circle</mat-icon>
+                                    </div>
+                                </div>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <p>
+                                    Participant count
+                                </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button mat-button ngxClipboard [cbContent]="domain + 'join/' + formatURL(room.digest)" (cbOnSuccess)="showToast($event)">
+                                    Copy Invite Link
+                                </button>
+                                <button mat-button (click)="openInNewTab(formatURL(room.digest))">
+                                    Join
+                                </button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                    <!--    Room Card End    -->
+                </ng-template>
+            </owl-carousel-o>
+
+        </div>
+    </section>
+
+    <!--  Existing Rooms End -->
+
+</div>
