@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/node_modules/crypto-random-string/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/node_modules/crypto-random-string/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/node_modules/crypto-random-string/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/node_modules/crypto-random-string/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join/join.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join/join.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/chime.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/util/crypto.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/util/crypto.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,28 +158,7 @@
       <workItem from="1584078878161" duration="13036000" />
       <workItem from="1584166974742" duration="18493000" />
       <workItem from="1584341138820" duration="11144000" />
-      <workItem from="1584353563628" duration="2655000" />
-    </task>
-    <task id="LOCAL-00106" summary="Login UI done">
-      <created>1583742088406</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1583742088406</updated>
-    </task>
-    <task id="LOCAL-00107" summary="Login UI">
-      <created>1583744300607</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1583744300607</updated>
-    </task>
-    <task id="LOCAL-00108" summary="Registration form + events in accounts">
-      <created>1583745313639</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1583745313639</updated>
+      <workItem from="1584353563628" duration="2898000" />
     </task>
     <task id="LOCAL-00109" summary="Rest API services init">
       <created>1583752365532</created>
@@ -511,7 +482,28 @@
       <option name="project" value="LOCAL" />
       <updated>1584191134355</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="Cryptography module updated">
+      <created>1584357068013</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1584357068014</updated>
+    </task>
+    <task id="LOCAL-00156" summary="Cryptography service updated">
+      <created>1584357092351</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1584357092351</updated>
+    </task>
+    <task id="LOCAL-00157" summary="Storage bug fixed">
+      <created>1584357111896</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1584357111896</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,10 +528,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Room API fixed" />
-    <MESSAGE value="Check if room exists API" />
-    <MESSAGE value="Join init" />
-    <MESSAGE value="Join method added" />
     <MESSAGE value="Before tweaking chime service" />
     <MESSAGE value="Added JWT in join endpoint" />
     <MESSAGE value="Fixed endpoint to get rooms" />
@@ -561,6 +549,10 @@
     <MESSAGE value="Login Attendee api" />
     <MESSAGE value="Load host from env" />
     <MESSAGE value="Basic Done with errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Done with errors" />
+    <MESSAGE value="Cryptography module updated" />
+    <MESSAGE value="Cryptography service updated" />
+    <MESSAGE value="Storage bug fixed" />
+    <MESSAGE value="env var fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="env var fixed" />
   </component>
 </project>

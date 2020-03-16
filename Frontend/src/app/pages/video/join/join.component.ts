@@ -66,6 +66,13 @@ export class JoinComponent implements OnInit {
     // Join meeting method
     async joinMeetingTrigger(meetingId, attendeeName) {
         console.log('Joining meting...');
+
+        // store roster info locally
+        this.storage.setRoasterInfo({
+            meetingId,
+            attendeeName
+        });
+
         this.chime.joinMeeting({
             title: meetingId,
             name: attendeeName

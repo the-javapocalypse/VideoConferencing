@@ -40,16 +40,15 @@ export class JoinAttendeeComponent implements OnInit {
         this.joiningFlag = true;
         // reset error flag
         this.joinErrorFlag = false;
-        // Check if user's roaster info is already present in localstorage
-        if (this.localStorage.roasterInfoIsSet()) {
-            // join meeting
-            this.joinMeetingTrigger(this.localStorage.getRoasterInfo().meetingId, this.localStorage.getRoasterInfo().attendeeName);
-        }
+
         // Grab meeting digest from url
         this.digest = this.route.snapshot.paramMap.get('digest');
 
         // Decrypt digest to get meeting id
         this.meetingId = this.crypto.decrypt(this.digest);
+
+        // Replace slash with code
+        this.digest = this.digest.replace(/\//g, '%2F');
 
         // Check if decryption successful
         if (this.meetingId === '' || this.meetingId === undefined) {
@@ -84,6 +83,13 @@ export class JoinAttendeeComponent implements OnInit {
 
     async joinMeetingTrigger(meetingId, attendeeName) {
         console.log('Joining meting...');
+
+        // store roster info locally
+        this.localStorage.setRoasterInfo({
+            meetingId,
+            attendeeName
+        });
+
         this.joiningFlag = true;  // flag to show spinner
         this.chime.joinMeeting({
             title: meetingId,
