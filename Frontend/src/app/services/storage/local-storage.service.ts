@@ -8,8 +8,8 @@ export class LocalStorageService {
     constructor() {
     }
 
-    private videoConferenceRoasterInformation: 'vc_roaster_info';
-    private userJWTToken: 'user_JWT_syscon';
+    private videoConferenceRoasterInformation = 'vc_roaster_info';
+    private userJWTToken = 'user_JWT_syscon';
 
     public storeJWT(jwt: object, userInfo: object) {
         localStorage.setItem(this.userJWTToken, JSON.stringify({
