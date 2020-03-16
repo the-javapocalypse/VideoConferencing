@@ -8,12 +8,11 @@ import {environment} from '../../../environments/environment';
 })
 export class CryptoService {
 
-    secretKey = '';
+    secretKey = environment.cryptoKey;
     simpleCrypto: any;
 
     constructor() {
         this.simpleCrypto = new SimpleCrypto(this.secretKey);
-        this.secretKey = environment.cryptoKey;
     }
 
     encrypt(pt) {
