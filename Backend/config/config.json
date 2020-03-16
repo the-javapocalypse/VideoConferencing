@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "syscon",
-    "host": "127.0.0.1",
+    "username": "letscode_syscon",
+    "password": "IXB^7UmNVr&d",
+    "database": "letscode_syscon",
+    "host": "gator4275.hostgator.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
