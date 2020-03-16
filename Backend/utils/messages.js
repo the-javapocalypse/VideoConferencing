@@ -1,7 +1,7 @@
 module.exports = {
     AUTHENTICATION_FAILED: {
         code: 401,
-        message: 'Authentication failed. Please login with valid credentials.',
+        message: 'Invalid login credentials.',
         success: false,
     },
     SUCCESSFUL_EMAIL_SENT: {
@@ -81,7 +81,7 @@ module.exports = {
     },
     NOT_ACTIVE: {
         code: 403,
-        message: 'Your account is not active. Please click on the activation link emailed to you.',
+        message: 'Account not activated yet.',
         success: false,
     },
     INVALID_PICTURE_TYPE: {

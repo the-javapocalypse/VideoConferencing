@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var controllers = require('../controllers/index');
+var middleware = require('../utils/middleware');
 
 
 
 
 /* Join Meeting */
-router.post('/join',  function(req, res, next) {
+router.post('/join', middleware.validateToken, function(req, res, next) {
      controllers.chime.joinMeeting(req, res, next);
 });
 

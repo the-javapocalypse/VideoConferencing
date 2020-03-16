@@ -1,0 +1,72 @@
+<div class="wrapper">
+    <div class="page-header">
+        <div class="page-header-image"></div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!--  Left Div START  -->
+                    <div class="col-md-7 d-flex h-100vh ">
+                        <div class="container align-content-center justify-content-center align-self-center text-center">
+                            <h1 class="font-weight-bolder text-dark">
+                                Video Conferencing
+                            </h1>
+                            <img src="../../assets/img/join-meeting-banner.jpg"
+                                 class="img-fluid center-block  pt-3 p-md-5"/>
+                        </div>
+                    </div>
+                    <!--  Left Div END  -->
+                    <!--  Right Div START  -->
+                    <div class="col-md-5 offset-lg-0 offset-md-3 d-flex bg-animated h-100vh">
+                        <div class="align-content-center justify-content-center align-self-center m-auto">
+                            <div class="px-md-5">
+                                <nz-card nzTitle="Join Meeting">
+                                    <form class="form" [formGroup]="attendeeJoinForm" (ngSubmit)="onSubmit()"
+                                          (keyup.enter)="onSubmit()">
+                                        <!--  Attendee Email  -->
+                                        <mat-form-field class="full-width" appearance="outline">
+                                            <mat-label>Email</mat-label>
+                                            <input type="email" matInput placeholder="john@example.com" name="email"
+                                                   formControlName="email">
+                                            <mat-error *ngIf="f.email.touched && f.email.errors?.required">
+                                                Please enter a valid email address
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <!--  Attendee Name  -->
+                                        <mat-form-field class="full-width" appearance="outline">
+                                            <mat-label>Name</mat-label>
+                                            <input type="text" matInput placeholder="John Doe" name="name"
+                                                   formControlName="name">
+                                            <mat-error *ngIf="f.name.touched && f.name.errors?.required">
+                                                Please enter your name
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <!--  Meeting ID  -->
+                                        <mat-form-field class="full-width" appearance="outline">
+                                            <mat-label>Room Name</mat-label>
+                                            <input type="text" matInput value="{{meetingId}}" disabled>
+                                        </mat-form-field>
+                                        <!--  Error  -->
+                                        <nz-alert class="mb-4" *ngIf="joinErrorFlag" nzType="error"
+                                                  nzMessage="Oops, Something went wrong. Please try again."></nz-alert>
+                                        <nz-alert class="mb-4" *ngIf="invalidInviteLinkFlag" nzType="error"
+                                                  nzMessage="The invitation link is invalid"></nz-alert>
+                                        <!--  Button  -->
+                                        <button type="submit" mat-raised-button color="primary" class="btn-block">
+                                            <!--  Spinner  -->
+                                            <i nz-icon [nzType]="'loading'" [class.d-none]="!joiningFlag"
+                                               class="pb-2"></i>
+                                            <span [class.d-none]="joiningFlag">
+                                              Join Room
+                                            </span>
+                                        </button>
+                                    </form>
+                                </nz-card>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  Right Div END  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
