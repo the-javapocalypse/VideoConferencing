@@ -249,17 +249,17 @@
             <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed" [class.transparent-bg]="isCollapsed"
                 style="max-width: 15vw; max-height: 100vh; position: absolute; z-index: 99;">
                 <li nz-menu-item *ngIf="!isCollapsed">
-                    <img src="../../assets/img/logo.png" class="img-fluid" />
+                    <img src="../../assets/img/logo.png" class="img-fluid mx-auto" width="60%" />
                 </li>
                 <li nz-menu-item nz-tooltip nzTooltipTitle="{{ isCollapsed ? 'Expand controls' : 'Shrink controls' }}"
                     nzTooltipPlacement="right" (click)="toggleCollapsed()">
                     <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
                     <!--                        {{meetingName}}-->
                     <span *ngIf="isCollapsed">
-                        Shrink collapse
+                        Shrink
                     </span>
                     <span *ngIf="!isCollapsed">
-                        Expand collapse
+                        Expand
                     </span>
                 </li>
                 <li nz-menu-item nz-popconfirm nzPopconfirmTitle="Are you sure you want to leave meeting?"
