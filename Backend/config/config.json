@@ -1,25 +1,25 @@
 {
   "development": {
     "username": "letscode_syscon",
-    "password": "IXB^7UmNVr&d",
+    "password": "sssyscrypttt@@@!",
     "database": "letscode_syscon",
     "host": "gator4275.hostgator.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "letscode_syscon",
+    "password": "IXB^7UmNVr&d",
+    "database": "letscode_syscon",
+    "host": "gator4275.hostgator.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "letscode_syscon",
+    "password": "IXB^7UmNVr&d",
+    "database": "letscode_syscon",
+    "host": "gator4275.hostgator.com",
     "dialect": "mysql",
     "operatorsAliases": false
   }
