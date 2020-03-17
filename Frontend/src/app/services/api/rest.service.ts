@@ -96,6 +96,6 @@ export class RestService {
 
 
     roomIsValid(digest) {
-        return this.http.get(this.host + this.roomEndPoint + 'roomExist/' + digest, this.httpOptions);
+        return this.http.get(this.host + this.roomEndPoint + 'roomExist?digest=' + digest, this.httpOptions);
     }
 }
