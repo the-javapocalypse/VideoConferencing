@@ -4,7 +4,7 @@ import {RestService} from '../../../services/api/rest.service';
 import {NzMessageService, NzNotificationService} from 'ng-zorro-antd';
 import {OwlOptions} from 'ngx-owl-carousel-o';
 import {Router} from '@angular/router';
-import { environment } from '../../../../environments/environment';
+import {environment} from '../../../../environments/environment';
 
 @Component({
     selector: 'app-home',
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
     // data variables
     createRoomName = '';
-    allRooms: any;
+    allRooms = [];
 
     // control flags
     creatingRoomFLAG = false;
@@ -82,6 +82,11 @@ export class HomeComponent implements OnInit {
                     'Room ' + res.body.message.toLowerCase(),
                     ''
                 );
+                // Update room list
+                this.getRooms();
+
+                // Reset room name input
+                this.createRoomName = '';
             },
             (err: any) => {
                 this.creatingRoomFLAG = false; // reset flag

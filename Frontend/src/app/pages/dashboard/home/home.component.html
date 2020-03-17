@@ -25,7 +25,13 @@
                         </mat-form-field>
                         <button mat-raised-button color="primary" (click)="createRoom()"
                                 id="createRoomBtn" [disabled]="createRoomName === '' || creatingRoomFLAG">
-                            Create Room
+                            <span *ngIf="creatingRoomFLAG">
+                                <ng-template #indicatorTemplate><i nz-icon nzType="loading" style="font-size: 24px;"></i> </ng-template>
+                                <nz-spin nzSimple [nzIndicator]="indicatorTemplate"> </nz-spin>
+                            </span>
+                            <span *ngIf="!creatingRoomFLAG">
+                                Create Room
+                            </span>
                         </button>
                     </p>
                 </div>
@@ -37,6 +43,11 @@
     <!--  Existing Rooms  -->
     <section>
         <div class="container">
+            <div class="">
+                <h4 class="mt-4" *ngIf="allRooms.length === 0">
+                    No rooms created yet
+                </h4>
+            </div>
             <!--    Owl Carousel    -->
             <owl-carousel-o [options]="customOptions">
                 <!--    Room Card Start    -->
