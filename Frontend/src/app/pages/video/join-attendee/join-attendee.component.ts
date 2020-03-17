@@ -42,41 +42,46 @@ export class JoinAttendeeComponent implements OnInit {
         this.joinErrorFlag = false;
 
         // Grab meeting digest from url
-        this.digest = this.route.snapshot.paramMap.get('digest');
+        // this.digest = this.route.snapshot.paramMap.get('digest');
 
-        // Decrypt digest to get meeting id
-        this.meetingId = this.crypto.decrypt(this.digest);
+        this.route.queryParams.subscribe(params => {
+            this.digest = params.room;
 
-        // Replace slash with code
-        this.digest = this.digest.replace(/\//g, '%2F');
 
-        // Check if decryption successful
-        if (this.meetingId === '' || this.meetingId === undefined) {
-            this.meetingId = 'Invalid invitation';
-            this.invalidInviteLinkFlag = true;
-            this.joiningFlag = false; // reset spinner
-        } else {
-            // check if room is valid
-            this.api.roomIsValid(this.digest).subscribe(
-                (res: any) => {
-                    // if room and digest both are valid
-                    // separate name from email of room creator
-                    this.meetingId = this.meetingId.split('~~~')[0];
-                    this.joiningFlag = false; // reset spinner
-                },
-                (error: any) => {
-                    // if invalid
-                    this.meetingId = 'Invalid invitation';
-                    this.invalidInviteLinkFlag = true;
-                    this.joiningFlag = false; // reset spinner
-                }
-            );
-        }
+            // Decrypt digest to get meeting id
+            this.meetingId = this.crypto.decrypt(this.digest);
 
-        // Initialize form validators
-        this.attendeeJoinForm = this.formBuilder.group({
-            email: ['', [Validators.required, Validators.email]],
-            name: ['', [Validators.required]],
+            // Replace slash with code
+            this.digest = this.digest.replace(/\//g, '%2F');
+
+            // Check if decryption successful
+            if (this.meetingId === '' || this.meetingId === undefined) {
+                this.meetingId = 'Invalid invitation';
+                this.invalidInviteLinkFlag = true;
+                this.joiningFlag = false; // reset spinner
+            } else {
+                // check if room is valid
+                this.api.roomIsValid(this.digest).subscribe(
+                    (res: any) => {
+                        // if room and digest both are valid
+                        // separate name from email of room creator
+                        this.meetingId = this.meetingId.split('~~~')[0];
+                        this.joiningFlag = false; // reset spinner
+                    },
+                    (error: any) => {
+                        // if invalid
+                        this.meetingId = 'Invalid invitation';
+                        this.invalidInviteLinkFlag = true;
+                        this.joiningFlag = false; // reset spinner
+                    }
+                );
+            }
+
+            // Initialize form validators
+            this.attendeeJoinForm = this.formBuilder.group({
+                email: ['', [Validators.required, Validators.email]],
+                name: ['', [Validators.required]],
+            });
         });
     }
 

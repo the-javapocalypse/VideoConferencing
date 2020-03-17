@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,21 +157,7 @@
       <workItem from="1584166974742" duration="18493000" />
       <workItem from="1584341138820" duration="11144000" />
       <workItem from="1584353563628" duration="3688000" />
-      <workItem from="1584428037940" duration="1485000" />
-    </task>
-    <task id="LOCAL-00115" summary="Home page init">
-      <created>1583842985450</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1583842985450</updated>
-    </task>
-    <task id="LOCAL-00116" summary="Added apis for rooms in frontend">
-      <created>1583843834599</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1583843834599</updated>
+      <workItem from="1584428037940" duration="2849000" />
     </task>
     <task id="LOCAL-00117" summary="Create Room API Integrated">
       <created>1583906663381</created>
@@ -500,7 +488,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584429654320</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="Register form submission bug fixed">
+      <created>1584429733231</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1584429733231</updated>
+    </task>
+    <task id="LOCAL-00165" summary="New build">
+      <created>1584429933922</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1584429933923</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,8 +527,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Updated routes for testing" />
-    <MESSAGE value="Using user info obj instead of roster stored in local storage" />
     <MESSAGE value="Join meeting for room owner" />
     <MESSAGE value="URL encoding working YAYY" />
     <MESSAGE value="Open room in new tab" />
@@ -550,6 +550,8 @@
     <MESSAGE value="Crypto module removed" />
     <MESSAGE value="Digest into query param instead of url param" />
     <MESSAGE value="Room Validity API endpoint updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Room Validity API endpoint updated" />
+    <MESSAGE value="Register form submission bug fixed" />
+    <MESSAGE value="New build" />
+    <option name="LAST_COMMIT_MESSAGE" value="New build" />
   </component>
 </project>
