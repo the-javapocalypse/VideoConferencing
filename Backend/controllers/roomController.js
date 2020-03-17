@@ -69,7 +69,7 @@ module.exports = {
     // get all rooms info of currently logged in user (user info via jwt)
     getRoom(req, res, next) {
         models.Room.findAll(
-            {where: {created_by: res.locals.user.id}}
+            {where: {created_by: res.locals.user.id}, order: [['createdAt', 'DESC']]}
         )
             .then(room => {
                 if (room == null) {
