@@ -23,7 +23,7 @@ router.post('/addToRoom', middleware.validateToken, function(req, res, next) {
 
 
 // check if room exists
-router.get('/roomExist/:digest', function(req, res, next) {
+router.get('/roomExist', function(req, res, next) {
     controllers.room.roomIsValid(req, res, next);
 });
 
