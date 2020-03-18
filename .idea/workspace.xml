@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Backend/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,14 +157,8 @@
       <workItem from="1584166974742" duration="18493000" />
       <workItem from="1584341138820" duration="11144000" />
       <workItem from="1584353563628" duration="3688000" />
-      <workItem from="1584428037940" duration="14097000" />
-    </task>
-    <task id="LOCAL-00125" summary="Home banner">
-      <created>1583928593821</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1583928593821</updated>
+      <workItem from="1584428037940" duration="15101000" />
+      <workItem from="1584516057774" duration="6764000" />
     </task>
     <task id="LOCAL-00126" summary="Attendees count in room">
       <created>1583929469841</created>
@@ -500,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584445918481</updated>
     </task>
-    <option name="localTasksCounter" value="174" />
+    <task id="LOCAL-00174" summary="DB credentials">
+      <created>1584446098233</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1584446098233</updated>
+    </task>
+    <option name="localTasksCounter" value="175" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +528,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Domain from env" />
     <MESSAGE value="Join attendee done" />
     <MESSAGE value="Crypto key from env" />
     <MESSAGE value="Fixed bug" />
@@ -550,6 +552,7 @@
     <MESSAGE value="UI tweaks" />
     <MESSAGE value="Removed &lt;p&gt;" />
     <MESSAGE value="Latest build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Latest build" />
+    <MESSAGE value="DB credentials" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB credentials" />
   </component>
 </project>

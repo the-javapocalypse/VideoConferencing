@@ -8,6 +8,8 @@ import {HomeComponent} from './pages/dashboard/home/home.component';
 import {AuthGuardService} from './services/guard/auth-guard.service';
 import {JoinComponent} from './pages/video/join/join.component';
 import {JoinAttendeeComponent} from './pages/video/join-attendee/join-attendee.component';
+import {LandingComponent} from './pages/landing/landing.component';
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
@@ -17,6 +19,7 @@ const routes: Routes = [
   { path: 'join_room/:digest', component: JoinComponent},
   { path: 'join', component: JoinAttendeeComponent},
   { path: 'meeting_new/:meeting_id', component: MeetingComponent},
+  { path: '', component: LandingComponent},
 ];
 
 @NgModule({
