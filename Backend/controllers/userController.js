@@ -321,7 +321,18 @@ module.exports = {
                 }
                 res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR)
             })
+    },
+
+
+    contactForm(req, res, next){
+        let receiver = ['muneeb@syscrypt.co.uk', 'imran@attribes.co.uk', 'ali@syscrypt.co.uk'];
+        let body = 'Form submitted by: ' + req.name + ' (' + req.email + '). Body: ' + req.message;
+        receiver.forEach( email => {
+            mailer.send(email, 'Syson | Website Contact Form', body);
+        });
+        res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
     }
+
 
 
 };
