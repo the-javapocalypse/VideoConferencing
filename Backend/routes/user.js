@@ -36,5 +36,11 @@ router.get('/logout', middleware.validateToken, function(req, res, next) {
 });
 
 
+// submit contact form
+router.post('/contactForm', function(req, res, next) {
+    controllers.user.contactForm(req, res, next);
+});
+
+
 
 module.exports = router;

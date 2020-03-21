@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/user.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,14 +158,7 @@
       <workItem from="1584428037940" duration="15101000" />
       <workItem from="1584516057774" duration="8552000" />
       <workItem from="1584596238122" duration="11521000" />
-      <workItem from="1584684643683" duration="21904000" />
-    </task>
-    <task id="LOCAL-00134" summary="Added JWT in join endpoint">
-      <created>1584086888240</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1584086888240</updated>
+      <workItem from="1584684643683" duration="22189000" />
     </task>
     <task id="LOCAL-00135" summary="Fixed endpoint to get rooms">
       <created>1584086916167</created>
@@ -503,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584779086070</updated>
     </task>
-    <option name="localTasksCounter" value="183" />
+    <task id="LOCAL-00183" summary="Contact form api controller">
+      <created>1584779672707</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1584779672707</updated>
+    </task>
+    <option name="localTasksCounter" value="184" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,7 +528,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Storage bug fixed" />
     <MESSAGE value="env var fixed" />
     <MESSAGE value="Meeting url fixed" />
     <MESSAGE value="Meeting name removed" />
@@ -553,6 +552,7 @@
     <MESSAGE value="Favicon updated" />
     <MESSAGE value="NAv color on hover" />
     <MESSAGE value="Contact form validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Contact form validation" />
+    <MESSAGE value="Contact form api controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Contact form api controller" />
   </component>
 </project>
