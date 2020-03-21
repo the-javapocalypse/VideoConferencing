@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/assets/img/business_meeting_banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/assets/img/business_meeting_banner.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/assets/img/landing_banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/assets/img/landing_banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,14 +159,7 @@
       <workItem from="1584428037940" duration="15101000" />
       <workItem from="1584516057774" duration="8552000" />
       <workItem from="1584596238122" duration="11521000" />
-      <workItem from="1584684643683" duration="17119000" />
-    </task>
-    <task id="LOCAL-00130" summary="Check if room exists API">
-      <created>1584015220312</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1584015220312</updated>
+      <workItem from="1584684643683" duration="18042000" />
     </task>
     <task id="LOCAL-00131" summary="Join init">
       <created>1584016214493</created>
@@ -511,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584706889626</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="Navigation Scrolling">
+      <created>1584774128642</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1584774128642</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,7 +529,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Load host from env" />
     <MESSAGE value="Basic Done with errors" />
     <MESSAGE value="Cryptography module updated" />
     <MESSAGE value="Cryptography service updated" />
@@ -561,6 +553,7 @@
     <MESSAGE value="Nav component" />
     <MESSAGE value="Features init" />
     <MESSAGE value="Added contact init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added contact init" />
+    <MESSAGE value="Navigation Scrolling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navigation Scrolling" />
   </component>
 </project>
