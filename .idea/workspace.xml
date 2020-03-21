@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,14 +159,7 @@
       <workItem from="1584428037940" duration="15101000" />
       <workItem from="1584516057774" duration="8552000" />
       <workItem from="1584596238122" duration="11521000" />
-      <workItem from="1584684643683" duration="18042000" />
-    </task>
-    <task id="LOCAL-00131" summary="Join init">
-      <created>1584016214493</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1584016214493</updated>
+      <workItem from="1584684643683" duration="19350000" />
     </task>
     <task id="LOCAL-00132" summary="Join method added">
       <created>1584080169324</created>
@@ -504,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584774128642</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="Favicon updated">
+      <created>1584775002885</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1584775002885</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +529,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Basic Done with errors" />
     <MESSAGE value="Cryptography module updated" />
     <MESSAGE value="Cryptography service updated" />
     <MESSAGE value="Storage bug fixed" />
@@ -554,6 +553,7 @@
     <MESSAGE value="Features init" />
     <MESSAGE value="Added contact init" />
     <MESSAGE value="Navigation Scrolling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navigation Scrolling" />
+    <MESSAGE value="Favicon updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Favicon updated" />
   </component>
 </project>
