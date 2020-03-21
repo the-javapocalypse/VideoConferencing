@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {HostListener} from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 
 @Component({
@@ -12,10 +13,14 @@ import {HostListener} from '@angular/core';
 
 export class NavComponent implements OnInit {
 
+  @Input() useCaseSection: HTMLElement;
+  @Input() landingSection: HTMLElement;
+  @Input() featuresSection: HTMLElement;
+  @Input() contactSection: HTMLElement;
 
   isScrolled = false;
 
-  constructor() {
+  constructor(private viewportScroller: ViewportScroller) {
   }
 
   ngOnInit() {
@@ -30,7 +35,10 @@ export class NavComponent implements OnInit {
   }
 
   scroll = (event): void => {
-    this.isScrolled = true; // set scrolled flad
+    this.isScrolled = true; // set scrolled flag on scroll event
   }
 
+  scrollTo(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+  }
 }

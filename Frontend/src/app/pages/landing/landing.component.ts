@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HostListener} from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class LandingComponent implements OnInit {
     ngOnInit() {
         // reset scroll
         this.isScrolled = false;
-        window.addEventListener('scroll', this.scroll, true); //third parameter
+        window.addEventListener('scroll', this.scroll, true); // third parameter
     }
 
     // tslint:disable-next-line:use-lifecycle-interface
@@ -30,7 +31,6 @@ export class LandingComponent implements OnInit {
     }
 
     scroll = (event): void => {
-      this.isScrolled = true; // set scrolled flad
+      this.isScrolled = true; // set scrolled flag
     }
-
 }

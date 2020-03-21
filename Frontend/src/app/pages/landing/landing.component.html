@@ -1,15 +1,15 @@
 <!--Navbar-->
-<app-nav>
+<app-nav [landingSection]="landingSection" [useCaseSection]="useCaseSection" [featuresSection]="featuresSection" [contactSection]="contactSection">
 </app-nav>
 
 
 <!--Landing hero section start-->
-<section id="landingHero" class="h-100vh w-100vw">
+<section #landingSection id="landingHero" class="h-100vh w-100vw">
     <div class="row full-width">
         <div class="col-md-7" style="margin-top: 12%;">
             <div class="px-md-5 px-2 my-auto">
-                <h1 class="text-dark text-center font-weight-bolder">Syscon</h1>
-                <p>
+                <h1 class="text-dark text-center font-weight-bolder display-3">Syscon</h1>
+                <p class="pt-3">
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
                     dicta sunt explicabo
@@ -27,11 +27,11 @@
 </section>
 
 <!--use cases section start-->
-<section id="" class="">
+<section #useCaseSection id="useCaseSection" class="sectionPadding">
     <h1 class="text-center text-dark font-weight-bolder nonito">
         Use Cases
     </h1>
-    <div class="row p-0 m-0">
+    <div class="row p-0 m-0 mt-5 contentPadding">
         <div class="col-md-1 col-0"></div>
         <div class="col-md-4 col-12 full-width">
             <img src="../../../assets/img/virtual_clinic_banner.jpg" class="img-fluid mx-auto p-md-3"/>
@@ -41,7 +41,7 @@
                 <h3 class="text-center text-dark font-weight-bolder nonito">
                     Virtual Clinic
                 </h3>
-                <p>
+                <p class="mt-4">
                     In the early yet simpler times, patients relied only on their doctor to make house calls. The
                     impression of a General Practitioner treating a sick patient at home is now considered a quaint
                     artefact for the medical lanes as it has almost vanished. But, is it really? However, unlike all
@@ -55,13 +55,13 @@
             </div>
         </div>
     </div>
-    <div class="row p-0 m-0">
+    <div class="row p-0 m-0 mt-5 contentPadding">
         <div class="col-md-7">
             <div class="px-md-5">
                 <h3 class="text-center text-dark font-weight-bolder nonito">
                     HR Interviews
                 </h3>
-                <p>
+                <p class="mt-4">
                     A millennial trend has been observed inside organizations, companies and especially HR
                     departments which are utilizing the video recordings to record job interviews or meetings with
                     employees even recording disciplinary meetings and hearings, individually. However, it is now
@@ -77,7 +77,7 @@
             <img src="../../../assets/img/hr_banner.jpg" class="img-fluid mx-auto"/>
         </div>
     </div>
-    <div class="row p-0 m-0">
+    <div class="row p-0 m-0 mt-5 contentPadding">
         <div class="col-md-1 col-0"></div>
         <div class="col-md-4 col-12 full-width">
             <img src="../../../assets/img/business_meeting_banner.jpg" class="img-fluid mx-auto"/>
@@ -87,7 +87,7 @@
                 <h3 class="text-center text-dark font-weight-bolder nonito">
                     Business Meetings
                 </h3>
-                <p>
+                <p class="mt-4">
                     In the early yet simpler times, patients relied only on their doctor to make house calls. The
                     impression of a General Practitioner treating a sick patient at home is now considered a quaint
                     artefact for the medical lanes as it has almost vanished. But, is it really? However, unlike all
@@ -105,11 +105,11 @@
 
 
 <!--Features Section-->
-<section class="container">
+<section #featuresSection class="container sectionPadding">
     <h1 class="text-center text-dark font-weight-bolder nonito">
         Features
     </h1>
-    <div class="row">
+    <div class="row contentPadding">
         <div class="col-md-7">
             <mat-card class="shadow">
                 <mat-card-header>
@@ -197,7 +197,7 @@
 </section>
 
 <!--Contact section-->
-<section class="w-100vw h-100vh" style="background: url('../../../assets/img/contact.png'); background-size: 100% 100%">
+<section #contactSection class="w-100vw h-100vh sectionPadding" style="background: url('../../../assets/img/contact.png'); background-size: 100% 100%">
     <div class="row full-width">
         <div class="col-md-6">
             <div class="container mt-5 pt-3">

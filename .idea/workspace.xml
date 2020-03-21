@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/assets/img/business_meeting_banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/assets/img/business_meeting_banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/assets/img/landing_banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/assets/img/landing_banner.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -160,14 +166,7 @@
       <workItem from="1584428037940" duration="15101000" />
       <workItem from="1584516057774" duration="8552000" />
       <workItem from="1584596238122" duration="11521000" />
-      <workItem from="1584684643683" duration="10001000" />
-    </task>
-    <task id="LOCAL-00129" summary="Room API fixed">
-      <created>1584014392396</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1584014392396</updated>
+      <workItem from="1584684643683" duration="17119000" />
     </task>
     <task id="LOCAL-00130" summary="Check if room exists API">
       <created>1584015220312</created>
@@ -505,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584615216263</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="Added contact init">
+      <created>1584706889625</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1584706889626</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +536,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Login Attendee api" />
     <MESSAGE value="Load host from env" />
     <MESSAGE value="Basic Done with errors" />
     <MESSAGE value="Cryptography module updated" />
@@ -555,6 +560,7 @@
     <MESSAGE value="Landing page" />
     <MESSAGE value="Nav component" />
     <MESSAGE value="Features init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Features init" />
+    <MESSAGE value="Added contact init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added contact init" />
   </component>
 </project>

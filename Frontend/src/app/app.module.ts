@@ -32,7 +32,7 @@ import { JoinComponent } from './pages/video/join/join.component';
 
 
 import {CustomUrlSerializer} from './custom/CustomUrlSerializer';
-import {UrlSerializer} from "@angular/router";
+import {UrlSerializer} from '@angular/router';
 import { JoinAttendeeComponent } from './pages/video/join-attendee/join-attendee.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { NavComponent } from './pages/common/nav/nav.component';
