@@ -1,19 +1,18 @@
 <!--Navbar-->
-<app-nav [landingSection]="landingSection" [useCaseSection]="useCaseSection" [featuresSection]="featuresSection" [contactSection]="contactSection">
+<app-nav [landingSection]="landingSection" [useCaseSection]="useCaseSection" [featuresSection]="featuresSection"
+         [contactSection]="contactSection">
 </app-nav>
 
 
 <!--Landing hero section start-->
 <section #landingSection id="landingHero" class="h-100vh w-100vw">
     <div class="row full-width">
-        <div class="col-md-7" style="margin-top: 12%;">
+        <div class="col-md-7" style="margin-top: 15%;">
             <div class="px-md-5 px-2 my-auto">
                 <h1 class="text-dark text-center font-weight-bolder display-3">Syscon</h1>
-                <p class="pt-3">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo
-                </p>
+                <h4 class="pt-3">
+                    Simplified video conferencing
+                </h4>
                 <button mat-stroked-button color="primary" class="px-md-5 py-md-2">
                     Login&nbsp;
                     <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
@@ -55,7 +54,7 @@
             </div>
         </div>
     </div>
-    <div class="row p-0 m-0 mt-5 contentPadding">
+    <div class="row p-0 m-0 mt-5 contentPadding full-width">
         <div class="col-md-7">
             <div class="px-md-5">
                 <h3 class="text-center text-dark font-weight-bolder nonito">
@@ -114,7 +113,7 @@
             <mat-card class="shadow">
                 <mat-card-header>
                     <mat-card-title class="text-dark nonito">
-                        <img src="../../../assets/img/ai.png" class="img-fluid d-inline-block featuresLogo" />
+                        <img src="../../../assets/img/ai.png" class="img-fluid d-inline-block featuresLogo"/>
                         Integration with AI
                     </mat-card-title>
                 </mat-card-header>
@@ -136,7 +135,8 @@
             <mat-card class="shadow">
                 <mat-card-header>
                     <mat-card-title class="text-dark nonito">
-                        <img src="../../../assets/img/integration.png" class="img-fluid d-inline-block featuresLogo p-1" />
+                        <img src="../../../assets/img/integration.png"
+                             class="img-fluid d-inline-block featuresLogo p-1"/>
                         Multi-Platform Integration
                     </mat-card-title>
                 </mat-card-header>
@@ -157,17 +157,14 @@
             <mat-card class="shadow">
                 <mat-card-header>
                     <mat-card-title class="text-dark nonito">
-                        <img src="../../../assets/img/pay_as_you_go.png" class="img-fluid d-inline-block featuresLogo" />
+                        <img src="../../../assets/img/pay_as_you_go.png" class="img-fluid d-inline-block featuresLogo"/>
                         Pay As You Go
                     </mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
                     <p>
-                        Regardless of the Operating System (OS), a conference can easily consists users from Windows,
-                        Macintosh, Android and even iOS hand held devices. This ease of integration on every system
-                        software makes the accessibility handy as the feature can be accessed through every GUI
-                        (Graphical User Interface) device sector in the market today. Being an open-source, the
-                        installation is not that much of a load itself thus, the application can be accessed overall.
+                        Get the brightest bits of Syscon, like Priority, without the contract. From £5 a month. Just
+                        signup , order your free company account, then top up the right amount as and when needed.
                     </p>
                 </mat-card-content>
             </mat-card>
@@ -176,7 +173,8 @@
             <mat-card class="shadow">
                 <mat-card-header>
                     <mat-card-title class="text-dark nonito">
-                        <img src="../../../assets/img/customization_1.png" class="img-fluid d-inline-block featuresLogo" />
+                        <img src="../../../assets/img/customization_1.png"
+                             class="img-fluid d-inline-block featuresLogo"/>
                         Fully Customisable
                     </mat-card-title>
                 </mat-card-header>
@@ -197,7 +195,7 @@
 </section>
 
 <!--Contact section-->
-<section #contactSection class="w-100vw h-100vh sectionPadding" style="background: url('../../../assets/img/contact.png'); background-size: 100% 100%">
+<section #contactSection class="w-100vw h-100vh sectionPadding" id="contactSection" style="">
     <div class="row full-width">
         <div class="col-md-6">
             <div class="container mt-5 pt-3">
@@ -236,7 +234,8 @@
                         <mat-label>
                             Your Message
                         </mat-label>
-                        <textarea [mat-autosize]="false"  rows="6" matInput placeholder="Your Message" formControlName="message"></textarea>
+                        <textarea [mat-autosize]="false" rows="6" matInput placeholder="Your Message"
+                                  formControlName="message"></textarea>
                         <mat-error *ngIf="f.message.touched && f.message.errors?.required">
                             Please enter a message
                         </mat-error>

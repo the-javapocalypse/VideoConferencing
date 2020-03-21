@@ -1,6 +1,12 @@
 #landingHero
   background-image: url('../../../assets/img/landing_banner.png')
   background-size: cover
+  width: 100vw!important
+  height: 100vh!important
+
+#contactSection
+  background-image: url('../../../assets/img/contact.png')
+  background-size: 100% 100%
 
 .featuresLogo
   width: 20%
@@ -40,10 +46,21 @@
 
 /* Change navbar styling on scroll
 
-/* Change navbar styling on small viewports
+/* Change styling on small viewports
 @media (max-width: 991.98px)
+  #landingHero
+    background-image: url('../../../assets/img/landing_banner.png')
+    background-size: cover
+    display: flex
+    align-items: center
+
+  #contactSection
+    background-image: none
+
+
   .navbar
     background: #fff
 
     .navbar-brand, .nav-link
       color: #555
+

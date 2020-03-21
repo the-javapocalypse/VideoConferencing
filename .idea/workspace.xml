@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,21 +161,8 @@
       <workItem from="1584428037940" duration="15101000" />
       <workItem from="1584516057774" duration="8552000" />
       <workItem from="1584596238122" duration="11521000" />
-      <workItem from="1584684643683" duration="27973000" />
-    </task>
-    <task id="LOCAL-00138" summary="Updated routes for testing">
-      <created>1584087001654</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1584087001654</updated>
-    </task>
-    <task id="LOCAL-00139" summary="Using user info obj instead of roster stored in local storage">
-      <created>1584087036398</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1584087036398</updated>
+      <workItem from="1584684643683" duration="28961000" />
+      <workItem from="1584792596672" duration="1068000" />
     </task>
     <task id="LOCAL-00140" summary="Join meeting for room owner">
       <created>1584087056144</created>
@@ -509,7 +493,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584782183331</updated>
     </task>
-    <option name="localTasksCounter" value="187" />
+    <task id="LOCAL-00187" summary="User activation done">
+      <created>1584790751067</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1584790751067</updated>
+    </task>
+    <task id="LOCAL-00188" summary="Latest build">
+      <created>1584791133898</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1584791133898</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +532,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Crypto module removed" />
     <MESSAGE value="Digest into query param instead of url param" />
     <MESSAGE value="Room Validity API endpoint updated" />
     <MESSAGE value="Register form submission bug fixed" />
@@ -545,7 +542,6 @@
     <MESSAGE value="Home UI tweaks" />
     <MESSAGE value="UI tweaks" />
     <MESSAGE value="Removed &lt;p&gt;" />
-    <MESSAGE value="Latest build" />
     <MESSAGE value="DB credentials" />
     <MESSAGE value="Landing page" />
     <MESSAGE value="Nav component" />
@@ -559,6 +555,8 @@
     <MESSAGE value="Endpoint of contact form api" />
     <MESSAGE value="Error handling" />
     <MESSAGE value="Landing page done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Landing page done" />
+    <MESSAGE value="User activation done" />
+    <MESSAGE value="Latest build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Latest build" />
   </component>
 </project>
