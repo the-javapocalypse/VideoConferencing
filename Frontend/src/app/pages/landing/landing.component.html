@@ -243,8 +243,13 @@
                     </mat-form-field>
                     <br>
                     <button mat-raised-button color="primary" class="btn-block py-2" (click)="onSubmit()">
-                        Submit&nbsp;&nbsp;
-                        <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
+                        <!--  Spinner  -->
+                        <i nz-icon [nzType]="'loading'" [class.d-none]="!contactFormSpinner" class="pb-2">
+                        </i>
+                        <span [class.d-none]="contactFormSpinner">
+                             Submit&nbsp;&nbsp;
+                            <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
+                        </span>
                     </button>
                 </form>
             </div>

@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {HostListener} from '@angular/core';
 import {ViewportScroller} from '@angular/common';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {RestService} from '../../services/api/rest.service';
+import {NzNotificationService} from 'ng-zorro-antd';
 
 
 @Component({
@@ -21,7 +23,9 @@ export class LandingComponent implements OnInit {
     contactForm: FormGroup;
 
 
-    constructor(private formBuilder: FormBuilder) {
+    constructor(private formBuilder: FormBuilder,
+                private api: RestService,
+                private notification: NzNotificationService) {
     }
 
     ngOnInit() {
@@ -57,5 +61,29 @@ export class LandingComponent implements OnInit {
             this.contactFormSpinner = false; // reset spinner
             return;
         }
+
+        // submit form
+        this.api.submitContactForm(this.contactForm.value).subscribe(
+            (res: any) => {
+                this.contactFormSpinner = false; // reset spinner
+                // show notification
+                this.notification.config({
+                    nzPlacement: 'bottomRight'
+                });
+                this.notification.create(
+                    'success',
+                    'Form submitted successfully',
+                    'We have successfully received your request. We will contact you shortly. Thanks.'
+                );
+            },
+            (err: any) => {
+                this.contactFormSpinner = false; // reset spinner
+                this.notification.create(
+                    'warning',
+                    'Oops! something went wrong',
+                    'Please try again later.'
+                );
+            }
+        );
     }
 }

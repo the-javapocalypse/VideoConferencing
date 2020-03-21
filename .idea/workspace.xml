@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Backend/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,21 +164,7 @@
       <workItem from="1584428037940" duration="15101000" />
       <workItem from="1584516057774" duration="8552000" />
       <workItem from="1584596238122" duration="11521000" />
-      <workItem from="1584684643683" duration="22189000" />
-    </task>
-    <task id="LOCAL-00135" summary="Fixed endpoint to get rooms">
-      <created>1584086916167</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1584086916168</updated>
-    </task>
-    <task id="LOCAL-00136" summary="Custom URL Serializer to allow special chars">
-      <created>1584086946139</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1584086946139</updated>
+      <workItem from="1584684643683" duration="24389000" />
     </task>
     <task id="LOCAL-00137" summary="Added custom URL Serializer to allow special chars">
       <created>1584086972440</created>
@@ -503,7 +495,21 @@
       <option name="project" value="LOCAL" />
       <updated>1584779672707</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="Endpoint of contact form api">
+      <created>1584779750608</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1584779750608</updated>
+    </task>
+    <task id="LOCAL-00185" summary="Error handling">
+      <created>1584780036547</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1584780036547</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,8 +534,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="env var fixed" />
-    <MESSAGE value="Meeting url fixed" />
     <MESSAGE value="Meeting name removed" />
     <MESSAGE value="Crypto module removed" />
     <MESSAGE value="Digest into query param instead of url param" />
@@ -553,6 +557,8 @@
     <MESSAGE value="NAv color on hover" />
     <MESSAGE value="Contact form validation" />
     <MESSAGE value="Contact form api controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Contact form api controller" />
+    <MESSAGE value="Endpoint of contact form api" />
+    <MESSAGE value="Error handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error handling" />
   </component>
 </project>

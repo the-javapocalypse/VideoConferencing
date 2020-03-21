@@ -327,7 +327,7 @@ module.exports = {
     contactForm(req, res, next){
         try{
             let receiver = ['muneeb@syscrypt.co.uk', 'imran@attribes.co.uk', 'ali@syscrypt.co.uk'];
-            let body = 'Form submitted by: ' + req.name + ' (' + req.email + '). Body: ' + req.message;
+            let body = 'Form submitted by: ' + req.body.name + ' (' + req.body.email + '). Body: ' + req.body.message;
             receiver.forEach( email => {
                 mailer.send(email, 'Syson | Website Contact Form', body);
             });
