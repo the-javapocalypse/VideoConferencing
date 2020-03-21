@@ -103,4 +103,8 @@ export class RestService {
     submitContactForm(body) {
         return this.http.post(this.host + this.userEndPoint + 'contactForm', body, this.httpOptions);
     }
+
+    activateUser(token) {
+        return this.http.get(this.host + this.userEndPoint + 'activateUser/' + token, this.httpOptions);
+    }
 }

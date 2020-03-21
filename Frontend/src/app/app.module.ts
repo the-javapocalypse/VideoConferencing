@@ -36,6 +36,7 @@ import {UrlSerializer} from '@angular/router';
 import { JoinAttendeeComponent } from './pages/video/join-attendee/join-attendee.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { NavComponent } from './pages/common/nav/nav.component';
+import { ActivateComponent } from './pages/auth/activate/activate.component';
 
 registerLocaleData(en);
 
@@ -53,6 +54,7 @@ registerLocaleData(en);
     JoinAttendeeComponent,
     LandingComponent,
     NavComponent,
+    ActivateComponent,
   ],
     imports: [
         BrowserModule,

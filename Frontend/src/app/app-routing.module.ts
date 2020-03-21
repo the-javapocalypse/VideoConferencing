@@ -9,6 +9,7 @@ import {AuthGuardService} from './services/guard/auth-guard.service';
 import {JoinComponent} from './pages/video/join/join.component';
 import {JoinAttendeeComponent} from './pages/video/join-attendee/join-attendee.component';
 import {LandingComponent} from './pages/landing/landing.component';
+import {ActivateComponent} from './pages/auth/activate/activate.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'join_room/:digest', component: JoinComponent},
   { path: 'join', component: JoinAttendeeComponent},
   { path: 'meeting_new/:meeting_id', component: MeetingComponent},
+  { path: 'activate/:token', component: ActivateComponent},
   { path: '', component: LandingComponent},
 ];
 

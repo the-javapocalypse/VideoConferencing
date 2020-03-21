@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,14 +164,7 @@
       <workItem from="1584428037940" duration="15101000" />
       <workItem from="1584516057774" duration="8552000" />
       <workItem from="1584596238122" duration="11521000" />
-      <workItem from="1584684643683" duration="24389000" />
-    </task>
-    <task id="LOCAL-00137" summary="Added custom URL Serializer to allow special chars">
-      <created>1584086972440</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1584086972440</updated>
+      <workItem from="1584684643683" duration="27973000" />
     </task>
     <task id="LOCAL-00138" summary="Updated routes for testing">
       <created>1584087001654</created>
@@ -509,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584780036547</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="Landing page done">
+      <created>1584782183330</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1584782183331</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +534,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Meeting name removed" />
     <MESSAGE value="Crypto module removed" />
     <MESSAGE value="Digest into query param instead of url param" />
     <MESSAGE value="Room Validity API endpoint updated" />
@@ -559,6 +558,7 @@
     <MESSAGE value="Contact form api controller" />
     <MESSAGE value="Endpoint of contact form api" />
     <MESSAGE value="Error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Error handling" />
+    <MESSAGE value="Landing page done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Landing page done" />
   </component>
 </project>

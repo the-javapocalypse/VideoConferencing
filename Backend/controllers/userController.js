@@ -53,7 +53,7 @@ module.exports = {
                             // Send email for verification
                             let subject = 'Email Verification | ' + process.env.AppName;
                             let body = 'Dear user, Thank you for registering with Syscon. To activate your account, please click ' +
-                                'on the following link: https://' + process.env.ClientDomain + '/activate/' + token;
+                                'on the following link: ' + process.env.ClientDomain + '/activate/' + token;
                             mailer.send(req.body.email, subject, body);
                             res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
                         })
