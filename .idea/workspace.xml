@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/landing/landing.component.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,14 +159,7 @@
       <workItem from="1584516057774" duration="8552000" />
       <workItem from="1584596238122" duration="11521000" />
       <workItem from="1584684643683" duration="28961000" />
-      <workItem from="1584792596672" duration="1068000" />
-    </task>
-    <task id="LOCAL-00140" summary="Join meeting for room owner">
-      <created>1584087056144</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1584087056145</updated>
+      <workItem from="1584792596672" duration="1561000" />
     </task>
     <task id="LOCAL-00141" summary="URL encoding working YAYY">
       <created>1584099853441</created>
@@ -507,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584791133898</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="Latest build content updated">
+      <created>1584793838368</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1584793838368</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +529,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Digest into query param instead of url param" />
     <MESSAGE value="Room Validity API endpoint updated" />
     <MESSAGE value="Register form submission bug fixed" />
     <MESSAGE value="Query param for room digest" />
@@ -557,6 +553,7 @@
     <MESSAGE value="Landing page done" />
     <MESSAGE value="User activation done" />
     <MESSAGE value="Latest build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Latest build" />
+    <MESSAGE value="Latest build content updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Latest build content updated" />
   </component>
 </project>
