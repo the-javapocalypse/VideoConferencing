@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HostListener} from '@angular/core';
-import { ViewportScroller } from '@angular/common';
+import {ViewportScroller} from '@angular/common';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 
 @Component({
@@ -15,14 +16,24 @@ import { ViewportScroller } from '@angular/common';
 export class LandingComponent implements OnInit {
 
     isScrolled = false;
+    contactFormSpinner = false;
 
-    constructor() {
+    contactForm: FormGroup;
+
+
+    constructor(private formBuilder: FormBuilder) {
     }
 
     ngOnInit() {
         // reset scroll
         this.isScrolled = false;
         window.addEventListener('scroll', this.scroll, true); // third parameter
+
+        this.contactForm = this.formBuilder.group({
+            name: ['', [Validators.required]],
+            email: ['', [Validators.required, Validators.email]],
+            message: ['', [Validators.required]],
+        });
     }
 
     // tslint:disable-next-line:use-lifecycle-interface
@@ -31,6 +42,20 @@ export class LandingComponent implements OnInit {
     }
 
     scroll = (event): void => {
-      this.isScrolled = true; // set scrolled flag
+        this.isScrolled = true; // set scrolled flag
+    }
+
+    // convenience getter for easy access to form fields
+    get f() {
+        return this.contactForm.controls;
+    }
+
+    onSubmit() {
+        this.contactFormSpinner = true; // set spinner
+        // stop here if form is invalid
+        if (this.contactForm.invalid) {
+            this.contactFormSpinner = false; // reset spinner
+            return;
+        }
     }
 }
