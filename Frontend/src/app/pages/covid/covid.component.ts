@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {RestService} from "../../services/api/rest.service";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {RestService} from '../../services/api/rest.service';
+import {NzNotificationService} from 'ng-zorro-antd';
 
 @Component({
     selector: 'app-covid',
@@ -13,7 +14,8 @@ export class CovidComponent implements OnInit {
     spinner = false;
 
     constructor(private api: RestService,
-                private formBuilder: FormBuilder) {
+                private formBuilder: FormBuilder,
+                private notification: NzNotificationService) {
     }
 
     ngOnInit() {
@@ -49,7 +51,27 @@ export class CovidComponent implements OnInit {
             this.spinner = false; // reset spinner
             return;
         }
-        console.log(this.suspectForm.value);
+        this.api.createCovid(this.suspectForm.value).subscribe(
+            (res: any) => {
+                this.spinner = false; // reset spinner
+                // show notification
+                this.notification.create(
+                    'success',
+                    'Registered successfully',
+                    'Your application has been registered successfully'
+                );
+            },
+            (err: any) => {
+                console.log(err);
+                this.spinner = false; // reset spinner
+                // show notification
+                this.notification.create(
+                    'warning',
+                    'Something went wrong',
+                    'Please try again later'
+                );
+            }
+        );
     }
 
 }

@@ -11,7 +11,7 @@ module.exports = {
     create(req, res, next) {
         models.Covid.create(req.body)
             .then((covid) => {
-                    res.status(msg.SUCCESSFUL_CREATE).send(msg.SUCCESSFUL_CREATE);
+                    res.status(msg.SUCCESSFUL_CREATE.code).send(msg.SUCCESSFUL_CREATE);
                 }
             )
             .catch(error => {

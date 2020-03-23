@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/covidController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/covidController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/migrations/20200323064538-create-covid.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/migrations/20200323064538-create-covid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/covid/covid.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/covid/covid.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
     </list>
@@ -165,14 +164,7 @@
       <workItem from="1584684643683" duration="28961000" />
       <workItem from="1584792596672" duration="1818000" />
       <workItem from="1584943463273" duration="14217000" />
-      <workItem from="1584959404320" duration="804000" />
-    </task>
-    <task id="LOCAL-00144" summary="Added route for attendee meeting join">
-      <created>1584184416630</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1584184416631</updated>
+      <workItem from="1584959404320" duration="1086000" />
     </task>
     <task id="LOCAL-00145" summary="Fixed bug">
       <created>1584184446073</created>
@@ -510,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584947594534</updated>
     </task>
-    <option name="localTasksCounter" value="193" />
+    <task id="LOCAL-00193" summary="Covid API updated">
+      <created>1584960255832</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1584960255833</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +534,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Query param for room digest" />
     <MESSAGE value="New build" />
     <MESSAGE value="New build added" />
     <MESSAGE value="getRoom order desc" />
@@ -560,6 +558,7 @@
     <MESSAGE value="Latest build content updated" />
     <MESSAGE value="Added covid migration" />
     <MESSAGE value="Added covid controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added covid controller" />
+    <MESSAGE value="Covid API updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Covid API updated" />
   </component>
 </project>
