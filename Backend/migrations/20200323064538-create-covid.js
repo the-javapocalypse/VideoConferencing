@@ -15,18 +15,21 @@ module.exports = {
         type: Sequelize.STRING
       },
       dob: {
+        allowNull: true,
         type: Sequelize.DATE
       },
       cnic: {
         type: Sequelize.STRING
       },
       address: {
+        allowNull: true,
         type: Sequelize.STRING
       },
       mobile: {
         type: Sequelize.STRING
       },
       phone: {
+        allowNull: true,
         type: Sequelize.STRING
       },
       travel_history: {

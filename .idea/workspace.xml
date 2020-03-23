@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/migrations/20200323064538-create-covid.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/migrations/20200323064538-create-covid.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,14 +162,7 @@
       <workItem from="1584596238122" duration="11521000" />
       <workItem from="1584684643683" duration="28961000" />
       <workItem from="1584792596672" duration="1818000" />
-      <workItem from="1584943463273" duration="2333000" />
-    </task>
-    <task id="LOCAL-00142" summary="Open room in new tab">
-      <created>1584101873821</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1584101873821</updated>
+      <workItem from="1584943463273" duration="3769000" />
     </task>
     <task id="LOCAL-00143" summary="Added crypto pkg in frontend">
       <created>1584184339067</created>
@@ -508,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584794359204</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="Added covid migration">
+      <created>1584946122423</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1584946122423</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +532,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Room Validity API endpoint updated" />
     <MESSAGE value="Register form submission bug fixed" />
     <MESSAGE value="Query param for room digest" />
     <MESSAGE value="New build" />
@@ -558,6 +556,7 @@
     <MESSAGE value="User activation done" />
     <MESSAGE value="Latest build" />
     <MESSAGE value="Latest build content updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Latest build content updated" />
+    <MESSAGE value="Added covid migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added covid migration" />
   </component>
 </project>
