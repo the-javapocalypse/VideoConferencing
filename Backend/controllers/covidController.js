@@ -5,6 +5,6 @@ const UIDGenerator = require('uid-generator');
 
 module.exports = {
     create(req, res, next) {
-
+        res.send('123');
     }
 }

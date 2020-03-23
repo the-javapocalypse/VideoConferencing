@@ -10,11 +10,13 @@ import {JoinComponent} from './pages/video/join/join.component';
 import {JoinAttendeeComponent} from './pages/video/join-attendee/join-attendee.component';
 import {LandingComponent} from './pages/landing/landing.component';
 import {ActivateComponent} from './pages/auth/activate/activate.component';
+import {CovidComponent} from './pages/covid/covid.component';
 
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
   { path: 'account', component: AccountComponent},
+  { path: 'covid', component: CovidComponent},
   { path: 'join_old/:meeting_id', component: JoinTempComponent },
   { path: 'meeting/:meeting_id', component: MeetingTempComponent},
   { path: 'join_room/:digest', component: JoinComponent},

@@ -11,6 +11,7 @@ export class ConfigService {
     private userApi = 'user/';
     private roomApi = 'room/';
     private chimeApi = 'vc/';
+    private covidApi = 'covid/';
 
     constructor() {
         this.host = environment.server;
@@ -26,5 +27,9 @@ export class ConfigService {
 
     public getRoomEndPoint() {
         return this.roomApi;
+    }
+
+    public getCovidEndPoint() {
+        return this.covidApi;
     }
 }

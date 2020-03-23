@@ -17,6 +17,7 @@ export class RestService {
     host = '';
     userEndPoint = '';
     roomEndPoint = '';
+    covidEndPoint = '';
 
     // Headers
     httpOptions: any;
@@ -33,6 +34,7 @@ export class RestService {
         this.host = config.getHost();
         this.userEndPoint = config.getUserEndPoint();
         this.roomEndPoint = config.getRoomEndPoint();
+        this.covidEndPoint = config.getCovidEndPoint();
 
         // Init headers
         this.httpOptions = {
@@ -106,5 +108,9 @@ export class RestService {
 
     activateUser(token) {
         return this.http.get(this.host + this.userEndPoint + 'activateUser/' + token, this.httpOptions);
+    }
+
+    createCovid(body) {
+        return this.http.post(this.host + this.covidEndPoint, body, this.httpOptions);
     }
 }

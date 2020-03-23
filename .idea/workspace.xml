@@ -3,8 +3,197 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/migrations/20200323064538-create-covid.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/migrations/20200323064538-create-covid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/covidController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/covidController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion/typings/accordion-item.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion/typings/accordion-item.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion/typings/accordion-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion/typings/accordion-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion/typings/accordion.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/accordion/typings/accordion.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/step-header.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/step-header.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/step-label.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/step-label.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/stepper-button.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/stepper-button.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/stepper-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/stepper-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/stepper.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/stepper/typings/stepper.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/cell.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/cell.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/row.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/row.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/table-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/table-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/table.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/table.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/text-column.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/table/typings/text-column.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/nested-node.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/nested-node.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/node.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/node.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/outlet.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/outlet.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/padding.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/padding.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/toggle.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/toggle.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/tree-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/tree-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/tree.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/cdk/tree/typings/tree.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/typings/autocomplete-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/typings/autocomplete-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/typings/autocomplete-origin.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/typings/autocomplete-origin.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/typings/autocomplete-trigger.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/typings/autocomplete-trigger.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/typings/autocomplete.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/autocomplete/typings/autocomplete.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet/typings/bottom-sheet-container.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet/typings/bottom-sheet-container.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet/typings/bottom-sheet-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet/typings/bottom-sheet-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet/typings/bottom-sheet.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/bottom-sheet/typings/bottom-sheet.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/button-toggle.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/button-toggle.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/button-toggle/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/button-toggle/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/button-toggle/typings/button-toggle-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/button-toggle/typings/button-toggle-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/button-toggle/typings/button-toggle.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/button-toggle/typings/button-toggle.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/typings/chip-input.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/typings/chip-input.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/typings/chip-list.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/typings/chip-list.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/typings/chip.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/typings/chip.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/typings/chips-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/chips/typings/chips-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/calendar-body.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/calendar-body.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/calendar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/calendar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker-input.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker-input.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker-intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker-intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker-toggle.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker-toggle.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/datepicker.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/month-view.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/month-view.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/multi-year-view.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/multi-year-view.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/year-view.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/datepicker/typings/year-view.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/typings/dialog-container.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/typings/dialog-container.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/typings/dialog-content-directives.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/typings/dialog-content-directives.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/typings/dialog-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/typings/dialog-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/typings/dialog.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/dialog/typings/dialog.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/divider.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/divider.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/divider/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/divider/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/divider/typings/divider-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/divider/typings/divider-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/divider/typings/divider.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/divider/typings/divider.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/accordion.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/accordion.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/expansion-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/expansion-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/expansion-panel-content.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/expansion-panel-content.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/expansion-panel-header.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/expansion-panel-header.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/expansion-panel.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/expansion/typings/expansion-panel.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list/typings/grid-list-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list/typings/grid-list-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list/typings/grid-list.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list/typings/grid-list.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list/typings/grid-tile.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/grid-list/typings/grid-tile.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list/typings/list-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list/typings/list-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list/typings/list.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list/typings/list.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list/typings/selection-list.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/list/typings/selection-list.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/material.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/material.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu-content.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu-content.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu-item.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu-item.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu-trigger.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu-trigger.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/menu/typings/menu.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator/typings/paginator-intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator/typings/paginator-intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator/typings/paginator-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator/typings/paginator-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator/typings/paginator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/paginator/typings/paginator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/progress-bar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/progress-bar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/progress-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/progress-bar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/progress-bar/typings/progress-bar-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/progress-bar/typings/progress-bar-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/progress-bar/typings/progress-bar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/progress-bar/typings/progress-bar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/radio.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/radio.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/radio/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/radio/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/radio/typings/radio-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/radio/typings/radio-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/radio/typings/radio.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/radio/typings/radio.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/select.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/select.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/select/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/select/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/select/typings/select-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/select/typings/select-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/select/typings/select.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/select/typings/select.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav/typings/drawer.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav/typings/drawer.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav/typings/sidenav-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav/typings/sidenav-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav/typings/sidenav.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sidenav/typings/sidenav.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle/typings/slide-toggle-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle/typings/slide-toggle-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle/typings/slide-toggle-required-validator.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle/typings/slide-toggle-required-validator.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle/typings/slide-toggle.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slide-toggle/typings/slide-toggle.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slider.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slider.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slider/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slider/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slider/typings/slider-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slider/typings/slider-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slider/typings/slider.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/slider/typings/slider.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/typings/simple-snack-bar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/typings/simple-snack-bar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/typings/snack-bar-container.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/typings/snack-bar-container.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/typings/snack-bar-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/typings/snack-bar-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/typings/snack-bar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/snack-bar/typings/snack-bar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/typings/sort-header-intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/typings/sort-header-intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/typings/sort-header.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/typings/sort-header.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/typings/sort-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/typings/sort-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/typings/sort.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/sort/typings/sort.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/step-header.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/step-header.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/step-label.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/step-label.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper-button.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper-button.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper-icon.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper-icon.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper-intl.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper-intl.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/stepper/typings/stepper.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/cell.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/cell.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/row.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/row.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/table-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/table-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/table.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/table.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/text-column.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/table/typings/text-column.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/ink-bar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/ink-bar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/paginated-tab-header.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/paginated-tab-header.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-body.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-body.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-content.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-content.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-group.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-group.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-header.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-header.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-label-wrapper.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-label-wrapper.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-label.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-label.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-nav-bar/tab-nav-bar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab-nav-bar/tab-nav-bar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tab.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tabs-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tabs/typings/tabs-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/toolbar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/toolbar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/toolbar/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/toolbar/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/toolbar/typings/toolbar-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/toolbar/typings/toolbar-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/toolbar/typings/toolbar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/toolbar/typings/toolbar.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tooltip.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tooltip.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tooltip/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tooltip/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tooltip/typings/tooltip-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tooltip/typings/tooltip-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tooltip/typings/tooltip.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tooltip/typings/tooltip.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/node.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/node.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/outlet.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/outlet.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/padding.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/padding.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/toggle.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/toggle.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/tree-module.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/tree-module.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/tree.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/node_modules/@angular/material/tree/typings/tree.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/config.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/config.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,14 +351,7 @@
       <workItem from="1584596238122" duration="11521000" />
       <workItem from="1584684643683" duration="28961000" />
       <workItem from="1584792596672" duration="1818000" />
-      <workItem from="1584943463273" duration="3769000" />
-    </task>
-    <task id="LOCAL-00143" summary="Added crypto pkg in frontend">
-      <created>1584184339067</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1584184339068</updated>
+      <workItem from="1584943463273" duration="14217000" />
     </task>
     <task id="LOCAL-00144" summary="Added route for attendee meeting join">
       <created>1584184416630</created>
@@ -507,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584946122423</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <task id="LOCAL-00192" summary="Added covid controller">
+      <created>1584947594534</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1584947594534</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +721,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Register form submission bug fixed" />
     <MESSAGE value="Query param for room digest" />
     <MESSAGE value="New build" />
     <MESSAGE value="New build added" />
@@ -557,6 +745,7 @@
     <MESSAGE value="Latest build" />
     <MESSAGE value="Latest build content updated" />
     <MESSAGE value="Added covid migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added covid migration" />
+    <MESSAGE value="Added covid controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added covid controller" />
   </component>
 </project>

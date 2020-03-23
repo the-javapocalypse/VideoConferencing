@@ -37,6 +37,12 @@ import { JoinAttendeeComponent } from './pages/video/join-attendee/join-attendee
 import { LandingComponent } from './pages/landing/landing.component';
 import { NavComponent } from './pages/common/nav/nav.component';
 import { ActivateComponent } from './pages/auth/activate/activate.component';
+import { CovidComponent } from './pages/covid/covid.component';
+import {MatSelectModule} from "@angular/material/select";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from '@angular/material';
+
+
 
 registerLocaleData(en);
 
@@ -55,6 +61,7 @@ registerLocaleData(en);
     LandingComponent,
     NavComponent,
     ActivateComponent,
+    CovidComponent,
   ],
     imports: [
         BrowserModule,
@@ -73,6 +80,9 @@ registerLocaleData(en);
         MatCardModule,
         MatBadgeModule,
         ClipboardModule,
+        MatSelectModule,
+        MatNativeDateModule,
+        MatDatepickerModule,
     ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, { provide: UrlSerializer, useClass: CustomUrlSerializer}],
   bootstrap: [AppComponent]

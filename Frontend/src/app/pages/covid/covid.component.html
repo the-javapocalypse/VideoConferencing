@@ -1,0 +1,253 @@
+<div class="container-fluid bg-covid">
+    <div class="container">
+        <br>
+        <mat-card class="shadow-lg">
+            <mat-card-header>
+                <mat-card-title>
+                    <h3 class="text-dark nunito">
+                        Pakistan's Corona Virus Symptoms Reporting Portal
+                    </h3>
+                </mat-card-title>
+            </mat-card-header>
+            <div class="px-md-5">
+                <form [formGroup]="suspectForm">
+                    <br>
+                    <nz-divider nzText="Suspect's Information" nzOrientation="left"></nz-divider>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <mat-form-field class="full-width">
+                                <mat-label>Name</mat-label>
+                                <input type="text" matInput name="name" formControlName="name">
+                                <mat-error *ngIf="f.name.touched && f.name.errors?.required">
+                                    Please enter suspect's name
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <mat-form-field class="full-width">
+                                <mat-label>CNIC</mat-label>
+                                <input type="text" matInput name="cnic" formControlName="cnic">
+                                <mat-error *ngIf="f.cnic.touched && f.cnic.errors?.required">
+                                    Please enter suspect's CNIC
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-2 col-12">
+                            <mat-form-field class="full-width">
+                                <mat-label>Gender</mat-label>
+                                <mat-select name="gender" formControlName="gender">
+                                    <mat-option value="male">
+                                        Male
+                                    </mat-option>
+                                    <mat-option value="female">
+                                        Female
+                                    </mat-option>
+                                    <mat-option value="other">
+                                        Other
+                                    </mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="f.gender.touched && f.gender.errors?.required">
+                                    Please enter suspect's gender
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-2 col-12">
+                            <mat-form-field class="full-width">
+                                <mat-label>Date of birth</mat-label>
+                                <input matInput [matDatepicker]="picker" name="dob" formControlName="dob">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker touchUi #picker></mat-datepicker>
+                                <mat-error *ngIf="f.dob.touched && f.dob.errors?.required">
+                                    Please enter suspect's date of birth
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <mat-form-field class="full-width">
+                                <mat-label>Address</mat-label>
+                                <input type="text" matInput name="address" formControlName="address">
+                                <mat-error *ngIf="f.address.touched && f.address.errors?.required">
+                                    Please enter suspect's address
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <mat-form-field class="full-width">
+                                <mat-label>Mobile Number</mat-label>
+                                <input type="text" matInput name="mobile" formControlName="mobile">
+                                <mat-error *ngIf="f.mobile.touched && f.mobile.errors?.required">
+                                    Please enter suspect's mobile number
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <mat-form-field class="full-width">
+                                <mat-label>Phone Number</mat-label>
+                                <input type="text" matInput name="phone" formControlName="phone">
+                                <mat-error *ngIf="f.phone.touched && f.phone.errors?.required">
+                                    Please enter suspect's phone number
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <mat-form-field class="full-width">
+                                <mat-label>Travel History</mat-label>
+                                <textarea [mat-autosize]="false" rows="3" matInput
+                                          formControlName="travel_history"></textarea>
+                                <mat-error *ngIf="f.travel_history.touched && f.travel_history.errors?.required">
+                                    Please enter a suspect's travel history
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <br><br>
+                    <nz-divider nzText="Symptoms Information" nzOrientation="left"></nz-divider>
+                    <br>
+                    <div id="symptoms">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="full-width">
+                                    <mat-label>Coughing</mat-label>
+                                    <mat-select name="cough" formControlName="cough">
+                                        <mat-option value="none">
+                                            None
+                                        </mat-option>
+                                        <mat-option value="mild">
+                                            Mild
+                                        </mat-option>
+                                        <mat-option value="severe">
+                                            Severe
+                                        </mat-option>
+                                        <mat-option value="blood">
+                                            coughing with blood
+                                        </mat-option>
+                                    </mat-select>
+                                    <mat-error *ngIf="f.cough.touched && f.cough.errors?.required">
+                                        Please fill out the coughing symptom
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6" *ngIf="f.cough.touched && f.cough.value !== 'none'">
+                                <mat-form-field class="full-width">
+                                    <mat-label>Date when coughing first occurred</mat-label>
+                                    <input matInput [matDatepicker]="pickerCough" name="cough_started" formControlName="cough_started">
+                                    <mat-datepicker-toggle matSuffix [for]="pickerCough"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #pickerCough></mat-datepicker>
+                                    <mat-error *ngIf="f.cough_started.touched && f.cough_started.errors?.required">
+                                        Please fill out the coughing symptom
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="full-width">
+                                    <mat-label>Sore Throat</mat-label>
+                                    <mat-select name="sore_throat" formControlName="sore_throat">
+                                        <mat-option value="none">
+                                            None
+                                        </mat-option>
+                                        <mat-option value="mild">
+                                            Mild
+                                        </mat-option>
+                                        <mat-option value="severe">
+                                            Severe
+                                        </mat-option>
+                                    </mat-select>
+                                    <mat-error *ngIf="f.sore_throat.touched && f.sore_throat.errors?.required">
+                                        Please fill out the sore throat symptom
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6" *ngIf="f.sore_throat.touched && f.sore_throat.value !== 'none'">
+                                <mat-form-field class="full-width">
+                                    <mat-label>Date when sore throat first occurred</mat-label>
+                                    <input matInput [matDatepicker]="pickerThroat" name="sore_throat_started" formControlName="sore_throat_started">
+                                    <mat-datepicker-toggle matSuffix [for]="pickerThroat"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #pickerThroat></mat-datepicker>
+                                    <mat-error *ngIf="f.sore_throat_started.touched && f.sore_throat_started.errors?.required">
+                                        Please fill out the sore throat symptom
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="full-width">
+                                    <mat-label>Shortness of breath</mat-label>
+                                    <mat-select name="breath_shortness" formControlName="breath_shortness">
+                                        <mat-option value="none">
+                                            None
+                                        </mat-option>
+                                        <mat-option value="mild">
+                                            Mild
+                                        </mat-option>
+                                        <mat-option value="severe">
+                                            Severe
+                                        </mat-option>
+                                    </mat-select>
+                                    <mat-error *ngIf="f.breath_shortness.touched && f.breath_shortness.errors?.required">
+                                        Please fill out the shortness of breath symptom
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6" *ngIf="f.breath_shortness.touched && f.breath_shortness.value !== 'none'">
+                                <mat-form-field class="full-width">
+                                    <mat-label>Date when shortness of breath first occurred</mat-label>
+                                    <input matInput [matDatepicker]="pickerBreath" name="breath_shortness_started" formControlName="breath_shortness_started">
+                                    <mat-datepicker-toggle matSuffix [for]="pickerBreath"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #pickerBreath></mat-datepicker>
+                                    <mat-error *ngIf="f.breath_shortness_started.touched && f.breath_shortness_started.errors?.required">
+                                        Please fill out the shortness of breath symptom
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <mat-form-field class="full-width">
+                                    <mat-label>Body Temperature</mat-label>
+                                    <input type="number" step="0.1" min="96" max="107" matInput name="fever" formControlName="fever" placeholder="(96.0-107.0)">
+                                    <mat-error *ngIf="f.fever.touched && f.fever.errors?.required">
+                                        Please enter suspect's fever
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field class="full-width">
+                                    <mat-label>Date when fever first occurred</mat-label>
+                                    <input matInput [matDatepicker]="pickerFever" name="fever_started" formControlName="fever_started">
+                                    <mat-datepicker-toggle matSuffix [for]="pickerFever"></mat-datepicker-toggle>
+                                    <mat-datepicker touchUi #pickerFever></mat-datepicker>
+                                    <mat-hint>
+                                        Leave this field if suspect got no fever
+                                    </mat-hint>
+                                    <mat-error *ngIf="f.fever_started.touched && f.fever_started.errors?.required">
+                                        Please fill out the fever symptom
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button mat-raised-button color="primary" class="ml-auto py-2 px-3 mr-2" type="submit" (click)="register()">
+                            <!--  Spinner  -->
+                            <i nz-icon [nzType]="'loading'" [class.d-none]="!spinner" class="pb-2">
+                            </i>
+                            <span [class.d-none]="spinner">
+                             Submit&nbsp;&nbsp;
+                            <i nz-icon nzType="arrow-right" nzTheme="outline"></i>
+                        </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </mat-card>
+        <br>
+    </div>
+</div>

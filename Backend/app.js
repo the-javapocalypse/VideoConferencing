@@ -16,6 +16,7 @@ var indexRouter = require('./routes/index');
 var vcRouter = require('./routes/videoConference');
 var userRouter = require('./routes/user');
 const roomRouter = require('./routes/room');
+const covid = require('./routes/covid');
 
 var app = express();
 
@@ -41,6 +42,8 @@ app.use('/', indexRouter);
 app.use('/vc', vcRouter);
 app.use('/user', userRouter);
 app.use('/room', roomRouter);
+app.use('/covid', covid);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
