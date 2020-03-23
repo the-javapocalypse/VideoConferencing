@@ -33,30 +33,35 @@ module.exports = {
         type: Sequelize.STRING
       },
       travel_history: {
+        allowNull: true,
         type: Sequelize.STRING
       },
       cough: {
         type: Sequelize.STRING
       },
       cough_started: {
+        allowNull: true,
         type: Sequelize.DATE
       },
       sore_throat: {
         type: Sequelize.STRING
       },
       sore_throat_started: {
+        allowNull: true,
         type: Sequelize.DATE
       },
       fever: {
         type: Sequelize.STRING
       },
       fever_started: {
+        allowNull: true,
         type: Sequelize.DATE
       },
       breath_shortness: {
         type: Sequelize.STRING
       },
       breath_shortness_started: {
+        allowNull: true,
         type: Sequelize.DATE
       },
       createdAt: {
