@@ -69,13 +69,17 @@ module.exports = {
     // get all rooms info of currently logged in user (user info via jwt)
     getRoom(req, res, next) {
         models.Room.findAll(
-            {where: {created_by: res.locals.user.id}, order: [['createdAt', 'DESC']]}
+            {where: {created_by: res.locals.user.id}, order: [['createdAt', 'DESC']], raw: true,}
         )
-            .then(room => {
+            .then( async(room) => {
                 if (room == null) {
                     res.status(msg.NOT_FOUND.code).send(msg.NOT_FOUND);
                     res.end();
                 } else {
+                    for(x in room){
+                        room[x].attendee_count = await this.getAttendeeCountInRoom(room[x].id);
+                    }
+                    log(room);
                     res.status(msg.SUCCESSFUL.code).send(room);
                     res.end();
                 }
@@ -145,21 +149,21 @@ module.exports = {
 
 
     // Get attendee count in room
-    getRoomAttendeeCount(req, res, next) {
-        models.User_Room.count({
+    getAttendeeCountInRoom(room_id) {
+        return models.User_Room.count({
             where: {
-                room_id: req.body.room_id
+                room_id: room_id
             },
         })
             .then(function (count) {
                 // count is an integer
-                res.status(msg.SUCCESSFUL.code).send({'count': count});
+                return count;
             })
             .catch((error) => {
                 if (env === 'development') {
                     log(error);
                 }
-                res.status(msg.INTERNAL_SERVER_ERROR.code).send(msg.INTERNAL_SERVER_ERROR);
+                return 0;
             });
     },
 
