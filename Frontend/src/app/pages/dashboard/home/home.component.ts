@@ -120,7 +120,7 @@ export class HomeComponent implements OnInit {
 
     // Format URL encoding
     formatURL(url) {
-        return url.replace(/\//g, '%2F');
+        return url.replace(/\//g, '%2F').replace(/\+/g, '%2B');
     }
 
     // Open tab in new url

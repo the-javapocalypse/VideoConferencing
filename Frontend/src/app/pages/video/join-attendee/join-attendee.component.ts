@@ -21,6 +21,7 @@ export class JoinAttendeeComponent implements OnInit {
     joiningFlag = false;
     joinErrorFlag = false;
     invalidInviteLinkFlag = false;
+    roomName = '';
 
     attendeeJoinForm: FormGroup;
 
@@ -52,7 +53,7 @@ export class JoinAttendeeComponent implements OnInit {
             this.meetingId = this.crypto.decrypt(this.digest);
 
             // Replace slash with code
-            this.digest = this.digest.replace(/\//g, '%2F');
+            this.digest = this.digest.replace(/\//g, '%2F').replace(/\+/g, '%2B');
 
             // Check if decryption successful
             if (this.meetingId === '' || this.meetingId === undefined) {
@@ -66,6 +67,7 @@ export class JoinAttendeeComponent implements OnInit {
                         // if room and digest both are valid
                         // separate name from email of room creator
                         this.meetingId = this.meetingId.split('~~~')[0];
+                        this.roomName = this.meetingId;
                         this.joiningFlag = false; // reset spinner
                     },
                     (error: any) => {
