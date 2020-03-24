@@ -12,6 +12,7 @@ export class CovidComponent implements OnInit {
 
     suspectForm: FormGroup;
     spinner = false;
+    successMsg = false;
 
     constructor(private api: RestService,
                 private formBuilder: FormBuilder,
@@ -19,6 +20,8 @@ export class CovidComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.successMsg = false;
+
         this.suspectForm = this.formBuilder.group({
             name: ['', [Validators.required]],
             gender: ['', [Validators.required]],
@@ -60,6 +63,8 @@ export class CovidComponent implements OnInit {
                     'Registered successfully',
                     'Your application has been registered successfully'
                 );
+                // show success msg div
+                this.successMsg = true;
             },
             (err: any) => {
                 console.log(err);

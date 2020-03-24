@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/.htaccess" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/3rdpartylicenses.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/assets/animal/panda.js" beforeDir="false" />
@@ -1786,15 +1785,17 @@
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/favicon.ico" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/landing_banner.615724e19e4ea3f787a3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/main-es2015.ca4ced7c23267376850b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/main-es5.ca4ced7c23267376850b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/main-es2015.d3d119a30e91efd4649f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/main-es5.d3d119a30e91efd4649f.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/owl.video.play.4a37f8008959c75f619b.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/polyfills-es2015.ca64e4516afbb1b890d5.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/polyfills-es5.ca9c6660228810623f55.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/runtime-es2015.0811dcefd377500b5b1a.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/runtime-es5.0811dcefd377500b5b1a.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/dist/frontend/styles.29ee3180f8c84afec0b2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/covid/covid.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/covid/covid.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/covid/covid.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/covid/covid.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1847,7 +1848,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="JavaScript Debug.covid.component.html">
     <configuration name="Tests (blk-design-system-angular)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/src/karma.conf.js" />
       <working-directory value="$PROJECT_DIR$" />
@@ -1866,6 +1867,9 @@
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
+    <configuration name="covid.component.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/VideoConferencing/Frontend/src/app/pages/covid/covid.component.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Angular CLI Server" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -1876,6 +1880,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.covid.component.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -1953,14 +1962,7 @@
       <workItem from="1584684643683" duration="28961000" />
       <workItem from="1584792596672" duration="1818000" />
       <workItem from="1584943463273" duration="14217000" />
-      <workItem from="1584959404320" duration="1412000" />
-    </task>
-    <task id="LOCAL-00146" summary="Home component tweaked">
-      <created>1584184465888</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1584184465889</updated>
+      <workItem from="1584959404320" duration="4970000" />
     </task>
     <task id="LOCAL-00147" summary="Added env vars">
       <created>1584188825753</created>
@@ -2298,7 +2300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584960553513</updated>
     </task>
-    <option name="localTasksCounter" value="195" />
+    <task id="LOCAL-00195" summary="Covid build">
+      <created>1584960889603</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1584960889603</updated>
+    </task>
+    <option name="localTasksCounter" value="196" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -2323,7 +2332,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="New build added" />
     <MESSAGE value="getRoom order desc" />
     <MESSAGE value="Home UI tweaks" />
     <MESSAGE value="UI tweaks" />
@@ -2348,6 +2356,7 @@
     <MESSAGE value="Added covid controller" />
     <MESSAGE value="Covid API updated" />
     <MESSAGE value="Covid Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Covid Done" />
+    <MESSAGE value="Covid build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Covid build" />
   </component>
 </project>
