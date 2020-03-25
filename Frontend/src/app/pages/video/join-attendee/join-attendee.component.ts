@@ -39,6 +39,20 @@ export class JoinAttendeeComponent implements OnInit {
 
 
     ngOnInit() {
+
+        // Initialize form validators
+        this.attendeeJoinForm = this.formBuilder.group({
+            email: ['', [Validators.required, Validators.email]],
+            name: ['', [Validators.required]],
+        });
+
+        // Get info from local storage (if present)
+        const userData = this.localStorage.retrieveJWT();
+        if (userData !== null) {
+            this.f.name.setValue(userData.userInfo.name);
+            this.f.email.setValue(userData.userInfo.email);
+        }
+
         // set spinner until room is validated
         this.joiningFlag = true;
         // reset error flag
@@ -80,12 +94,6 @@ export class JoinAttendeeComponent implements OnInit {
                     }
                 );
             }
-
-            // Initialize form validators
-            this.attendeeJoinForm = this.formBuilder.group({
-                email: ['', [Validators.required, Validators.email]],
-                name: ['', [Validators.required]],
-            });
         });
     }
 

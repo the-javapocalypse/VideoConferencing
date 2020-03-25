@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/src/app/services/util/url.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,28 +171,7 @@
       <workItem from="1584792596672" duration="1818000" />
       <workItem from="1584943463273" duration="14217000" />
       <workItem from="1584959404320" duration="16080000" />
-      <workItem from="1585116832410" duration="5197000" />
-    </task>
-    <task id="LOCAL-00152" summary="Login Attendee api">
-      <created>1584188992549</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1584188992549</updated>
-    </task>
-    <task id="LOCAL-00153" summary="Load host from env">
-      <created>1584189291409</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1584189291409</updated>
-    </task>
-    <task id="LOCAL-00154" summary="Basic Done with errors">
-      <created>1584191134354</created>
-      <option name="number" value="00154" />
-      <option name="presentableId" value="LOCAL-00154" />
-      <option name="project" value="LOCAL" />
-      <updated>1584191134355</updated>
+      <workItem from="1585116832410" duration="6302000" />
     </task>
     <task id="LOCAL-00155" summary="Cryptography module updated">
       <created>1584357068013</created>
@@ -523,7 +495,28 @@
       <option name="project" value="LOCAL" />
       <updated>1585050858518</updated>
     </task>
-    <option name="localTasksCounter" value="201" />
+    <task id="LOCAL-00201" summary="Added service to encode/decode url">
+      <created>1585125121178</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1585125121180</updated>
+    </task>
+    <task id="LOCAL-00202" summary="API updated to add attendee to room">
+      <created>1585125144224</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1585125144224</updated>
+    </task>
+    <task id="LOCAL-00203" summary="Add attendee to room working">
+      <created>1585125165265</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1585125165266</updated>
+    </task>
+    <option name="localTasksCounter" value="204" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,8 +541,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="DB credentials" />
-    <MESSAGE value="Landing page" />
     <MESSAGE value="Nav component" />
     <MESSAGE value="Features init" />
     <MESSAGE value="Added contact init" />
@@ -573,6 +564,8 @@
     <MESSAGE value="Api updated" />
     <MESSAGE value="Attendee count api integrated" />
     <MESSAGE value="Added service to encode/decode url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added service to encode/decode url" />
+    <MESSAGE value="API updated to add attendee to room" />
+    <MESSAGE value="Add attendee to room working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add attendee to room working" />
   </component>
 </project>
