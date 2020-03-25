@@ -5,6 +5,7 @@ import {NzMessageService, NzNotificationService} from 'ng-zorro-antd';
 import {OwlOptions} from 'ngx-owl-carousel-o';
 import {Router} from '@angular/router';
 import {environment} from '../../../../environments/environment';
+import {UrlService} from "../../../services/util/url.service";
 
 @Component({
     selector: 'app-home',
@@ -61,6 +62,7 @@ export class HomeComponent implements OnInit {
                 private notification: NzNotificationService,
                 private message: NzMessageService,
                 private router: Router,
+                private url: UrlService
     ) {
     }
 
@@ -120,7 +122,7 @@ export class HomeComponent implements OnInit {
 
     // Format URL encoding
     formatURL(url) {
-        return url.replace(/\//g, '%2F').replace(/\+/g, '%2B');
+        return this.url.encode(url);
     }
 
     // Open tab in new url
