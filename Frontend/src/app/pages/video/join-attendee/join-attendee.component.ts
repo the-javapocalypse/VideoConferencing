@@ -5,6 +5,7 @@ import {LocalStorageService} from '../../../services/storage/local-storage.servi
 import {CryptoService} from '../../../services/util/crypto.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {RestService} from '../../../services/api/rest.service';
+import {UrlService} from "../../../services/util/url.service";
 
 
 @Component({
@@ -32,7 +33,8 @@ export class JoinAttendeeComponent implements OnInit {
                 private localStorage: LocalStorageService,
                 private crypto: CryptoService,
                 private formBuilder: FormBuilder,
-                private api: RestService) {
+                private api: RestService,
+                private url: UrlService) {
     }
 
 
@@ -53,7 +55,7 @@ export class JoinAttendeeComponent implements OnInit {
             this.meetingId = this.crypto.decrypt(this.digest);
 
             // Replace slash with code
-            this.digest = this.digest.replace(/\//g, '%2F').replace(/\+/g, '%2B');
+            this.digest = this.url.encode(this.digest);
 
             // Check if decryption successful
             if (this.meetingId === '' || this.meetingId === undefined) {
@@ -140,6 +142,15 @@ export class JoinAttendeeComponent implements OnInit {
                     (response: any) => {
                         /// !!!! Join in either case
                         this.localStorage.storeJWT(response.body.token, response.body.user); // store login info
+                        // Add attendee to room
+                        this.api.addAAttendeeToRoom({digest: this.url.decode(this.digest)}).subscribe(
+                            (room: any) => {
+
+                            },
+                            (error: any) => {
+
+                            }
+                        );
                         this.joinMeetingTrigger(this.digest, this.attendeeJoinForm.value.name);
                     },
                     (error: any) => {
@@ -156,6 +167,15 @@ export class JoinAttendeeComponent implements OnInit {
                     (response: any) => {
                         /// !!!! Join in either case
                         this.localStorage.storeJWT(response.body.token, response.body.user); // store login info
+                        // Add attendee to room
+                        this.api.addAAttendeeToRoom({digest: this.url.decode(this.digest)}).subscribe(
+                            (room: any) => {
+
+                            },
+                            (error: any) => {
+
+                            }
+                        );
                         this.joinMeetingTrigger(this.digest, this.attendeeJoinForm.value.name);
                     },
                     (error: any) => {

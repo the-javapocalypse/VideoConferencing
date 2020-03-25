@@ -113,4 +113,11 @@ export class RestService {
     createCovid(body) {
         return this.http.post(this.host + this.covidEndPoint, body, this.httpOptions);
     }
+
+    addAAttendeeToRoom(body) {
+        if (this.token === '') {
+            this.readToken();
+        }
+        return this.http.post(this.host + this.roomEndPoint + 'addToRoom', body, this.httpOptionsAuth);
+    }
 }
