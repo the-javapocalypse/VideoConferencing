@@ -71,12 +71,12 @@ module.exports = {
         models.Room.findAll(
             {where: {created_by: res.locals.user.id}, order: [['createdAt', 'DESC']], raw: true,}
         )
-            .then( async(room) => {
+            .then(async (room) => {
                 if (room == null) {
                     res.status(msg.NOT_FOUND.code).send(msg.NOT_FOUND);
                     res.end();
                 } else {
-                    for(x in room){
+                    for (x in room) {
                         room[x].attendee_count = await this.getAttendeeCountInRoom(room[x].id);
                     }
                     log(room);
@@ -95,10 +95,24 @@ module.exports = {
 
     // add attendee to room API
     async addAttendeeToRoom(req, res, next) {
-        this.addUserToRoom(res.locals.user.id, req.body.room_id)
-            .then(msg => {
-                res.status(msg.code).send(msg);
-            });
+        models.Room.findOne(
+            {where: {digest: req.body.digest}}
+        )
+            .then(room => {
+                log(room);
+                if (room) {
+                    this.addUserToRoom(res.locals.user.id, room.dataValues.id)
+                        .then(msg => {
+                            res.status(msg.code).send(msg);
+                        });
+                }
+            })
+            .catch(error => {
+                if (env === 'development') {
+                    log(error);
+                }
+                return msg.INTERNAL_SERVER_ERROR;
+            })
     },
 
 
@@ -128,14 +142,14 @@ module.exports = {
     },
 
 
-    roomIsValid(req, res, next){
+    roomIsValid(req, res, next) {
         models.Room.findOne(
             {where: {digest: req.query.digest}}
         )
-            .then( room => {
-                if(!room){
+            .then(room => {
+                if (!room) {
                     res.status(msg.NOT_FOUND.code).send(msg.NOT_FOUND);
-                }else {
+                } else {
                     res.status(msg.SUCCESSFUL.code).send(msg.SUCCESSFUL);
                 }
             })
