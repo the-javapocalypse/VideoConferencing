@@ -98,7 +98,6 @@ module.exports = {
             {where: {digest: req.body.digest}}
         )
             .then(room => {
-                log(room);
                 if (room) {
                     this.addUserToRoom(res.locals.user.id, room.dataValues.id)
                         .then(msg => {
