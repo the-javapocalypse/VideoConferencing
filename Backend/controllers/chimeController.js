@@ -64,7 +64,6 @@ module.exports = {
     // Todo: Authentication
     async attendee(req, res, next) {
         try{
-            log(attendeeCache);
             compression({})(req, res, () => {});
             const attendeeInfo = {
                 AttendeeInfo: {
@@ -84,7 +83,7 @@ module.exports = {
 
     async leaveMeeting(req, res, next){
         try{
-            log('\n' + 'leaving meeting' + '\n');
+            delete attendeeCache[req.body.meetingId][req.body.attendeeId];
             res.send(messages.SUCCESSFUL_CREATE);
             res.end();
         }

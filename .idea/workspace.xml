@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Auto populate attendee field">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/chimeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/chimeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/routes/videoConference.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/videoConference.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/config.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/config.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/api/rest.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -179,42 +174,7 @@
       <workItem from="1584959404320" duration="16080000" />
       <workItem from="1585116832410" duration="9066000" />
       <workItem from="1585208723657" duration="3595000" />
-      <workItem from="1585214283406" duration="3099000" />
-    </task>
-    <task id="LOCAL-00156" summary="Cryptography service updated">
-      <created>1584357092351</created>
-      <option name="number" value="00156" />
-      <option name="presentableId" value="LOCAL-00156" />
-      <option name="project" value="LOCAL" />
-      <updated>1584357092351</updated>
-    </task>
-    <task id="LOCAL-00157" summary="Storage bug fixed">
-      <created>1584357111896</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1584357111896</updated>
-    </task>
-    <task id="LOCAL-00158" summary="env var fixed">
-      <created>1584357178415</created>
-      <option name="number" value="00158" />
-      <option name="presentableId" value="LOCAL-00158" />
-      <option name="project" value="LOCAL" />
-      <updated>1584357178416</updated>
-    </task>
-    <task id="LOCAL-00159" summary="Meeting url fixed">
-      <created>1584357200947</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1584357200947</updated>
-    </task>
-    <task id="LOCAL-00160" summary="Meeting name removed">
-      <created>1584357398766</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1584357398767</updated>
+      <workItem from="1585214283406" duration="4906000" />
     </task>
     <task id="LOCAL-00161" summary="Crypto module removed">
       <created>1584357425088</created>
@@ -524,7 +484,42 @@
       <option name="project" value="LOCAL" />
       <updated>1585126244892</updated>
     </task>
-    <option name="localTasksCounter" value="205" />
+    <task id="LOCAL-00205" summary="leave meeting API inti">
+      <created>1585220971152</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1585220971153</updated>
+    </task>
+    <task id="LOCAL-00206" summary="Storing attendee id in meeting">
+      <created>1585220992163</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1585220992163</updated>
+    </task>
+    <task id="LOCAL-00207" summary="Removed log">
+      <created>1585221252376</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1585221252376</updated>
+    </task>
+    <task id="LOCAL-00208" summary="Removed log">
+      <created>1585221602093</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1585221602093</updated>
+    </task>
+    <task id="LOCAL-00209" summary="Local storage tweaks for meeting">
+      <created>1585221625459</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1585221625459</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,10 +544,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Features init" />
-    <MESSAGE value="Added contact init" />
-    <MESSAGE value="Navigation Scrolling" />
-    <MESSAGE value="Favicon updated" />
     <MESSAGE value="NAv color on hover" />
     <MESSAGE value="Contact form validation" />
     <MESSAGE value="Contact form api controller" />
@@ -574,6 +565,10 @@
     <MESSAGE value="API updated to add attendee to room" />
     <MESSAGE value="Add attendee to room working" />
     <MESSAGE value="Auto populate attendee field" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auto populate attendee field" />
+    <MESSAGE value="leave meeting API inti" />
+    <MESSAGE value="Storing attendee id in meeting" />
+    <MESSAGE value="Removed log" />
+    <MESSAGE value="Local storage tweaks for meeting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Local storage tweaks for meeting" />
   </component>
 </project>
