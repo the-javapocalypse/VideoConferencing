@@ -490,7 +490,9 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
 
     leaveMeeting() {
-        this.api.leaveMeeting({user: 'something'}).subscribe(
+        this.api.leaveMeeting({
+            attendeeId: this.storage.getRoasterInfo().attendeeId
+        }).subscribe(
             (res: any) => {
                 console.log(res);
             },

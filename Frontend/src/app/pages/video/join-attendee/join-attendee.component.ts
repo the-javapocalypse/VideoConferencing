@@ -117,7 +117,7 @@ export class JoinAttendeeComponent implements OnInit {
 
                 this.chime.startSession(res.body.JoinInfo.Meeting, res.body.JoinInfo.Attendee);
                 this.joiningFlag = false; // reset flag
-                // this.router.navigate(['/meeting/' + meetingId]);
+                this.router.navigate(['/meeting/' + meetingId]);
             },
             (err: any) => {
                 console.log(err);
