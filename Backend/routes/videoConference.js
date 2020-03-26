@@ -16,4 +16,11 @@ router.post('/attendee',  function(req, res, next) {
      controllers.chime.attendee(req, res, next);
 });
 
+
+/* Leave Meeting */
+router.post('/leave', middleware.validateToken, function(req, res, next) {
+     controllers.chime.leaveMeeting(req, res, next);
+});
+
+
 module.exports = router;

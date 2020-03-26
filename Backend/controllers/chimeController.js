@@ -22,10 +22,7 @@ module.exports = {
             const title = req.body.title;
             const name = req.body.name;
 
-            log(meetingCache[title]);
-            log(attendeeCache[title]);
-
-            // check if meeting exists
+            // check if meeting does not exists
             if (!meetingCache[title]) {
                 meetingCache[title] = await chime
                     .createMeeting({
@@ -67,6 +64,7 @@ module.exports = {
     // Todo: Authentication
     async attendee(req, res, next) {
         try{
+            log(attendeeCache);
             compression({})(req, res, () => {});
             const attendeeInfo = {
                 AttendeeInfo: {
@@ -75,6 +73,19 @@ module.exports = {
                 },
             };
             res.send(JSON.stringify(attendeeInfo));
+            res.end();
+        }
+        catch (e) {
+            log(e);
+            res.status(messages.INTERNAL_SERVER_ERROR.code).send(JSON.stringify(e));
+            res.end();
+        }
+    },
+
+    async leaveMeeting(req, res, next){
+        try{
+            log('\n' + 'leaving meeting' + '\n');
+            res.send(messages.SUCCESSFUL_CREATE);
             res.end();
         }
         catch (e) {
