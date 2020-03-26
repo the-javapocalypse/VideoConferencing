@@ -79,7 +79,6 @@ module.exports = {
                     for (x in room) {
                         room[x].attendee_count = await this.getAttendeeCountInRoom(room[x].id);
                     }
-                    log(room);
                     res.status(msg.SUCCESSFUL.code).send(room);
                     res.end();
                 }
