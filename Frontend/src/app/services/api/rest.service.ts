@@ -18,6 +18,7 @@ export class RestService {
     userEndPoint = '';
     roomEndPoint = '';
     covidEndPoint = '';
+    vcEndPoint = '';
 
     // Headers
     httpOptions: any;
@@ -35,6 +36,7 @@ export class RestService {
         this.userEndPoint = config.getUserEndPoint();
         this.roomEndPoint = config.getRoomEndPoint();
         this.covidEndPoint = config.getCovidEndPoint();
+        this.vcEndPoint = config.getVCEndPoint();
 
         // Init headers
         this.httpOptions = {
@@ -119,5 +121,15 @@ export class RestService {
             this.readToken();
         }
         return this.http.post(this.host + this.roomEndPoint + 'addToRoom', body, this.httpOptionsAuth);
+    }
+
+
+    ///// VC APIS  ////////////
+
+    leaveMeeting(body) {
+        if (this.token === '') {
+            this.readToken();
+        }
+        return this.http.post(this.host + this.vcEndPoint + 'leave', body, this.httpOptionsAuth);
     }
 }

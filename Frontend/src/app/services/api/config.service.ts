@@ -29,6 +29,10 @@ export class ConfigService {
         return this.roomApi;
     }
 
+    public getVCEndPoint() {
+        return this.chimeApi;
+    }
+
     public getCovidEndPoint() {
         return this.covidApi;
     }

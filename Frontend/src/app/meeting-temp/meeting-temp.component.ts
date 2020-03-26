@@ -5,6 +5,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 import {interval} from 'rxjs';
 import {NzMessageService} from 'ng-zorro-antd';
 import {LocalStorageService} from '../services/storage/local-storage.service';
+import {RestService} from '../services/api/rest.service';
 
 @Component({
     selector: 'app-meeting-temp',
@@ -20,6 +21,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
                 private route: ActivatedRoute,
                 private toast: NzMessageService,
                 public storage: LocalStorageService,
+                private api: RestService,
     ) {
 
         window.addEventListener('beforeunload', (event) => {
@@ -310,7 +312,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
     videoInputHandler() {
         // Toggle flag
-        this.videoInput = !this.videoInput;
+        this.videoInput = !this.videoInput;76
         if (this.videoInput) {
             // Start video input
             this.updateCurrentVideoInputDevice(this.currentVideoInputDevice, this.currentVideoInputDeviceID);
@@ -488,6 +490,14 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
 
 
     leaveMeeting() {
+        this.api.leaveMeeting({user: 'something'}).subscribe(
+            (res: any) => {
+                console.log(res);
+            },
+            (err: any) => {
+                console.log(err);
+            }
+        );
         this.chime.leave();
         this.subscribe.unsubscribe();
         this.router.navigate(['/']);
@@ -504,7 +514,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
     }
 
 
-    toggleStatsFlag(){
+    toggleStatsFlag() {
         this.showStatsFLAG = !this.showStatsFLAG;
     }
 

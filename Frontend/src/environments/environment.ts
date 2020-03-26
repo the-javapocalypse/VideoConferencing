@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  domain: 'https://192.168.0.109:4200/', // 'https://192.168.100.131:4200/' 'https://syscon.io/'
-  server: 'https://192.168.0.109:8080/', // 'https://backend.syscon.io/' 'https://192.168.100.131:8080/',
+  domain: 'https://192.168.8.103:4200/', // 'https://192.168.100.131:4200/' 'https://syscon.io/'
+  server: 'https://192.168.8.103:8080/', // 'https://backend.syscon.io/' 'https://192.168.100.131:8080/',
   cryptoKey: 'ch!m3sy$cOn@!@',
 };
 
