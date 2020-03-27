@@ -3,7 +3,7 @@ const compression = require('compression');
 const uuid = require('uuid/v4');
 const log = require('../utils/logger');
 const messages = require('../utils/messages');
-
+const roomController = require('./roomController');
 
 const chime = new AWS.Chime({ region: 'us-east-1' });
 chime.endpoint = new AWS.Endpoint('https://service.chime.aws.amazon.com/console');
@@ -91,6 +91,9 @@ module.exports = {
             // Calculate active time in minutes
             let sessionTime = (new Date() - attendeeCache[req.body.meetingId][req.body.attendeeId].joining_time); // Get active time in ms
             sessionTime = Math.round(((sessionTime % 86400000) % 3600000) / 60000); // minutes
+
+            // Pass values to controller
+            roomController.updateActiveSessionTime(res.locals.user.id, req.body.meetingId, sessionTime);
 
             // Remove entry from cache
             delete attendeeCache[req.body.meetingId][req.body.attendeeId];
