@@ -6,6 +6,7 @@ import {interval} from 'rxjs';
 import {NzMessageService} from 'ng-zorro-antd';
 import {LocalStorageService} from '../services/storage/local-storage.service';
 import {RestService} from '../services/api/rest.service';
+import {UrlService} from '../services/util/url.service';
 
 @Component({
     selector: 'app-meeting-temp',
@@ -22,6 +23,7 @@ export class MeetingTempComponent implements OnInit, OnDestroy {
                 private toast: NzMessageService,
                 public storage: LocalStorageService,
                 private api: RestService,
+                private url: UrlService
     ) {
 
         window.addEventListener('beforeunload', (event) => {

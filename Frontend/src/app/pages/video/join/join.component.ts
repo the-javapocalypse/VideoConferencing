@@ -3,6 +3,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 import {ChimeService} from '../../../services/api/chime.service';
 import {LocalStorageService} from '../../../services/storage/local-storage.service';
 import {RestService} from '../../../services/api/rest.service';
+import {UrlService} from '../../../services/util/url.service';
 
 @Component({
     selector: 'app-join',
@@ -32,7 +33,8 @@ export class JoinComponent implements OnInit {
                 private router: Router,
                 private chime: ChimeService,
                 private storage: LocalStorageService,
-                private api: RestService) {
+                private api: RestService,
+                private url: UrlService) {
     }
 
     ngOnInit() {
