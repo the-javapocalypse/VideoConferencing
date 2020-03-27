@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Remove from cache when leaving meeting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/chimeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/chimeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/migrations/20200302070946-create-user-room.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/migrations/20200302070946-create-user-room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/models/user_room.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/models/user_room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -174,14 +176,8 @@
       <workItem from="1584959404320" duration="16080000" />
       <workItem from="1585116832410" duration="9066000" />
       <workItem from="1585208723657" duration="3595000" />
-      <workItem from="1585214283406" duration="4906000" />
-    </task>
-    <task id="LOCAL-00161" summary="Crypto module removed">
-      <created>1584357425088</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1584357425089</updated>
+      <workItem from="1585214283406" duration="5201000" />
+      <workItem from="1585295939870" duration="3769000" />
     </task>
     <task id="LOCAL-00162" summary="Digest into query param instead of url param">
       <created>1584429526559</created>
@@ -519,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585221625459</updated>
     </task>
-    <option name="localTasksCounter" value="210" />
+    <task id="LOCAL-00210" summary="Remove from cache when leaving meeting">
+      <created>1585222824400</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1585222824400</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +547,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="NAv color on hover" />
     <MESSAGE value="Contact form validation" />
     <MESSAGE value="Contact form api controller" />
     <MESSAGE value="Endpoint of contact form api" />
@@ -569,6 +571,7 @@
     <MESSAGE value="Storing attendee id in meeting" />
     <MESSAGE value="Removed log" />
     <MESSAGE value="Local storage tweaks for meeting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Local storage tweaks for meeting" />
+    <MESSAGE value="Remove from cache when leaving meeting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove from cache when leaving meeting" />
   </component>
 </project>

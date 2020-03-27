@@ -14,6 +14,10 @@ module.exports = {
       room_id: {
         type: Sequelize.INTEGER
       },
+      active_time: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

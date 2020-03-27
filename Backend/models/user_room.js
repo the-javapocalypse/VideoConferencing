@@ -2,7 +2,8 @@
 module.exports = (sequelize, DataTypes) => {
   const User_Room = sequelize.define('User_Room', {
     user_id: DataTypes.INTEGER,
-    room_id: DataTypes.INTEGER
+    room_id: DataTypes.INTEGER,
+    active_time: DataTypes.INTEGER
   }, {});
   User_Room.associate = function(models) {
     // associations can be defined here
