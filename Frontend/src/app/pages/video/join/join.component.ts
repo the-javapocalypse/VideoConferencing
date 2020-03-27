@@ -67,16 +67,17 @@ export class JoinComponent implements OnInit {
     async joinMeetingTrigger(meetingId, attendeeName) {
         console.log('Joining meting...');
 
-        // store roster info locally
-        this.storage.setRoasterInfo({
-            meetingId,
-            attendeeName
-        });
-
         this.chime.joinMeeting({
             title: meetingId,
             name: attendeeName
         }).subscribe((res: any) => {
+                // store roster info locally
+                this.storage.setRoasterInfo({
+                    meetingId,
+                    attendeeName,
+                    attendeeId: res.body.JoinInfo.Attendee.AttendeeId
+                });
+
                 console.log('Successfully joined...');
                 this.chime.startSession(res.body.JoinInfo.Meeting, res.body.JoinInfo.Attendee);
                 this.router.navigate(['/meeting/' + meetingId]);
