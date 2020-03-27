@@ -179,4 +179,62 @@ module.exports = {
             });
     },
 
+
+
+    updateActiveSessionTime(user_id, digest, time){
+
+        digest = digest.replace(/%2F/g, '/').replace(/%2B/g, '+');
+
+        models.Room.findOne({
+            where: {digest},
+            raw: true
+        })
+            .then(room => {
+
+                models.User_Room.findOne({
+                    where: {
+                        user_id: user_id,
+                        room_id: room.id
+                    },
+                    raw: true
+                })
+                    .then(user_sess => {
+
+                        log('---------------------------------------------');
+                        log(time);
+                        log(user_sess.active_time);
+
+
+                        let timeTotal = time + user_sess.active_time;
+
+                        log(timeTotal);
+
+                        models.User_Room.update(
+                            {
+                                active_time: timeTotal
+                            },
+                            {
+                                where: {
+                                    user_id: user_id,
+                                    room_id: room.id
+                                }
+                            }
+                        );
+
+                    })
+                    .catch(error => {
+                        if (env === 'development') {
+                            log(error);
+                        }
+                    });
+
+
+            })
+            .catch(error => {
+                if (env === 'development') {
+                    log(error);
+                }
+            });
+    }
+
 };
