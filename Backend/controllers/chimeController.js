@@ -11,7 +11,6 @@ chime.endpoint = new AWS.Endpoint('https://service.chime.aws.amazon.com/console'
 const meetingCache = {};
 const attendeeCache = {};
 
-
 module.exports = {
     // join meeting
     // Todo: Authentication
@@ -19,7 +18,7 @@ module.exports = {
         try {
             compression({})(req, res, () => {
             });
-            const title = req.body.title;
+            const title = req.body.title;   // meeting digest
             const name = req.body.name;
 
             // check if meeting does not exists
@@ -49,7 +48,13 @@ module.exports = {
                     ).Attendee,
                 },
             };
-            attendeeCache[title][joinInfo.JoinInfo.Attendee.AttendeeId] = name;
+            attendeeCache[title][joinInfo.JoinInfo.Attendee.AttendeeId] = {
+                name,
+                joining_time: new Date()
+            };
+            log('--------------------Joining--------------------');
+            log(attendeeCache);
+            log('--------------------Joining--------------------');
             res.send(JSON.stringify(joinInfo));
             res.end();
         }
@@ -68,7 +73,7 @@ module.exports = {
             const attendeeInfo = {
                 AttendeeInfo: {
                     AttendeeId: req.body.attendee,
-                    Name: attendeeCache[req.body.title][req.body.attendee],
+                    Name: attendeeCache[req.body.title][req.body.attendee].name,
                 },
             };
             res.send(JSON.stringify(attendeeInfo));
@@ -83,7 +88,13 @@ module.exports = {
 
     async leaveMeeting(req, res, next){
         try{
+            // Calculate active time in minutes
+            let sessionTime = (new Date() - attendeeCache[req.body.meetingId][req.body.attendeeId].joining_time); // Get active time in ms
+            sessionTime = Math.round(((sessionTime % 86400000) % 3600000) / 60000); // minutes
+
+            // Remove entry from cache
             delete attendeeCache[req.body.meetingId][req.body.attendeeId];
+
             res.send(messages.SUCCESSFUL_CREATE);
             res.end();
         }
