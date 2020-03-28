@@ -71,7 +71,8 @@
 
                                 <br>
                                 <nz-table #basicTable [nzData]="room.session" [nzShowPagination]="false" nzSize="small"
-                                          nzFooter="Total Active Time: {{getSumOfSessionsTime(room.session)}} minutes">
+                                          nzFooter="Total Active Time: {{getSumOfSessionsTime(room.session)}} minutes"
+                                          [nzBordered]="false">
                                     <thead>
                                     <tr>
                                         <th class="text-dark nunito">Attendee</th>
@@ -81,7 +82,7 @@
                                     <tbody>
                                     <tr *ngFor="let data of basicTable.data">
                                         <td>{{data['User.name']}} ({{data['User.email']}})</td>
-                                        <td>{{data.active_time}}</td>
+                                        <td>{{data.active_time}} mins</td>
                                     </tr>
                                     </tbody>
                                 </nz-table>
