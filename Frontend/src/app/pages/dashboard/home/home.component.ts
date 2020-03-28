@@ -12,6 +12,8 @@ import {UrlService} from "../../../services/util/url.service";
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.sass']
 })
+
+
 export class HomeComponent implements OnInit {
 
     // domain name form env
@@ -107,6 +109,7 @@ export class HomeComponent implements OnInit {
         this.api.getRooms().subscribe(
             (res: any) => {
                 this.allRooms = res.body;
+                console.log(res.body);
             },
             (err: any) => {
                 console.log(err);
@@ -136,4 +139,12 @@ export class HomeComponent implements OnInit {
         window.open(url, '_blank');
     }
 
+
+    getSumOfSessionsTime(sessions) {
+        let total = 0;
+        for (let time of sessions) {
+            total += time.active_time;
+        }
+        return total;
+    }
 }

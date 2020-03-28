@@ -41,6 +41,7 @@ import { CovidComponent } from './pages/covid/covid.component';
 import {MatSelectModule} from "@angular/material/select";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from '@angular/material';
+import {MatTableModule} from "@angular/material/table";
 
 
 
@@ -83,6 +84,7 @@ registerLocaleData(en);
         MatSelectModule,
         MatNativeDateModule,
         MatDatepickerModule,
+        MatTableModule,
     ],
   providers: [{ provide: NZ_I18N, useValue: en_US }, { provide: UrlSerializer, useClass: CustomUrlSerializer}],
   bootstrap: [AppComponent]

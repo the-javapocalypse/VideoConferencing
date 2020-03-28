@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Remove from cache when leaving meeting">
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Meeting time calculation | local storage tweaks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/chimeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/chimeController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/meeting-temp/meeting-temp.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join/join.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join/join.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -180,21 +180,8 @@
       <workItem from="1585214283406" duration="5201000" />
       <workItem from="1585295939870" duration="5552000" />
       <workItem from="1585307465314" duration="3885000" />
-      <workItem from="1585312244303" duration="1488000" />
-    </task>
-    <task id="LOCAL-00165" summary="New build">
-      <created>1584429933922</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1584429933923</updated>
-    </task>
-    <task id="LOCAL-00166" summary="Query param for room digest">
-      <created>1584431487681</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1584431487681</updated>
+      <workItem from="1585312244303" duration="1755000" />
+      <workItem from="1585383435738" duration="6107000" />
     </task>
     <task id="LOCAL-00167" summary="New build">
       <created>1584431909765</created>
@@ -525,7 +512,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585308036046</updated>
     </task>
-    <option name="localTasksCounter" value="214" />
+    <task id="LOCAL-00214" summary="Session Duration Calculator">
+      <created>1585313973774</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1585313973775</updated>
+    </task>
+    <task id="LOCAL-00215" summary="Calculate time on leaving">
+      <created>1585313999679</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1585313999679</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,9 +551,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Error handling" />
-    <MESSAGE value="Landing page done" />
-    <MESSAGE value="User activation done" />
     <MESSAGE value="Latest build" />
     <MESSAGE value="Latest build content updated" />
     <MESSAGE value="Added covid migration" />
@@ -575,6 +573,9 @@
     <MESSAGE value="Added session field in user_room model" />
     <MESSAGE value="Storing attendeeId in local storage" />
     <MESSAGE value="Calculate active time for attendees" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calculate active time for attendees" />
+    <MESSAGE value="Session Duration Calculator" />
+    <MESSAGE value="Calculate time on leaving" />
+    <MESSAGE value="Meeting time calculation | local storage tweaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Meeting time calculation | local storage tweaks" />
   </component>
 </project>

@@ -62,14 +62,33 @@
                                         </h4>
                                     </div>
                                     <div class="col-md-2 col-2 text-right">
-                                        <mat-icon nz-tooltip nzTooltipTitle="Attendee count" matBadge="{{room.attendee_count}}" matBadgeColor="success">account_circle</mat-icon>
+                                        <mat-icon nz-tooltip nzTooltipTitle="Invitations Accepted" matBadge="{{room.attendee_count}}" matBadgeColor="success">account_circle</mat-icon>
                                     </div>
                                 </div>
                             </mat-card-header>
-                            <mat-card-content>
-                                <p>
-                            <!--Participant count-->
-                                </p>
+                            <mat-card-content style="height: 25vh!important; overflow-y: auto">
+
+
+                                <br>
+                                <nz-table #basicTable [nzData]="room.session" [nzShowPagination]="false" nzSize="small"
+                                          nzFooter="Total Active Time: {{getSumOfSessionsTime(room.session)}} minutes">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-dark nunito">Attendee</th>
+                                        <th class="text-dark nunito">Active Time</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr *ngFor="let data of basicTable.data">
+                                        <td>{{data['User.name']}} ({{data['User.email']}})</td>
+                                        <td>{{data.active_time}}</td>
+                                    </tr>
+                                    </tbody>
+                                </nz-table>
+
+
+
+
                             </mat-card-content>
                             <mat-card-actions>
                                 <button mat-button ngxClipboard [cbContent]="domain + 'join?room=' + formatURL(room.digest)" (cbOnSuccess)="showToast($event)">
