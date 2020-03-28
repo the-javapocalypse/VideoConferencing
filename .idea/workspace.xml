@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,14 +177,7 @@
       <workItem from="1585295939870" duration="5552000" />
       <workItem from="1585307465314" duration="3885000" />
       <workItem from="1585312244303" duration="1755000" />
-      <workItem from="1585383435738" duration="6372000" />
-    </task>
-    <task id="LOCAL-00170" summary="Home UI tweaks">
-      <created>1584438327325</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1584438327325</updated>
+      <workItem from="1585383435738" duration="7239000" />
     </task>
     <task id="LOCAL-00171" summary="UI tweaks">
       <created>1584438349257</created>
@@ -521,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585394962840</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="Added custom scrollbar">
+      <created>1585395278136</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1585395278136</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +547,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Added covid controller" />
     <MESSAGE value="Covid API updated" />
     <MESSAGE value="Covid Done" />
     <MESSAGE value="Covid build" />
@@ -571,6 +571,7 @@
     <MESSAGE value="Removed logs" />
     <MESSAGE value="Return sessions time in room api" />
     <MESSAGE value="Session timings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Session timings" />
+    <MESSAGE value="Added custom scrollbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added custom scrollbar" />
   </component>
 </project>
