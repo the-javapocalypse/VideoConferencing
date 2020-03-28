@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="Meeting time calculation | local storage tweaks">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/chimeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/chimeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/roomController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/roomController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.ts" afterDir="false" />
+    <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Frontend/src/styles.sass" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/styles.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,28 +176,7 @@
       <workItem from="1585295939870" duration="5552000" />
       <workItem from="1585307465314" duration="3885000" />
       <workItem from="1585312244303" duration="1755000" />
-      <workItem from="1585383435738" duration="6107000" />
-    </task>
-    <task id="LOCAL-00167" summary="New build">
-      <created>1584431909765</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1584431909765</updated>
-    </task>
-    <task id="LOCAL-00168" summary="New build added">
-      <created>1584431944287</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1584431944287</updated>
-    </task>
-    <task id="LOCAL-00169" summary="getRoom order desc">
-      <created>1584438293252</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1584438293253</updated>
+      <workItem from="1585383435738" duration="6372000" />
     </task>
     <task id="LOCAL-00170" summary="Home UI tweaks">
       <created>1584438327325</created>
@@ -526,7 +500,28 @@
       <option name="project" value="LOCAL" />
       <updated>1585313999679</updated>
     </task>
-    <option name="localTasksCounter" value="216" />
+    <task id="LOCAL-00216" summary="Removed logs">
+      <created>1585394923505</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1585394923506</updated>
+    </task>
+    <task id="LOCAL-00217" summary="Return sessions time in room api">
+      <created>1585394946635</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1585394946635</updated>
+    </task>
+    <task id="LOCAL-00218" summary="Session timings">
+      <created>1585394962839</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1585394962840</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,9 +546,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Latest build" />
-    <MESSAGE value="Latest build content updated" />
-    <MESSAGE value="Added covid migration" />
     <MESSAGE value="Added covid controller" />
     <MESSAGE value="Covid API updated" />
     <MESSAGE value="Covid Done" />
@@ -576,6 +568,9 @@
     <MESSAGE value="Session Duration Calculator" />
     <MESSAGE value="Calculate time on leaving" />
     <MESSAGE value="Meeting time calculation | local storage tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Meeting time calculation | local storage tweaks" />
+    <MESSAGE value="Removed logs" />
+    <MESSAGE value="Return sessions time in room api" />
+    <MESSAGE value="Session timings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Session timings" />
   </component>
 </project>
