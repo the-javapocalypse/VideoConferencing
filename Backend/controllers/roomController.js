@@ -78,6 +78,7 @@ module.exports = {
                 } else {
                     for (x in room) {
                         room[x].attendee_count = await this.getAttendeeCountInRoom(room[x].id);
+                        room[x].session = await this.getAttendeesSessionTime(room[x].id);
                     }
                     res.status(msg.SUCCESSFUL.code).send(room);
                     res.end();
@@ -180,8 +181,7 @@ module.exports = {
     },
 
 
-
-    updateActiveSessionTime(user_id, digest, time){
+    updateActiveSessionTime(user_id, digest, time) {
 
         digest = digest.replace(/%2F/g, '/').replace(/%2B/g, '+');
 
@@ -200,14 +200,7 @@ module.exports = {
                 })
                     .then(user_sess => {
 
-                        log('---------------------------------------------');
-                        log(time);
-                        log(user_sess.active_time);
-
-
                         let timeTotal = time + user_sess.active_time;
-
-                        log(timeTotal);
 
                         models.User_Room.update(
                             {
@@ -235,6 +228,29 @@ module.exports = {
                     log(error);
                 }
             });
-    }
+    },
 
+
+    getAttendeesSessionTime(room_id) {
+        return models.User_Room.findAll({
+            where: {
+                room_id
+            },
+            include: [{
+                model: models.User,
+            }],
+            raw: true
+        })
+            .then(user => {
+                return user;
+            })
+            .catch(error => {
+                if (env === 'development') {
+                    log(error);
+                }
+                return {};
+            });
+    },
 };
+
+
