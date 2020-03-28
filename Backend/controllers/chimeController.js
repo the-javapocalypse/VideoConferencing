@@ -52,9 +52,6 @@ module.exports = {
                 name,
                 joining_time: new Date()
             };
-            log('--------------------Joining--------------------');
-            log(attendeeCache);
-            log('--------------------Joining--------------------');
             res.send(JSON.stringify(joinInfo));
             res.end();
         }
