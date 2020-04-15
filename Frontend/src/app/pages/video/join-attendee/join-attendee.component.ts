@@ -177,16 +177,21 @@ export class JoinAttendeeComponent implements OnInit {
                     (response: any) => {
                         /// !!!! Join in either case
                         this.localStorage.storeJWT(response.body.token, response.body.user); // store login info
-                        // Add attendee to room
-                        this.api.addAAttendeeToRoom({digest: this.url.decode(this.digest)}).subscribe(
-                            (room: any) => {
 
-                            },
-                            (error: any) => {
+                        // wait for 500ms so that local storage is updated
+                        setTimeout(() => {
+                            // Add attendee to room
+                            this.api.addAAttendeeToRoom({digest: this.url.decode(this.digest)}).subscribe(
+                                (room: any) => {
+                                    console.log(room);
+                                },
+                                (error: any) => {
+                                    console.log(error);
+                                }
+                            );
+                            this.joinMeetingTrigger(this.digest, this.attendeeJoinForm.value.name);
+                        }, 500);
 
-                            }
-                        );
-                        this.joinMeetingTrigger(this.digest, this.attendeeJoinForm.value.name);
                     },
                     (error: any) => {
                         /// error loggin in

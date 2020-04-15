@@ -57,6 +57,7 @@ module.exports = {
         }
         catch (e) {
             log(e);
+            log('Error in joinMeeting');
             res.status(messages.INTERNAL_SERVER_ERROR.code).send(JSON.stringify(e));
             res.end();
         }
@@ -78,6 +79,7 @@ module.exports = {
         }
         catch (e) {
             log(e);
+            log('Error in attendee');
             res.status(messages.INTERNAL_SERVER_ERROR.code).send(JSON.stringify(e));
             res.end();
         }
