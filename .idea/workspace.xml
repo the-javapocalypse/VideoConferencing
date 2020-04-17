@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/account/account.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/account/account.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,21 +181,7 @@
       <workItem from="1586163690864" duration="44000" />
       <workItem from="1586936424765" duration="4262000" />
       <workItem from="1587103464507" duration="358000" />
-      <workItem from="1587104571832" duration="4556000" />
-    </task>
-    <task id="LOCAL-00177" summary="Features init">
-      <created>1584615216263</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1584615216263</updated>
-    </task>
-    <task id="LOCAL-00178" summary="Added contact init">
-      <created>1584706889625</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1584706889626</updated>
+      <workItem from="1587104571832" duration="4808000" />
     </task>
     <task id="LOCAL-00179" summary="Navigation Scrolling">
       <created>1584774128642</created>
@@ -526,7 +512,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587124417495</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="Added 500 ms delay to update local storage">
+      <created>1587125228450</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1587125228450</updated>
+    </task>
+    <task id="LOCAL-00227" summary="Join/login links in landing page working">
+      <created>1587125252745</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1587125252746</updated>
+    </task>
+    <option name="localTasksCounter" value="228" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,8 +551,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Added service to encode/decode url" />
-    <MESSAGE value="API updated to add attendee to room" />
     <MESSAGE value="Add attendee to room working" />
     <MESSAGE value="Auto populate attendee field" />
     <MESSAGE value="leave meeting API inti" />
@@ -576,6 +574,8 @@
     <MESSAGE value="Empty local storage method" />
     <MESSAGE value="Added logout feature" />
     <MESSAGE value="CLear previous local storage when logging in" />
-    <option name="LAST_COMMIT_MESSAGE" value="CLear previous local storage when logging in" />
+    <MESSAGE value="Added 500 ms delay to update local storage" />
+    <MESSAGE value="Join/login links in landing page working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Join/login links in landing page working" />
   </component>
 </project>
