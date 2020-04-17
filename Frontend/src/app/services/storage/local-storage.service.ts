@@ -39,6 +39,10 @@ export class LocalStorageService {
         localStorage.removeItem(this.userJWTToken);
     }
 
+    public clearAll() {
+        localStorage.clear();
+    }
+
 
     public setRoasterInfo(info: object) {
         console.log('storing roaster info');
