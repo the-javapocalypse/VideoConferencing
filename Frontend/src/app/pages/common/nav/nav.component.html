@@ -9,11 +9,13 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a class="nav-link text-uppercase font-weight-bold" (click)="scrollTo(landingSection)">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase font-weight-bold" (click)="scrollTo(useCaseSection)">Usecases</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase font-weight-bold" (click)="scrollTo(featuresSection)">Features</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase font-weight-bold" (click)="scrollTo(contactSection)">Contact</a></li>
+                    <li *ngIf="!isLoggedIn" class="nav-item"><a class="nav-link text-uppercase font-weight-bold" (click)="scrollTo(useCaseSection)">Usecases</a></li>
+                    <li *ngIf="!isLoggedIn" class="nav-item"><a class="nav-link text-uppercase font-weight-bold" (click)="scrollTo(featuresSection)">Features</a></li>
+                    <li *ngIf="!isLoggedIn" class="nav-item"><a class="nav-link text-uppercase font-weight-bold" (click)="scrollTo(contactSection)">Contact</a></li>
                     <li class="nav-item"><a routerLink="/covid" class="nav-link text-uppercase font-weight-bold">Covid19</a></li>
-                    <li class="nav-item"><a routerLink="/account" class="nav-link text-uppercase font-weight-bold">Account</a></li>
+                    <li *ngIf="!isLoggedIn" class="nav-item"><a routerLink="/account" class="nav-link text-uppercase font-weight-bold">Account</a></li>
+                    <li *ngIf="isLoggedIn" class="nav-item"><a routerLink="/home" class="nav-link text-uppercase font-weight-bold">Dashboard</a></li>
+                    <li *ngIf="isLoggedIn" class="nav-item"><a (click)="logout()" class="nav-link text-uppercase font-weight-bold">Logout</a></li>
                 </ul>
             </div>
         </div>

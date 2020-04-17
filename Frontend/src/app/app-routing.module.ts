@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'join', component: JoinAttendeeComponent},
   { path: 'meeting_new/:meeting_id', component: MeetingComponent},
   { path: 'activate/:token', component: ActivateComponent},
+  { path: 'landing', component: LandingComponent},
   { path: '', component: LandingComponent},
 ];
 
