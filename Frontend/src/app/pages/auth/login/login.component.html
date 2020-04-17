@@ -42,7 +42,14 @@
                 </div>
             </div>
         </div>
-        <button type="submit" mat-raised-button color="primary" class="btn-block" (click)="onSubmit()">Login</button>
+        <button type="submit" mat-raised-button color="primary" class="btn-block" (click)="onSubmit()">
+            <!--  Spinner  -->
+            <i nz-icon [nzType]="'loading'" [class.d-none]="!spinner"
+               class="pb-2"></i>
+            <span [class.d-none]="spinner">
+              login
+            </span>
+        </button>
     </form>
     <!--  Form End  -->
     <small class="cursor-pointer">Not a member? <span class="text-primary" (click)="register()">Register</span></small>

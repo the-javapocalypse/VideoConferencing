@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/account/account.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/account/account.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,21 +181,7 @@
       <workItem from="1586163690864" duration="44000" />
       <workItem from="1586936424765" duration="4262000" />
       <workItem from="1587103464507" duration="358000" />
-      <workItem from="1587104571832" duration="4808000" />
-    </task>
-    <task id="LOCAL-00179" summary="Navigation Scrolling">
-      <created>1584774128642</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1584774128642</updated>
-    </task>
-    <task id="LOCAL-00180" summary="Favicon updated">
-      <created>1584775002885</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1584775002885</updated>
+      <workItem from="1587104571832" duration="5074000" />
     </task>
     <task id="LOCAL-00181" summary="NAv color on hover">
       <created>1584776863685</created>
@@ -526,7 +512,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587125252746</updated>
     </task>
-    <option name="localTasksCounter" value="228" />
+    <task id="LOCAL-00228" summary="Logo navigates to landing in account">
+      <created>1587125357136</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1587125357136</updated>
+    </task>
+    <task id="LOCAL-00229" summary="Menu logo navigates to landing">
+      <created>1587125497727</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1587125497727</updated>
+    </task>
+    <option name="localTasksCounter" value="230" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,8 +551,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Add attendee to room working" />
-    <MESSAGE value="Auto populate attendee field" />
     <MESSAGE value="leave meeting API inti" />
     <MESSAGE value="Storing attendee id in meeting" />
     <MESSAGE value="Removed log" />
@@ -576,6 +574,8 @@
     <MESSAGE value="CLear previous local storage when logging in" />
     <MESSAGE value="Added 500 ms delay to update local storage" />
     <MESSAGE value="Join/login links in landing page working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Join/login links in landing page working" />
+    <MESSAGE value="Logo navigates to landing in account" />
+    <MESSAGE value="Menu logo navigates to landing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu logo navigates to landing" />
   </component>
 </project>
