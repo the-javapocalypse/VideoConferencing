@@ -55,8 +55,11 @@ export class LoginComponent implements OnInit {
 
         this.api.loginUser(this.loginForm.value).subscribe((res: any) => {
                 this.storage.storeJWT(res.body.token, res.body.user);
-                this.spinner = false; // hide spinner
-                this.router.navigate(['/home']);
+                // wait for token to get stored in local storage
+                setTimeout(() => {
+                    this.spinner = false; // hide spinner
+                    this.router.navigate(['/home']);
+                }, 500);
             },
             (err: any) => {
                 this.spinner = false; // hide spinner
