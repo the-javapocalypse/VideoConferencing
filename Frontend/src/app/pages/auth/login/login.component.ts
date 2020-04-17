@@ -41,6 +41,10 @@ export class LoginComponent implements OnInit {
     }
 
     onSubmit() {
+
+        // clear existing data of local storage
+        this.storage.clearAll();
+
         this.spinner = true; // show spinner
 
         // stop here if form is invalid

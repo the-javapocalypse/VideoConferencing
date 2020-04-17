@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/chimeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/chimeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/video/join-attendee/join-attendee.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/common/nav/nav.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/dashboard/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/services/storage/local-storage.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,14 +185,9 @@
       <workItem from="1585383435738" duration="8004000" />
       <workItem from="1585733555507" duration="1212000" />
       <workItem from="1586163690864" duration="44000" />
-      <workItem from="1586936424765" duration="3270000" />
-    </task>
-    <task id="LOCAL-00173" summary="Latest build">
-      <created>1584445918481</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1584445918481</updated>
+      <workItem from="1586936424765" duration="4262000" />
+      <workItem from="1587103464507" duration="358000" />
+      <workItem from="1587104571832" duration="3726000" />
     </task>
     <task id="LOCAL-00174" summary="DB credentials">
       <created>1584446098233</created>
@@ -529,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585399684997</updated>
     </task>
-    <option name="localTasksCounter" value="222" />
+    <task id="LOCAL-00222" summary="Fixed joining bug">
+      <created>1586940596815</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1586940596816</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +557,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="Covid build" />
     <MESSAGE value="Join Attendee room validation bug fixed" />
     <MESSAGE value="Api updated" />
     <MESSAGE value="Attendee count api integrated" />
@@ -579,6 +581,7 @@
     <MESSAGE value="Added custom scrollbar" />
     <MESSAGE value="Updated error message" />
     <MESSAGE value="Build session time" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build session time" />
+    <MESSAGE value="Fixed joining bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed joining bug" />
   </component>
 </project>
