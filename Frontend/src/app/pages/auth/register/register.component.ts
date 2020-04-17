@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
         // stop here if form is invalid
         if (this.registerForm.invalid) {
             this.spinner = false; // hide spinner
-            return;
+            // return;
         }
 
         this.api.createUser(this.registerForm.value).subscribe((res: any) => {

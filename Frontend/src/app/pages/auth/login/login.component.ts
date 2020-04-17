@@ -42,6 +42,8 @@ export class LoginComponent implements OnInit {
 
     onSubmit() {
 
+        console.log(this.loginForm);
+
         // clear existing data of local storage
         this.storage.clearAll();
 
@@ -50,7 +52,7 @@ export class LoginComponent implements OnInit {
         // stop here if form is invalid
         if (this.loginForm.invalid) {
             this.spinner = false; // hide spinner
-            return;
+            // return;
         }
 
         this.api.loginUser(this.loginForm.value).subscribe((res: any) => {

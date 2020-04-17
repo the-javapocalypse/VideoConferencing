@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e44972a4-b332-4fdf-ac86-d6424d65796b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/app/pages/auth/login/login.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,14 +183,7 @@
       <workItem from="1586163690864" duration="44000" />
       <workItem from="1586936424765" duration="4262000" />
       <workItem from="1587103464507" duration="358000" />
-      <workItem from="1587104571832" duration="5074000" />
-    </task>
-    <task id="LOCAL-00181" summary="NAv color on hover">
-      <created>1584776863685</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1584776863685</updated>
+      <workItem from="1587104571832" duration="6970000" />
     </task>
     <task id="LOCAL-00182" summary="Contact form validation">
       <created>1584779086070</created>
@@ -526,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587125497727</updated>
     </task>
-    <option name="localTasksCounter" value="230" />
+    <task id="LOCAL-00230" summary="Spinner in login">
+      <created>1587125804368</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1587125804368</updated>
+    </task>
+    <option name="localTasksCounter" value="231" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +553,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/ngx-admin" />
     </ignored-roots>
-    <MESSAGE value="leave meeting API inti" />
     <MESSAGE value="Storing attendee id in meeting" />
     <MESSAGE value="Removed log" />
     <MESSAGE value="Local storage tweaks for meeting" />
@@ -576,6 +577,7 @@
     <MESSAGE value="Join/login links in landing page working" />
     <MESSAGE value="Logo navigates to landing in account" />
     <MESSAGE value="Menu logo navigates to landing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu logo navigates to landing" />
+    <MESSAGE value="Spinner in login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spinner in login" />
   </component>
 </project>
