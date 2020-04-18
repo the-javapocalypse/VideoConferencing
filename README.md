@@ -114,9 +114,10 @@ certbot certonly --standalone -d syscon.com -d backend.syscon.com
 ```
 - Enable apache modules
 ```
-a2ensite syscon.conf
+sudo a2ensite syscon.conf
 sudo a2enmod proxy
 sudo a2enmod proxy_http
+sudo a2enmod rewrite
 ```
 - Reload apache server by running ```sudo systemctl reload apache2```
 
