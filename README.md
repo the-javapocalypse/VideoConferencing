@@ -4,6 +4,8 @@
 
 ## Deployment
 ---
+Note: For subdomain (backend.syscon.io) create A recrod in r53 for www.backend.syscon.io and a alias of A record for backend.syscon.io
+
 #### Server (Apache 2)
 - Install apache2 by running ```sudo apt install apache2```
 - Start server by running ```sudo systemctl start apache2```
