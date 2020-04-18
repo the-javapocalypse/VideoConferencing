@@ -4,6 +4,8 @@
 
 ## Deployment
 ---
+Note: For subdomain (backend.syscon.io) create A recrod in r53 for www.backend.syscon.io and a alias of A record for backend.syscon.io
+
 #### Server (Apache 2)
 - Install apache2 by running ```sudo apt install apache2```
 - Start server by running ```sudo systemctl start apache2```
@@ -114,9 +116,10 @@ certbot certonly --standalone -d syscon.com -d backend.syscon.com
 ```
 - Enable apache modules
 ```
-a2ensite syscon.conf
+sudo a2ensite syscon.conf
 sudo a2enmod proxy
 sudo a2enmod proxy_http
+sudo a2enmod rewrite
 ```
 - Reload apache server by running ```sudo systemctl reload apache2```
 
