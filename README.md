@@ -116,6 +116,7 @@ certbot certonly --standalone -d syscon.com -d backend.syscon.com
 ```
 - Enable apache modules
 ```
+sudo a2enmod ssl
 sudo a2ensite syscon.conf
 sudo a2enmod proxy
 sudo a2enmod proxy_http
